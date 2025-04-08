@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicUnderlyingV5Resp{}
 // GetPublicUnderlyingV5Resp struct for GetPublicUnderlyingV5Resp
 type GetPublicUnderlyingV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []GetPublicUnderlyingV5RespDataInner `json:"data,omitempty"`
+	Data [][]string `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *GetPublicUnderlyingV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicUnderlyingV5Resp) GetData() []GetPublicUnderlyingV5RespDataInner {
+func (o *GetPublicUnderlyingV5Resp) GetData() [][]string {
 	if o == nil || IsNil(o.Data) {
-		var ret []GetPublicUnderlyingV5RespDataInner
+		var ret [][]string
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *GetPublicUnderlyingV5Resp) GetData() []GetPublicUnderlyingV5RespDataInn
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicUnderlyingV5Resp) GetDataOk() ([]GetPublicUnderlyingV5RespDataInner, bool) {
+func (o *GetPublicUnderlyingV5Resp) GetDataOk() ([][]string, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *GetPublicUnderlyingV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []GetPublicUnderlyingV5RespDataInner and assigns it to the Data field.
-func (o *GetPublicUnderlyingV5Resp) SetData(v []GetPublicUnderlyingV5RespDataInner) {
+// SetData gets a reference to the given [][]string and assigns it to the Data field.
+func (o *GetPublicUnderlyingV5Resp) SetData(v [][]string) {
 	o.Data = v
 }
 

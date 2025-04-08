@@ -9985,6 +9985,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketCandlesV5Resp'
+          description: Successful operation
       summary: "Retrieve the candlestick charts. This endpoint can retrieve the latest\
         \ 1,440 data entries. Charts are returned in groups based on the requested\
         \ bar. \n\n"
@@ -10100,6 +10106,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketHistoryIndexCandlesV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the candlestick charts of the index from recent years.
 
@@ -10185,6 +10197,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketHistoryMarkPriceCandlesV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the candlestick charts of mark price from recent years.
 
@@ -10362,6 +10380,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketIndexCandlesV5Resp'
+          description: Successful operation
       summary: "Retrieve the candlestick charts of the index. This endpoint can retrieve\
         \ the latest 1,440 data entries. Charts are returned in groups based on the\
         \ requested bar. \n\n"
@@ -10546,6 +10570,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketMarkPriceCandlesV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
 
@@ -10709,6 +10739,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketSprdCandlesV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
 
@@ -10793,6 +10829,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetMarketSprdHistoryCandlesV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve history candlestick charts from recent years.
 
@@ -12858,6 +12900,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetPublicUnderlyingV5Resp'
+          description: Successful operation
       tags:
       - Public Data
   /api/v5/rfq/cancel-all-after:
@@ -14093,6 +14141,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRubikStatContractsLongShortAccountRatioContractV5Resp'
+          description: Successful operation
       summary: "Retrieve the account long/short ratio of a contract. This endpoint\
         \ can retrieve the latest 1,440 data entries. \n\n\n\nFor period=1D, the data\
         \ time range is up to January 1, 2024; for other periods, the data time range\
@@ -14179,6 +14233,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.
 
@@ -14263,6 +14323,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp'
+          description: Successful operation
       summary: |+
         Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.
 
@@ -14350,6 +14416,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRubikStatContractsOpenInterestHistoryV5Resp'
+          description: Successful operation
       summary: "Retrieve the contract open interest statistics of futures and perp.\
         \ This endpoint can retrieve the latest 1,440 data entries. \n\n\n\nFor period=1D,\
         \ the data time range is up to January 1, 2024; for other periods, the data\
@@ -14974,6 +15046,12 @@ paths:
               schema:
                 $ref: '#/components/schemas/APIError'
           description: Server Error
+        "200":
+          content:
+            application/json:
+              schema:
+                $ref: '#/components/schemas/GetRubikStatTakerVolumeContractV5Resp'
+          description: Successful operation
       summary: "Retrieve the contract taker volume for both buyers and sellers. This\
         \ endpoint can retrieve the latest 1,440 data entries. \n\n\n\nFor period=1D,\
         \ the data time range is up to January 1, 2024; for other periods, the data\
@@ -31988,6 +32066,50 @@ components:
           default: ""
           type: string
       type: object
+    GetMarketCandlesV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "8422410",
+                "22698348.04828491",
+                "12698348.04828491",
+                "0"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "24912403",
+                "67632347.24399722",
+                "37632347.24399722",
+                "1"
+            ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
     GetMarketExchangeRateV5Resp:
       example: |
         {
@@ -32006,6 +32128,82 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetMarketExchangeRateV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketHistoryIndexCandlesV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "1"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "1"
+            ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketHistoryMarkPriceCandlesV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "1"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "1"
+            ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32042,6 +32240,44 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetMarketHistoryTradesV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketIndexCandlesV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "0"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "1"
+            ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32125,6 +32361,44 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetMarketIndexTickersV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketMarkPriceCandlesV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "0"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "1"
+            ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32214,6 +32488,88 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetMarketPlatform24VolumeV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketSprdCandlesV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "8422410",
+                "0"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "24912403",
+                "1"
+            ]
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetMarketSprdHistoryCandlesV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+             [
+                "1597026383085",
+                "3.721",
+                "3.743",
+                "3.677",
+                "3.708",
+                "8422410",
+                "1"
+            ],
+            [
+                "1597026383085",
+                "3.731",
+                "3.799",
+                "3.494",
+                "3.72",
+                "24912403",
+                "1"
+            ]
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -33199,6 +33555,33 @@ components:
           default: ""
           type: string
       type: object
+    GetPublicUnderlyingV5Resp:
+      example: |
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "LTC-USDT",
+                    "BTC-USDT",
+                    "ETC-USDT"
+                ]
+            ]
+        }
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
     GetRfqCounterpartiesV5Resp:
       example: "{\n    \"code\":\"0\",\n    \"msg\":\"\",\n    \"data\":[\n      \
         \  {\n            \"traderName\" : \"Satoshi Nakamoto\",\n            \"traderCode\"\
@@ -33598,6 +33981,68 @@ components:
           default: ""
           type: string
       type: object
+    GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "1701417600000",    // timestamp
+                    "1.1739"            // long/short account num ratio of top traders
+                ],
+                [
+                    "1701417600000",    // timestamp
+                    "0.1236"            // long/short account num ratio of top traders
+                ],
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetRubikStatContractsLongShortAccountRatioContractV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "1701417600000",    // timestamp
+                    "1.1739"            // long/short account num ratio of traders
+                ],
+                [
+                    "1701417600000",    // timestamp
+                    "0.1236"            // long/short account num ratio of traders
+                ],
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
     GetRubikStatContractsLongShortAccountRatioV5Resp:
       example: |
         {
@@ -33617,6 +34062,72 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetRubikStatContractsLongShortAccountRatioV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "1701417600000",    // timestamp
+                    "1.1739"            // long/short position num ratio of top traders
+                ],
+                [
+                    "1701417600000",    // timestamp
+                    "0.1236"            // long/short position num ratio of top traders
+                ],
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetRubikStatContractsOpenInterestHistoryV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "1701417600000",    // timestamp
+                    "731377.57500501",   // open interest (oi, contracts)
+                    "111",              // open interest (oiCcy, coin)
+                    "8888888"         // open interest (oiUsd, USD)
+                ],
+                [
+                    "1701417500000",    // timestamp
+                    "731377.57500501",   // open interest (oi, contracts)
+                    "111",              // open interest (oiCcy, coin)
+                    "8888888"         // open interest (oiUsd, USD)
+                ]
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -33824,6 +34335,39 @@ components:
         data:
           items:
             $ref: '#/components/schemas/GetRubikStatOptionTakerBlockVolumeV5Resp_data_inner'
+          type: array
+        msg:
+          default: ""
+          type: string
+      type: object
+    GetRubikStatTakerVolumeContractV5Resp:
+      example: |+
+        {
+            "code":"0",
+            "msg":"",
+            "data":[
+                [
+                    "1701417600000",    // timestamp
+                    "200",              // taker sell volume
+                    "380"               // taker buy volume
+                ],
+                [
+                    "1701417600000",    // timestamp
+                    "100",              // taker sell volume
+                    "300"               // taker buy volume
+                ]
+            ]
+        }
+
+      properties:
+        code:
+          default: ""
+          type: string
+        data:
+          items:
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""

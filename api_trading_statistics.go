@@ -62,7 +62,7 @@ func (r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request)
 	return r
 }
 
-func (r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request) Execute() (*http.Response, error) {
+func (r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request) Execute() (*GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp, *http.Response, error) {
 	return r.ApiService.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Execute(r)
 }
 
@@ -88,16 +88,18 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 }
 
 // Execute executes the request
-func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Execute(r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request) (*http.Response, error) {
+//  @return GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp
+func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Execute(r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request) (*GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradingStatisticsAPIService.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/rubik/stat/contracts/long-short-account-ratio-contract-top-trader"
@@ -106,7 +108,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return nil, reportError("instId is required and must be specified")
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -154,19 +156,19 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -179,26 +181,35 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetRubikStatContractsLongShortAccountRatioContractV5Request struct {
@@ -241,7 +252,7 @@ func (r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) Limit(li
 	return r
 }
 
-func (r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) Execute() (*http.Response, error) {
+func (r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) Execute() (*GetRubikStatContractsLongShortAccountRatioContractV5Resp, *http.Response, error) {
 	return r.ApiService.GetRubikStatContractsLongShortAccountRatioContractV5Execute(r)
 }
 
@@ -271,16 +282,18 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 }
 
 // Execute executes the request
-func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatioContractV5Execute(r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) (*http.Response, error) {
+//  @return GetRubikStatContractsLongShortAccountRatioContractV5Resp
+func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatioContractV5Execute(r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) (*GetRubikStatContractsLongShortAccountRatioContractV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetRubikStatContractsLongShortAccountRatioContractV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradingStatisticsAPIService.GetRubikStatContractsLongShortAccountRatioContractV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/rubik/stat/contracts/long-short-account-ratio-contract"
@@ -289,7 +302,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return nil, reportError("instId is required and must be specified")
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -337,19 +350,19 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -362,26 +375,35 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetRubikStatContractsLongShortAccountRatioV5Request struct {
@@ -601,7 +623,7 @@ func (r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request
 	return r
 }
 
-func (r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request) Execute() (*http.Response, error) {
+func (r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request) Execute() (*GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp, *http.Response, error) {
 	return r.ApiService.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Execute(r)
 }
 
@@ -627,16 +649,18 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 }
 
 // Execute executes the request
-func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Execute(r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request) (*http.Response, error) {
+//  @return GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp
+func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Execute(r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request) (*GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradingStatisticsAPIService.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/rubik/stat/contracts/long-short-position-ratio-contract-top-trader"
@@ -645,7 +669,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return nil, reportError("instId is required and must be specified")
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -693,19 +717,19 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -718,26 +742,35 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetRubikStatContractsOpenInterestHistoryV5Request struct {
@@ -780,7 +813,7 @@ func (r ApiGetRubikStatContractsOpenInterestHistoryV5Request) Limit(limit string
 	return r
 }
 
-func (r ApiGetRubikStatContractsOpenInterestHistoryV5Request) Execute() (*http.Response, error) {
+func (r ApiGetRubikStatContractsOpenInterestHistoryV5Request) Execute() (*GetRubikStatContractsOpenInterestHistoryV5Resp, *http.Response, error) {
 	return r.ApiService.GetRubikStatContractsOpenInterestHistoryV5Execute(r)
 }
 
@@ -810,16 +843,18 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 }
 
 // Execute executes the request
-func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5Execute(r ApiGetRubikStatContractsOpenInterestHistoryV5Request) (*http.Response, error) {
+//  @return GetRubikStatContractsOpenInterestHistoryV5Resp
+func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5Execute(r ApiGetRubikStatContractsOpenInterestHistoryV5Request) (*GetRubikStatContractsOpenInterestHistoryV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetRubikStatContractsOpenInterestHistoryV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradingStatisticsAPIService.GetRubikStatContractsOpenInterestHistoryV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/rubik/stat/contracts/open-interest-history"
@@ -828,7 +863,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return nil, reportError("instId is required and must be specified")
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -876,19 +911,19 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -901,26 +936,35 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetRubikStatContractsOpenInterestVolumeV5Request struct {
@@ -2090,7 +2134,7 @@ func (r ApiGetRubikStatTakerVolumeContractV5Request) Limit(limit string) ApiGetR
 	return r
 }
 
-func (r ApiGetRubikStatTakerVolumeContractV5Request) Execute() (*http.Response, error) {
+func (r ApiGetRubikStatTakerVolumeContractV5Request) Execute() (*GetRubikStatTakerVolumeContractV5Resp, *http.Response, error) {
 	return r.ApiService.GetRubikStatTakerVolumeContractV5Execute(r)
 }
 
@@ -2120,16 +2164,18 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5(ctx cont
 }
 
 // Execute executes the request
-func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r ApiGetRubikStatTakerVolumeContractV5Request) (*http.Response, error) {
+//  @return GetRubikStatTakerVolumeContractV5Resp
+func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r ApiGetRubikStatTakerVolumeContractV5Request) (*GetRubikStatTakerVolumeContractV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetRubikStatTakerVolumeContractV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "TradingStatisticsAPIService.GetRubikStatTakerVolumeContractV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/rubik/stat/taker-volume-contract"
@@ -2138,7 +2184,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return nil, reportError("instId is required and must be specified")
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -2192,19 +2238,19 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -2217,26 +2263,35 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetRubikStatTakerVolumeV5Request struct {

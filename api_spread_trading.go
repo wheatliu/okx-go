@@ -755,7 +755,7 @@ func (r ApiGetMarketSprdCandlesV5Request) Limit(limit string) ApiGetMarketSprdCa
 	return r
 }
 
-func (r ApiGetMarketSprdCandlesV5Request) Execute() (*http.Response, error) {
+func (r ApiGetMarketSprdCandlesV5Request) Execute() (*GetMarketSprdCandlesV5Resp, *http.Response, error) {
 	return r.ApiService.GetMarketSprdCandlesV5Execute(r)
 }
 
@@ -781,16 +781,18 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5(ctx context.Context) Ap
 }
 
 // Execute executes the request
-func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSprdCandlesV5Request) (*http.Response, error) {
+//  @return GetMarketSprdCandlesV5Resp
+func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSprdCandlesV5Request) (*GetMarketSprdCandlesV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetMarketSprdCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SpreadTradingAPIService.GetMarketSprdCandlesV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/sprd-candles"
@@ -799,7 +801,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.sprdId == nil {
-		return nil, reportError("sprdId is required and must be specified")
+		return localVarReturnValue, nil, reportError("sprdId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "sprdId", r.sprdId, "form", "")
@@ -847,19 +849,19 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -872,26 +874,35 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetMarketSprdHistoryCandlesV5Request struct {
@@ -934,7 +945,7 @@ func (r ApiGetMarketSprdHistoryCandlesV5Request) Limit(limit string) ApiGetMarke
 	return r
 }
 
-func (r ApiGetMarketSprdHistoryCandlesV5Request) Execute() (*http.Response, error) {
+func (r ApiGetMarketSprdHistoryCandlesV5Request) Execute() (*GetMarketSprdHistoryCandlesV5Resp, *http.Response, error) {
 	return r.ApiService.GetMarketSprdHistoryCandlesV5Execute(r)
 }
 
@@ -960,16 +971,18 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5(ctx context.Cont
 }
 
 // Execute executes the request
-func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetMarketSprdHistoryCandlesV5Request) (*http.Response, error) {
+//  @return GetMarketSprdHistoryCandlesV5Resp
+func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetMarketSprdHistoryCandlesV5Request) (*GetMarketSprdHistoryCandlesV5Resp, *http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
+		localVarReturnValue  *GetMarketSprdHistoryCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "SpreadTradingAPIService.GetMarketSprdHistoryCandlesV5")
 	if err != nil {
-		return nil, &GenericOpenAPIError{error: err.Error()}
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/sprd-history-candles"
@@ -978,7 +991,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.sprdId == nil {
-		return nil, reportError("sprdId is required and must be specified")
+		return localVarReturnValue, nil, reportError("sprdId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "sprdId", r.sprdId, "form", "")
@@ -1026,19 +1039,19 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return nil, err
+		return localVarReturnValue, nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarHTTPResponse, err
+		return localVarReturnValue, localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1051,26 +1064,35 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarHTTPResponse, newErr
+			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarHTTPResponse, newErr
+				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarHTTPResponse, newErr
+		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
 
-	return localVarHTTPResponse, nil
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
 }
 
 type ApiGetMarketSprdTickerV5Request struct {
