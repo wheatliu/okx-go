@@ -32102,7 +32102,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32161,7 +32163,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32197,7 +32201,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32269,7 +32275,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32388,7 +32396,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32516,7 +32526,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -32555,7 +32567,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -33988,7 +34002,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -34017,7 +34033,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -34070,7 +34088,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -34103,7 +34123,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""
@@ -34341,7 +34363,9 @@ components:
           type: string
         data:
           items:
-            type: string
+            items:
+              type: string
+            type: array
           type: array
         msg:
           default: ""

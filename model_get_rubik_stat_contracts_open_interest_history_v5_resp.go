@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatContractsOpenInterestHistoryV5Resp{}
 // GetRubikStatContractsOpenInterestHistoryV5Resp struct for GetRubikStatContractsOpenInterestHistoryV5Resp
 type GetRubikStatContractsOpenInterestHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []string `json:"data,omitempty"`
+	Data [][]string `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) GetData() []string {
+func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) GetData() [][]string {
 	if o == nil || IsNil(o.Data) {
-		var ret []string
+		var ret [][]string
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) GetData() []string {
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) GetDataOk() ([]string, bool) {
+func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) GetDataOk() ([][]string, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []string and assigns it to the Data field.
-func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) SetData(v []string) {
+// SetData gets a reference to the given [][]string and assigns it to the Data field.
+func (o *GetRubikStatContractsOpenInterestHistoryV5Resp) SetData(v [][]string) {
 	o.Data = v
 }
 
