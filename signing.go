@@ -18,6 +18,7 @@ import (
 	"io"
 	"net/http"
 	"time"
+	"encoding/base64"
 )
 
 type KeyType string
@@ -83,7 +84,7 @@ func (b *Auth) Sign(r *http.Request) (err error) {
 	if err != nil {
 		return err
 	}
-	signature = fmt.Sprintf("%x", (mac.Sum(nil)))
+	signature = base64.StdEncoding.EncodeToString(mac.Sum(nil))
 
 	// Make sure signature is added to the end of the query string
 	r.Header.Set("OK-ACCESS-SIGN", signature)
