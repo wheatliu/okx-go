@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicInterestRateLoanQuotaV5Resp{}
 // GetPublicInterestRateLoanQuotaV5Resp struct for GetPublicInterestRateLoanQuotaV5Resp
 type GetPublicInterestRateLoanQuotaV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicInterestRateLoanQuotaV5RespData `json:"data,omitempty"`
+	Data []GetPublicInterestRateLoanQuotaV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicInterestRateLoanQuotaV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicInterestRateLoanQuotaV5Resp) GetData() GetPublicInterestRateLoanQuotaV5RespData {
+func (o *GetPublicInterestRateLoanQuotaV5Resp) GetData() []GetPublicInterestRateLoanQuotaV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicInterestRateLoanQuotaV5RespData
+		var ret []GetPublicInterestRateLoanQuotaV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicInterestRateLoanQuotaV5Resp) GetDataOk() (*GetPublicInterestRateLoanQuotaV5RespData, bool) {
+func (o *GetPublicInterestRateLoanQuotaV5Resp) GetDataOk() ([]GetPublicInterestRateLoanQuotaV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicInterestRateLoanQuotaV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicInterestRateLoanQuotaV5RespData and assigns it to the Data field.
-func (o *GetPublicInterestRateLoanQuotaV5Resp) SetData(v GetPublicInterestRateLoanQuotaV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicInterestRateLoanQuotaV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicInterestRateLoanQuotaV5Resp) SetData(v []GetPublicInterestRateLoanQuotaV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

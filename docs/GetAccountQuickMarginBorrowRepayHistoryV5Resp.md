@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountQuickMarginBorrowRepayHistoryV5RespData**](GetAccountQuickMarginBorrowRepayHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner**](GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetData() GetAccountQuickMarginBorrowRepayHistoryV5RespData`
+`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetData() []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetDataOk() (*GetAccountQuickMarginBorrowRepayHistoryV5RespData, bool)`
+`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetDataOk() (*[]GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) SetData(v GetAccountQuickMarginBorrowRepayHistoryV5RespData)`
+`func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) SetData(v []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradingBotPublicRsiBackTestingV5Resp{}
 // GetTradingBotPublicRsiBackTestingV5Resp struct for GetTradingBotPublicRsiBackTestingV5Resp
 type GetTradingBotPublicRsiBackTestingV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradingBotPublicRsiBackTestingV5RespData `json:"data,omitempty"`
+	Data []GetTradingBotPublicRsiBackTestingV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradingBotPublicRsiBackTestingV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetData() GetTradingBotPublicRsiBackTestingV5RespData {
+func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetData() []GetTradingBotPublicRsiBackTestingV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradingBotPublicRsiBackTestingV5RespData
+		var ret []GetTradingBotPublicRsiBackTestingV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetDataOk() (*GetTradingBotPublicRsiBackTestingV5RespData, bool) {
+func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetDataOk() ([]GetTradingBotPublicRsiBackTestingV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradingBotPublicRsiBackTestingV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradingBotPublicRsiBackTestingV5RespData and assigns it to the Data field.
-func (o *GetTradingBotPublicRsiBackTestingV5Resp) SetData(v GetTradingBotPublicRsiBackTestingV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradingBotPublicRsiBackTestingV5RespDataInner and assigns it to the Data field.
+func (o *GetTradingBotPublicRsiBackTestingV5Resp) SetData(v []GetTradingBotPublicRsiBackTestingV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

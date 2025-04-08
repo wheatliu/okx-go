@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateTradeCancelAllAfterV5RespData**](CreateTradeCancelAllAfterV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateTradeCancelAllAfterV5RespDataInner**](CreateTradeCancelAllAfterV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateTradeCancelAllAfterV5Resp) GetData() CreateTradeCancelAllAfterV5RespData`
+`func (o *CreateTradeCancelAllAfterV5Resp) GetData() []CreateTradeCancelAllAfterV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateTradeCancelAllAfterV5Resp) GetDataOk() (*CreateTradeCancelAllAfterV5RespData, bool)`
+`func (o *CreateTradeCancelAllAfterV5Resp) GetDataOk() (*[]CreateTradeCancelAllAfterV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateTradeCancelAllAfterV5Resp) SetData(v CreateTradeCancelAllAfterV5RespData)`
+`func (o *CreateTradeCancelAllAfterV5Resp) SetData(v []CreateTradeCancelAllAfterV5RespDataInner)`
 
 SetData sets Data field to given value.
 

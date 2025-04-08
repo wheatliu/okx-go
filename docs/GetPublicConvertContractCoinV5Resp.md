@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicConvertContractCoinV5RespData**](GetPublicConvertContractCoinV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicConvertContractCoinV5RespDataInner**](GetPublicConvertContractCoinV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicConvertContractCoinV5Resp) GetData() GetPublicConvertContractCoinV5RespData`
+`func (o *GetPublicConvertContractCoinV5Resp) GetData() []GetPublicConvertContractCoinV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicConvertContractCoinV5Resp) GetDataOk() (*GetPublicConvertContractCoinV5RespData, bool)`
+`func (o *GetPublicConvertContractCoinV5Resp) GetDataOk() (*[]GetPublicConvertContractCoinV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicConvertContractCoinV5Resp) SetData(v GetPublicConvertContractCoinV5RespData)`
+`func (o *GetPublicConvertContractCoinV5Resp) SetData(v []GetPublicConvertContractCoinV5RespDataInner)`
 
 SetData sets Data field to given value.
 

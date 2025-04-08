@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetRfqMakerInstrumentSettingsV5RespData**](GetRfqMakerInstrumentSettingsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetRfqMakerInstrumentSettingsV5RespDataInner**](GetRfqMakerInstrumentSettingsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetRfqMakerInstrumentSettingsV5Resp) GetData() GetRfqMakerInstrumentSettingsV5RespData`
+`func (o *GetRfqMakerInstrumentSettingsV5Resp) GetData() []GetRfqMakerInstrumentSettingsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetRfqMakerInstrumentSettingsV5Resp) GetDataOk() (*GetRfqMakerInstrumentSettingsV5RespData, bool)`
+`func (o *GetRfqMakerInstrumentSettingsV5Resp) GetDataOk() (*[]GetRfqMakerInstrumentSettingsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetRfqMakerInstrumentSettingsV5Resp) SetData(v GetRfqMakerInstrumentSettingsV5RespData)`
+`func (o *GetRfqMakerInstrumentSettingsV5Resp) SetData(v []GetRfqMakerInstrumentSettingsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

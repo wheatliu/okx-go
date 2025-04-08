@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotGridWithdrawIncomeV5Resp{}
 // CreateTradingBotGridWithdrawIncomeV5Resp struct for CreateTradingBotGridWithdrawIncomeV5Resp
 type CreateTradingBotGridWithdrawIncomeV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotGridWithdrawIncomeV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotGridWithdrawIncomeV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotGridWithdrawIncomeV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotGridWithdrawIncomeV5Resp) GetData() CreateTradingBotGridWithdrawIncomeV5RespData {
+func (o *CreateTradingBotGridWithdrawIncomeV5Resp) GetData() []CreateTradingBotGridWithdrawIncomeV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotGridWithdrawIncomeV5RespData
+		var ret []CreateTradingBotGridWithdrawIncomeV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotGridWithdrawIncomeV5Resp) GetDataOk() (*CreateTradingBotGridWithdrawIncomeV5RespData, bool) {
+func (o *CreateTradingBotGridWithdrawIncomeV5Resp) GetDataOk() ([]CreateTradingBotGridWithdrawIncomeV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotGridWithdrawIncomeV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotGridWithdrawIncomeV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotGridWithdrawIncomeV5Resp) SetData(v CreateTradingBotGridWithdrawIncomeV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotGridWithdrawIncomeV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotGridWithdrawIncomeV5Resp) SetData(v []CreateTradingBotGridWithdrawIncomeV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

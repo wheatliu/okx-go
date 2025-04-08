@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountTradeFeeV5RespData**](GetAccountTradeFeeV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountTradeFeeV5RespDataInner**](GetAccountTradeFeeV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountTradeFeeV5Resp) GetData() GetAccountTradeFeeV5RespData`
+`func (o *GetAccountTradeFeeV5Resp) GetData() []GetAccountTradeFeeV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountTradeFeeV5Resp) GetDataOk() (*GetAccountTradeFeeV5RespData, bool)`
+`func (o *GetAccountTradeFeeV5Resp) GetDataOk() (*[]GetAccountTradeFeeV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountTradeFeeV5Resp) SetData(v GetAccountTradeFeeV5RespData)`
+`func (o *GetAccountTradeFeeV5Resp) SetData(v []GetAccountTradeFeeV5RespDataInner)`
 
 SetData sets Data field to given value.
 

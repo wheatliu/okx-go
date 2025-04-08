@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradeEasyConvertHistoryV5RespData**](GetTradeEasyConvertHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradeEasyConvertHistoryV5RespDataInner**](GetTradeEasyConvertHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradeEasyConvertHistoryV5Resp) GetData() GetTradeEasyConvertHistoryV5RespData`
+`func (o *GetTradeEasyConvertHistoryV5Resp) GetData() []GetTradeEasyConvertHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradeEasyConvertHistoryV5Resp) GetDataOk() (*GetTradeEasyConvertHistoryV5RespData, bool)`
+`func (o *GetTradeEasyConvertHistoryV5Resp) GetDataOk() (*[]GetTradeEasyConvertHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradeEasyConvertHistoryV5Resp) SetData(v GetTradeEasyConvertHistoryV5RespData)`
+`func (o *GetTradeEasyConvertHistoryV5Resp) SetData(v []GetTradeEasyConvertHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

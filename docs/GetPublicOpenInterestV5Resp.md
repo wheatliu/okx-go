@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicOpenInterestV5RespData**](GetPublicOpenInterestV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicOpenInterestV5RespDataInner**](GetPublicOpenInterestV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicOpenInterestV5Resp) GetData() GetPublicOpenInterestV5RespData`
+`func (o *GetPublicOpenInterestV5Resp) GetData() []GetPublicOpenInterestV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicOpenInterestV5Resp) GetDataOk() (*GetPublicOpenInterestV5RespData, bool)`
+`func (o *GetPublicOpenInterestV5Resp) GetDataOk() (*[]GetPublicOpenInterestV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicOpenInterestV5Resp) SetData(v GetPublicOpenInterestV5RespData)`
+`func (o *GetPublicOpenInterestV5Resp) SetData(v []GetPublicOpenInterestV5RespDataInner)`
 
 SetData sets Data field to given value.
 

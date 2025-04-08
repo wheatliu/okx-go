@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetRubikStatMarginLoanRatioV5RespData**](GetRubikStatMarginLoanRatioV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetRubikStatMarginLoanRatioV5RespDataInner**](GetRubikStatMarginLoanRatioV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetRubikStatMarginLoanRatioV5Resp) GetData() GetRubikStatMarginLoanRatioV5RespData`
+`func (o *GetRubikStatMarginLoanRatioV5Resp) GetData() []GetRubikStatMarginLoanRatioV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetRubikStatMarginLoanRatioV5Resp) GetDataOk() (*GetRubikStatMarginLoanRatioV5RespData, bool)`
+`func (o *GetRubikStatMarginLoanRatioV5Resp) GetDataOk() (*[]GetRubikStatMarginLoanRatioV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetRubikStatMarginLoanRatioV5Resp) SetData(v GetRubikStatMarginLoanRatioV5RespData)`
+`func (o *GetRubikStatMarginLoanRatioV5Resp) SetData(v []GetRubikStatMarginLoanRatioV5RespDataInner)`
 
 SetData sets Data field to given value.
 

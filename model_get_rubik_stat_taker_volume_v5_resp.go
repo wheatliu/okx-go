@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatTakerVolumeV5Resp{}
 // GetRubikStatTakerVolumeV5Resp struct for GetRubikStatTakerVolumeV5Resp
 type GetRubikStatTakerVolumeV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRubikStatTakerVolumeV5RespData `json:"data,omitempty"`
+	Data []GetRubikStatTakerVolumeV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRubikStatTakerVolumeV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatTakerVolumeV5Resp) GetData() GetRubikStatTakerVolumeV5RespData {
+func (o *GetRubikStatTakerVolumeV5Resp) GetData() []GetRubikStatTakerVolumeV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRubikStatTakerVolumeV5RespData
+		var ret []GetRubikStatTakerVolumeV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatTakerVolumeV5Resp) GetDataOk() (*GetRubikStatTakerVolumeV5RespData, bool) {
+func (o *GetRubikStatTakerVolumeV5Resp) GetDataOk() ([]GetRubikStatTakerVolumeV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRubikStatTakerVolumeV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRubikStatTakerVolumeV5RespData and assigns it to the Data field.
-func (o *GetRubikStatTakerVolumeV5Resp) SetData(v GetRubikStatTakerVolumeV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRubikStatTakerVolumeV5RespDataInner and assigns it to the Data field.
+func (o *GetRubikStatTakerVolumeV5Resp) SetData(v []GetRubikStatTakerVolumeV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

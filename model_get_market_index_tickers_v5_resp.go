@@ -20,7 +20,7 @@ var _ MappedNullable = &GetMarketIndexTickersV5Resp{}
 // GetMarketIndexTickersV5Resp struct for GetMarketIndexTickersV5Resp
 type GetMarketIndexTickersV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetMarketIndexTickersV5RespData `json:"data,omitempty"`
+	Data []GetMarketIndexTickersV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetMarketIndexTickersV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetMarketIndexTickersV5Resp) GetData() GetMarketIndexTickersV5RespData {
+func (o *GetMarketIndexTickersV5Resp) GetData() []GetMarketIndexTickersV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetMarketIndexTickersV5RespData
+		var ret []GetMarketIndexTickersV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetMarketIndexTickersV5Resp) GetDataOk() (*GetMarketIndexTickersV5RespData, bool) {
+func (o *GetMarketIndexTickersV5Resp) GetDataOk() ([]GetMarketIndexTickersV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetMarketIndexTickersV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetMarketIndexTickersV5RespData and assigns it to the Data field.
-func (o *GetMarketIndexTickersV5Resp) SetData(v GetMarketIndexTickersV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetMarketIndexTickersV5RespDataInner and assigns it to the Data field.
+func (o *GetMarketIndexTickersV5Resp) SetData(v []GetMarketIndexTickersV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

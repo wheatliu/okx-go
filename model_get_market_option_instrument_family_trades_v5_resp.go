@@ -20,7 +20,7 @@ var _ MappedNullable = &GetMarketOptionInstrumentFamilyTradesV5Resp{}
 // GetMarketOptionInstrumentFamilyTradesV5Resp struct for GetMarketOptionInstrumentFamilyTradesV5Resp
 type GetMarketOptionInstrumentFamilyTradesV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetMarketOptionInstrumentFamilyTradesV5RespData `json:"data,omitempty"`
+	Data []GetMarketOptionInstrumentFamilyTradesV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) GetData() GetMarketOptionInstrumentFamilyTradesV5RespData {
+func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) GetData() []GetMarketOptionInstrumentFamilyTradesV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetMarketOptionInstrumentFamilyTradesV5RespData
+		var ret []GetMarketOptionInstrumentFamilyTradesV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) GetDataOk() (*GetMarketOptionInstrumentFamilyTradesV5RespData, bool) {
+func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) GetDataOk() ([]GetMarketOptionInstrumentFamilyTradesV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetMarketOptionInstrumentFamilyTradesV5RespData and assigns it to the Data field.
-func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) SetData(v GetMarketOptionInstrumentFamilyTradesV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetMarketOptionInstrumentFamilyTradesV5RespDataInner and assigns it to the Data field.
+func (o *GetMarketOptionInstrumentFamilyTradesV5Resp) SetData(v []GetMarketOptionInstrumentFamilyTradesV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicOpenInterestV5Resp{}
 // GetPublicOpenInterestV5Resp struct for GetPublicOpenInterestV5Resp
 type GetPublicOpenInterestV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicOpenInterestV5RespData `json:"data,omitempty"`
+	Data []GetPublicOpenInterestV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicOpenInterestV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicOpenInterestV5Resp) GetData() GetPublicOpenInterestV5RespData {
+func (o *GetPublicOpenInterestV5Resp) GetData() []GetPublicOpenInterestV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicOpenInterestV5RespData
+		var ret []GetPublicOpenInterestV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicOpenInterestV5Resp) GetDataOk() (*GetPublicOpenInterestV5RespData, bool) {
+func (o *GetPublicOpenInterestV5Resp) GetDataOk() ([]GetPublicOpenInterestV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicOpenInterestV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicOpenInterestV5RespData and assigns it to the Data field.
-func (o *GetPublicOpenInterestV5Resp) SetData(v GetPublicOpenInterestV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicOpenInterestV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicOpenInterestV5Resp) SetData(v []GetPublicOpenInterestV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

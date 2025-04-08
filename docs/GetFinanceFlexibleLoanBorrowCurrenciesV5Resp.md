@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetFinanceFlexibleLoanBorrowCurrenciesV5RespData**](GetFinanceFlexibleLoanBorrowCurrenciesV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner**](GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetData() GetFinanceFlexibleLoanBorrowCurrenciesV5RespData`
+`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetData() []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetDataOk() (*GetFinanceFlexibleLoanBorrowCurrenciesV5RespData, bool)`
+`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetDataOk() (*[]GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) SetData(v GetFinanceFlexibleLoanBorrowCurrenciesV5RespData)`
+`func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) SetData(v []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner)`
 
 SetData sets Data field to given value.
 

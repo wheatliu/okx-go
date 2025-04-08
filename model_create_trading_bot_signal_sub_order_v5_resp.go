@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotSignalSubOrderV5Resp{}
 // CreateTradingBotSignalSubOrderV5Resp struct for CreateTradingBotSignalSubOrderV5Resp
 type CreateTradingBotSignalSubOrderV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotSignalSubOrderV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotSignalSubOrderV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotSignalSubOrderV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotSignalSubOrderV5Resp) GetData() CreateTradingBotSignalSubOrderV5RespData {
+func (o *CreateTradingBotSignalSubOrderV5Resp) GetData() []CreateTradingBotSignalSubOrderV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotSignalSubOrderV5RespData
+		var ret []CreateTradingBotSignalSubOrderV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotSignalSubOrderV5Resp) GetDataOk() (*CreateTradingBotSignalSubOrderV5RespData, bool) {
+func (o *CreateTradingBotSignalSubOrderV5Resp) GetDataOk() ([]CreateTradingBotSignalSubOrderV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotSignalSubOrderV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotSignalSubOrderV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotSignalSubOrderV5Resp) SetData(v CreateTradingBotSignalSubOrderV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotSignalSubOrderV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotSignalSubOrderV5Resp) SetData(v []CreateTradingBotSignalSubOrderV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

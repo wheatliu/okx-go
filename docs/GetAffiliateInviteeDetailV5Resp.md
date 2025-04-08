@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAffiliateInviteeDetailV5RespData**](GetAffiliateInviteeDetailV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAffiliateInviteeDetailV5RespDataInner**](GetAffiliateInviteeDetailV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAffiliateInviteeDetailV5Resp) GetData() GetAffiliateInviteeDetailV5RespData`
+`func (o *GetAffiliateInviteeDetailV5Resp) GetData() []GetAffiliateInviteeDetailV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAffiliateInviteeDetailV5Resp) GetDataOk() (*GetAffiliateInviteeDetailV5RespData, bool)`
+`func (o *GetAffiliateInviteeDetailV5Resp) GetDataOk() (*[]GetAffiliateInviteeDetailV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAffiliateInviteeDetailV5Resp) SetData(v GetAffiliateInviteeDetailV5RespData)`
+`func (o *GetAffiliateInviteeDetailV5Resp) SetData(v []GetAffiliateInviteeDetailV5RespDataInner)`
 
 SetData sets Data field to given value.
 

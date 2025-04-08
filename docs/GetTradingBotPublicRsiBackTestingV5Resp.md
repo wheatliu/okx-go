@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradingBotPublicRsiBackTestingV5RespData**](GetTradingBotPublicRsiBackTestingV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradingBotPublicRsiBackTestingV5RespDataInner**](GetTradingBotPublicRsiBackTestingV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetData() GetTradingBotPublicRsiBackTestingV5RespData`
+`func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetData() []GetTradingBotPublicRsiBackTestingV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetDataOk() (*GetTradingBotPublicRsiBackTestingV5RespData, bool)`
+`func (o *GetTradingBotPublicRsiBackTestingV5Resp) GetDataOk() (*[]GetTradingBotPublicRsiBackTestingV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradingBotPublicRsiBackTestingV5Resp) SetData(v GetTradingBotPublicRsiBackTestingV5RespData)`
+`func (o *GetTradingBotPublicRsiBackTestingV5Resp) SetData(v []GetTradingBotPublicRsiBackTestingV5RespDataInner)`
 
 SetData sets Data field to given value.
 

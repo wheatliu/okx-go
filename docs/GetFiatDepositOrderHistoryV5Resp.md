@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetFiatDepositOrderHistoryV5RespData**](GetFiatDepositOrderHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetFiatDepositOrderHistoryV5RespDataInner**](GetFiatDepositOrderHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetFiatDepositOrderHistoryV5Resp) GetData() GetFiatDepositOrderHistoryV5RespData`
+`func (o *GetFiatDepositOrderHistoryV5Resp) GetData() []GetFiatDepositOrderHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetFiatDepositOrderHistoryV5Resp) GetDataOk() (*GetFiatDepositOrderHistoryV5RespData, bool)`
+`func (o *GetFiatDepositOrderHistoryV5Resp) GetDataOk() (*[]GetFiatDepositOrderHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetFiatDepositOrderHistoryV5Resp) SetData(v GetFiatDepositOrderHistoryV5RespData)`
+`func (o *GetFiatDepositOrderHistoryV5Resp) SetData(v []GetFiatDepositOrderHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

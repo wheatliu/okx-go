@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateAssetSubaccountTransferV5RespData**](CreateAssetSubaccountTransferV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateAssetSubaccountTransferV5RespDataInner**](CreateAssetSubaccountTransferV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateAssetSubaccountTransferV5Resp) GetData() CreateAssetSubaccountTransferV5RespData`
+`func (o *CreateAssetSubaccountTransferV5Resp) GetData() []CreateAssetSubaccountTransferV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateAssetSubaccountTransferV5Resp) GetDataOk() (*CreateAssetSubaccountTransferV5RespData, bool)`
+`func (o *CreateAssetSubaccountTransferV5Resp) GetDataOk() (*[]CreateAssetSubaccountTransferV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateAssetSubaccountTransferV5Resp) SetData(v CreateAssetSubaccountTransferV5RespData)`
+`func (o *CreateAssetSubaccountTransferV5Resp) SetData(v []CreateAssetSubaccountTransferV5RespDataInner)`
 
 SetData sets Data field to given value.
 

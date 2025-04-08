@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicDeliveryExerciseHistoryV5Resp{}
 // GetPublicDeliveryExerciseHistoryV5Resp struct for GetPublicDeliveryExerciseHistoryV5Resp
 type GetPublicDeliveryExerciseHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicDeliveryExerciseHistoryV5RespData `json:"data,omitempty"`
+	Data []GetPublicDeliveryExerciseHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicDeliveryExerciseHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetData() GetPublicDeliveryExerciseHistoryV5RespData {
+func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetData() []GetPublicDeliveryExerciseHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicDeliveryExerciseHistoryV5RespData
+		var ret []GetPublicDeliveryExerciseHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetDataOk() (*GetPublicDeliveryExerciseHistoryV5RespData, bool) {
+func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetDataOk() ([]GetPublicDeliveryExerciseHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicDeliveryExerciseHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicDeliveryExerciseHistoryV5RespData and assigns it to the Data field.
-func (o *GetPublicDeliveryExerciseHistoryV5Resp) SetData(v GetPublicDeliveryExerciseHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicDeliveryExerciseHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicDeliveryExerciseHistoryV5Resp) SetData(v []GetPublicDeliveryExerciseHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

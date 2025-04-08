@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradeAccountRateLimitV5RespData**](GetTradeAccountRateLimitV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradeAccountRateLimitV5RespDataInner**](GetTradeAccountRateLimitV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradeAccountRateLimitV5Resp) GetData() GetTradeAccountRateLimitV5RespData`
+`func (o *GetTradeAccountRateLimitV5Resp) GetData() []GetTradeAccountRateLimitV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradeAccountRateLimitV5Resp) GetDataOk() (*GetTradeAccountRateLimitV5RespData, bool)`
+`func (o *GetTradeAccountRateLimitV5Resp) GetDataOk() (*[]GetTradeAccountRateLimitV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradeAccountRateLimitV5Resp) SetData(v GetTradeAccountRateLimitV5RespData)`
+`func (o *GetTradeAccountRateLimitV5Resp) SetData(v []GetTradeAccountRateLimitV5RespDataInner)`
 
 SetData sets Data field to given value.
 

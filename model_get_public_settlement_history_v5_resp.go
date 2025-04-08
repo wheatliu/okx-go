@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicSettlementHistoryV5Resp{}
 // GetPublicSettlementHistoryV5Resp struct for GetPublicSettlementHistoryV5Resp
 type GetPublicSettlementHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicSettlementHistoryV5RespData `json:"data,omitempty"`
+	Data []GetPublicSettlementHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicSettlementHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicSettlementHistoryV5Resp) GetData() GetPublicSettlementHistoryV5RespData {
+func (o *GetPublicSettlementHistoryV5Resp) GetData() []GetPublicSettlementHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicSettlementHistoryV5RespData
+		var ret []GetPublicSettlementHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicSettlementHistoryV5Resp) GetDataOk() (*GetPublicSettlementHistoryV5RespData, bool) {
+func (o *GetPublicSettlementHistoryV5Resp) GetDataOk() ([]GetPublicSettlementHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicSettlementHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicSettlementHistoryV5RespData and assigns it to the Data field.
-func (o *GetPublicSettlementHistoryV5Resp) SetData(v GetPublicSettlementHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicSettlementHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicSettlementHistoryV5Resp) SetData(v []GetPublicSettlementHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

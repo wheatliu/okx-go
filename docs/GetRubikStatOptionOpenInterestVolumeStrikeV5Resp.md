@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetRubikStatOptionOpenInterestVolumeStrikeV5RespData**](GetRubikStatOptionOpenInterestVolumeStrikeV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetRubikStatOptionOpenInterestVolumeStrikeV5RespDataInner**](GetRubikStatOptionOpenInterestVolumeStrikeV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) GetData() GetRubikStatOptionOpenInterestVolumeStrikeV5RespData`
+`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) GetData() []GetRubikStatOptionOpenInterestVolumeStrikeV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) GetDataOk() (*GetRubikStatOptionOpenInterestVolumeStrikeV5RespData, bool)`
+`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) GetDataOk() (*[]GetRubikStatOptionOpenInterestVolumeStrikeV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) SetData(v GetRubikStatOptionOpenInterestVolumeStrikeV5RespData)`
+`func (o *GetRubikStatOptionOpenInterestVolumeStrikeV5Resp) SetData(v []GetRubikStatOptionOpenInterestVolumeStrikeV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingPublicLeadTradersV5Resp{}
 // GetCopytradingPublicLeadTradersV5Resp struct for GetCopytradingPublicLeadTradersV5Resp
 type GetCopytradingPublicLeadTradersV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingPublicLeadTradersV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingPublicLeadTradersV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingPublicLeadTradersV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingPublicLeadTradersV5Resp) GetData() GetCopytradingPublicLeadTradersV5RespData {
+func (o *GetCopytradingPublicLeadTradersV5Resp) GetData() []GetCopytradingPublicLeadTradersV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingPublicLeadTradersV5RespData
+		var ret []GetCopytradingPublicLeadTradersV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingPublicLeadTradersV5Resp) GetDataOk() (*GetCopytradingPublicLeadTradersV5RespData, bool) {
+func (o *GetCopytradingPublicLeadTradersV5Resp) GetDataOk() ([]GetCopytradingPublicLeadTradersV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingPublicLeadTradersV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingPublicLeadTradersV5RespData and assigns it to the Data field.
-func (o *GetCopytradingPublicLeadTradersV5Resp) SetData(v GetCopytradingPublicLeadTradersV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingPublicLeadTradersV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingPublicLeadTradersV5Resp) SetData(v []GetCopytradingPublicLeadTradersV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

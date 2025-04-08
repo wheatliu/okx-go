@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetFiatWithdrawalV5RespData**](GetFiatWithdrawalV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetFiatWithdrawalV5RespDataInner**](GetFiatWithdrawalV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetFiatWithdrawalV5Resp) GetData() GetFiatWithdrawalV5RespData`
+`func (o *GetFiatWithdrawalV5Resp) GetData() []GetFiatWithdrawalV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetFiatWithdrawalV5Resp) GetDataOk() (*GetFiatWithdrawalV5RespData, bool)`
+`func (o *GetFiatWithdrawalV5Resp) GetDataOk() (*[]GetFiatWithdrawalV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetFiatWithdrawalV5Resp) SetData(v GetFiatWithdrawalV5RespData)`
+`func (o *GetFiatWithdrawalV5Resp) SetData(v []GetFiatWithdrawalV5RespDataInner)`
 
 SetData sets Data field to given value.
 

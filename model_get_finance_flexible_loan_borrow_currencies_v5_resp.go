@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceFlexibleLoanBorrowCurrenciesV5Resp{}
 // GetFinanceFlexibleLoanBorrowCurrenciesV5Resp struct for GetFinanceFlexibleLoanBorrowCurrenciesV5Resp
 type GetFinanceFlexibleLoanBorrowCurrenciesV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceFlexibleLoanBorrowCurrenciesV5RespData `json:"data,omitempty"`
+	Data []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetData() GetFinanceFlexibleLoanBorrowCurrenciesV5RespData {
+func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetData() []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceFlexibleLoanBorrowCurrenciesV5RespData
+		var ret []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetDataOk() (*GetFinanceFlexibleLoanBorrowCurrenciesV5RespData, bool) {
+func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) GetDataOk() ([]GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceFlexibleLoanBorrowCurrenciesV5RespData and assigns it to the Data field.
-func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) SetData(v GetFinanceFlexibleLoanBorrowCurrenciesV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceFlexibleLoanBorrowCurrenciesV5Resp) SetData(v []GetFinanceFlexibleLoanBorrowCurrenciesV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

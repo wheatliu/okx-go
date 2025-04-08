@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAssetTransferStateV5Resp{}
 // GetAssetTransferStateV5Resp struct for GetAssetTransferStateV5Resp
 type GetAssetTransferStateV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAssetTransferStateV5RespData `json:"data,omitempty"`
+	Data []GetAssetTransferStateV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAssetTransferStateV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAssetTransferStateV5Resp) GetData() GetAssetTransferStateV5RespData {
+func (o *GetAssetTransferStateV5Resp) GetData() []GetAssetTransferStateV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAssetTransferStateV5RespData
+		var ret []GetAssetTransferStateV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAssetTransferStateV5Resp) GetDataOk() (*GetAssetTransferStateV5RespData, bool) {
+func (o *GetAssetTransferStateV5Resp) GetDataOk() ([]GetAssetTransferStateV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAssetTransferStateV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAssetTransferStateV5RespData and assigns it to the Data field.
-func (o *GetAssetTransferStateV5Resp) SetData(v GetAssetTransferStateV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAssetTransferStateV5RespDataInner and assigns it to the Data field.
+func (o *GetAssetTransferStateV5Resp) SetData(v []GetAssetTransferStateV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

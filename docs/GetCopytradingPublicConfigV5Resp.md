@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetCopytradingPublicConfigV5RespData**](GetCopytradingPublicConfigV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetCopytradingPublicConfigV5RespDataInner**](GetCopytradingPublicConfigV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetCopytradingPublicConfigV5Resp) GetData() GetCopytradingPublicConfigV5RespData`
+`func (o *GetCopytradingPublicConfigV5Resp) GetData() []GetCopytradingPublicConfigV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetCopytradingPublicConfigV5Resp) GetDataOk() (*GetCopytradingPublicConfigV5RespData, bool)`
+`func (o *GetCopytradingPublicConfigV5Resp) GetDataOk() (*[]GetCopytradingPublicConfigV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetCopytradingPublicConfigV5Resp) SetData(v GetCopytradingPublicConfigV5RespData)`
+`func (o *GetCopytradingPublicConfigV5Resp) SetData(v []GetCopytradingPublicConfigV5RespDataInner)`
 
 SetData sets Data field to given value.
 

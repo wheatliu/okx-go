@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradingBotGridOrdersAlgoHistoryV5Resp{}
 // GetTradingBotGridOrdersAlgoHistoryV5Resp struct for GetTradingBotGridOrdersAlgoHistoryV5Resp
 type GetTradingBotGridOrdersAlgoHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradingBotGridOrdersAlgoHistoryV5RespData `json:"data,omitempty"`
+	Data []GetTradingBotGridOrdersAlgoHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) GetData() GetTradingBotGridOrdersAlgoHistoryV5RespData {
+func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) GetData() []GetTradingBotGridOrdersAlgoHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradingBotGridOrdersAlgoHistoryV5RespData
+		var ret []GetTradingBotGridOrdersAlgoHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) GetDataOk() (*GetTradingBotGridOrdersAlgoHistoryV5RespData, bool) {
+func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) GetDataOk() ([]GetTradingBotGridOrdersAlgoHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradingBotGridOrdersAlgoHistoryV5RespData and assigns it to the Data field.
-func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) SetData(v GetTradingBotGridOrdersAlgoHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradingBotGridOrdersAlgoHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetTradingBotGridOrdersAlgoHistoryV5Resp) SetData(v []GetTradingBotGridOrdersAlgoHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

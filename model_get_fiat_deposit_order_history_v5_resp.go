@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFiatDepositOrderHistoryV5Resp{}
 // GetFiatDepositOrderHistoryV5Resp struct for GetFiatDepositOrderHistoryV5Resp
 type GetFiatDepositOrderHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFiatDepositOrderHistoryV5RespData `json:"data,omitempty"`
+	Data []GetFiatDepositOrderHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFiatDepositOrderHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFiatDepositOrderHistoryV5Resp) GetData() GetFiatDepositOrderHistoryV5RespData {
+func (o *GetFiatDepositOrderHistoryV5Resp) GetData() []GetFiatDepositOrderHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFiatDepositOrderHistoryV5RespData
+		var ret []GetFiatDepositOrderHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFiatDepositOrderHistoryV5Resp) GetDataOk() (*GetFiatDepositOrderHistoryV5RespData, bool) {
+func (o *GetFiatDepositOrderHistoryV5Resp) GetDataOk() ([]GetFiatDepositOrderHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFiatDepositOrderHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFiatDepositOrderHistoryV5RespData and assigns it to the Data field.
-func (o *GetFiatDepositOrderHistoryV5Resp) SetData(v GetFiatDepositOrderHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFiatDepositOrderHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetFiatDepositOrderHistoryV5Resp) SetData(v []GetFiatDepositOrderHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

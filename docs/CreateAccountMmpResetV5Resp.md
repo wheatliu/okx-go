@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateAccountMmpResetV5RespData**](CreateAccountMmpResetV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateAccountMmpResetV5RespDataInner**](CreateAccountMmpResetV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateAccountMmpResetV5Resp) GetData() CreateAccountMmpResetV5RespData`
+`func (o *CreateAccountMmpResetV5Resp) GetData() []CreateAccountMmpResetV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateAccountMmpResetV5Resp) GetDataOk() (*CreateAccountMmpResetV5RespData, bool)`
+`func (o *CreateAccountMmpResetV5Resp) GetDataOk() (*[]CreateAccountMmpResetV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateAccountMmpResetV5Resp) SetData(v CreateAccountMmpResetV5RespData)`
+`func (o *CreateAccountMmpResetV5Resp) SetData(v []CreateAccountMmpResetV5RespDataInner)`
 
 SetData sets Data field to given value.
 

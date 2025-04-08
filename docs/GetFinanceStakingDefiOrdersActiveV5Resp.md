@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetFinanceStakingDefiOrdersActiveV5RespData**](GetFinanceStakingDefiOrdersActiveV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetFinanceStakingDefiOrdersActiveV5RespDataInner**](GetFinanceStakingDefiOrdersActiveV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetData() GetFinanceStakingDefiOrdersActiveV5RespData`
+`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetData() []GetFinanceStakingDefiOrdersActiveV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetDataOk() (*GetFinanceStakingDefiOrdersActiveV5RespData, bool)`
+`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetDataOk() (*[]GetFinanceStakingDefiOrdersActiveV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) SetData(v GetFinanceStakingDefiOrdersActiveV5RespData)`
+`func (o *GetFinanceStakingDefiOrdersActiveV5Resp) SetData(v []GetFinanceStakingDefiOrdersActiveV5RespDataInner)`
 
 SetData sets Data field to given value.
 

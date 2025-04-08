@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateAccountSetCollateralAssetsV5RespData**](CreateAccountSetCollateralAssetsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateAccountSetCollateralAssetsV5RespDataInner**](CreateAccountSetCollateralAssetsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateAccountSetCollateralAssetsV5Resp) GetData() CreateAccountSetCollateralAssetsV5RespData`
+`func (o *CreateAccountSetCollateralAssetsV5Resp) GetData() []CreateAccountSetCollateralAssetsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateAccountSetCollateralAssetsV5Resp) GetDataOk() (*CreateAccountSetCollateralAssetsV5RespData, bool)`
+`func (o *CreateAccountSetCollateralAssetsV5Resp) GetDataOk() (*[]CreateAccountSetCollateralAssetsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateAccountSetCollateralAssetsV5Resp) SetData(v CreateAccountSetCollateralAssetsV5RespData)`
+`func (o *CreateAccountSetCollateralAssetsV5Resp) SetData(v []CreateAccountSetCollateralAssetsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

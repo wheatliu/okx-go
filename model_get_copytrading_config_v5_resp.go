@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingConfigV5Resp{}
 // GetCopytradingConfigV5Resp struct for GetCopytradingConfigV5Resp
 type GetCopytradingConfigV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingConfigV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingConfigV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingConfigV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingConfigV5Resp) GetData() GetCopytradingConfigV5RespData {
+func (o *GetCopytradingConfigV5Resp) GetData() []GetCopytradingConfigV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingConfigV5RespData
+		var ret []GetCopytradingConfigV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingConfigV5Resp) GetDataOk() (*GetCopytradingConfigV5RespData, bool) {
+func (o *GetCopytradingConfigV5Resp) GetDataOk() ([]GetCopytradingConfigV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingConfigV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingConfigV5RespData and assigns it to the Data field.
-func (o *GetCopytradingConfigV5Resp) SetData(v GetCopytradingConfigV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingConfigV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingConfigV5Resp) SetData(v []GetCopytradingConfigV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

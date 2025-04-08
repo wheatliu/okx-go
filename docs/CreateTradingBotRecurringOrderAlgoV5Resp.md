@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateTradingBotRecurringOrderAlgoV5RespData**](CreateTradingBotRecurringOrderAlgoV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateTradingBotRecurringOrderAlgoV5RespDataInner**](CreateTradingBotRecurringOrderAlgoV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) GetData() CreateTradingBotRecurringOrderAlgoV5RespData`
+`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) GetData() []CreateTradingBotRecurringOrderAlgoV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) GetDataOk() (*CreateTradingBotRecurringOrderAlgoV5RespData, bool)`
+`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) GetDataOk() (*[]CreateTradingBotRecurringOrderAlgoV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) SetData(v CreateTradingBotRecurringOrderAlgoV5RespData)`
+`func (o *CreateTradingBotRecurringOrderAlgoV5Resp) SetData(v []CreateTradingBotRecurringOrderAlgoV5RespDataInner)`
 
 SetData sets Data field to given value.
 

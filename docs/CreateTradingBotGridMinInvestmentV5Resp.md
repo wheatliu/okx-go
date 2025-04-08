@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateTradingBotGridMinInvestmentV5RespData**](CreateTradingBotGridMinInvestmentV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateTradingBotGridMinInvestmentV5RespDataInner**](CreateTradingBotGridMinInvestmentV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateTradingBotGridMinInvestmentV5Resp) GetData() CreateTradingBotGridMinInvestmentV5RespData`
+`func (o *CreateTradingBotGridMinInvestmentV5Resp) GetData() []CreateTradingBotGridMinInvestmentV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateTradingBotGridMinInvestmentV5Resp) GetDataOk() (*CreateTradingBotGridMinInvestmentV5RespData, bool)`
+`func (o *CreateTradingBotGridMinInvestmentV5Resp) GetDataOk() (*[]CreateTradingBotGridMinInvestmentV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateTradingBotGridMinInvestmentV5Resp) SetData(v CreateTradingBotGridMinInvestmentV5RespData)`
+`func (o *CreateTradingBotGridMinInvestmentV5Resp) SetData(v []CreateTradingBotGridMinInvestmentV5RespDataInner)`
 
 SetData sets Data field to given value.
 

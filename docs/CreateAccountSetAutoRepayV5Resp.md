@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateAccountSetAutoRepayV5RespData**](CreateAccountSetAutoRepayV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateAccountSetAutoRepayV5RespDataInner**](CreateAccountSetAutoRepayV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateAccountSetAutoRepayV5Resp) GetData() CreateAccountSetAutoRepayV5RespData`
+`func (o *CreateAccountSetAutoRepayV5Resp) GetData() []CreateAccountSetAutoRepayV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateAccountSetAutoRepayV5Resp) GetDataOk() (*CreateAccountSetAutoRepayV5RespData, bool)`
+`func (o *CreateAccountSetAutoRepayV5Resp) GetDataOk() (*[]CreateAccountSetAutoRepayV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateAccountSetAutoRepayV5Resp) SetData(v CreateAccountSetAutoRepayV5RespData)`
+`func (o *CreateAccountSetAutoRepayV5Resp) SetData(v []CreateAccountSetAutoRepayV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAssetBalancesV5Resp{}
 // GetAssetBalancesV5Resp struct for GetAssetBalancesV5Resp
 type GetAssetBalancesV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAssetBalancesV5RespData `json:"data,omitempty"`
+	Data []GetAssetBalancesV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAssetBalancesV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAssetBalancesV5Resp) GetData() GetAssetBalancesV5RespData {
+func (o *GetAssetBalancesV5Resp) GetData() []GetAssetBalancesV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAssetBalancesV5RespData
+		var ret []GetAssetBalancesV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAssetBalancesV5Resp) GetDataOk() (*GetAssetBalancesV5RespData, bool) {
+func (o *GetAssetBalancesV5Resp) GetDataOk() ([]GetAssetBalancesV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAssetBalancesV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAssetBalancesV5RespData and assigns it to the Data field.
-func (o *GetAssetBalancesV5Resp) SetData(v GetAssetBalancesV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAssetBalancesV5RespDataInner and assigns it to the Data field.
+func (o *GetAssetBalancesV5Resp) SetData(v []GetAssetBalancesV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

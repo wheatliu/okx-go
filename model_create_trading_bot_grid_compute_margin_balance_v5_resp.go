@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotGridComputeMarginBalanceV5Resp{}
 // CreateTradingBotGridComputeMarginBalanceV5Resp struct for CreateTradingBotGridComputeMarginBalanceV5Resp
 type CreateTradingBotGridComputeMarginBalanceV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotGridComputeMarginBalanceV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotGridComputeMarginBalanceV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) GetData() CreateTradingBotGridComputeMarginBalanceV5RespData {
+func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) GetData() []CreateTradingBotGridComputeMarginBalanceV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotGridComputeMarginBalanceV5RespData
+		var ret []CreateTradingBotGridComputeMarginBalanceV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) GetDataOk() (*CreateTradingBotGridComputeMarginBalanceV5RespData, bool) {
+func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) GetDataOk() ([]CreateTradingBotGridComputeMarginBalanceV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotGridComputeMarginBalanceV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) SetData(v CreateTradingBotGridComputeMarginBalanceV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotGridComputeMarginBalanceV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotGridComputeMarginBalanceV5Resp) SetData(v []CreateTradingBotGridComputeMarginBalanceV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

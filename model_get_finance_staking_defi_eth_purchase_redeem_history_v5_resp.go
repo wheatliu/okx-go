@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp{}
 // GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp struct for GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp
 type GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData `json:"data,omitempty"`
+	Data []GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) SetCode(v string) 
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) GetData() GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData {
+func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) GetData() []GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData
+		var ret []GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) GetDataOk() (*GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData, bool) {
+func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) GetDataOk() ([]GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData and assigns it to the Data field.
-func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) SetData(v GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp) SetData(v []GetFinanceStakingDefiEthPurchaseRedeemHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

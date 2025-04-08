@@ -20,7 +20,7 @@ var _ MappedNullable = &GetMarketCallAuctionDetailsV5Resp{}
 // GetMarketCallAuctionDetailsV5Resp struct for GetMarketCallAuctionDetailsV5Resp
 type GetMarketCallAuctionDetailsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetMarketCallAuctionDetailsV5RespData `json:"data,omitempty"`
+	Data []GetMarketCallAuctionDetailsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetMarketCallAuctionDetailsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetMarketCallAuctionDetailsV5Resp) GetData() GetMarketCallAuctionDetailsV5RespData {
+func (o *GetMarketCallAuctionDetailsV5Resp) GetData() []GetMarketCallAuctionDetailsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetMarketCallAuctionDetailsV5RespData
+		var ret []GetMarketCallAuctionDetailsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetMarketCallAuctionDetailsV5Resp) GetDataOk() (*GetMarketCallAuctionDetailsV5RespData, bool) {
+func (o *GetMarketCallAuctionDetailsV5Resp) GetDataOk() ([]GetMarketCallAuctionDetailsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetMarketCallAuctionDetailsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetMarketCallAuctionDetailsV5RespData and assigns it to the Data field.
-func (o *GetMarketCallAuctionDetailsV5Resp) SetData(v GetMarketCallAuctionDetailsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetMarketCallAuctionDetailsV5RespDataInner and assigns it to the Data field.
+func (o *GetMarketCallAuctionDetailsV5Resp) SetData(v []GetMarketCallAuctionDetailsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

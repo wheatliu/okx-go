@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradeOrdersHistoryArchiveV5Resp{}
 // GetTradeOrdersHistoryArchiveV5Resp struct for GetTradeOrdersHistoryArchiveV5Resp
 type GetTradeOrdersHistoryArchiveV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradeOrdersHistoryArchiveV5RespData `json:"data,omitempty"`
+	Data []GetTradeOrdersHistoryArchiveV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradeOrdersHistoryArchiveV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradeOrdersHistoryArchiveV5Resp) GetData() GetTradeOrdersHistoryArchiveV5RespData {
+func (o *GetTradeOrdersHistoryArchiveV5Resp) GetData() []GetTradeOrdersHistoryArchiveV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradeOrdersHistoryArchiveV5RespData
+		var ret []GetTradeOrdersHistoryArchiveV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradeOrdersHistoryArchiveV5Resp) GetDataOk() (*GetTradeOrdersHistoryArchiveV5RespData, bool) {
+func (o *GetTradeOrdersHistoryArchiveV5Resp) GetDataOk() ([]GetTradeOrdersHistoryArchiveV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradeOrdersHistoryArchiveV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradeOrdersHistoryArchiveV5RespData and assigns it to the Data field.
-func (o *GetTradeOrdersHistoryArchiveV5Resp) SetData(v GetTradeOrdersHistoryArchiveV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradeOrdersHistoryArchiveV5RespDataInner and assigns it to the Data field.
+func (o *GetTradeOrdersHistoryArchiveV5Resp) SetData(v []GetTradeOrdersHistoryArchiveV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingPublicWeeklyPnlV5Resp{}
 // GetCopytradingPublicWeeklyPnlV5Resp struct for GetCopytradingPublicWeeklyPnlV5Resp
 type GetCopytradingPublicWeeklyPnlV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingPublicWeeklyPnlV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingPublicWeeklyPnlV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingPublicWeeklyPnlV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetData() GetCopytradingPublicWeeklyPnlV5RespData {
+func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetData() []GetCopytradingPublicWeeklyPnlV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingPublicWeeklyPnlV5RespData
+		var ret []GetCopytradingPublicWeeklyPnlV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetDataOk() (*GetCopytradingPublicWeeklyPnlV5RespData, bool) {
+func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetDataOk() ([]GetCopytradingPublicWeeklyPnlV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingPublicWeeklyPnlV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingPublicWeeklyPnlV5RespData and assigns it to the Data field.
-func (o *GetCopytradingPublicWeeklyPnlV5Resp) SetData(v GetCopytradingPublicWeeklyPnlV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingPublicWeeklyPnlV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingPublicWeeklyPnlV5Resp) SetData(v []GetCopytradingPublicWeeklyPnlV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

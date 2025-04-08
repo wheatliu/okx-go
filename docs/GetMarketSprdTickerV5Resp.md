@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetMarketSprdTickerV5RespData**](GetMarketSprdTickerV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetMarketSprdTickerV5RespDataInner**](GetMarketSprdTickerV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetMarketSprdTickerV5Resp) GetData() GetMarketSprdTickerV5RespData`
+`func (o *GetMarketSprdTickerV5Resp) GetData() []GetMarketSprdTickerV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetMarketSprdTickerV5Resp) GetDataOk() (*GetMarketSprdTickerV5RespData, bool)`
+`func (o *GetMarketSprdTickerV5Resp) GetDataOk() (*[]GetMarketSprdTickerV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetMarketSprdTickerV5Resp) SetData(v GetMarketSprdTickerV5RespData)`
+`func (o *GetMarketSprdTickerV5Resp) SetData(v []GetMarketSprdTickerV5RespDataInner)`
 
 SetData sets Data field to given value.
 

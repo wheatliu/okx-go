@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAssetDepositWithdrawStatusV5Resp{}
 // GetAssetDepositWithdrawStatusV5Resp struct for GetAssetDepositWithdrawStatusV5Resp
 type GetAssetDepositWithdrawStatusV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAssetDepositWithdrawStatusV5RespData `json:"data,omitempty"`
+	Data []GetAssetDepositWithdrawStatusV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAssetDepositWithdrawStatusV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAssetDepositWithdrawStatusV5Resp) GetData() GetAssetDepositWithdrawStatusV5RespData {
+func (o *GetAssetDepositWithdrawStatusV5Resp) GetData() []GetAssetDepositWithdrawStatusV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAssetDepositWithdrawStatusV5RespData
+		var ret []GetAssetDepositWithdrawStatusV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAssetDepositWithdrawStatusV5Resp) GetDataOk() (*GetAssetDepositWithdrawStatusV5RespData, bool) {
+func (o *GetAssetDepositWithdrawStatusV5Resp) GetDataOk() ([]GetAssetDepositWithdrawStatusV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAssetDepositWithdrawStatusV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAssetDepositWithdrawStatusV5RespData and assigns it to the Data field.
-func (o *GetAssetDepositWithdrawStatusV5Resp) SetData(v GetAssetDepositWithdrawStatusV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAssetDepositWithdrawStatusV5RespDataInner and assigns it to the Data field.
+func (o *GetAssetDepositWithdrawStatusV5Resp) SetData(v []GetAssetDepositWithdrawStatusV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

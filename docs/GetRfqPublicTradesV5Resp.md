@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetRfqPublicTradesV5RespData**](GetRfqPublicTradesV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetRfqPublicTradesV5RespDataInner**](GetRfqPublicTradesV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetRfqPublicTradesV5Resp) GetData() GetRfqPublicTradesV5RespData`
+`func (o *GetRfqPublicTradesV5Resp) GetData() []GetRfqPublicTradesV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetRfqPublicTradesV5Resp) GetDataOk() (*GetRfqPublicTradesV5RespData, bool)`
+`func (o *GetRfqPublicTradesV5Resp) GetDataOk() (*[]GetRfqPublicTradesV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetRfqPublicTradesV5Resp) SetData(v GetRfqPublicTradesV5RespData)`
+`func (o *GetRfqPublicTradesV5Resp) SetData(v []GetRfqPublicTradesV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateAccountSpotManualBorrowRepayV5Resp{}
 // CreateAccountSpotManualBorrowRepayV5Resp struct for CreateAccountSpotManualBorrowRepayV5Resp
 type CreateAccountSpotManualBorrowRepayV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateAccountSpotManualBorrowRepayV5RespData `json:"data,omitempty"`
+	Data []CreateAccountSpotManualBorrowRepayV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateAccountSpotManualBorrowRepayV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateAccountSpotManualBorrowRepayV5Resp) GetData() CreateAccountSpotManualBorrowRepayV5RespData {
+func (o *CreateAccountSpotManualBorrowRepayV5Resp) GetData() []CreateAccountSpotManualBorrowRepayV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateAccountSpotManualBorrowRepayV5RespData
+		var ret []CreateAccountSpotManualBorrowRepayV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAccountSpotManualBorrowRepayV5Resp) GetDataOk() (*CreateAccountSpotManualBorrowRepayV5RespData, bool) {
+func (o *CreateAccountSpotManualBorrowRepayV5Resp) GetDataOk() ([]CreateAccountSpotManualBorrowRepayV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateAccountSpotManualBorrowRepayV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateAccountSpotManualBorrowRepayV5RespData and assigns it to the Data field.
-func (o *CreateAccountSpotManualBorrowRepayV5Resp) SetData(v CreateAccountSpotManualBorrowRepayV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateAccountSpotManualBorrowRepayV5RespDataInner and assigns it to the Data field.
+func (o *CreateAccountSpotManualBorrowRepayV5Resp) SetData(v []CreateAccountSpotManualBorrowRepayV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAssetAssetValuationV5RespData**](GetAssetAssetValuationV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAssetAssetValuationV5RespDataInner**](GetAssetAssetValuationV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAssetAssetValuationV5Resp) GetData() GetAssetAssetValuationV5RespData`
+`func (o *GetAssetAssetValuationV5Resp) GetData() []GetAssetAssetValuationV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAssetAssetValuationV5Resp) GetDataOk() (*GetAssetAssetValuationV5RespData, bool)`
+`func (o *GetAssetAssetValuationV5Resp) GetDataOk() (*[]GetAssetAssetValuationV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAssetAssetValuationV5Resp) SetData(v GetAssetAssetValuationV5RespData)`
+`func (o *GetAssetAssetValuationV5Resp) SetData(v []GetAssetAssetValuationV5RespDataInner)`
 
 SetData sets Data field to given value.
 

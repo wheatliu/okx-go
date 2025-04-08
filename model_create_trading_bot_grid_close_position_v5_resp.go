@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotGridClosePositionV5Resp{}
 // CreateTradingBotGridClosePositionV5Resp struct for CreateTradingBotGridClosePositionV5Resp
 type CreateTradingBotGridClosePositionV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotGridClosePositionV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotGridClosePositionV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotGridClosePositionV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotGridClosePositionV5Resp) GetData() CreateTradingBotGridClosePositionV5RespData {
+func (o *CreateTradingBotGridClosePositionV5Resp) GetData() []CreateTradingBotGridClosePositionV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotGridClosePositionV5RespData
+		var ret []CreateTradingBotGridClosePositionV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotGridClosePositionV5Resp) GetDataOk() (*CreateTradingBotGridClosePositionV5RespData, bool) {
+func (o *CreateTradingBotGridClosePositionV5Resp) GetDataOk() ([]CreateTradingBotGridClosePositionV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotGridClosePositionV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotGridClosePositionV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotGridClosePositionV5Resp) SetData(v CreateTradingBotGridClosePositionV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotGridClosePositionV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotGridClosePositionV5Resp) SetData(v []CreateTradingBotGridClosePositionV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

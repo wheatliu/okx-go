@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountSubaccountMaxWithdrawalV5Resp{}
 // GetAccountSubaccountMaxWithdrawalV5Resp struct for GetAccountSubaccountMaxWithdrawalV5Resp
 type GetAccountSubaccountMaxWithdrawalV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountSubaccountMaxWithdrawalV5RespData `json:"data,omitempty"`
+	Data []GetAccountSubaccountMaxWithdrawalV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountSubaccountMaxWithdrawalV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountSubaccountMaxWithdrawalV5Resp) GetData() GetAccountSubaccountMaxWithdrawalV5RespData {
+func (o *GetAccountSubaccountMaxWithdrawalV5Resp) GetData() []GetAccountSubaccountMaxWithdrawalV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountSubaccountMaxWithdrawalV5RespData
+		var ret []GetAccountSubaccountMaxWithdrawalV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountSubaccountMaxWithdrawalV5Resp) GetDataOk() (*GetAccountSubaccountMaxWithdrawalV5RespData, bool) {
+func (o *GetAccountSubaccountMaxWithdrawalV5Resp) GetDataOk() ([]GetAccountSubaccountMaxWithdrawalV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountSubaccountMaxWithdrawalV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountSubaccountMaxWithdrawalV5RespData and assigns it to the Data field.
-func (o *GetAccountSubaccountMaxWithdrawalV5Resp) SetData(v GetAccountSubaccountMaxWithdrawalV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountSubaccountMaxWithdrawalV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountSubaccountMaxWithdrawalV5Resp) SetData(v []GetAccountSubaccountMaxWithdrawalV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

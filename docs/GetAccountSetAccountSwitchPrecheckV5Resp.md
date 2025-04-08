@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountSetAccountSwitchPrecheckV5RespData**](GetAccountSetAccountSwitchPrecheckV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountSetAccountSwitchPrecheckV5RespDataInner**](GetAccountSetAccountSwitchPrecheckV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) GetData() GetAccountSetAccountSwitchPrecheckV5RespData`
+`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) GetData() []GetAccountSetAccountSwitchPrecheckV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) GetDataOk() (*GetAccountSetAccountSwitchPrecheckV5RespData, bool)`
+`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) GetDataOk() (*[]GetAccountSetAccountSwitchPrecheckV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) SetData(v GetAccountSetAccountSwitchPrecheckV5RespData)`
+`func (o *GetAccountSetAccountSwitchPrecheckV5Resp) SetData(v []GetAccountSetAccountSwitchPrecheckV5RespDataInner)`
 
 SetData sets Data field to given value.
 

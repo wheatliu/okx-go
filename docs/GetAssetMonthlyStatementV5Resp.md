@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAssetMonthlyStatementV5RespData**](GetAssetMonthlyStatementV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAssetMonthlyStatementV5RespDataInner**](GetAssetMonthlyStatementV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAssetMonthlyStatementV5Resp) GetData() GetAssetMonthlyStatementV5RespData`
+`func (o *GetAssetMonthlyStatementV5Resp) GetData() []GetAssetMonthlyStatementV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAssetMonthlyStatementV5Resp) GetDataOk() (*GetAssetMonthlyStatementV5RespData, bool)`
+`func (o *GetAssetMonthlyStatementV5Resp) GetDataOk() (*[]GetAssetMonthlyStatementV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAssetMonthlyStatementV5Resp) SetData(v GetAssetMonthlyStatementV5RespData)`
+`func (o *GetAssetMonthlyStatementV5Resp) SetData(v []GetAssetMonthlyStatementV5RespDataInner)`
 
 SetData sets Data field to given value.
 

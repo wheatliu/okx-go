@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateAccountPositionMarginBalanceV5Resp{}
 // CreateAccountPositionMarginBalanceV5Resp struct for CreateAccountPositionMarginBalanceV5Resp
 type CreateAccountPositionMarginBalanceV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateAccountPositionMarginBalanceV5RespData `json:"data,omitempty"`
+	Data []CreateAccountPositionMarginBalanceV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateAccountPositionMarginBalanceV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateAccountPositionMarginBalanceV5Resp) GetData() CreateAccountPositionMarginBalanceV5RespData {
+func (o *CreateAccountPositionMarginBalanceV5Resp) GetData() []CreateAccountPositionMarginBalanceV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateAccountPositionMarginBalanceV5RespData
+		var ret []CreateAccountPositionMarginBalanceV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAccountPositionMarginBalanceV5Resp) GetDataOk() (*CreateAccountPositionMarginBalanceV5RespData, bool) {
+func (o *CreateAccountPositionMarginBalanceV5Resp) GetDataOk() ([]CreateAccountPositionMarginBalanceV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateAccountPositionMarginBalanceV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateAccountPositionMarginBalanceV5RespData and assigns it to the Data field.
-func (o *CreateAccountPositionMarginBalanceV5Resp) SetData(v CreateAccountPositionMarginBalanceV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateAccountPositionMarginBalanceV5RespDataInner and assigns it to the Data field.
+func (o *CreateAccountPositionMarginBalanceV5Resp) SetData(v []CreateAccountPositionMarginBalanceV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

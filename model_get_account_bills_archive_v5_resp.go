@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountBillsArchiveV5Resp{}
 // GetAccountBillsArchiveV5Resp struct for GetAccountBillsArchiveV5Resp
 type GetAccountBillsArchiveV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountBillsArchiveV5RespData `json:"data,omitempty"`
+	Data []GetAccountBillsArchiveV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountBillsArchiveV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountBillsArchiveV5Resp) GetData() GetAccountBillsArchiveV5RespData {
+func (o *GetAccountBillsArchiveV5Resp) GetData() []GetAccountBillsArchiveV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountBillsArchiveV5RespData
+		var ret []GetAccountBillsArchiveV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountBillsArchiveV5Resp) GetDataOk() (*GetAccountBillsArchiveV5RespData, bool) {
+func (o *GetAccountBillsArchiveV5Resp) GetDataOk() ([]GetAccountBillsArchiveV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountBillsArchiveV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountBillsArchiveV5RespData and assigns it to the Data field.
-func (o *GetAccountBillsArchiveV5Resp) SetData(v GetAccountBillsArchiveV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountBillsArchiveV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountBillsArchiveV5Resp) SetData(v []GetAccountBillsArchiveV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceSavingsLendingRateHistoryV5Resp{}
 // GetFinanceSavingsLendingRateHistoryV5Resp struct for GetFinanceSavingsLendingRateHistoryV5Resp
 type GetFinanceSavingsLendingRateHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceSavingsLendingRateHistoryV5RespData `json:"data,omitempty"`
+	Data []GetFinanceSavingsLendingRateHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceSavingsLendingRateHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceSavingsLendingRateHistoryV5Resp) GetData() GetFinanceSavingsLendingRateHistoryV5RespData {
+func (o *GetFinanceSavingsLendingRateHistoryV5Resp) GetData() []GetFinanceSavingsLendingRateHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceSavingsLendingRateHistoryV5RespData
+		var ret []GetFinanceSavingsLendingRateHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceSavingsLendingRateHistoryV5Resp) GetDataOk() (*GetFinanceSavingsLendingRateHistoryV5RespData, bool) {
+func (o *GetFinanceSavingsLendingRateHistoryV5Resp) GetDataOk() ([]GetFinanceSavingsLendingRateHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceSavingsLendingRateHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceSavingsLendingRateHistoryV5RespData and assigns it to the Data field.
-func (o *GetFinanceSavingsLendingRateHistoryV5Resp) SetData(v GetFinanceSavingsLendingRateHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceSavingsLendingRateHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceSavingsLendingRateHistoryV5Resp) SetData(v []GetFinanceSavingsLendingRateHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

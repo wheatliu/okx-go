@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicInsuranceFundV5Resp{}
 // GetPublicInsuranceFundV5Resp struct for GetPublicInsuranceFundV5Resp
 type GetPublicInsuranceFundV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicInsuranceFundV5RespData `json:"data,omitempty"`
+	Data []GetPublicInsuranceFundV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicInsuranceFundV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicInsuranceFundV5Resp) GetData() GetPublicInsuranceFundV5RespData {
+func (o *GetPublicInsuranceFundV5Resp) GetData() []GetPublicInsuranceFundV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicInsuranceFundV5RespData
+		var ret []GetPublicInsuranceFundV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicInsuranceFundV5Resp) GetDataOk() (*GetPublicInsuranceFundV5RespData, bool) {
+func (o *GetPublicInsuranceFundV5Resp) GetDataOk() ([]GetPublicInsuranceFundV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicInsuranceFundV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicInsuranceFundV5RespData and assigns it to the Data field.
-func (o *GetPublicInsuranceFundV5Resp) SetData(v GetPublicInsuranceFundV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicInsuranceFundV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicInsuranceFundV5Resp) SetData(v []GetPublicInsuranceFundV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

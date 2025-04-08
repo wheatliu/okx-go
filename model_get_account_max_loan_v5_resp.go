@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountMaxLoanV5Resp{}
 // GetAccountMaxLoanV5Resp struct for GetAccountMaxLoanV5Resp
 type GetAccountMaxLoanV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountMaxLoanV5RespData `json:"data,omitempty"`
+	Data []GetAccountMaxLoanV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountMaxLoanV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountMaxLoanV5Resp) GetData() GetAccountMaxLoanV5RespData {
+func (o *GetAccountMaxLoanV5Resp) GetData() []GetAccountMaxLoanV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountMaxLoanV5RespData
+		var ret []GetAccountMaxLoanV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountMaxLoanV5Resp) GetDataOk() (*GetAccountMaxLoanV5RespData, bool) {
+func (o *GetAccountMaxLoanV5Resp) GetDataOk() ([]GetAccountMaxLoanV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountMaxLoanV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountMaxLoanV5RespData and assigns it to the Data field.
-func (o *GetAccountMaxLoanV5Resp) SetData(v GetAccountMaxLoanV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountMaxLoanV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountMaxLoanV5Resp) SetData(v []GetAccountMaxLoanV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

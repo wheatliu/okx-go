@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingTotalUnrealizedProfitSharingV5Resp{}
 // GetCopytradingTotalUnrealizedProfitSharingV5Resp struct for GetCopytradingTotalUnrealizedProfitSharingV5Resp
 type GetCopytradingTotalUnrealizedProfitSharingV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingTotalUnrealizedProfitSharingV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) GetData() GetCopytradingTotalUnrealizedProfitSharingV5RespData {
+func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) GetData() []GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingTotalUnrealizedProfitSharingV5RespData
+		var ret []GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) GetDataOk() (*GetCopytradingTotalUnrealizedProfitSharingV5RespData, bool) {
+func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) GetDataOk() ([]GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingTotalUnrealizedProfitSharingV5RespData and assigns it to the Data field.
-func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) SetData(v GetCopytradingTotalUnrealizedProfitSharingV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingTotalUnrealizedProfitSharingV5Resp) SetData(v []GetCopytradingTotalUnrealizedProfitSharingV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

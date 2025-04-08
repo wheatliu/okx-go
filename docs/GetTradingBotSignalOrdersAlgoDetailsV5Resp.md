@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradingBotSignalOrdersAlgoDetailsV5RespData**](GetTradingBotSignalOrdersAlgoDetailsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradingBotSignalOrdersAlgoDetailsV5RespDataInner**](GetTradingBotSignalOrdersAlgoDetailsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) GetData() GetTradingBotSignalOrdersAlgoDetailsV5RespData`
+`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) GetData() []GetTradingBotSignalOrdersAlgoDetailsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) GetDataOk() (*GetTradingBotSignalOrdersAlgoDetailsV5RespData, bool)`
+`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) GetDataOk() (*[]GetTradingBotSignalOrdersAlgoDetailsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) SetData(v GetTradingBotSignalOrdersAlgoDetailsV5RespData)`
+`func (o *GetTradingBotSignalOrdersAlgoDetailsV5Resp) SetData(v []GetTradingBotSignalOrdersAlgoDetailsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

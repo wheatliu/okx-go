@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateFiatCancelWithdrawalV5RespData**](CreateFiatCancelWithdrawalV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateFiatCancelWithdrawalV5RespDataInner**](CreateFiatCancelWithdrawalV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateFiatCancelWithdrawalV5Resp) GetData() CreateFiatCancelWithdrawalV5RespData`
+`func (o *CreateFiatCancelWithdrawalV5Resp) GetData() []CreateFiatCancelWithdrawalV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateFiatCancelWithdrawalV5Resp) GetDataOk() (*CreateFiatCancelWithdrawalV5RespData, bool)`
+`func (o *CreateFiatCancelWithdrawalV5Resp) GetDataOk() (*[]CreateFiatCancelWithdrawalV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateFiatCancelWithdrawalV5Resp) SetData(v CreateFiatCancelWithdrawalV5RespData)`
+`func (o *CreateFiatCancelWithdrawalV5Resp) SetData(v []CreateFiatCancelWithdrawalV5RespDataInner)`
 
 SetData sets Data field to given value.
 

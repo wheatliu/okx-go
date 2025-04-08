@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradeOneClickRepayCurrencyListV2V5Resp{}
 // GetTradeOneClickRepayCurrencyListV2V5Resp struct for GetTradeOneClickRepayCurrencyListV2V5Resp
 type GetTradeOneClickRepayCurrencyListV2V5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradeOneClickRepayCurrencyListV2V5RespData `json:"data,omitempty"`
+	Data []GetTradeOneClickRepayCurrencyListV2V5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) GetData() GetTradeOneClickRepayCurrencyListV2V5RespData {
+func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) GetData() []GetTradeOneClickRepayCurrencyListV2V5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradeOneClickRepayCurrencyListV2V5RespData
+		var ret []GetTradeOneClickRepayCurrencyListV2V5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) GetDataOk() (*GetTradeOneClickRepayCurrencyListV2V5RespData, bool) {
+func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) GetDataOk() ([]GetTradeOneClickRepayCurrencyListV2V5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradeOneClickRepayCurrencyListV2V5RespData and assigns it to the Data field.
-func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) SetData(v GetTradeOneClickRepayCurrencyListV2V5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradeOneClickRepayCurrencyListV2V5RespDataInner and assigns it to the Data field.
+func (o *GetTradeOneClickRepayCurrencyListV2V5Resp) SetData(v []GetTradeOneClickRepayCurrencyListV2V5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

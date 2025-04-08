@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicInterestRateLoanQuotaV5RespData**](GetPublicInterestRateLoanQuotaV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicInterestRateLoanQuotaV5RespDataInner**](GetPublicInterestRateLoanQuotaV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicInterestRateLoanQuotaV5Resp) GetData() GetPublicInterestRateLoanQuotaV5RespData`
+`func (o *GetPublicInterestRateLoanQuotaV5Resp) GetData() []GetPublicInterestRateLoanQuotaV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicInterestRateLoanQuotaV5Resp) GetDataOk() (*GetPublicInterestRateLoanQuotaV5RespData, bool)`
+`func (o *GetPublicInterestRateLoanQuotaV5Resp) GetDataOk() (*[]GetPublicInterestRateLoanQuotaV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicInterestRateLoanQuotaV5Resp) SetData(v GetPublicInterestRateLoanQuotaV5RespData)`
+`func (o *GetPublicInterestRateLoanQuotaV5Resp) SetData(v []GetPublicInterestRateLoanQuotaV5RespDataInner)`
 
 SetData sets Data field to given value.
 

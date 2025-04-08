@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetMarketIndexComponentsV5RespData**](GetMarketIndexComponentsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetMarketIndexComponentsV5RespDataInner**](GetMarketIndexComponentsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetMarketIndexComponentsV5Resp) GetData() GetMarketIndexComponentsV5RespData`
+`func (o *GetMarketIndexComponentsV5Resp) GetData() []GetMarketIndexComponentsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetMarketIndexComponentsV5Resp) GetDataOk() (*GetMarketIndexComponentsV5RespData, bool)`
+`func (o *GetMarketIndexComponentsV5Resp) GetDataOk() (*[]GetMarketIndexComponentsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetMarketIndexComponentsV5Resp) SetData(v GetMarketIndexComponentsV5RespData)`
+`func (o *GetMarketIndexComponentsV5Resp) SetData(v []GetMarketIndexComponentsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

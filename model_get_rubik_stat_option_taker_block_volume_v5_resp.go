@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatOptionTakerBlockVolumeV5Resp{}
 // GetRubikStatOptionTakerBlockVolumeV5Resp struct for GetRubikStatOptionTakerBlockVolumeV5Resp
 type GetRubikStatOptionTakerBlockVolumeV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRubikStatOptionTakerBlockVolumeV5RespData `json:"data,omitempty"`
+	Data []GetRubikStatOptionTakerBlockVolumeV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) GetData() GetRubikStatOptionTakerBlockVolumeV5RespData {
+func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) GetData() []GetRubikStatOptionTakerBlockVolumeV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRubikStatOptionTakerBlockVolumeV5RespData
+		var ret []GetRubikStatOptionTakerBlockVolumeV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) GetDataOk() (*GetRubikStatOptionTakerBlockVolumeV5RespData, bool) {
+func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) GetDataOk() ([]GetRubikStatOptionTakerBlockVolumeV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRubikStatOptionTakerBlockVolumeV5RespData and assigns it to the Data field.
-func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) SetData(v GetRubikStatOptionTakerBlockVolumeV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRubikStatOptionTakerBlockVolumeV5RespDataInner and assigns it to the Data field.
+func (o *GetRubikStatOptionTakerBlockVolumeV5Resp) SetData(v []GetRubikStatOptionTakerBlockVolumeV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

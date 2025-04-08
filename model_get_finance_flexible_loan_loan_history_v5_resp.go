@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceFlexibleLoanLoanHistoryV5Resp{}
 // GetFinanceFlexibleLoanLoanHistoryV5Resp struct for GetFinanceFlexibleLoanLoanHistoryV5Resp
 type GetFinanceFlexibleLoanLoanHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceFlexibleLoanLoanHistoryV5RespData `json:"data,omitempty"`
+	Data []GetFinanceFlexibleLoanLoanHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) GetData() GetFinanceFlexibleLoanLoanHistoryV5RespData {
+func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) GetData() []GetFinanceFlexibleLoanLoanHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceFlexibleLoanLoanHistoryV5RespData
+		var ret []GetFinanceFlexibleLoanLoanHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) GetDataOk() (*GetFinanceFlexibleLoanLoanHistoryV5RespData, bool) {
+func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) GetDataOk() ([]GetFinanceFlexibleLoanLoanHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceFlexibleLoanLoanHistoryV5RespData and assigns it to the Data field.
-func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) SetData(v GetFinanceFlexibleLoanLoanHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceFlexibleLoanLoanHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceFlexibleLoanLoanHistoryV5Resp) SetData(v []GetFinanceFlexibleLoanLoanHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

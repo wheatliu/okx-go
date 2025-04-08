@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradeOrderAlgoV5Resp{}
 // GetTradeOrderAlgoV5Resp struct for GetTradeOrderAlgoV5Resp
 type GetTradeOrderAlgoV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradeOrderAlgoV5RespData `json:"data,omitempty"`
+	Data []GetTradeOrderAlgoV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradeOrderAlgoV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradeOrderAlgoV5Resp) GetData() GetTradeOrderAlgoV5RespData {
+func (o *GetTradeOrderAlgoV5Resp) GetData() []GetTradeOrderAlgoV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradeOrderAlgoV5RespData
+		var ret []GetTradeOrderAlgoV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradeOrderAlgoV5Resp) GetDataOk() (*GetTradeOrderAlgoV5RespData, bool) {
+func (o *GetTradeOrderAlgoV5Resp) GetDataOk() ([]GetTradeOrderAlgoV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradeOrderAlgoV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradeOrderAlgoV5RespData and assigns it to the Data field.
-func (o *GetTradeOrderAlgoV5Resp) SetData(v GetTradeOrderAlgoV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradeOrderAlgoV5RespDataInner and assigns it to the Data field.
+func (o *GetTradeOrderAlgoV5Resp) SetData(v []GetTradeOrderAlgoV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

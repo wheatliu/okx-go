@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceStakingDefiOffersV5Resp{}
 // GetFinanceStakingDefiOffersV5Resp struct for GetFinanceStakingDefiOffersV5Resp
 type GetFinanceStakingDefiOffersV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceStakingDefiOffersV5RespData `json:"data,omitempty"`
+	Data []GetFinanceStakingDefiOffersV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceStakingDefiOffersV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceStakingDefiOffersV5Resp) GetData() GetFinanceStakingDefiOffersV5RespData {
+func (o *GetFinanceStakingDefiOffersV5Resp) GetData() []GetFinanceStakingDefiOffersV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceStakingDefiOffersV5RespData
+		var ret []GetFinanceStakingDefiOffersV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceStakingDefiOffersV5Resp) GetDataOk() (*GetFinanceStakingDefiOffersV5RespData, bool) {
+func (o *GetFinanceStakingDefiOffersV5Resp) GetDataOk() ([]GetFinanceStakingDefiOffersV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceStakingDefiOffersV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceStakingDefiOffersV5RespData and assigns it to the Data field.
-func (o *GetFinanceStakingDefiOffersV5Resp) SetData(v GetFinanceStakingDefiOffersV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceStakingDefiOffersV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceStakingDefiOffersV5Resp) SetData(v []GetFinanceStakingDefiOffersV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

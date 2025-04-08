@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetUsersPartnerIfRebateV5RespData**](GetUsersPartnerIfRebateV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetUsersPartnerIfRebateV5RespDataInner**](GetUsersPartnerIfRebateV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetUsersPartnerIfRebateV5Resp) GetData() GetUsersPartnerIfRebateV5RespData`
+`func (o *GetUsersPartnerIfRebateV5Resp) GetData() []GetUsersPartnerIfRebateV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() (*GetUsersPartnerIfRebateV5RespData, bool)`
+`func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() (*[]GetUsersPartnerIfRebateV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetUsersPartnerIfRebateV5Resp) SetData(v GetUsersPartnerIfRebateV5RespData)`
+`func (o *GetUsersPartnerIfRebateV5Resp) SetData(v []GetUsersPartnerIfRebateV5RespDataInner)`
 
 SetData sets Data field to given value.
 

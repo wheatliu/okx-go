@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateCopytradingFirstCopySettingsV5Resp{}
 // CreateCopytradingFirstCopySettingsV5Resp struct for CreateCopytradingFirstCopySettingsV5Resp
 type CreateCopytradingFirstCopySettingsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateCopytradingAmendCopySettingsV5RespData `json:"data,omitempty"`
+	Data []CreateCopytradingAmendCopySettingsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateCopytradingFirstCopySettingsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateCopytradingFirstCopySettingsV5Resp) GetData() CreateCopytradingAmendCopySettingsV5RespData {
+func (o *CreateCopytradingFirstCopySettingsV5Resp) GetData() []CreateCopytradingAmendCopySettingsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateCopytradingAmendCopySettingsV5RespData
+		var ret []CreateCopytradingAmendCopySettingsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateCopytradingFirstCopySettingsV5Resp) GetDataOk() (*CreateCopytradingAmendCopySettingsV5RespData, bool) {
+func (o *CreateCopytradingFirstCopySettingsV5Resp) GetDataOk() ([]CreateCopytradingAmendCopySettingsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateCopytradingFirstCopySettingsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateCopytradingAmendCopySettingsV5RespData and assigns it to the Data field.
-func (o *CreateCopytradingFirstCopySettingsV5Resp) SetData(v CreateCopytradingAmendCopySettingsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateCopytradingAmendCopySettingsV5RespDataInner and assigns it to the Data field.
+func (o *CreateCopytradingFirstCopySettingsV5Resp) SetData(v []CreateCopytradingAmendCopySettingsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

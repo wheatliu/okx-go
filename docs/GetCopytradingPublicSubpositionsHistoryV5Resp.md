@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetCopytradingPublicSubpositionsHistoryV5RespData**](GetCopytradingPublicSubpositionsHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetCopytradingPublicSubpositionsHistoryV5RespDataInner**](GetCopytradingPublicSubpositionsHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) GetData() GetCopytradingPublicSubpositionsHistoryV5RespData`
+`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) GetData() []GetCopytradingPublicSubpositionsHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) GetDataOk() (*GetCopytradingPublicSubpositionsHistoryV5RespData, bool)`
+`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) GetDataOk() (*[]GetCopytradingPublicSubpositionsHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) SetData(v GetCopytradingPublicSubpositionsHistoryV5RespData)`
+`func (o *GetCopytradingPublicSubpositionsHistoryV5Resp) SetData(v []GetCopytradingPublicSubpositionsHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

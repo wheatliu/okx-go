@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicPositionTiersV5RespData**](GetPublicPositionTiersV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicPositionTiersV5RespDataInner**](GetPublicPositionTiersV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicPositionTiersV5Resp) GetData() GetPublicPositionTiersV5RespData`
+`func (o *GetPublicPositionTiersV5Resp) GetData() []GetPublicPositionTiersV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicPositionTiersV5Resp) GetDataOk() (*GetPublicPositionTiersV5RespData, bool)`
+`func (o *GetPublicPositionTiersV5Resp) GetDataOk() (*[]GetPublicPositionTiersV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicPositionTiersV5Resp) SetData(v GetPublicPositionTiersV5RespData)`
+`func (o *GetPublicPositionTiersV5Resp) SetData(v []GetPublicPositionTiersV5RespDataInner)`
 
 SetData sets Data field to given value.
 

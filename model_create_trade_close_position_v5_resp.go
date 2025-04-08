@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradeClosePositionV5Resp{}
 // CreateTradeClosePositionV5Resp struct for CreateTradeClosePositionV5Resp
 type CreateTradeClosePositionV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradeClosePositionV5RespData `json:"data,omitempty"`
+	Data []CreateTradeClosePositionV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradeClosePositionV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradeClosePositionV5Resp) GetData() CreateTradeClosePositionV5RespData {
+func (o *CreateTradeClosePositionV5Resp) GetData() []CreateTradeClosePositionV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradeClosePositionV5RespData
+		var ret []CreateTradeClosePositionV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradeClosePositionV5Resp) GetDataOk() (*CreateTradeClosePositionV5RespData, bool) {
+func (o *CreateTradeClosePositionV5Resp) GetDataOk() ([]CreateTradeClosePositionV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradeClosePositionV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradeClosePositionV5RespData and assigns it to the Data field.
-func (o *CreateTradeClosePositionV5Resp) SetData(v CreateTradeClosePositionV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradeClosePositionV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradeClosePositionV5Resp) SetData(v []CreateTradeClosePositionV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

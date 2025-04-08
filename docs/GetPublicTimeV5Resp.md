@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicTimeV5RespData**](GetPublicTimeV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicTimeV5RespDataInner**](GetPublicTimeV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicTimeV5Resp) GetData() GetPublicTimeV5RespData`
+`func (o *GetPublicTimeV5Resp) GetData() []GetPublicTimeV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicTimeV5Resp) GetDataOk() (*GetPublicTimeV5RespData, bool)`
+`func (o *GetPublicTimeV5Resp) GetDataOk() (*[]GetPublicTimeV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicTimeV5Resp) SetData(v GetPublicTimeV5RespData)`
+`func (o *GetPublicTimeV5Resp) SetData(v []GetPublicTimeV5RespDataInner)`
 
 SetData sets Data field to given value.
 

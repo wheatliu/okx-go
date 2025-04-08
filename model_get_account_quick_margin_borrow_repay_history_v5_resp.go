@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountQuickMarginBorrowRepayHistoryV5Resp{}
 // GetAccountQuickMarginBorrowRepayHistoryV5Resp struct for GetAccountQuickMarginBorrowRepayHistoryV5Resp
 type GetAccountQuickMarginBorrowRepayHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountQuickMarginBorrowRepayHistoryV5RespData `json:"data,omitempty"`
+	Data []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetData() GetAccountQuickMarginBorrowRepayHistoryV5RespData {
+func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetData() []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountQuickMarginBorrowRepayHistoryV5RespData
+		var ret []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetDataOk() (*GetAccountQuickMarginBorrowRepayHistoryV5RespData, bool) {
+func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) GetDataOk() ([]GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountQuickMarginBorrowRepayHistoryV5RespData and assigns it to the Data field.
-func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) SetData(v GetAccountQuickMarginBorrowRepayHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountQuickMarginBorrowRepayHistoryV5Resp) SetData(v []GetAccountQuickMarginBorrowRepayHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

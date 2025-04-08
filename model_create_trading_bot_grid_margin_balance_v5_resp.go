@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotGridMarginBalanceV5Resp{}
 // CreateTradingBotGridMarginBalanceV5Resp struct for CreateTradingBotGridMarginBalanceV5Resp
 type CreateTradingBotGridMarginBalanceV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotGridMarginBalanceV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotGridMarginBalanceV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotGridMarginBalanceV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotGridMarginBalanceV5Resp) GetData() CreateTradingBotGridMarginBalanceV5RespData {
+func (o *CreateTradingBotGridMarginBalanceV5Resp) GetData() []CreateTradingBotGridMarginBalanceV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotGridMarginBalanceV5RespData
+		var ret []CreateTradingBotGridMarginBalanceV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotGridMarginBalanceV5Resp) GetDataOk() (*CreateTradingBotGridMarginBalanceV5RespData, bool) {
+func (o *CreateTradingBotGridMarginBalanceV5Resp) GetDataOk() ([]CreateTradingBotGridMarginBalanceV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotGridMarginBalanceV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotGridMarginBalanceV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotGridMarginBalanceV5Resp) SetData(v CreateTradingBotGridMarginBalanceV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotGridMarginBalanceV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotGridMarginBalanceV5Resp) SetData(v []CreateTradingBotGridMarginBalanceV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

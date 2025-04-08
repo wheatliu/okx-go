@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingCurrentSubpositionsV5Resp{}
 // GetCopytradingCurrentSubpositionsV5Resp struct for GetCopytradingCurrentSubpositionsV5Resp
 type GetCopytradingCurrentSubpositionsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingCurrentSubpositionsV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingCurrentSubpositionsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingCurrentSubpositionsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingCurrentSubpositionsV5Resp) GetData() GetCopytradingCurrentSubpositionsV5RespData {
+func (o *GetCopytradingCurrentSubpositionsV5Resp) GetData() []GetCopytradingCurrentSubpositionsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingCurrentSubpositionsV5RespData
+		var ret []GetCopytradingCurrentSubpositionsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingCurrentSubpositionsV5Resp) GetDataOk() (*GetCopytradingCurrentSubpositionsV5RespData, bool) {
+func (o *GetCopytradingCurrentSubpositionsV5Resp) GetDataOk() ([]GetCopytradingCurrentSubpositionsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingCurrentSubpositionsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingCurrentSubpositionsV5RespData and assigns it to the Data field.
-func (o *GetCopytradingCurrentSubpositionsV5Resp) SetData(v GetCopytradingCurrentSubpositionsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingCurrentSubpositionsV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingCurrentSubpositionsV5Resp) SetData(v []GetCopytradingCurrentSubpositionsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

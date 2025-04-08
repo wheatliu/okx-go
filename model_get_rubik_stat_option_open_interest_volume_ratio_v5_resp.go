@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatOptionOpenInterestVolumeRatioV5Resp{}
 // GetRubikStatOptionOpenInterestVolumeRatioV5Resp struct for GetRubikStatOptionOpenInterestVolumeRatioV5Resp
 type GetRubikStatOptionOpenInterestVolumeRatioV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRubikStatOptionOpenInterestVolumeRatioV5RespData `json:"data,omitempty"`
+	Data []GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) GetData() GetRubikStatOptionOpenInterestVolumeRatioV5RespData {
+func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) GetData() []GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRubikStatOptionOpenInterestVolumeRatioV5RespData
+		var ret []GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) GetDataOk() (*GetRubikStatOptionOpenInterestVolumeRatioV5RespData, bool) {
+func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) GetDataOk() ([]GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRubikStatOptionOpenInterestVolumeRatioV5RespData and assigns it to the Data field.
-func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) SetData(v GetRubikStatOptionOpenInterestVolumeRatioV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner and assigns it to the Data field.
+func (o *GetRubikStatOptionOpenInterestVolumeRatioV5Resp) SetData(v []GetRubikStatOptionOpenInterestVolumeRatioV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

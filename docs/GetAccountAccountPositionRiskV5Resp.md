@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountAccountPositionRiskV5RespData**](GetAccountAccountPositionRiskV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountAccountPositionRiskV5RespDataInner**](GetAccountAccountPositionRiskV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountAccountPositionRiskV5Resp) GetData() GetAccountAccountPositionRiskV5RespData`
+`func (o *GetAccountAccountPositionRiskV5Resp) GetData() []GetAccountAccountPositionRiskV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountAccountPositionRiskV5Resp) GetDataOk() (*GetAccountAccountPositionRiskV5RespData, bool)`
+`func (o *GetAccountAccountPositionRiskV5Resp) GetDataOk() (*[]GetAccountAccountPositionRiskV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountAccountPositionRiskV5Resp) SetData(v GetAccountAccountPositionRiskV5RespData)`
+`func (o *GetAccountAccountPositionRiskV5Resp) SetData(v []GetAccountAccountPositionRiskV5RespDataInner)`
 
 SetData sets Data field to given value.
 

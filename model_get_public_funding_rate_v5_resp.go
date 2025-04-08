@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicFundingRateV5Resp{}
 // GetPublicFundingRateV5Resp struct for GetPublicFundingRateV5Resp
 type GetPublicFundingRateV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicFundingRateV5RespData `json:"data,omitempty"`
+	Data []GetPublicFundingRateV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicFundingRateV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicFundingRateV5Resp) GetData() GetPublicFundingRateV5RespData {
+func (o *GetPublicFundingRateV5Resp) GetData() []GetPublicFundingRateV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicFundingRateV5RespData
+		var ret []GetPublicFundingRateV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicFundingRateV5Resp) GetDataOk() (*GetPublicFundingRateV5RespData, bool) {
+func (o *GetPublicFundingRateV5Resp) GetDataOk() ([]GetPublicFundingRateV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicFundingRateV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicFundingRateV5RespData and assigns it to the Data field.
-func (o *GetPublicFundingRateV5Resp) SetData(v GetPublicFundingRateV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicFundingRateV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicFundingRateV5Resp) SetData(v []GetPublicFundingRateV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

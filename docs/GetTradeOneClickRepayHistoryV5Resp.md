@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradeOneClickRepayHistoryV5RespData**](GetTradeOneClickRepayHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradeOneClickRepayHistoryV5RespDataInner**](GetTradeOneClickRepayHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradeOneClickRepayHistoryV5Resp) GetData() GetTradeOneClickRepayHistoryV5RespData`
+`func (o *GetTradeOneClickRepayHistoryV5Resp) GetData() []GetTradeOneClickRepayHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradeOneClickRepayHistoryV5Resp) GetDataOk() (*GetTradeOneClickRepayHistoryV5RespData, bool)`
+`func (o *GetTradeOneClickRepayHistoryV5Resp) GetDataOk() (*[]GetTradeOneClickRepayHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradeOneClickRepayHistoryV5Resp) SetData(v GetTradeOneClickRepayHistoryV5RespData)`
+`func (o *GetTradeOneClickRepayHistoryV5Resp) SetData(v []GetTradeOneClickRepayHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

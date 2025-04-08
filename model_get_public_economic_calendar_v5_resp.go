@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicEconomicCalendarV5Resp{}
 // GetPublicEconomicCalendarV5Resp struct for GetPublicEconomicCalendarV5Resp
 type GetPublicEconomicCalendarV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicEconomicCalendarV5RespData `json:"data,omitempty"`
+	Data []GetPublicEconomicCalendarV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicEconomicCalendarV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicEconomicCalendarV5Resp) GetData() GetPublicEconomicCalendarV5RespData {
+func (o *GetPublicEconomicCalendarV5Resp) GetData() []GetPublicEconomicCalendarV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicEconomicCalendarV5RespData
+		var ret []GetPublicEconomicCalendarV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicEconomicCalendarV5Resp) GetDataOk() (*GetPublicEconomicCalendarV5RespData, bool) {
+func (o *GetPublicEconomicCalendarV5Resp) GetDataOk() ([]GetPublicEconomicCalendarV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicEconomicCalendarV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicEconomicCalendarV5RespData and assigns it to the Data field.
-func (o *GetPublicEconomicCalendarV5Resp) SetData(v GetPublicEconomicCalendarV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicEconomicCalendarV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicEconomicCalendarV5Resp) SetData(v []GetPublicEconomicCalendarV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

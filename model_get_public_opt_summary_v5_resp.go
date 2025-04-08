@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicOptSummaryV5Resp{}
 // GetPublicOptSummaryV5Resp struct for GetPublicOptSummaryV5Resp
 type GetPublicOptSummaryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicOptSummaryV5RespData `json:"data,omitempty"`
+	Data []GetPublicOptSummaryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicOptSummaryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicOptSummaryV5Resp) GetData() GetPublicOptSummaryV5RespData {
+func (o *GetPublicOptSummaryV5Resp) GetData() []GetPublicOptSummaryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicOptSummaryV5RespData
+		var ret []GetPublicOptSummaryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicOptSummaryV5Resp) GetDataOk() (*GetPublicOptSummaryV5RespData, bool) {
+func (o *GetPublicOptSummaryV5Resp) GetDataOk() ([]GetPublicOptSummaryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicOptSummaryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicOptSummaryV5RespData and assigns it to the Data field.
-func (o *GetPublicOptSummaryV5Resp) SetData(v GetPublicOptSummaryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicOptSummaryV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicOptSummaryV5Resp) SetData(v []GetPublicOptSummaryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

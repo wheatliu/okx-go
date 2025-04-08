@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountBillsArchiveV5RespData**](GetAccountBillsArchiveV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountBillsArchiveV5RespDataInner**](GetAccountBillsArchiveV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountBillsArchiveV5Resp) GetData() GetAccountBillsArchiveV5RespData`
+`func (o *GetAccountBillsArchiveV5Resp) GetData() []GetAccountBillsArchiveV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountBillsArchiveV5Resp) GetDataOk() (*GetAccountBillsArchiveV5RespData, bool)`
+`func (o *GetAccountBillsArchiveV5Resp) GetDataOk() (*[]GetAccountBillsArchiveV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountBillsArchiveV5Resp) SetData(v GetAccountBillsArchiveV5RespData)`
+`func (o *GetAccountBillsArchiveV5Resp) SetData(v []GetAccountBillsArchiveV5RespDataInner)`
 
 SetData sets Data field to given value.
 

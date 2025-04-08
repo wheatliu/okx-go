@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetTradeEasyConvertCurrencyListV5RespData**](GetTradeEasyConvertCurrencyListV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetTradeEasyConvertCurrencyListV5RespDataInner**](GetTradeEasyConvertCurrencyListV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetTradeEasyConvertCurrencyListV5Resp) GetData() GetTradeEasyConvertCurrencyListV5RespData`
+`func (o *GetTradeEasyConvertCurrencyListV5Resp) GetData() []GetTradeEasyConvertCurrencyListV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetTradeEasyConvertCurrencyListV5Resp) GetDataOk() (*GetTradeEasyConvertCurrencyListV5RespData, bool)`
+`func (o *GetTradeEasyConvertCurrencyListV5Resp) GetDataOk() (*[]GetTradeEasyConvertCurrencyListV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetTradeEasyConvertCurrencyListV5Resp) SetData(v GetTradeEasyConvertCurrencyListV5RespData)`
+`func (o *GetTradeEasyConvertCurrencyListV5Resp) SetData(v []GetTradeEasyConvertCurrencyListV5RespDataInner)`
 
 SetData sets Data field to given value.
 

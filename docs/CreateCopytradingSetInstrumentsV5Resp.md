@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateCopytradingSetInstrumentsV5RespData**](CreateCopytradingSetInstrumentsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateCopytradingSetInstrumentsV5RespDataInner**](CreateCopytradingSetInstrumentsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateCopytradingSetInstrumentsV5Resp) GetData() CreateCopytradingSetInstrumentsV5RespData`
+`func (o *CreateCopytradingSetInstrumentsV5Resp) GetData() []CreateCopytradingSetInstrumentsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateCopytradingSetInstrumentsV5Resp) GetDataOk() (*CreateCopytradingSetInstrumentsV5RespData, bool)`
+`func (o *CreateCopytradingSetInstrumentsV5Resp) GetDataOk() (*[]CreateCopytradingSetInstrumentsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateCopytradingSetInstrumentsV5Resp) SetData(v CreateCopytradingSetInstrumentsV5RespData)`
+`func (o *CreateCopytradingSetInstrumentsV5Resp) SetData(v []CreateCopytradingSetInstrumentsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

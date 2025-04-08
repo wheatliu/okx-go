@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceStakingDefiEthApyHistoryV5Resp{}
 // GetFinanceStakingDefiEthApyHistoryV5Resp struct for GetFinanceStakingDefiEthApyHistoryV5Resp
 type GetFinanceStakingDefiEthApyHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceStakingDefiEthApyHistoryV5RespData `json:"data,omitempty"`
+	Data []GetFinanceStakingDefiEthApyHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) GetData() GetFinanceStakingDefiEthApyHistoryV5RespData {
+func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) GetData() []GetFinanceStakingDefiEthApyHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceStakingDefiEthApyHistoryV5RespData
+		var ret []GetFinanceStakingDefiEthApyHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) GetDataOk() (*GetFinanceStakingDefiEthApyHistoryV5RespData, bool) {
+func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) GetDataOk() ([]GetFinanceStakingDefiEthApyHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceStakingDefiEthApyHistoryV5RespData and assigns it to the Data field.
-func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) SetData(v GetFinanceStakingDefiEthApyHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceStakingDefiEthApyHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceStakingDefiEthApyHistoryV5Resp) SetData(v []GetFinanceStakingDefiEthApyHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

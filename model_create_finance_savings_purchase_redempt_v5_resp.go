@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateFinanceSavingsPurchaseRedemptV5Resp{}
 // CreateFinanceSavingsPurchaseRedemptV5Resp struct for CreateFinanceSavingsPurchaseRedemptV5Resp
 type CreateFinanceSavingsPurchaseRedemptV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateFinanceSavingsPurchaseRedemptV5RespData `json:"data,omitempty"`
+	Data []CreateFinanceSavingsPurchaseRedemptV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetData() CreateFinanceSavingsPurchaseRedemptV5RespData {
+func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetData() []CreateFinanceSavingsPurchaseRedemptV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateFinanceSavingsPurchaseRedemptV5RespData
+		var ret []CreateFinanceSavingsPurchaseRedemptV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetDataOk() (*CreateFinanceSavingsPurchaseRedemptV5RespData, bool) {
+func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetDataOk() ([]CreateFinanceSavingsPurchaseRedemptV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateFinanceSavingsPurchaseRedemptV5RespData and assigns it to the Data field.
-func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) SetData(v CreateFinanceSavingsPurchaseRedemptV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateFinanceSavingsPurchaseRedemptV5RespDataInner and assigns it to the Data field.
+func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) SetData(v []CreateFinanceSavingsPurchaseRedemptV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

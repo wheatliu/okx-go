@@ -20,7 +20,7 @@ var _ MappedNullable = &GetFinanceStakingDefiOrdersActiveV5Resp{}
 // GetFinanceStakingDefiOrdersActiveV5Resp struct for GetFinanceStakingDefiOrdersActiveV5Resp
 type GetFinanceStakingDefiOrdersActiveV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetFinanceStakingDefiOrdersActiveV5RespData `json:"data,omitempty"`
+	Data []GetFinanceStakingDefiOrdersActiveV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetFinanceStakingDefiOrdersActiveV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetData() GetFinanceStakingDefiOrdersActiveV5RespData {
+func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetData() []GetFinanceStakingDefiOrdersActiveV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetFinanceStakingDefiOrdersActiveV5RespData
+		var ret []GetFinanceStakingDefiOrdersActiveV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetDataOk() (*GetFinanceStakingDefiOrdersActiveV5RespData, bool) {
+func (o *GetFinanceStakingDefiOrdersActiveV5Resp) GetDataOk() ([]GetFinanceStakingDefiOrdersActiveV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetFinanceStakingDefiOrdersActiveV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetFinanceStakingDefiOrdersActiveV5RespData and assigns it to the Data field.
-func (o *GetFinanceStakingDefiOrdersActiveV5Resp) SetData(v GetFinanceStakingDefiOrdersActiveV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetFinanceStakingDefiOrdersActiveV5RespDataInner and assigns it to the Data field.
+func (o *GetFinanceStakingDefiOrdersActiveV5Resp) SetData(v []GetFinanceStakingDefiOrdersActiveV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

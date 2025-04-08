@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRfqCounterpartiesV5Resp{}
 // GetRfqCounterpartiesV5Resp struct for GetRfqCounterpartiesV5Resp
 type GetRfqCounterpartiesV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRfqCounterpartiesV5RespData `json:"data,omitempty"`
+	Data []GetRfqCounterpartiesV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRfqCounterpartiesV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRfqCounterpartiesV5Resp) GetData() GetRfqCounterpartiesV5RespData {
+func (o *GetRfqCounterpartiesV5Resp) GetData() []GetRfqCounterpartiesV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRfqCounterpartiesV5RespData
+		var ret []GetRfqCounterpartiesV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRfqCounterpartiesV5Resp) GetDataOk() (*GetRfqCounterpartiesV5RespData, bool) {
+func (o *GetRfqCounterpartiesV5Resp) GetDataOk() ([]GetRfqCounterpartiesV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRfqCounterpartiesV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRfqCounterpartiesV5RespData and assigns it to the Data field.
-func (o *GetRfqCounterpartiesV5Resp) SetData(v GetRfqCounterpartiesV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRfqCounterpartiesV5RespDataInner and assigns it to the Data field.
+func (o *GetRfqCounterpartiesV5Resp) SetData(v []GetRfqCounterpartiesV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

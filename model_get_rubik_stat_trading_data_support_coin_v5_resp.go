@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatTradingDataSupportCoinV5Resp{}
 // GetRubikStatTradingDataSupportCoinV5Resp struct for GetRubikStatTradingDataSupportCoinV5Resp
 type GetRubikStatTradingDataSupportCoinV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRubikStatTradingDataSupportCoinV5RespData `json:"data,omitempty"`
+	Data []GetRubikStatTradingDataSupportCoinV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRubikStatTradingDataSupportCoinV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatTradingDataSupportCoinV5Resp) GetData() GetRubikStatTradingDataSupportCoinV5RespData {
+func (o *GetRubikStatTradingDataSupportCoinV5Resp) GetData() []GetRubikStatTradingDataSupportCoinV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRubikStatTradingDataSupportCoinV5RespData
+		var ret []GetRubikStatTradingDataSupportCoinV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatTradingDataSupportCoinV5Resp) GetDataOk() (*GetRubikStatTradingDataSupportCoinV5RespData, bool) {
+func (o *GetRubikStatTradingDataSupportCoinV5Resp) GetDataOk() ([]GetRubikStatTradingDataSupportCoinV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRubikStatTradingDataSupportCoinV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRubikStatTradingDataSupportCoinV5RespData and assigns it to the Data field.
-func (o *GetRubikStatTradingDataSupportCoinV5Resp) SetData(v GetRubikStatTradingDataSupportCoinV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRubikStatTradingDataSupportCoinV5RespDataInner and assigns it to the Data field.
+func (o *GetRubikStatTradingDataSupportCoinV5Resp) SetData(v []GetRubikStatTradingDataSupportCoinV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

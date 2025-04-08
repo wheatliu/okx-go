@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetRfqMmpConfigV5RespData**](GetRfqMmpConfigV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetRfqMmpConfigV5RespDataInner**](GetRfqMmpConfigV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetRfqMmpConfigV5Resp) GetData() GetRfqMmpConfigV5RespData`
+`func (o *GetRfqMmpConfigV5Resp) GetData() []GetRfqMmpConfigV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetRfqMmpConfigV5Resp) GetDataOk() (*GetRfqMmpConfigV5RespData, bool)`
+`func (o *GetRfqMmpConfigV5Resp) GetDataOk() (*[]GetRfqMmpConfigV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetRfqMmpConfigV5Resp) SetData(v GetRfqMmpConfigV5RespData)`
+`func (o *GetRfqMmpConfigV5Resp) SetData(v []GetRfqMmpConfigV5RespDataInner)`
 
 SetData sets Data field to given value.
 

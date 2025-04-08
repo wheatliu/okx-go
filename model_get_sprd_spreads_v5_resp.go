@@ -20,7 +20,7 @@ var _ MappedNullable = &GetSprdSpreadsV5Resp{}
 // GetSprdSpreadsV5Resp struct for GetSprdSpreadsV5Resp
 type GetSprdSpreadsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetSprdSpreadsV5RespData `json:"data,omitempty"`
+	Data []GetSprdSpreadsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetSprdSpreadsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetSprdSpreadsV5Resp) GetData() GetSprdSpreadsV5RespData {
+func (o *GetSprdSpreadsV5Resp) GetData() []GetSprdSpreadsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetSprdSpreadsV5RespData
+		var ret []GetSprdSpreadsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetSprdSpreadsV5Resp) GetDataOk() (*GetSprdSpreadsV5RespData, bool) {
+func (o *GetSprdSpreadsV5Resp) GetDataOk() ([]GetSprdSpreadsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetSprdSpreadsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetSprdSpreadsV5RespData and assigns it to the Data field.
-func (o *GetSprdSpreadsV5Resp) SetData(v GetSprdSpreadsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetSprdSpreadsV5RespDataInner and assigns it to the Data field.
+func (o *GetSprdSpreadsV5Resp) SetData(v []GetSprdSpreadsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

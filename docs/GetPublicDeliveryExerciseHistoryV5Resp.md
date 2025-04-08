@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicDeliveryExerciseHistoryV5RespData**](GetPublicDeliveryExerciseHistoryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicDeliveryExerciseHistoryV5RespDataInner**](GetPublicDeliveryExerciseHistoryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetData() GetPublicDeliveryExerciseHistoryV5RespData`
+`func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetData() []GetPublicDeliveryExerciseHistoryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetDataOk() (*GetPublicDeliveryExerciseHistoryV5RespData, bool)`
+`func (o *GetPublicDeliveryExerciseHistoryV5Resp) GetDataOk() (*[]GetPublicDeliveryExerciseHistoryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicDeliveryExerciseHistoryV5Resp) SetData(v GetPublicDeliveryExerciseHistoryV5RespData)`
+`func (o *GetPublicDeliveryExerciseHistoryV5Resp) SetData(v []GetPublicDeliveryExerciseHistoryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

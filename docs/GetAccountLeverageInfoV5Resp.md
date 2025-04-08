@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountLeverageInfoV5RespData**](GetAccountLeverageInfoV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountLeverageInfoV5RespDataInner**](GetAccountLeverageInfoV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountLeverageInfoV5Resp) GetData() GetAccountLeverageInfoV5RespData`
+`func (o *GetAccountLeverageInfoV5Resp) GetData() []GetAccountLeverageInfoV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountLeverageInfoV5Resp) GetDataOk() (*GetAccountLeverageInfoV5RespData, bool)`
+`func (o *GetAccountLeverageInfoV5Resp) GetDataOk() (*[]GetAccountLeverageInfoV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountLeverageInfoV5Resp) SetData(v GetAccountLeverageInfoV5RespData)`
+`func (o *GetAccountLeverageInfoV5Resp) SetData(v []GetAccountLeverageInfoV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateFinanceSavingsPurchaseRedemptV5RespData**](CreateFinanceSavingsPurchaseRedemptV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateFinanceSavingsPurchaseRedemptV5RespDataInner**](CreateFinanceSavingsPurchaseRedemptV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetData() CreateFinanceSavingsPurchaseRedemptV5RespData`
+`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetData() []CreateFinanceSavingsPurchaseRedemptV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetDataOk() (*CreateFinanceSavingsPurchaseRedemptV5RespData, bool)`
+`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) GetDataOk() (*[]CreateFinanceSavingsPurchaseRedemptV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) SetData(v CreateFinanceSavingsPurchaseRedemptV5RespData)`
+`func (o *CreateFinanceSavingsPurchaseRedemptV5Resp) SetData(v []CreateFinanceSavingsPurchaseRedemptV5RespDataInner)`
 
 SetData sets Data field to given value.
 

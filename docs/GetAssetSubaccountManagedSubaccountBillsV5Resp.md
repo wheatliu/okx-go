@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAssetSubaccountManagedSubaccountBillsV5RespData**](GetAssetSubaccountManagedSubaccountBillsV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAssetSubaccountManagedSubaccountBillsV5RespDataInner**](GetAssetSubaccountManagedSubaccountBillsV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) GetData() GetAssetSubaccountManagedSubaccountBillsV5RespData`
+`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) GetData() []GetAssetSubaccountManagedSubaccountBillsV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) GetDataOk() (*GetAssetSubaccountManagedSubaccountBillsV5RespData, bool)`
+`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) GetDataOk() (*[]GetAssetSubaccountManagedSubaccountBillsV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) SetData(v GetAssetSubaccountManagedSubaccountBillsV5RespData)`
+`func (o *GetAssetSubaccountManagedSubaccountBillsV5Resp) SetData(v []GetAssetSubaccountManagedSubaccountBillsV5RespDataInner)`
 
 SetData sets Data field to given value.
 

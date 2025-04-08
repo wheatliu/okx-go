@@ -20,7 +20,7 @@ var _ MappedNullable = &GetUsersPartnerIfRebateV5Resp{}
 // GetUsersPartnerIfRebateV5Resp struct for GetUsersPartnerIfRebateV5Resp
 type GetUsersPartnerIfRebateV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetUsersPartnerIfRebateV5RespData `json:"data,omitempty"`
+	Data []GetUsersPartnerIfRebateV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetUsersPartnerIfRebateV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetUsersPartnerIfRebateV5Resp) GetData() GetUsersPartnerIfRebateV5RespData {
+func (o *GetUsersPartnerIfRebateV5Resp) GetData() []GetUsersPartnerIfRebateV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetUsersPartnerIfRebateV5RespData
+		var ret []GetUsersPartnerIfRebateV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() (*GetUsersPartnerIfRebateV5RespData, bool) {
+func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() ([]GetUsersPartnerIfRebateV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetUsersPartnerIfRebateV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetUsersPartnerIfRebateV5RespData and assigns it to the Data field.
-func (o *GetUsersPartnerIfRebateV5Resp) SetData(v GetUsersPartnerIfRebateV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetUsersPartnerIfRebateV5RespDataInner and assigns it to the Data field.
+func (o *GetUsersPartnerIfRebateV5Resp) SetData(v []GetUsersPartnerIfRebateV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

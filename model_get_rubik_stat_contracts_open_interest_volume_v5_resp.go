@@ -20,7 +20,7 @@ var _ MappedNullable = &GetRubikStatContractsOpenInterestVolumeV5Resp{}
 // GetRubikStatContractsOpenInterestVolumeV5Resp struct for GetRubikStatContractsOpenInterestVolumeV5Resp
 type GetRubikStatContractsOpenInterestVolumeV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetRubikStatContractsOpenInterestVolumeV5RespData `json:"data,omitempty"`
+	Data []GetRubikStatContractsOpenInterestVolumeV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) GetData() GetRubikStatContractsOpenInterestVolumeV5RespData {
+func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) GetData() []GetRubikStatContractsOpenInterestVolumeV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetRubikStatContractsOpenInterestVolumeV5RespData
+		var ret []GetRubikStatContractsOpenInterestVolumeV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) GetDataOk() (*GetRubikStatContractsOpenInterestVolumeV5RespData, bool) {
+func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) GetDataOk() ([]GetRubikStatContractsOpenInterestVolumeV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetRubikStatContractsOpenInterestVolumeV5RespData and assigns it to the Data field.
-func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) SetData(v GetRubikStatContractsOpenInterestVolumeV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetRubikStatContractsOpenInterestVolumeV5RespDataInner and assigns it to the Data field.
+func (o *GetRubikStatContractsOpenInterestVolumeV5Resp) SetData(v []GetRubikStatContractsOpenInterestVolumeV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

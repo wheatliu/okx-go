@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradingBotRecurringOrdersAlgoHistoryV5Resp{}
 // GetTradingBotRecurringOrdersAlgoHistoryV5Resp struct for GetTradingBotRecurringOrdersAlgoHistoryV5Resp
 type GetTradingBotRecurringOrdersAlgoHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradingBotRecurringOrdersAlgoHistoryV5RespData `json:"data,omitempty"`
+	Data []GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) GetData() GetTradingBotRecurringOrdersAlgoHistoryV5RespData {
+func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) GetData() []GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradingBotRecurringOrdersAlgoHistoryV5RespData
+		var ret []GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) GetDataOk() (*GetTradingBotRecurringOrdersAlgoHistoryV5RespData, bool) {
+func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) GetDataOk() ([]GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradingBotRecurringOrdersAlgoHistoryV5RespData and assigns it to the Data field.
-func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) SetData(v GetTradingBotRecurringOrdersAlgoHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetTradingBotRecurringOrdersAlgoHistoryV5Resp) SetData(v []GetTradingBotRecurringOrdersAlgoHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

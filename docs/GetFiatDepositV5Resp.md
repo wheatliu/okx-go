@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetFiatDepositV5RespData**](GetFiatDepositV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetFiatDepositV5RespDataInner**](GetFiatDepositV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetFiatDepositV5Resp) GetData() GetFiatDepositV5RespData`
+`func (o *GetFiatDepositV5Resp) GetData() []GetFiatDepositV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetFiatDepositV5Resp) GetDataOk() (*GetFiatDepositV5RespData, bool)`
+`func (o *GetFiatDepositV5Resp) GetDataOk() (*[]GetFiatDepositV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetFiatDepositV5Resp) SetData(v GetFiatDepositV5RespData)`
+`func (o *GetFiatDepositV5Resp) SetData(v []GetFiatDepositV5RespDataInner)`
 
 SetData sets Data field to given value.
 

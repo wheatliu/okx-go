@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**CreateRfqCreateQuoteV5RespData**](CreateRfqCreateQuoteV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]CreateRfqCreateQuoteV5RespDataInner**](CreateRfqCreateQuoteV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateRfqCreateQuoteV5Resp) GetData() CreateRfqCreateQuoteV5RespData`
+`func (o *CreateRfqCreateQuoteV5Resp) GetData() []CreateRfqCreateQuoteV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateRfqCreateQuoteV5Resp) GetDataOk() (*CreateRfqCreateQuoteV5RespData, bool)`
+`func (o *CreateRfqCreateQuoteV5Resp) GetDataOk() (*[]CreateRfqCreateQuoteV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateRfqCreateQuoteV5Resp) SetData(v CreateRfqCreateQuoteV5RespData)`
+`func (o *CreateRfqCreateQuoteV5Resp) SetData(v []CreateRfqCreateQuoteV5RespDataInner)`
 
 SetData sets Data field to given value.
 

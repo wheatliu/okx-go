@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetCopytradingPublicWeeklyPnlV5RespData**](GetCopytradingPublicWeeklyPnlV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetCopytradingPublicWeeklyPnlV5RespDataInner**](GetCopytradingPublicWeeklyPnlV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetData() GetCopytradingPublicWeeklyPnlV5RespData`
+`func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetData() []GetCopytradingPublicWeeklyPnlV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetDataOk() (*GetCopytradingPublicWeeklyPnlV5RespData, bool)`
+`func (o *GetCopytradingPublicWeeklyPnlV5Resp) GetDataOk() (*[]GetCopytradingPublicWeeklyPnlV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetCopytradingPublicWeeklyPnlV5Resp) SetData(v GetCopytradingPublicWeeklyPnlV5RespData)`
+`func (o *GetCopytradingPublicWeeklyPnlV5Resp) SetData(v []GetCopytradingPublicWeeklyPnlV5RespDataInner)`
 
 SetData sets Data field to given value.
 

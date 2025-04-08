@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradingBotSignalPositionsHistoryV5Resp{}
 // GetTradingBotSignalPositionsHistoryV5Resp struct for GetTradingBotSignalPositionsHistoryV5Resp
 type GetTradingBotSignalPositionsHistoryV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradingBotSignalPositionsHistoryV5RespData `json:"data,omitempty"`
+	Data []GetTradingBotSignalPositionsHistoryV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradingBotSignalPositionsHistoryV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradingBotSignalPositionsHistoryV5Resp) GetData() GetTradingBotSignalPositionsHistoryV5RespData {
+func (o *GetTradingBotSignalPositionsHistoryV5Resp) GetData() []GetTradingBotSignalPositionsHistoryV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradingBotSignalPositionsHistoryV5RespData
+		var ret []GetTradingBotSignalPositionsHistoryV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradingBotSignalPositionsHistoryV5Resp) GetDataOk() (*GetTradingBotSignalPositionsHistoryV5RespData, bool) {
+func (o *GetTradingBotSignalPositionsHistoryV5Resp) GetDataOk() ([]GetTradingBotSignalPositionsHistoryV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradingBotSignalPositionsHistoryV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradingBotSignalPositionsHistoryV5RespData and assigns it to the Data field.
-func (o *GetTradingBotSignalPositionsHistoryV5Resp) SetData(v GetTradingBotSignalPositionsHistoryV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradingBotSignalPositionsHistoryV5RespDataInner and assigns it to the Data field.
+func (o *GetTradingBotSignalPositionsHistoryV5Resp) SetData(v []GetTradingBotSignalPositionsHistoryV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

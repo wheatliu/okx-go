@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateTradingBotSignalCreateSignalV5Resp{}
 // CreateTradingBotSignalCreateSignalV5Resp struct for CreateTradingBotSignalCreateSignalV5Resp
 type CreateTradingBotSignalCreateSignalV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateTradingBotSignalCreateSignalV5RespData `json:"data,omitempty"`
+	Data []CreateTradingBotSignalCreateSignalV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateTradingBotSignalCreateSignalV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotSignalCreateSignalV5Resp) GetData() CreateTradingBotSignalCreateSignalV5RespData {
+func (o *CreateTradingBotSignalCreateSignalV5Resp) GetData() []CreateTradingBotSignalCreateSignalV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateTradingBotSignalCreateSignalV5RespData
+		var ret []CreateTradingBotSignalCreateSignalV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotSignalCreateSignalV5Resp) GetDataOk() (*CreateTradingBotSignalCreateSignalV5RespData, bool) {
+func (o *CreateTradingBotSignalCreateSignalV5Resp) GetDataOk() ([]CreateTradingBotSignalCreateSignalV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateTradingBotSignalCreateSignalV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateTradingBotSignalCreateSignalV5RespData and assigns it to the Data field.
-func (o *CreateTradingBotSignalCreateSignalV5Resp) SetData(v CreateTradingBotSignalCreateSignalV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateTradingBotSignalCreateSignalV5RespDataInner and assigns it to the Data field.
+func (o *CreateTradingBotSignalCreateSignalV5Resp) SetData(v []CreateTradingBotSignalCreateSignalV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

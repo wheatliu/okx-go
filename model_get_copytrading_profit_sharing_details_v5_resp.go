@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingProfitSharingDetailsV5Resp{}
 // GetCopytradingProfitSharingDetailsV5Resp struct for GetCopytradingProfitSharingDetailsV5Resp
 type GetCopytradingProfitSharingDetailsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingProfitSharingDetailsV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingProfitSharingDetailsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingProfitSharingDetailsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingProfitSharingDetailsV5Resp) GetData() GetCopytradingProfitSharingDetailsV5RespData {
+func (o *GetCopytradingProfitSharingDetailsV5Resp) GetData() []GetCopytradingProfitSharingDetailsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingProfitSharingDetailsV5RespData
+		var ret []GetCopytradingProfitSharingDetailsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingProfitSharingDetailsV5Resp) GetDataOk() (*GetCopytradingProfitSharingDetailsV5RespData, bool) {
+func (o *GetCopytradingProfitSharingDetailsV5Resp) GetDataOk() ([]GetCopytradingProfitSharingDetailsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingProfitSharingDetailsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingProfitSharingDetailsV5RespData and assigns it to the Data field.
-func (o *GetCopytradingProfitSharingDetailsV5Resp) SetData(v GetCopytradingProfitSharingDetailsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingProfitSharingDetailsV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingProfitSharingDetailsV5Resp) SetData(v []GetCopytradingProfitSharingDetailsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

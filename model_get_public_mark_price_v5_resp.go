@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicMarkPriceV5Resp{}
 // GetPublicMarkPriceV5Resp struct for GetPublicMarkPriceV5Resp
 type GetPublicMarkPriceV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicMarkPriceV5RespData `json:"data,omitempty"`
+	Data []GetPublicMarkPriceV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicMarkPriceV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicMarkPriceV5Resp) GetData() GetPublicMarkPriceV5RespData {
+func (o *GetPublicMarkPriceV5Resp) GetData() []GetPublicMarkPriceV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicMarkPriceV5RespData
+		var ret []GetPublicMarkPriceV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicMarkPriceV5Resp) GetDataOk() (*GetPublicMarkPriceV5RespData, bool) {
+func (o *GetPublicMarkPriceV5Resp) GetDataOk() ([]GetPublicMarkPriceV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicMarkPriceV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicMarkPriceV5RespData and assigns it to the Data field.
-func (o *GetPublicMarkPriceV5Resp) SetData(v GetPublicMarkPriceV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicMarkPriceV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicMarkPriceV5Resp) SetData(v []GetPublicMarkPriceV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

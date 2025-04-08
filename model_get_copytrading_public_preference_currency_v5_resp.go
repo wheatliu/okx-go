@@ -20,7 +20,7 @@ var _ MappedNullable = &GetCopytradingPublicPreferenceCurrencyV5Resp{}
 // GetCopytradingPublicPreferenceCurrencyV5Resp struct for GetCopytradingPublicPreferenceCurrencyV5Resp
 type GetCopytradingPublicPreferenceCurrencyV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetCopytradingPublicPreferenceCurrencyV5RespData `json:"data,omitempty"`
+	Data []GetCopytradingPublicPreferenceCurrencyV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) GetData() GetCopytradingPublicPreferenceCurrencyV5RespData {
+func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) GetData() []GetCopytradingPublicPreferenceCurrencyV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetCopytradingPublicPreferenceCurrencyV5RespData
+		var ret []GetCopytradingPublicPreferenceCurrencyV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) GetDataOk() (*GetCopytradingPublicPreferenceCurrencyV5RespData, bool) {
+func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) GetDataOk() ([]GetCopytradingPublicPreferenceCurrencyV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetCopytradingPublicPreferenceCurrencyV5RespData and assigns it to the Data field.
-func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) SetData(v GetCopytradingPublicPreferenceCurrencyV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetCopytradingPublicPreferenceCurrencyV5RespDataInner and assigns it to the Data field.
+func (o *GetCopytradingPublicPreferenceCurrencyV5Resp) SetData(v []GetCopytradingPublicPreferenceCurrencyV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateUsersSubaccountSetTransferOutV5Resp{}
 // CreateUsersSubaccountSetTransferOutV5Resp struct for CreateUsersSubaccountSetTransferOutV5Resp
 type CreateUsersSubaccountSetTransferOutV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateUsersSubaccountSetTransferOutV5RespData `json:"data,omitempty"`
+	Data []CreateUsersSubaccountSetTransferOutV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateUsersSubaccountSetTransferOutV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateUsersSubaccountSetTransferOutV5Resp) GetData() CreateUsersSubaccountSetTransferOutV5RespData {
+func (o *CreateUsersSubaccountSetTransferOutV5Resp) GetData() []CreateUsersSubaccountSetTransferOutV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateUsersSubaccountSetTransferOutV5RespData
+		var ret []CreateUsersSubaccountSetTransferOutV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateUsersSubaccountSetTransferOutV5Resp) GetDataOk() (*CreateUsersSubaccountSetTransferOutV5RespData, bool) {
+func (o *CreateUsersSubaccountSetTransferOutV5Resp) GetDataOk() ([]CreateUsersSubaccountSetTransferOutV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateUsersSubaccountSetTransferOutV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateUsersSubaccountSetTransferOutV5RespData and assigns it to the Data field.
-func (o *CreateUsersSubaccountSetTransferOutV5Resp) SetData(v CreateUsersSubaccountSetTransferOutV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateUsersSubaccountSetTransferOutV5RespDataInner and assigns it to the Data field.
+func (o *CreateUsersSubaccountSetTransferOutV5Resp) SetData(v []CreateUsersSubaccountSetTransferOutV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

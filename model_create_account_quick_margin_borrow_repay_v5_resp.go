@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateAccountQuickMarginBorrowRepayV5Resp{}
 // CreateAccountQuickMarginBorrowRepayV5Resp struct for CreateAccountQuickMarginBorrowRepayV5Resp
 type CreateAccountQuickMarginBorrowRepayV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *CreateAccountQuickMarginBorrowRepayV5RespData `json:"data,omitempty"`
+	Data []CreateAccountQuickMarginBorrowRepayV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *CreateAccountQuickMarginBorrowRepayV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateAccountQuickMarginBorrowRepayV5Resp) GetData() CreateAccountQuickMarginBorrowRepayV5RespData {
+func (o *CreateAccountQuickMarginBorrowRepayV5Resp) GetData() []CreateAccountQuickMarginBorrowRepayV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret CreateAccountQuickMarginBorrowRepayV5RespData
+		var ret []CreateAccountQuickMarginBorrowRepayV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAccountQuickMarginBorrowRepayV5Resp) GetDataOk() (*CreateAccountQuickMarginBorrowRepayV5RespData, bool) {
+func (o *CreateAccountQuickMarginBorrowRepayV5Resp) GetDataOk() ([]CreateAccountQuickMarginBorrowRepayV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *CreateAccountQuickMarginBorrowRepayV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given CreateAccountQuickMarginBorrowRepayV5RespData and assigns it to the Data field.
-func (o *CreateAccountQuickMarginBorrowRepayV5Resp) SetData(v CreateAccountQuickMarginBorrowRepayV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []CreateAccountQuickMarginBorrowRepayV5RespDataInner and assigns it to the Data field.
+func (o *CreateAccountQuickMarginBorrowRepayV5Resp) SetData(v []CreateAccountQuickMarginBorrowRepayV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

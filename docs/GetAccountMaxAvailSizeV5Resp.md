@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetAccountMaxAvailSizeV5RespData**](GetAccountMaxAvailSizeV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetAccountMaxAvailSizeV5RespDataInner**](GetAccountMaxAvailSizeV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetAccountMaxAvailSizeV5Resp) GetData() GetAccountMaxAvailSizeV5RespData`
+`func (o *GetAccountMaxAvailSizeV5Resp) GetData() []GetAccountMaxAvailSizeV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetAccountMaxAvailSizeV5Resp) GetDataOk() (*GetAccountMaxAvailSizeV5RespData, bool)`
+`func (o *GetAccountMaxAvailSizeV5Resp) GetDataOk() (*[]GetAccountMaxAvailSizeV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetAccountMaxAvailSizeV5Resp) SetData(v GetAccountMaxAvailSizeV5RespData)`
+`func (o *GetAccountMaxAvailSizeV5Resp) SetData(v []GetAccountMaxAvailSizeV5RespDataInner)`
 
 SetData sets Data field to given value.
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &GetTradingBotGridPositionsV5Resp{}
 // GetTradingBotGridPositionsV5Resp struct for GetTradingBotGridPositionsV5Resp
 type GetTradingBotGridPositionsV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetTradingBotGridPositionsV5RespData `json:"data,omitempty"`
+	Data []GetTradingBotGridPositionsV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetTradingBotGridPositionsV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetTradingBotGridPositionsV5Resp) GetData() GetTradingBotGridPositionsV5RespData {
+func (o *GetTradingBotGridPositionsV5Resp) GetData() []GetTradingBotGridPositionsV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetTradingBotGridPositionsV5RespData
+		var ret []GetTradingBotGridPositionsV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetTradingBotGridPositionsV5Resp) GetDataOk() (*GetTradingBotGridPositionsV5RespData, bool) {
+func (o *GetTradingBotGridPositionsV5Resp) GetDataOk() ([]GetTradingBotGridPositionsV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetTradingBotGridPositionsV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetTradingBotGridPositionsV5RespData and assigns it to the Data field.
-func (o *GetTradingBotGridPositionsV5Resp) SetData(v GetTradingBotGridPositionsV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetTradingBotGridPositionsV5RespDataInner and assigns it to the Data field.
+func (o *GetTradingBotGridPositionsV5Resp) SetData(v []GetTradingBotGridPositionsV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

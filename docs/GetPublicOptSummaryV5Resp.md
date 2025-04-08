@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to [**GetPublicOptSummaryV5RespData**](GetPublicOptSummaryV5RespData.md) |  | [optional] 
+**Data** | Pointer to [**[]GetPublicOptSummaryV5RespDataInner**](GetPublicOptSummaryV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetPublicOptSummaryV5Resp) GetData() GetPublicOptSummaryV5RespData`
+`func (o *GetPublicOptSummaryV5Resp) GetData() []GetPublicOptSummaryV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetPublicOptSummaryV5Resp) GetDataOk() (*GetPublicOptSummaryV5RespData, bool)`
+`func (o *GetPublicOptSummaryV5Resp) GetDataOk() (*[]GetPublicOptSummaryV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetPublicOptSummaryV5Resp) SetData(v GetPublicOptSummaryV5RespData)`
+`func (o *GetPublicOptSummaryV5Resp) SetData(v []GetPublicOptSummaryV5RespDataInner)`
 
 SetData sets Data field to given value.
 

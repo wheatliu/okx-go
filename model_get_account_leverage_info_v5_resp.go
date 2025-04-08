@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountLeverageInfoV5Resp{}
 // GetAccountLeverageInfoV5Resp struct for GetAccountLeverageInfoV5Resp
 type GetAccountLeverageInfoV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountLeverageInfoV5RespData `json:"data,omitempty"`
+	Data []GetAccountLeverageInfoV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountLeverageInfoV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountLeverageInfoV5Resp) GetData() GetAccountLeverageInfoV5RespData {
+func (o *GetAccountLeverageInfoV5Resp) GetData() []GetAccountLeverageInfoV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountLeverageInfoV5RespData
+		var ret []GetAccountLeverageInfoV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountLeverageInfoV5Resp) GetDataOk() (*GetAccountLeverageInfoV5RespData, bool) {
+func (o *GetAccountLeverageInfoV5Resp) GetDataOk() ([]GetAccountLeverageInfoV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountLeverageInfoV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountLeverageInfoV5RespData and assigns it to the Data field.
-func (o *GetAccountLeverageInfoV5Resp) SetData(v GetAccountLeverageInfoV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountLeverageInfoV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountLeverageInfoV5Resp) SetData(v []GetAccountLeverageInfoV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

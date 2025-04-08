@@ -20,7 +20,7 @@ var _ MappedNullable = &GetPublicOptionTradesV5Resp{}
 // GetPublicOptionTradesV5Resp struct for GetPublicOptionTradesV5Resp
 type GetPublicOptionTradesV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetPublicOptionTradesV5RespData `json:"data,omitempty"`
+	Data []GetPublicOptionTradesV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetPublicOptionTradesV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetPublicOptionTradesV5Resp) GetData() GetPublicOptionTradesV5RespData {
+func (o *GetPublicOptionTradesV5Resp) GetData() []GetPublicOptionTradesV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetPublicOptionTradesV5RespData
+		var ret []GetPublicOptionTradesV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetPublicOptionTradesV5Resp) GetDataOk() (*GetPublicOptionTradesV5RespData, bool) {
+func (o *GetPublicOptionTradesV5Resp) GetDataOk() ([]GetPublicOptionTradesV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetPublicOptionTradesV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetPublicOptionTradesV5RespData and assigns it to the Data field.
-func (o *GetPublicOptionTradesV5Resp) SetData(v GetPublicOptionTradesV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetPublicOptionTradesV5RespDataInner and assigns it to the Data field.
+func (o *GetPublicOptionTradesV5Resp) SetData(v []GetPublicOptionTradesV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.

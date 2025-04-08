@@ -20,7 +20,7 @@ var _ MappedNullable = &GetAccountGreeksV5Resp{}
 // GetAccountGreeksV5Resp struct for GetAccountGreeksV5Resp
 type GetAccountGreeksV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data *GetAccountGreeksV5RespData `json:"data,omitempty"`
+	Data []GetAccountGreeksV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,17 +82,17 @@ func (o *GetAccountGreeksV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetAccountGreeksV5Resp) GetData() GetAccountGreeksV5RespData {
+func (o *GetAccountGreeksV5Resp) GetData() []GetAccountGreeksV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret GetAccountGreeksV5RespData
+		var ret []GetAccountGreeksV5RespDataInner
 		return ret
 	}
-	return *o.Data
+	return o.Data
 }
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAccountGreeksV5Resp) GetDataOk() (*GetAccountGreeksV5RespData, bool) {
+func (o *GetAccountGreeksV5Resp) GetDataOk() ([]GetAccountGreeksV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,9 +108,9 @@ func (o *GetAccountGreeksV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given GetAccountGreeksV5RespData and assigns it to the Data field.
-func (o *GetAccountGreeksV5Resp) SetData(v GetAccountGreeksV5RespData) {
-	o.Data = &v
+// SetData gets a reference to the given []GetAccountGreeksV5RespDataInner and assigns it to the Data field.
+func (o *GetAccountGreeksV5Resp) SetData(v []GetAccountGreeksV5RespDataInner) {
+	o.Data = v
 }
 
 // GetMsg returns the Msg field value if set, zero value otherwise.
