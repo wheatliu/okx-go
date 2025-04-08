@@ -19,12 +19,20 @@ var _ MappedNullable = &GetRfqMakerInstrumentSettingsV5RespDataInner{}
 
 // GetRfqMakerInstrumentSettingsV5RespDataInner struct for GetRfqMakerInstrumentSettingsV5RespDataInner
 type GetRfqMakerInstrumentSettingsV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Return data of the request.
-	Data []GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not `0`.
-	Msg *string `json:"msg,omitempty"`
+	// Elements of the instType.
+	Data []CreateRfqMakerInstrumentSettingsV5ReqDataInner `json:"data,omitempty"`
+	// Receive all instruments or not under specific instType setting.   Valid value can be boolean (`True`/`False`). By default, the value will be `false`.
+	IncludeAll *bool `json:"includeAll,omitempty"`
+	// Instrument family. Required for `FUTURES`, `OPTION` and `SWAP` only.
+	InstFamily *string `json:"instFamily,omitempty"`
+	// Instrument ID. Required for `SPOT` only.
+	InstId *string `json:"instId,omitempty"`
+	// Type of instrument. Valid value can be `FUTURES`, `OPTION`, `SWAP` or `SPOT`.
+	InstType *string `json:"instType,omitempty"`
+	// Price bands in unit of ticks, measured against mark price.   Setting makerPxBand to 1 tick means:   If Bid price > Mark + 1 tick, it will be stopped   If Ask price < Mark - 1 tick, It will be stopped
+	MakerPxBand *string `json:"makerPxBand,omitempty"`
+	// Max trade quantity for the product(s).   For `FUTURES`, `OPTION` and `SWAP`, the max quantity of the RFQ/Quote is in unit of contracts. For `SPOT`, this parameter is in base currency.
+	MaxBlockSz *string `json:"maxBlockSz,omitempty"`
 }
 
 // NewGetRfqMakerInstrumentSettingsV5RespDataInner instantiates a new GetRfqMakerInstrumentSettingsV5RespDataInner object
@@ -33,10 +41,16 @@ type GetRfqMakerInstrumentSettingsV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewGetRfqMakerInstrumentSettingsV5RespDataInner() *GetRfqMakerInstrumentSettingsV5RespDataInner {
 	this := GetRfqMakerInstrumentSettingsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var instFamily string = ""
+	this.InstFamily = &instFamily
+	var instId string = ""
+	this.InstId = &instId
+	var instType string = ""
+	this.InstType = &instType
+	var makerPxBand string = ""
+	this.MakerPxBand = &makerPxBand
+	var maxBlockSz string = ""
+	this.MaxBlockSz = &maxBlockSz
 	return &this
 }
 
@@ -45,49 +59,23 @@ func NewGetRfqMakerInstrumentSettingsV5RespDataInner() *GetRfqMakerInstrumentSet
 // but it doesn't guarantee that properties required by API are set
 func NewGetRfqMakerInstrumentSettingsV5RespDataInnerWithDefaults() *GetRfqMakerInstrumentSettingsV5RespDataInner {
 	this := GetRfqMakerInstrumentSettingsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var instFamily string = ""
+	this.InstFamily = &instFamily
+	var instId string = ""
+	this.InstId = &instId
+	var instType string = ""
+	this.InstType = &instType
+	var makerPxBand string = ""
+	this.MakerPxBand = &makerPxBand
+	var maxBlockSz string = ""
+	this.MaxBlockSz = &maxBlockSz
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
-		var ret string
-		return ret
-	}
-	return *o.Code
-}
-
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
-		return nil, false
-	}
-	return o.Code, true
-}
-
-// HasCode returns a boolean if a field has been set.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
-		return true
-	}
-
-	return false
-}
-
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetCode(v string) {
-	o.Code = &v
-}
-
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetData() []GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner {
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetData() []CreateRfqMakerInstrumentSettingsV5ReqDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret []GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner
+		var ret []CreateRfqMakerInstrumentSettingsV5ReqDataInner
 		return ret
 	}
 	return o.Data
@@ -95,7 +83,7 @@ func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetData() []GetRfqMakerIn
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetDataOk() ([]GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner, bool) {
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetDataOk() ([]CreateRfqMakerInstrumentSettingsV5ReqDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -111,41 +99,201 @@ func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetData(v []GetRfqMakerInstrumentSettingsV5RespDataInnerDataInner) {
+// SetData gets a reference to the given []CreateRfqMakerInstrumentSettingsV5ReqDataInner and assigns it to the Data field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetData(v []CreateRfqMakerInstrumentSettingsV5ReqDataInner) {
 	o.Data = v
 }
 
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
-		var ret string
+// GetIncludeAll returns the IncludeAll field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetIncludeAll() bool {
+	if o == nil || IsNil(o.IncludeAll) {
+		var ret bool
 		return ret
 	}
-	return *o.Msg
+	return *o.IncludeAll
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetIncludeAllOk returns a tuple with the IncludeAll field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetIncludeAllOk() (*bool, bool) {
+	if o == nil || IsNil(o.IncludeAll) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.IncludeAll, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasIncludeAll returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasIncludeAll() bool {
+	if o != nil && !IsNil(o.IncludeAll) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetIncludeAll gets a reference to the given bool and assigns it to the IncludeAll field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetIncludeAll(v bool) {
+	o.IncludeAll = &v
+}
+
+// GetInstFamily returns the InstFamily field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstFamily() string {
+	if o == nil || IsNil(o.InstFamily) {
+		var ret string
+		return ret
+	}
+	return *o.InstFamily
+}
+
+// GetInstFamilyOk returns a tuple with the InstFamily field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstFamilyOk() (*string, bool) {
+	if o == nil || IsNil(o.InstFamily) {
+		return nil, false
+	}
+	return o.InstFamily, true
+}
+
+// HasInstFamily returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasInstFamily() bool {
+	if o != nil && !IsNil(o.InstFamily) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstFamily gets a reference to the given string and assigns it to the InstFamily field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetInstFamily(v string) {
+	o.InstFamily = &v
+}
+
+// GetInstId returns the InstId field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstId() string {
+	if o == nil || IsNil(o.InstId) {
+		var ret string
+		return ret
+	}
+	return *o.InstId
+}
+
+// GetInstIdOk returns a tuple with the InstId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstIdOk() (*string, bool) {
+	if o == nil || IsNil(o.InstId) {
+		return nil, false
+	}
+	return o.InstId, true
+}
+
+// HasInstId returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasInstId() bool {
+	if o != nil && !IsNil(o.InstId) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstId gets a reference to the given string and assigns it to the InstId field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetInstId(v string) {
+	o.InstId = &v
+}
+
+// GetInstType returns the InstType field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstType() string {
+	if o == nil || IsNil(o.InstType) {
+		var ret string
+		return ret
+	}
+	return *o.InstType
+}
+
+// GetInstTypeOk returns a tuple with the InstType field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetInstTypeOk() (*string, bool) {
+	if o == nil || IsNil(o.InstType) {
+		return nil, false
+	}
+	return o.InstType, true
+}
+
+// HasInstType returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasInstType() bool {
+	if o != nil && !IsNil(o.InstType) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstType gets a reference to the given string and assigns it to the InstType field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetInstType(v string) {
+	o.InstType = &v
+}
+
+// GetMakerPxBand returns the MakerPxBand field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMakerPxBand() string {
+	if o == nil || IsNil(o.MakerPxBand) {
+		var ret string
+		return ret
+	}
+	return *o.MakerPxBand
+}
+
+// GetMakerPxBandOk returns a tuple with the MakerPxBand field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMakerPxBandOk() (*string, bool) {
+	if o == nil || IsNil(o.MakerPxBand) {
+		return nil, false
+	}
+	return o.MakerPxBand, true
+}
+
+// HasMakerPxBand returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasMakerPxBand() bool {
+	if o != nil && !IsNil(o.MakerPxBand) {
+		return true
+	}
+
+	return false
+}
+
+// SetMakerPxBand gets a reference to the given string and assigns it to the MakerPxBand field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetMakerPxBand(v string) {
+	o.MakerPxBand = &v
+}
+
+// GetMaxBlockSz returns the MaxBlockSz field value if set, zero value otherwise.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMaxBlockSz() string {
+	if o == nil || IsNil(o.MaxBlockSz) {
+		var ret string
+		return ret
+	}
+	return *o.MaxBlockSz
+}
+
+// GetMaxBlockSzOk returns a tuple with the MaxBlockSz field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) GetMaxBlockSzOk() (*string, bool) {
+	if o == nil || IsNil(o.MaxBlockSz) {
+		return nil, false
+	}
+	return o.MaxBlockSz, true
+}
+
+// HasMaxBlockSz returns a boolean if a field has been set.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) HasMaxBlockSz() bool {
+	if o != nil && !IsNil(o.MaxBlockSz) {
+		return true
+	}
+
+	return false
+}
+
+// SetMaxBlockSz gets a reference to the given string and assigns it to the MaxBlockSz field.
+func (o *GetRfqMakerInstrumentSettingsV5RespDataInner) SetMaxBlockSz(v string) {
+	o.MaxBlockSz = &v
 }
 
 func (o GetRfqMakerInstrumentSettingsV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +306,26 @@ func (o GetRfqMakerInstrumentSettingsV5RespDataInner) MarshalJSON() ([]byte, err
 
 func (o GetRfqMakerInstrumentSettingsV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
-	}
 	if !IsNil(o.Data) {
 		toSerialize["data"] = o.Data
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.IncludeAll) {
+		toSerialize["includeAll"] = o.IncludeAll
+	}
+	if !IsNil(o.InstFamily) {
+		toSerialize["instFamily"] = o.InstFamily
+	}
+	if !IsNil(o.InstId) {
+		toSerialize["instId"] = o.InstId
+	}
+	if !IsNil(o.InstType) {
+		toSerialize["instType"] = o.InstType
+	}
+	if !IsNil(o.MakerPxBand) {
+		toSerialize["makerPxBand"] = o.MakerPxBand
+	}
+	if !IsNil(o.MaxBlockSz) {
+		toSerialize["maxBlockSz"] = o.MaxBlockSz
 	}
 	return toSerialize, nil
 }

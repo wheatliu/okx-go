@@ -189,7 +189,7 @@ func (r ApiGetMarketHistoryIndexCandlesV5Request) Limit(limit string) ApiGetMark
 	return r
 }
 
-func (r ApiGetMarketHistoryIndexCandlesV5Request) Execute() (*GetMarketHistoryIndexCandlesV5Resp, *http.Response, error) {
+func (r ApiGetMarketHistoryIndexCandlesV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetMarketHistoryIndexCandlesV5Execute(r)
 }
 
@@ -215,18 +215,16 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5(ctx context.Contex
 }
 
 // Execute executes the request
-//  @return GetMarketHistoryIndexCandlesV5Resp
-func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMarketHistoryIndexCandlesV5Request) (*GetMarketHistoryIndexCandlesV5Resp, *http.Response, error) {
+func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMarketHistoryIndexCandlesV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetMarketHistoryIndexCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PublicDataAPIService.GetMarketHistoryIndexCandlesV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/history-index-candles"
@@ -235,7 +233,7 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+		return nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -283,19 +281,19 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -308,35 +306,26 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }
 
 type ApiGetMarketHistoryMarkPriceCandlesV5Request struct {
@@ -379,7 +368,7 @@ func (r ApiGetMarketHistoryMarkPriceCandlesV5Request) Limit(limit string) ApiGet
 	return r
 }
 
-func (r ApiGetMarketHistoryMarkPriceCandlesV5Request) Execute() (*GetMarketHistoryMarkPriceCandlesV5Resp, *http.Response, error) {
+func (r ApiGetMarketHistoryMarkPriceCandlesV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetMarketHistoryMarkPriceCandlesV5Execute(r)
 }
 
@@ -405,18 +394,16 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5(ctx context.Co
 }
 
 // Execute executes the request
-//  @return GetMarketHistoryMarkPriceCandlesV5Resp
-func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGetMarketHistoryMarkPriceCandlesV5Request) (*GetMarketHistoryMarkPriceCandlesV5Resp, *http.Response, error) {
+func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGetMarketHistoryMarkPriceCandlesV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetMarketHistoryMarkPriceCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PublicDataAPIService.GetMarketHistoryMarkPriceCandlesV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/history-mark-price-candles"
@@ -425,7 +412,7 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+		return nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -473,19 +460,19 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -498,35 +485,26 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }
 
 type ApiGetMarketIndexCandlesV5Request struct {
@@ -569,7 +547,7 @@ func (r ApiGetMarketIndexCandlesV5Request) Limit(limit string) ApiGetMarketIndex
 	return r
 }
 
-func (r ApiGetMarketIndexCandlesV5Request) Execute() (*GetMarketIndexCandlesV5Resp, *http.Response, error) {
+func (r ApiGetMarketIndexCandlesV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetMarketIndexCandlesV5Execute(r)
 }
 
@@ -595,18 +573,16 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5(ctx context.Context) ApiG
 }
 
 // Execute executes the request
-//  @return GetMarketIndexCandlesV5Resp
-func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketIndexCandlesV5Request) (*GetMarketIndexCandlesV5Resp, *http.Response, error) {
+func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketIndexCandlesV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetMarketIndexCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PublicDataAPIService.GetMarketIndexCandlesV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/index-candles"
@@ -615,7 +591,7 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+		return nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -663,19 +639,19 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -688,35 +664,26 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }
 
 type ApiGetMarketIndexComponentsV5Request struct {
@@ -1050,7 +1017,7 @@ func (r ApiGetMarketMarkPriceCandlesV5Request) Limit(limit string) ApiGetMarketM
 	return r
 }
 
-func (r ApiGetMarketMarkPriceCandlesV5Request) Execute() (*GetMarketMarkPriceCandlesV5Resp, *http.Response, error) {
+func (r ApiGetMarketMarkPriceCandlesV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetMarketMarkPriceCandlesV5Execute(r)
 }
 
@@ -1076,18 +1043,16 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5(ctx context.Context) 
 }
 
 // Execute executes the request
-//  @return GetMarketMarkPriceCandlesV5Resp
-func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarketMarkPriceCandlesV5Request) (*GetMarketMarkPriceCandlesV5Resp, *http.Response, error) {
+func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarketMarkPriceCandlesV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetMarketMarkPriceCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PublicDataAPIService.GetMarketMarkPriceCandlesV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/mark-price-candles"
@@ -1096,7 +1061,7 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+		return nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -1144,19 +1109,19 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -1169,35 +1134,26 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }
 
 type ApiGetPublicConvertContractCoinV5Request struct {
@@ -4593,7 +4549,7 @@ func (r ApiGetPublicUnderlyingV5Request) InstType(instType string) ApiGetPublicU
 	return r
 }
 
-func (r ApiGetPublicUnderlyingV5Request) Execute() (*GetPublicUnderlyingV5Resp, *http.Response, error) {
+func (r ApiGetPublicUnderlyingV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetPublicUnderlyingV5Execute(r)
 }
 
@@ -4617,18 +4573,16 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5(ctx context.Context) ApiGet
 }
 
 // Execute executes the request
-//  @return GetPublicUnderlyingV5Resp
-func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderlyingV5Request) (*GetPublicUnderlyingV5Resp, *http.Response, error) {
+func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderlyingV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetPublicUnderlyingV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "PublicDataAPIService.GetPublicUnderlyingV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/public/underlying"
@@ -4637,7 +4591,7 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instType == nil {
-		return localVarReturnValue, nil, reportError("instType is required and must be specified")
+		return nil, reportError("instType is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instType", r.instType, "form", "")
@@ -4661,19 +4615,19 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -4686,33 +4640,24 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }

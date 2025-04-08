@@ -24,7 +24,7 @@ Method | HTTP request | Description
 
 ## GetRubikStatContractsLongShortAccountRatioContractTopTraderV5
 
-> GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+> GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
 Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
 
@@ -51,13 +51,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+	r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetRubikStatContractsLongShortAccountRatioContractTopTraderV5`: GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5`: %v\n", resp)
 }
 ```
 
@@ -80,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp**](GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -98,7 +96,7 @@ No authorization required
 
 ## GetRubikStatContractsLongShortAccountRatioContractV5
 
-> GetRubikStatContractsLongShortAccountRatioContractV5Resp GetRubikStatContractsLongShortAccountRatioContractV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+> GetRubikStatContractsLongShortAccountRatioContractV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
 Retrieve the account long/short ratio of a contract. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
 
@@ -125,13 +123,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+	r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetRubikStatContractsLongShortAccountRatioContractV5`: GetRubikStatContractsLongShortAccountRatioContractV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5`: %v\n", resp)
 }
 ```
 
@@ -154,7 +150,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRubikStatContractsLongShortAccountRatioContractV5Resp**](GetRubikStatContractsLongShortAccountRatioContractV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -244,7 +240,7 @@ No authorization required
 
 ## GetRubikStatContractsLongShortPositionRatioContractTopTraderV5
 
-> GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+> GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
 Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
 
@@ -271,13 +267,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+	r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetRubikStatContractsLongShortPositionRatioContractTopTraderV5`: GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5`: %v\n", resp)
 }
 ```
 
@@ -300,7 +294,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp**](GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -318,7 +312,7 @@ No authorization required
 
 ## GetRubikStatContractsOpenInterestHistoryV5
 
-> GetRubikStatContractsOpenInterestHistoryV5Resp GetRubikStatContractsOpenInterestHistoryV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+> GetRubikStatContractsOpenInterestHistoryV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
 Retrieve the contract open interest statistics of futures and perp. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
 
@@ -345,13 +339,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
+	r, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5(context.Background()).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetRubikStatContractsOpenInterestHistoryV5`: GetRubikStatContractsOpenInterestHistoryV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5`: %v\n", resp)
 }
 ```
 
@@ -374,7 +366,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRubikStatContractsOpenInterestHistoryV5Resp**](GetRubikStatContractsOpenInterestHistoryV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -878,7 +870,7 @@ No authorization required
 
 ## GetRubikStatTakerVolumeContractV5
 
-> GetRubikStatTakerVolumeContractV5Resp GetRubikStatTakerVolumeContractV5(ctx).InstId(instId).Period(period).Unit(unit).End(end).Begin(begin).Limit(limit).Execute()
+> GetRubikStatTakerVolumeContractV5(ctx).InstId(instId).Period(period).Unit(unit).End(end).Begin(begin).Limit(limit).Execute()
 
 Retrieve the contract taker volume for both buyers and sellers. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
 
@@ -906,13 +898,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5(context.Background()).InstId(instId).Period(period).Unit(unit).End(end).Begin(begin).Limit(limit).Execute()
+	r, err := apiClient.TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5(context.Background()).InstId(instId).Period(period).Unit(unit).End(end).Begin(begin).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetRubikStatTakerVolumeContractV5`: GetRubikStatTakerVolumeContractV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5`: %v\n", resp)
 }
 ```
 
@@ -936,7 +926,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetRubikStatTakerVolumeContractV5Resp**](GetRubikStatTakerVolumeContractV5Resp.md)
+ (empty response body)
 
 ### Authorization
 

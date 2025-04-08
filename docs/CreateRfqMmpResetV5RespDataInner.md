@@ -4,9 +4,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **string** | The result code, &#x60;0&#x60; means success. | [optional] [default to ""]
-**Data** | Pointer to [**[]CreateRfqMmpResetV5RespDataInnerDataInner**](CreateRfqMmpResetV5RespDataInnerDataInner.md) | Array of objects containing the results. | [optional] 
-**Msg** | Pointer to **string** | The error message, not empty if the code is not &#x60;0&#x60;. | [optional] [default to ""]
+**Ts** | Pointer to **string** | The timestamp of re-setting successfully. Unix timestamp format in milliseconds, e.g. &#x60;1597026383085&#x60;. | [optional] [default to ""]
 
 ## Methods
 
@@ -27,80 +25,30 @@ NewCreateRfqMmpResetV5RespDataInnerWithDefaults instantiates a new CreateRfqMmpR
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCode
+### GetTs
 
-`func (o *CreateRfqMmpResetV5RespDataInner) GetCode() string`
+`func (o *CreateRfqMmpResetV5RespDataInner) GetTs() string`
 
-GetCode returns the Code field if non-nil, zero value otherwise.
+GetTs returns the Ts field if non-nil, zero value otherwise.
 
-### GetCodeOk
+### GetTsOk
 
-`func (o *CreateRfqMmpResetV5RespDataInner) GetCodeOk() (*string, bool)`
+`func (o *CreateRfqMmpResetV5RespDataInner) GetTsOk() (*string, bool)`
 
-GetCodeOk returns a tuple with the Code field if it's non-nil, zero value otherwise
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCode
+### SetTs
 
-`func (o *CreateRfqMmpResetV5RespDataInner) SetCode(v string)`
+`func (o *CreateRfqMmpResetV5RespDataInner) SetTs(v string)`
 
-SetCode sets Code field to given value.
+SetTs sets Ts field to given value.
 
-### HasCode
+### HasTs
 
-`func (o *CreateRfqMmpResetV5RespDataInner) HasCode() bool`
+`func (o *CreateRfqMmpResetV5RespDataInner) HasTs() bool`
 
-HasCode returns a boolean if a field has been set.
-
-### GetData
-
-`func (o *CreateRfqMmpResetV5RespDataInner) GetData() []CreateRfqMmpResetV5RespDataInnerDataInner`
-
-GetData returns the Data field if non-nil, zero value otherwise.
-
-### GetDataOk
-
-`func (o *CreateRfqMmpResetV5RespDataInner) GetDataOk() (*[]CreateRfqMmpResetV5RespDataInnerDataInner, bool)`
-
-GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetData
-
-`func (o *CreateRfqMmpResetV5RespDataInner) SetData(v []CreateRfqMmpResetV5RespDataInnerDataInner)`
-
-SetData sets Data field to given value.
-
-### HasData
-
-`func (o *CreateRfqMmpResetV5RespDataInner) HasData() bool`
-
-HasData returns a boolean if a field has been set.
-
-### GetMsg
-
-`func (o *CreateRfqMmpResetV5RespDataInner) GetMsg() string`
-
-GetMsg returns the Msg field if non-nil, zero value otherwise.
-
-### GetMsgOk
-
-`func (o *CreateRfqMmpResetV5RespDataInner) GetMsgOk() (*string, bool)`
-
-GetMsgOk returns a tuple with the Msg field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetMsg
-
-`func (o *CreateRfqMmpResetV5RespDataInner) SetMsg(v string)`
-
-SetMsg sets Msg field to given value.
-
-### HasMsg
-
-`func (o *CreateRfqMmpResetV5RespDataInner) HasMsg() bool`
-
-HasMsg returns a boolean if a field has been set.
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

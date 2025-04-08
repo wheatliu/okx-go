@@ -86,10 +86,9 @@ func Test_rest_SpreadTradingAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.SpreadTradingAPI.GetMarketSprdCandlesV5(context.Background()).Execute()
+		httpRes, err := apiClient.SpreadTradingAPI.GetMarketSprdCandlesV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -98,10 +97,9 @@ func Test_rest_SpreadTradingAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.SpreadTradingAPI.GetMarketSprdHistoryCandlesV5(context.Background()).Execute()
+		httpRes, err := apiClient.SpreadTradingAPI.GetMarketSprdHistoryCandlesV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 ## GetMarketSprdCandlesV5
 
-> GetMarketSprdCandlesV5Resp GetMarketSprdCandlesV5(ctx).SprdId(sprdId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
+> GetMarketSprdCandlesV5(ctx).SprdId(sprdId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 
 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
 
@@ -377,13 +377,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SpreadTradingAPI.GetMarketSprdCandlesV5(context.Background()).SprdId(sprdId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
+	r, err := apiClient.SpreadTradingAPI.GetMarketSprdCandlesV5(context.Background()).SprdId(sprdId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SpreadTradingAPI.GetMarketSprdCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketSprdCandlesV5`: GetMarketSprdCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `SpreadTradingAPI.GetMarketSprdCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -406,7 +404,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketSprdCandlesV5Resp**](GetMarketSprdCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -424,7 +422,7 @@ No authorization required
 
 ## GetMarketSprdHistoryCandlesV5
 
-> GetMarketSprdHistoryCandlesV5Resp GetMarketSprdHistoryCandlesV5(ctx).SprdId(sprdId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+> GetMarketSprdHistoryCandlesV5(ctx).SprdId(sprdId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
 Retrieve history candlestick charts from recent years.  
 
@@ -451,13 +449,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SpreadTradingAPI.GetMarketSprdHistoryCandlesV5(context.Background()).SprdId(sprdId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	r, err := apiClient.SpreadTradingAPI.GetMarketSprdHistoryCandlesV5(context.Background()).SprdId(sprdId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SpreadTradingAPI.GetMarketSprdHistoryCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketSprdHistoryCandlesV5`: GetMarketSprdHistoryCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `SpreadTradingAPI.GetMarketSprdHistoryCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -480,7 +476,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketSprdHistoryCandlesV5Resp**](GetMarketSprdHistoryCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 

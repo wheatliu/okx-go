@@ -19,12 +19,12 @@ var _ MappedNullable = &CreateTradingBotSignalCancelSubOrderV5RespDataInner{}
 
 // CreateTradingBotSignalCancelSubOrderV5RespDataInner struct for CreateTradingBotSignalCancelSubOrderV5RespDataInner
 type CreateTradingBotSignalCancelSubOrderV5RespDataInner struct {
-	// The result code, `0` means success
-	Code *string `json:"code,omitempty"`
-	// Array of objects contains the response results
-	Data []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, empty if the code is 0
-	Msg *string `json:"msg,omitempty"`
+	// The code of the event execution result, `0` means success.
+	SCode *string `json:"sCode,omitempty"`
+	// Rejection or success message of event execution.
+	SMsg *string `json:"sMsg,omitempty"`
+	// Order ID
+	SignalOrdId *string `json:"signalOrdId,omitempty"`
 }
 
 // NewCreateTradingBotSignalCancelSubOrderV5RespDataInner instantiates a new CreateTradingBotSignalCancelSubOrderV5RespDataInner object
@@ -33,10 +33,12 @@ type CreateTradingBotSignalCancelSubOrderV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateTradingBotSignalCancelSubOrderV5RespDataInner() *CreateTradingBotSignalCancelSubOrderV5RespDataInner {
 	this := CreateTradingBotSignalCancelSubOrderV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
+	var signalOrdId string = ""
+	this.SignalOrdId = &signalOrdId
 	return &this
 }
 
@@ -45,107 +47,109 @@ func NewCreateTradingBotSignalCancelSubOrderV5RespDataInner() *CreateTradingBotS
 // but it doesn't guarantee that properties required by API are set
 func NewCreateTradingBotSignalCancelSubOrderV5RespDataInnerWithDefaults() *CreateTradingBotSignalCancelSubOrderV5RespDataInner {
 	this := CreateTradingBotSignalCancelSubOrderV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
+	var signalOrdId string = ""
+	this.SignalOrdId = &signalOrdId
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetSCode returns the SCode field value if set, zero value otherwise.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSCode() string {
+	if o == nil || IsNil(o.SCode) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.SCode
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetSCodeOk returns a tuple with the SCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.SCode) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.SCode, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasSCode returns a boolean if a field has been set.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSCode() bool {
+	if o != nil && !IsNil(o.SCode) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetSCode gets a reference to the given string and assigns it to the SCode field.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSCode(v string) {
+	o.SCode = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetData() []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetDataOk() ([]CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetData(v []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetSMsg returns the SMsg field value if set, zero value otherwise.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSMsg() string {
+	if o == nil || IsNil(o.SMsg) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.SMsg
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetSMsgOk returns a tuple with the SMsg field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSMsgOk() (*string, bool) {
+	if o == nil || IsNil(o.SMsg) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.SMsg, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasSMsg returns a boolean if a field has been set.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSMsg() bool {
+	if o != nil && !IsNil(o.SMsg) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetSMsg gets a reference to the given string and assigns it to the SMsg field.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSMsg(v string) {
+	o.SMsg = &v
+}
+
+// GetSignalOrdId returns the SignalOrdId field value if set, zero value otherwise.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSignalOrdId() string {
+	if o == nil || IsNil(o.SignalOrdId) {
+		var ret string
+		return ret
+	}
+	return *o.SignalOrdId
+}
+
+// GetSignalOrdIdOk returns a tuple with the SignalOrdId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSignalOrdIdOk() (*string, bool) {
+	if o == nil || IsNil(o.SignalOrdId) {
+		return nil, false
+	}
+	return o.SignalOrdId, true
+}
+
+// HasSignalOrdId returns a boolean if a field has been set.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSignalOrdId() bool {
+	if o != nil && !IsNil(o.SignalOrdId) {
+		return true
+	}
+
+	return false
+}
+
+// SetSignalOrdId gets a reference to the given string and assigns it to the SignalOrdId field.
+func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSignalOrdId(v string) {
+	o.SignalOrdId = &v
 }
 
 func (o CreateTradingBotSignalCancelSubOrderV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +162,14 @@ func (o CreateTradingBotSignalCancelSubOrderV5RespDataInner) MarshalJSON() ([]by
 
 func (o CreateTradingBotSignalCancelSubOrderV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.SCode) {
+		toSerialize["sCode"] = o.SCode
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.SMsg) {
+		toSerialize["sMsg"] = o.SMsg
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.SignalOrdId) {
+		toSerialize["signalOrdId"] = o.SignalOrdId
 	}
 	return toSerialize, nil
 }

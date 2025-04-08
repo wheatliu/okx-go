@@ -98,7 +98,7 @@ No authorization required
 
 ## GetMarketHistoryIndexCandlesV5
 
-> GetMarketHistoryIndexCandlesV5Resp GetMarketHistoryIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+> GetMarketHistoryIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
 Retrieve the candlestick charts of the index from recent years.  
 
@@ -125,13 +125,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PublicDataAPI.GetMarketHistoryIndexCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	r, err := apiClient.PublicDataAPI.GetMarketHistoryIndexCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PublicDataAPI.GetMarketHistoryIndexCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketHistoryIndexCandlesV5`: GetMarketHistoryIndexCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `PublicDataAPI.GetMarketHistoryIndexCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -154,7 +152,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketHistoryIndexCandlesV5Resp**](GetMarketHistoryIndexCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -172,7 +170,7 @@ No authorization required
 
 ## GetMarketHistoryMarkPriceCandlesV5
 
-> GetMarketHistoryMarkPriceCandlesV5Resp GetMarketHistoryMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+> GetMarketHistoryMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
 Retrieve the candlestick charts of mark price from recent years.  
 
@@ -199,13 +197,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PublicDataAPI.GetMarketHistoryMarkPriceCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	r, err := apiClient.PublicDataAPI.GetMarketHistoryMarkPriceCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PublicDataAPI.GetMarketHistoryMarkPriceCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketHistoryMarkPriceCandlesV5`: GetMarketHistoryMarkPriceCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `PublicDataAPI.GetMarketHistoryMarkPriceCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -228,7 +224,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketHistoryMarkPriceCandlesV5Resp**](GetMarketHistoryMarkPriceCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -246,7 +242,7 @@ No authorization required
 
 ## GetMarketIndexCandlesV5
 
-> GetMarketIndexCandlesV5Resp GetMarketIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+> GetMarketIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
 Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
 
@@ -273,13 +269,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PublicDataAPI.GetMarketIndexCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	r, err := apiClient.PublicDataAPI.GetMarketIndexCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PublicDataAPI.GetMarketIndexCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketIndexCandlesV5`: GetMarketIndexCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `PublicDataAPI.GetMarketIndexCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -302,7 +296,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketIndexCandlesV5Resp**](GetMarketIndexCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -454,7 +448,7 @@ No authorization required
 
 ## GetMarketMarkPriceCandlesV5
 
-> GetMarketMarkPriceCandlesV5Resp GetMarketMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+> GetMarketMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
 Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
 
@@ -481,13 +475,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PublicDataAPI.GetMarketMarkPriceCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	r, err := apiClient.PublicDataAPI.GetMarketMarkPriceCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PublicDataAPI.GetMarketMarkPriceCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketMarkPriceCandlesV5`: GetMarketMarkPriceCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `PublicDataAPI.GetMarketMarkPriceCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -510,7 +502,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketMarkPriceCandlesV5Resp**](GetMarketMarkPriceCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 
@@ -1936,7 +1928,7 @@ No authorization required
 
 ## GetPublicUnderlyingV5
 
-> GetPublicUnderlyingV5Resp GetPublicUnderlyingV5(ctx).InstType(instType).Execute()
+> GetPublicUnderlyingV5(ctx).InstType(instType).Execute()
 
 
 
@@ -1959,13 +1951,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.PublicDataAPI.GetPublicUnderlyingV5(context.Background()).InstType(instType).Execute()
+	r, err := apiClient.PublicDataAPI.GetPublicUnderlyingV5(context.Background()).InstType(instType).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `PublicDataAPI.GetPublicUnderlyingV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetPublicUnderlyingV5`: GetPublicUnderlyingV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `PublicDataAPI.GetPublicUnderlyingV5`: %v\n", resp)
 }
 ```
 
@@ -1984,7 +1974,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetPublicUnderlyingV5Resp**](GetPublicUnderlyingV5Resp.md)
+ (empty response body)
 
 ### Authorization
 

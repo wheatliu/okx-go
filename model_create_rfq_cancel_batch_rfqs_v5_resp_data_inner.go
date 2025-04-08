@@ -19,12 +19,14 @@ var _ MappedNullable = &CreateRfqCancelBatchRfqsV5RespDataInner{}
 
 // CreateRfqCancelBatchRfqsV5RespDataInner struct for CreateRfqCancelBatchRfqsV5RespDataInner
 type CreateRfqCancelBatchRfqsV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results
-	Data []CreateRfqCancelBatchRfqsV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not 0.
-	Msg *string `json:"msg,omitempty"`
+	// Client-supplied RFQ ID.
+	ClRfqId *string `json:"clRfqId,omitempty"`
+	// RFQ ID
+	RfqId *string `json:"rfqId,omitempty"`
+	// The code of the event execution result, `0` means success.
+	SCode *string `json:"sCode,omitempty"`
+	// Rejection message if the request is unsuccessful.
+	SMsg *string `json:"sMsg,omitempty"`
 }
 
 // NewCreateRfqCancelBatchRfqsV5RespDataInner instantiates a new CreateRfqCancelBatchRfqsV5RespDataInner object
@@ -33,10 +35,14 @@ type CreateRfqCancelBatchRfqsV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateRfqCancelBatchRfqsV5RespDataInner() *CreateRfqCancelBatchRfqsV5RespDataInner {
 	this := CreateRfqCancelBatchRfqsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var clRfqId string = ""
+	this.ClRfqId = &clRfqId
+	var rfqId string = ""
+	this.RfqId = &rfqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
@@ -45,107 +51,143 @@ func NewCreateRfqCancelBatchRfqsV5RespDataInner() *CreateRfqCancelBatchRfqsV5Res
 // but it doesn't guarantee that properties required by API are set
 func NewCreateRfqCancelBatchRfqsV5RespDataInnerWithDefaults() *CreateRfqCancelBatchRfqsV5RespDataInner {
 	this := CreateRfqCancelBatchRfqsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var clRfqId string = ""
+	this.ClRfqId = &clRfqId
+	var rfqId string = ""
+	this.RfqId = &rfqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetClRfqId returns the ClRfqId field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetClRfqId() string {
+	if o == nil || IsNil(o.ClRfqId) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.ClRfqId
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetClRfqIdOk returns a tuple with the ClRfqId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetClRfqIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ClRfqId) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.ClRfqId, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasClRfqId returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasClRfqId() bool {
+	if o != nil && !IsNil(o.ClRfqId) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetClRfqId gets a reference to the given string and assigns it to the ClRfqId field.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetClRfqId(v string) {
+	o.ClRfqId = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetData() []CreateRfqCancelBatchRfqsV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateRfqCancelBatchRfqsV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetDataOk() ([]CreateRfqCancelBatchRfqsV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateRfqCancelBatchRfqsV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetData(v []CreateRfqCancelBatchRfqsV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetRfqId returns the RfqId field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetRfqId() string {
+	if o == nil || IsNil(o.RfqId) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.RfqId
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetRfqIdOk returns a tuple with the RfqId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetRfqIdOk() (*string, bool) {
+	if o == nil || IsNil(o.RfqId) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.RfqId, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasRfqId returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasRfqId() bool {
+	if o != nil && !IsNil(o.RfqId) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetRfqId gets a reference to the given string and assigns it to the RfqId field.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetRfqId(v string) {
+	o.RfqId = &v
+}
+
+// GetSCode returns the SCode field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetSCode() string {
+	if o == nil || IsNil(o.SCode) {
+		var ret string
+		return ret
+	}
+	return *o.SCode
+}
+
+// GetSCodeOk returns a tuple with the SCode field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetSCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.SCode) {
+		return nil, false
+	}
+	return o.SCode, true
+}
+
+// HasSCode returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasSCode() bool {
+	if o != nil && !IsNil(o.SCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetSCode gets a reference to the given string and assigns it to the SCode field.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetSCode(v string) {
+	o.SCode = &v
+}
+
+// GetSMsg returns the SMsg field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetSMsg() string {
+	if o == nil || IsNil(o.SMsg) {
+		var ret string
+		return ret
+	}
+	return *o.SMsg
+}
+
+// GetSMsgOk returns a tuple with the SMsg field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) GetSMsgOk() (*string, bool) {
+	if o == nil || IsNil(o.SMsg) {
+		return nil, false
+	}
+	return o.SMsg, true
+}
+
+// HasSMsg returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) HasSMsg() bool {
+	if o != nil && !IsNil(o.SMsg) {
+		return true
+	}
+
+	return false
+}
+
+// SetSMsg gets a reference to the given string and assigns it to the SMsg field.
+func (o *CreateRfqCancelBatchRfqsV5RespDataInner) SetSMsg(v string) {
+	o.SMsg = &v
 }
 
 func (o CreateRfqCancelBatchRfqsV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +200,17 @@ func (o CreateRfqCancelBatchRfqsV5RespDataInner) MarshalJSON() ([]byte, error) {
 
 func (o CreateRfqCancelBatchRfqsV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.ClRfqId) {
+		toSerialize["clRfqId"] = o.ClRfqId
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.RfqId) {
+		toSerialize["rfqId"] = o.RfqId
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.SCode) {
+		toSerialize["sCode"] = o.SCode
+	}
+	if !IsNil(o.SMsg) {
+		toSerialize["sMsg"] = o.SMsg
 	}
 	return toSerialize, nil
 }

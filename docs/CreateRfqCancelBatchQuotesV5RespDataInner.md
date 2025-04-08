@@ -4,9 +4,10 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **string** | The result code, &#x60;0&#x60; means success. | [optional] [default to ""]
-**Data** | Pointer to [**[]CreateRfqCancelBatchQuotesV5RespDataInnerDataInner**](CreateRfqCancelBatchQuotesV5RespDataInnerDataInner.md) | Array of objects containing the results | [optional] 
-**Msg** | Pointer to **string** | The error message, not empty if the code is not 0. | [optional] [default to ""]
+**ClQuoteId** | Pointer to **string** | Client-supplied Quote ID. | [optional] [default to ""]
+**QuoteId** | Pointer to **string** | Quote ID | [optional] [default to ""]
+**SCode** | Pointer to **string** | The code of the event execution result, &#x60;0&#x60; means success. | [optional] [default to ""]
+**SMsg** | Pointer to **string** | Rejection message if the request is unsuccessful. | [optional] [default to ""]
 
 ## Methods
 
@@ -27,80 +28,105 @@ NewCreateRfqCancelBatchQuotesV5RespDataInnerWithDefaults instantiates a new Crea
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCode
+### GetClQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetCode() string`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetClQuoteId() string`
 
-GetCode returns the Code field if non-nil, zero value otherwise.
+GetClQuoteId returns the ClQuoteId field if non-nil, zero value otherwise.
 
-### GetCodeOk
+### GetClQuoteIdOk
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetCodeOk() (*string, bool)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetClQuoteIdOk() (*string, bool)`
 
-GetCodeOk returns a tuple with the Code field if it's non-nil, zero value otherwise
+GetClQuoteIdOk returns a tuple with the ClQuoteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCode
+### SetClQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetCode(v string)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetClQuoteId(v string)`
 
-SetCode sets Code field to given value.
+SetClQuoteId sets ClQuoteId field to given value.
 
-### HasCode
+### HasClQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasCode() bool`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasClQuoteId() bool`
 
-HasCode returns a boolean if a field has been set.
+HasClQuoteId returns a boolean if a field has been set.
 
-### GetData
+### GetQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetData() []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetQuoteId() string`
 
-GetData returns the Data field if non-nil, zero value otherwise.
+GetQuoteId returns the QuoteId field if non-nil, zero value otherwise.
 
-### GetDataOk
+### GetQuoteIdOk
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetDataOk() (*[]CreateRfqCancelBatchQuotesV5RespDataInnerDataInner, bool)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetQuoteIdOk() (*string, bool)`
 
-GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
+GetQuoteIdOk returns a tuple with the QuoteId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetData
+### SetQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetData(v []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetQuoteId(v string)`
 
-SetData sets Data field to given value.
+SetQuoteId sets QuoteId field to given value.
 
-### HasData
+### HasQuoteId
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasData() bool`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasQuoteId() bool`
 
-HasData returns a boolean if a field has been set.
+HasQuoteId returns a boolean if a field has been set.
 
-### GetMsg
+### GetSCode
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetMsg() string`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSCode() string`
 
-GetMsg returns the Msg field if non-nil, zero value otherwise.
+GetSCode returns the SCode field if non-nil, zero value otherwise.
 
-### GetMsgOk
+### GetSCodeOk
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetMsgOk() (*string, bool)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSCodeOk() (*string, bool)`
 
-GetMsgOk returns a tuple with the Msg field if it's non-nil, zero value otherwise
+GetSCodeOk returns a tuple with the SCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMsg
+### SetSCode
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetMsg(v string)`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetSCode(v string)`
 
-SetMsg sets Msg field to given value.
+SetSCode sets SCode field to given value.
 
-### HasMsg
+### HasSCode
 
-`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasMsg() bool`
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasSCode() bool`
 
-HasMsg returns a boolean if a field has been set.
+HasSCode returns a boolean if a field has been set.
+
+### GetSMsg
+
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSMsg() string`
+
+GetSMsg returns the SMsg field if non-nil, zero value otherwise.
+
+### GetSMsgOk
+
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSMsgOk() (*string, bool)`
+
+GetSMsgOk returns a tuple with the SMsg field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSMsg
+
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetSMsg(v string)`
+
+SetSMsg sets SMsg field to given value.
+
+### HasSMsg
+
+`func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasSMsg() bool`
+
+HasSMsg returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

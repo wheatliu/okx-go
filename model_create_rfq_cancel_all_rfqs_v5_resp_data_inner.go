@@ -19,12 +19,8 @@ var _ MappedNullable = &CreateRfqCancelAllRfqsV5RespDataInner{}
 
 // CreateRfqCancelAllRfqsV5RespDataInner struct for CreateRfqCancelAllRfqsV5RespDataInner
 type CreateRfqCancelAllRfqsV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results
-	Data []CreateRfqCancelAllRfqsV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not 0.
-	Msg *string `json:"msg,omitempty"`
+	// The timestamp of successful cancellation. Unix timestamp format in milliseconds, e.g. 1597026383085.
+	Ts *string `json:"ts,omitempty"`
 }
 
 // NewCreateRfqCancelAllRfqsV5RespDataInner instantiates a new CreateRfqCancelAllRfqsV5RespDataInner object
@@ -33,10 +29,8 @@ type CreateRfqCancelAllRfqsV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateRfqCancelAllRfqsV5RespDataInner() *CreateRfqCancelAllRfqsV5RespDataInner {
 	this := CreateRfqCancelAllRfqsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var ts string = ""
+	this.Ts = &ts
 	return &this
 }
 
@@ -45,107 +39,41 @@ func NewCreateRfqCancelAllRfqsV5RespDataInner() *CreateRfqCancelAllRfqsV5RespDat
 // but it doesn't guarantee that properties required by API are set
 func NewCreateRfqCancelAllRfqsV5RespDataInnerWithDefaults() *CreateRfqCancelAllRfqsV5RespDataInner {
 	this := CreateRfqCancelAllRfqsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var ts string = ""
+	this.Ts = &ts
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetTs returns the Ts field value if set, zero value otherwise.
+func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetTs() string {
+	if o == nil || IsNil(o.Ts) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.Ts
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetTsOk returns a tuple with the Ts field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetTsOk() (*string, bool) {
+	if o == nil || IsNil(o.Ts) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.Ts, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasTs returns a boolean if a field has been set.
+func (o *CreateRfqCancelAllRfqsV5RespDataInner) HasTs() bool {
+	if o != nil && !IsNil(o.Ts) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) SetCode(v string) {
-	o.Code = &v
-}
-
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetData() []CreateRfqCancelAllRfqsV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateRfqCancelAllRfqsV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetDataOk() ([]CreateRfqCancelAllRfqsV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateRfqCancelAllRfqsV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) SetData(v []CreateRfqCancelAllRfqsV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
-		var ret string
-		return ret
-	}
-	return *o.Msg
-}
-
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
-		return nil, false
-	}
-	return o.Msg, true
-}
-
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
-		return true
-	}
-
-	return false
-}
-
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateRfqCancelAllRfqsV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetTs gets a reference to the given string and assigns it to the Ts field.
+func (o *CreateRfqCancelAllRfqsV5RespDataInner) SetTs(v string) {
+	o.Ts = &v
 }
 
 func (o CreateRfqCancelAllRfqsV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +86,8 @@ func (o CreateRfqCancelAllRfqsV5RespDataInner) MarshalJSON() ([]byte, error) {
 
 func (o CreateRfqCancelAllRfqsV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
-	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
-	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.Ts) {
+		toSerialize["ts"] = o.Ts
 	}
 	return toSerialize, nil
 }

@@ -502,7 +502,7 @@ func (r ApiGetMarketCandlesV5Request) Limit(limit string) ApiGetMarketCandlesV5R
 	return r
 }
 
-func (r ApiGetMarketCandlesV5Request) Execute() (*GetMarketCandlesV5Resp, *http.Response, error) {
+func (r ApiGetMarketCandlesV5Request) Execute() (*http.Response, error) {
 	return r.ApiService.GetMarketCandlesV5Execute(r)
 }
 
@@ -528,18 +528,16 @@ func (a *MarketDataAPIService) GetMarketCandlesV5(ctx context.Context) ApiGetMar
 }
 
 // Execute executes the request
-//  @return GetMarketCandlesV5Resp
-func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5Request) (*GetMarketCandlesV5Resp, *http.Response, error) {
+func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5Request) (*http.Response, error) {
 	var (
 		localVarHTTPMethod   = http.MethodGet
 		localVarPostBody     interface{}
 		formFiles            []formFile
-		localVarReturnValue  *GetMarketCandlesV5Resp
 	)
 
 	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketDataAPIService.GetMarketCandlesV5")
 	if err != nil {
-		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+		return nil, &GenericOpenAPIError{error: err.Error()}
 	}
 
 	localVarPath := localBasePath + "/api/v5/market/candles"
@@ -548,7 +546,7 @@ func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
 	if r.instId == nil {
-		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+		return nil, reportError("instId is required and must be specified")
 	}
 
 	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
@@ -596,19 +594,19 @@ func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5
 
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
-		return localVarReturnValue, nil, err
+		return nil, err
 	}
 
 	localVarHTTPResponse, err := a.client.callAPI(req)
 	if err != nil || localVarHTTPResponse == nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
 	localVarHTTPResponse.Body.Close()
 	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
 	if err != nil {
-		return localVarReturnValue, localVarHTTPResponse, err
+		return localVarHTTPResponse, err
 	}
 
 	if localVarHTTPResponse.StatusCode >= 300 {
@@ -621,35 +619,26 @@ func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
-			return localVarReturnValue, localVarHTTPResponse, newErr
+			return localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
 			var v APIError
 			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 			if err != nil {
 				newErr.error = err.Error()
-				return localVarReturnValue, localVarHTTPResponse, newErr
+				return localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
 					newErr.model = v
 		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
+		return localVarHTTPResponse, newErr
 	}
 
-	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
-	if err != nil {
-		newErr := &GenericOpenAPIError{
-			body:  localVarBody,
-			error: err.Error(),
-		}
-		return localVarReturnValue, localVarHTTPResponse, newErr
-	}
-
-	return localVarReturnValue, localVarHTTPResponse, nil
+	return localVarHTTPResponse, nil
 }
 
 type ApiGetMarketHistoryTradesV5Request struct {

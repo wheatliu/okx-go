@@ -19,12 +19,24 @@ var _ MappedNullable = &GetRfqPublicTradesV5RespDataInner{}
 
 // GetRfqPublicTradesV5RespDataInner struct for GetRfqPublicTradesV5RespDataInner
 type GetRfqPublicTradesV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results of the public block trade.
-	Data []GetRfqPublicTradesV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not 0.
-	Msg *string `json:"msg,omitempty"`
+	// Block trade ID.
+	BlockTdId *string `json:"blockTdId,omitempty"`
+	// The time the trade was executed. Unix timestamp in milliseconds.
+	CTime *string `json:"cTime,omitempty"`
+	// Instrument ID, e.g. BTC-USDT-SWAP
+	InstId *string `json:"instId,omitempty"`
+	// Legs of trade
+	Legs []GetRfqPublicTradesV5RespDataInnerLegsInner `json:"legs,omitempty"`
+	// The price the leg executed
+	Px *string `json:"px,omitempty"`
+	// The direction of the leg from the Takers perspective. Valid value can be buy or sell.
+	Side *string `json:"side,omitempty"`
+	// Option strategy, e.g. CALL_CALENDAR_SPREAD
+	Strategy *string `json:"strategy,omitempty"`
+	// Trade quantity   For spot trading, the unit is base currency  For `FUTURES`/`SWAP`/`OPTION`, the unit is contract.
+	Sz *string `json:"sz,omitempty"`
+	// Last traded ID.
+	TradeId *string `json:"tradeId,omitempty"`
 }
 
 // NewGetRfqPublicTradesV5RespDataInner instantiates a new GetRfqPublicTradesV5RespDataInner object
@@ -33,10 +45,22 @@ type GetRfqPublicTradesV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewGetRfqPublicTradesV5RespDataInner() *GetRfqPublicTradesV5RespDataInner {
 	this := GetRfqPublicTradesV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var blockTdId string = ""
+	this.BlockTdId = &blockTdId
+	var cTime string = ""
+	this.CTime = &cTime
+	var instId string = ""
+	this.InstId = &instId
+	var px string = ""
+	this.Px = &px
+	var side string = ""
+	this.Side = &side
+	var strategy string = ""
+	this.Strategy = &strategy
+	var sz string = ""
+	this.Sz = &sz
+	var tradeId string = ""
+	this.TradeId = &tradeId
 	return &this
 }
 
@@ -45,107 +69,311 @@ func NewGetRfqPublicTradesV5RespDataInner() *GetRfqPublicTradesV5RespDataInner {
 // but it doesn't guarantee that properties required by API are set
 func NewGetRfqPublicTradesV5RespDataInnerWithDefaults() *GetRfqPublicTradesV5RespDataInner {
 	this := GetRfqPublicTradesV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var blockTdId string = ""
+	this.BlockTdId = &blockTdId
+	var cTime string = ""
+	this.CTime = &cTime
+	var instId string = ""
+	this.InstId = &instId
+	var px string = ""
+	this.Px = &px
+	var side string = ""
+	this.Side = &side
+	var strategy string = ""
+	this.Strategy = &strategy
+	var sz string = ""
+	this.Sz = &sz
+	var tradeId string = ""
+	this.TradeId = &tradeId
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *GetRfqPublicTradesV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetBlockTdId returns the BlockTdId field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetBlockTdId() string {
+	if o == nil || IsNil(o.BlockTdId) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.BlockTdId
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetBlockTdIdOk returns a tuple with the BlockTdId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *GetRfqPublicTradesV5RespDataInner) GetBlockTdIdOk() (*string, bool) {
+	if o == nil || IsNil(o.BlockTdId) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.BlockTdId, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasBlockTdId returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasBlockTdId() bool {
+	if o != nil && !IsNil(o.BlockTdId) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *GetRfqPublicTradesV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetBlockTdId gets a reference to the given string and assigns it to the BlockTdId field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetBlockTdId(v string) {
+	o.BlockTdId = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *GetRfqPublicTradesV5RespDataInner) GetData() []GetRfqPublicTradesV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []GetRfqPublicTradesV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) GetDataOk() ([]GetRfqPublicTradesV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []GetRfqPublicTradesV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *GetRfqPublicTradesV5RespDataInner) SetData(v []GetRfqPublicTradesV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *GetRfqPublicTradesV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetCTime returns the CTime field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetCTime() string {
+	if o == nil || IsNil(o.CTime) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.CTime
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetCTimeOk returns a tuple with the CTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *GetRfqPublicTradesV5RespDataInner) GetCTimeOk() (*string, bool) {
+	if o == nil || IsNil(o.CTime) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.CTime, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *GetRfqPublicTradesV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasCTime returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasCTime() bool {
+	if o != nil && !IsNil(o.CTime) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *GetRfqPublicTradesV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetCTime gets a reference to the given string and assigns it to the CTime field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetCTime(v string) {
+	o.CTime = &v
+}
+
+// GetInstId returns the InstId field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetInstId() string {
+	if o == nil || IsNil(o.InstId) {
+		var ret string
+		return ret
+	}
+	return *o.InstId
+}
+
+// GetInstIdOk returns a tuple with the InstId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetInstIdOk() (*string, bool) {
+	if o == nil || IsNil(o.InstId) {
+		return nil, false
+	}
+	return o.InstId, true
+}
+
+// HasInstId returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasInstId() bool {
+	if o != nil && !IsNil(o.InstId) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstId gets a reference to the given string and assigns it to the InstId field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetInstId(v string) {
+	o.InstId = &v
+}
+
+// GetLegs returns the Legs field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetLegs() []GetRfqPublicTradesV5RespDataInnerLegsInner {
+	if o == nil || IsNil(o.Legs) {
+		var ret []GetRfqPublicTradesV5RespDataInnerLegsInner
+		return ret
+	}
+	return o.Legs
+}
+
+// GetLegsOk returns a tuple with the Legs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetLegsOk() ([]GetRfqPublicTradesV5RespDataInnerLegsInner, bool) {
+	if o == nil || IsNil(o.Legs) {
+		return nil, false
+	}
+	return o.Legs, true
+}
+
+// HasLegs returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasLegs() bool {
+	if o != nil && !IsNil(o.Legs) {
+		return true
+	}
+
+	return false
+}
+
+// SetLegs gets a reference to the given []GetRfqPublicTradesV5RespDataInnerLegsInner and assigns it to the Legs field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetLegs(v []GetRfqPublicTradesV5RespDataInnerLegsInner) {
+	o.Legs = v
+}
+
+// GetPx returns the Px field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetPx() string {
+	if o == nil || IsNil(o.Px) {
+		var ret string
+		return ret
+	}
+	return *o.Px
+}
+
+// GetPxOk returns a tuple with the Px field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetPxOk() (*string, bool) {
+	if o == nil || IsNil(o.Px) {
+		return nil, false
+	}
+	return o.Px, true
+}
+
+// HasPx returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasPx() bool {
+	if o != nil && !IsNil(o.Px) {
+		return true
+	}
+
+	return false
+}
+
+// SetPx gets a reference to the given string and assigns it to the Px field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetPx(v string) {
+	o.Px = &v
+}
+
+// GetSide returns the Side field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetSide() string {
+	if o == nil || IsNil(o.Side) {
+		var ret string
+		return ret
+	}
+	return *o.Side
+}
+
+// GetSideOk returns a tuple with the Side field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetSideOk() (*string, bool) {
+	if o == nil || IsNil(o.Side) {
+		return nil, false
+	}
+	return o.Side, true
+}
+
+// HasSide returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasSide() bool {
+	if o != nil && !IsNil(o.Side) {
+		return true
+	}
+
+	return false
+}
+
+// SetSide gets a reference to the given string and assigns it to the Side field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetSide(v string) {
+	o.Side = &v
+}
+
+// GetStrategy returns the Strategy field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetStrategy() string {
+	if o == nil || IsNil(o.Strategy) {
+		var ret string
+		return ret
+	}
+	return *o.Strategy
+}
+
+// GetStrategyOk returns a tuple with the Strategy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetStrategyOk() (*string, bool) {
+	if o == nil || IsNil(o.Strategy) {
+		return nil, false
+	}
+	return o.Strategy, true
+}
+
+// HasStrategy returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasStrategy() bool {
+	if o != nil && !IsNil(o.Strategy) {
+		return true
+	}
+
+	return false
+}
+
+// SetStrategy gets a reference to the given string and assigns it to the Strategy field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetStrategy(v string) {
+	o.Strategy = &v
+}
+
+// GetSz returns the Sz field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetSz() string {
+	if o == nil || IsNil(o.Sz) {
+		var ret string
+		return ret
+	}
+	return *o.Sz
+}
+
+// GetSzOk returns a tuple with the Sz field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetSzOk() (*string, bool) {
+	if o == nil || IsNil(o.Sz) {
+		return nil, false
+	}
+	return o.Sz, true
+}
+
+// HasSz returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasSz() bool {
+	if o != nil && !IsNil(o.Sz) {
+		return true
+	}
+
+	return false
+}
+
+// SetSz gets a reference to the given string and assigns it to the Sz field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetSz(v string) {
+	o.Sz = &v
+}
+
+// GetTradeId returns the TradeId field value if set, zero value otherwise.
+func (o *GetRfqPublicTradesV5RespDataInner) GetTradeId() string {
+	if o == nil || IsNil(o.TradeId) {
+		var ret string
+		return ret
+	}
+	return *o.TradeId
+}
+
+// GetTradeIdOk returns a tuple with the TradeId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) GetTradeIdOk() (*string, bool) {
+	if o == nil || IsNil(o.TradeId) {
+		return nil, false
+	}
+	return o.TradeId, true
+}
+
+// HasTradeId returns a boolean if a field has been set.
+func (o *GetRfqPublicTradesV5RespDataInner) HasTradeId() bool {
+	if o != nil && !IsNil(o.TradeId) {
+		return true
+	}
+
+	return false
+}
+
+// SetTradeId gets a reference to the given string and assigns it to the TradeId field.
+func (o *GetRfqPublicTradesV5RespDataInner) SetTradeId(v string) {
+	o.TradeId = &v
 }
 
 func (o GetRfqPublicTradesV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +386,32 @@ func (o GetRfqPublicTradesV5RespDataInner) MarshalJSON() ([]byte, error) {
 
 func (o GetRfqPublicTradesV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.BlockTdId) {
+		toSerialize["blockTdId"] = o.BlockTdId
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.CTime) {
+		toSerialize["cTime"] = o.CTime
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.InstId) {
+		toSerialize["instId"] = o.InstId
+	}
+	if !IsNil(o.Legs) {
+		toSerialize["legs"] = o.Legs
+	}
+	if !IsNil(o.Px) {
+		toSerialize["px"] = o.Px
+	}
+	if !IsNil(o.Side) {
+		toSerialize["side"] = o.Side
+	}
+	if !IsNil(o.Strategy) {
+		toSerialize["strategy"] = o.Strategy
+	}
+	if !IsNil(o.Sz) {
+		toSerialize["sz"] = o.Sz
+	}
+	if !IsNil(o.TradeId) {
+		toSerialize["tradeId"] = o.TradeId
 	}
 	return toSerialize, nil
 }

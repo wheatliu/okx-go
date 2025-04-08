@@ -26,10 +26,9 @@ func Test_rest_TradingStatisticsAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(context.Background()).Execute()
+		httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -38,10 +37,9 @@ func Test_rest_TradingStatisticsAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5(context.Background()).Execute()
+		httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortAccountRatioContractV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -62,10 +60,9 @@ func Test_rest_TradingStatisticsAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(context.Background()).Execute()
+		httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -74,10 +71,9 @@ func Test_rest_TradingStatisticsAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5(context.Background()).Execute()
+		httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatContractsOpenInterestHistoryV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})
@@ -170,10 +166,9 @@ func Test_rest_TradingStatisticsAPIService(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test
 
-		resp, httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5(context.Background()).Execute()
+		httpRes, err := apiClient.TradingStatisticsAPI.GetRubikStatTakerVolumeContractV5(context.Background()).Execute()
 
 		require.Nil(t, err)
-		require.NotNil(t, resp)
 		assert.Equal(t, 200, httpRes.StatusCode)
 
 	})

@@ -4,11 +4,12 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **string** | The result code, &#x60;0&#x60; means success | [optional] [default to ""]
-**Data** | Pointer to [**[]CreateTradeBatchOrdersV5RespDataInnerDataInner**](CreateTradeBatchOrdersV5RespDataInnerDataInner.md) | Array of objects contains the response results | [optional] 
-**InTime** | Pointer to **string** | Timestamp at REST gateway when the request is received, Unix timestamp format in microseconds, e.g. &#x60;1597026383085123&#x60;   The time is recorded after authentication. | [optional] [default to ""]
-**Msg** | Pointer to **string** | The error message, empty if the code is 0 | [optional] [default to ""]
-**OutTime** | Pointer to **string** | Timestamp at REST gateway when the response is sent, Unix timestamp format in microseconds, e.g. &#x60;1597026383085123&#x60; | [optional] [default to ""]
+**ClOrdId** | Pointer to **string** | Client Order ID as assigned by the client | [optional] [default to ""]
+**OrdId** | Pointer to **string** | Order ID | [optional] [default to ""]
+**SCode** | Pointer to **string** | The code of the event execution result, &#x60;0&#x60; means success. | [optional] [default to ""]
+**SMsg** | Pointer to **string** | Rejection or success message of event execution. | [optional] [default to ""]
+**Tag** | Pointer to **string** | Order tag | [optional] [default to ""]
+**Ts** | Pointer to **string** | Timestamp when the order request processing is finished by our system, Unix timestamp format in milliseconds, e.g. &#x60;1597026383085&#x60; | [optional] [default to ""]
 
 ## Methods
 
@@ -29,130 +30,155 @@ NewCreateTradeBatchOrdersV5RespDataInnerWithDefaults instantiates a new CreateTr
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCode
+### GetClOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetCode() string`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetClOrdId() string`
 
-GetCode returns the Code field if non-nil, zero value otherwise.
+GetClOrdId returns the ClOrdId field if non-nil, zero value otherwise.
 
-### GetCodeOk
+### GetClOrdIdOk
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetCodeOk() (*string, bool)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetClOrdIdOk() (*string, bool)`
 
-GetCodeOk returns a tuple with the Code field if it's non-nil, zero value otherwise
+GetClOrdIdOk returns a tuple with the ClOrdId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCode
+### SetClOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) SetCode(v string)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetClOrdId(v string)`
 
-SetCode sets Code field to given value.
+SetClOrdId sets ClOrdId field to given value.
 
-### HasCode
+### HasClOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) HasCode() bool`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasClOrdId() bool`
 
-HasCode returns a boolean if a field has been set.
+HasClOrdId returns a boolean if a field has been set.
 
-### GetData
+### GetOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetData() []CreateTradeBatchOrdersV5RespDataInnerDataInner`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetOrdId() string`
 
-GetData returns the Data field if non-nil, zero value otherwise.
+GetOrdId returns the OrdId field if non-nil, zero value otherwise.
 
-### GetDataOk
+### GetOrdIdOk
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetDataOk() (*[]CreateTradeBatchOrdersV5RespDataInnerDataInner, bool)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetOrdIdOk() (*string, bool)`
 
-GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
+GetOrdIdOk returns a tuple with the OrdId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetData
+### SetOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) SetData(v []CreateTradeBatchOrdersV5RespDataInnerDataInner)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetOrdId(v string)`
 
-SetData sets Data field to given value.
+SetOrdId sets OrdId field to given value.
 
-### HasData
+### HasOrdId
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) HasData() bool`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasOrdId() bool`
 
-HasData returns a boolean if a field has been set.
+HasOrdId returns a boolean if a field has been set.
 
-### GetInTime
+### GetSCode
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetInTime() string`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetSCode() string`
 
-GetInTime returns the InTime field if non-nil, zero value otherwise.
+GetSCode returns the SCode field if non-nil, zero value otherwise.
 
-### GetInTimeOk
+### GetSCodeOk
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetInTimeOk() (*string, bool)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetSCodeOk() (*string, bool)`
 
-GetInTimeOk returns a tuple with the InTime field if it's non-nil, zero value otherwise
+GetSCodeOk returns a tuple with the SCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetInTime
+### SetSCode
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) SetInTime(v string)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetSCode(v string)`
 
-SetInTime sets InTime field to given value.
+SetSCode sets SCode field to given value.
 
-### HasInTime
+### HasSCode
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) HasInTime() bool`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasSCode() bool`
 
-HasInTime returns a boolean if a field has been set.
+HasSCode returns a boolean if a field has been set.
 
-### GetMsg
+### GetSMsg
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetMsg() string`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetSMsg() string`
 
-GetMsg returns the Msg field if non-nil, zero value otherwise.
+GetSMsg returns the SMsg field if non-nil, zero value otherwise.
 
-### GetMsgOk
+### GetSMsgOk
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetMsgOk() (*string, bool)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetSMsgOk() (*string, bool)`
 
-GetMsgOk returns a tuple with the Msg field if it's non-nil, zero value otherwise
+GetSMsgOk returns a tuple with the SMsg field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMsg
+### SetSMsg
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) SetMsg(v string)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetSMsg(v string)`
 
-SetMsg sets Msg field to given value.
+SetSMsg sets SMsg field to given value.
 
-### HasMsg
+### HasSMsg
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) HasMsg() bool`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasSMsg() bool`
 
-HasMsg returns a boolean if a field has been set.
+HasSMsg returns a boolean if a field has been set.
 
-### GetOutTime
+### GetTag
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetOutTime() string`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetTag() string`
 
-GetOutTime returns the OutTime field if non-nil, zero value otherwise.
+GetTag returns the Tag field if non-nil, zero value otherwise.
 
-### GetOutTimeOk
+### GetTagOk
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) GetOutTimeOk() (*string, bool)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetTagOk() (*string, bool)`
 
-GetOutTimeOk returns a tuple with the OutTime field if it's non-nil, zero value otherwise
+GetTagOk returns a tuple with the Tag field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetOutTime
+### SetTag
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) SetOutTime(v string)`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetTag(v string)`
 
-SetOutTime sets OutTime field to given value.
+SetTag sets Tag field to given value.
 
-### HasOutTime
+### HasTag
 
-`func (o *CreateTradeBatchOrdersV5RespDataInner) HasOutTime() bool`
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasTag() bool`
 
-HasOutTime returns a boolean if a field has been set.
+HasTag returns a boolean if a field has been set.
+
+### GetTs
+
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetTs() string`
+
+GetTs returns the Ts field if non-nil, zero value otherwise.
+
+### GetTsOk
+
+`func (o *CreateTradeBatchOrdersV5RespDataInner) GetTsOk() (*string, bool)`
+
+GetTsOk returns a tuple with the Ts field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetTs
+
+`func (o *CreateTradeBatchOrdersV5RespDataInner) SetTs(v string)`
+
+SetTs sets Ts field to given value.
+
+### HasTs
+
+`func (o *CreateTradeBatchOrdersV5RespDataInner) HasTs() bool`
+
+HasTs returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

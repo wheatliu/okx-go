@@ -19,12 +19,48 @@ var _ MappedNullable = &CreateRfqCreateQuoteV5RespDataInner{}
 
 // CreateRfqCreateQuoteV5RespDataInner struct for CreateRfqCreateQuoteV5RespDataInner
 type CreateRfqCreateQuoteV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results
-	Data []CreateRfqCreateQuoteV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not 0.
-	Msg *string `json:"msg,omitempty"`
+	// The timestamp the Quote was created, Unix timestamp format in milliseconds.
+	CTime *string `json:"cTime,omitempty"`
+	// Margin currency.   Only applicable to `cross` `MARGIN` orders in `Spot and futures mode`. The parameter will be ignored in other scenarios.
+	Ccy *string `json:"ccy,omitempty"`
+	// Client-supplied Quote ID.   This attribute is treated as client sensitive information. It will not be exposed to the Taker, only return empty string.
+	ClQuoteId *string `json:"clQuoteId,omitempty"`
+	// Client-supplied RFQ ID.   This attribute is treated as client sensitive information. It will not be exposed to the Maker, only return empty string.
+	ClRfqId *string `json:"clRfqId,omitempty"`
+	// Instrument ID, e.g. `BTC-USDT-SWAP`
+	InstId *string `json:"instId,omitempty"`
+	// The legs of the Quote.
+	Legs []CreateRfqCreateQuoteV5RespDataInnerLegsInner `json:"legs,omitempty"`
+	// Position side.   The default is `net` in the net mode. If not specified, return \"\", which is equivalent to net.   It can only be `long` or `short` in the long/short mode. If not specified, return \"\", which corresponds to the direction that opens new positions for the trade (buy => long, sell => short).   Only applicable to FUTURES/SWAP.
+	PosSide *string `json:"posSide,omitempty"`
+	// The price of the leg.
+	Px *string `json:"px,omitempty"`
+	// Quote ID.
+	QuoteId *string `json:"quoteId,omitempty"`
+	// The trading direction of the Quote.   Its value can be `buy` or `sell`. For example, if quoteSide is `buy`, all the legs are executed in their leg sides; otherwise, all the legs are executed in the opposite of their leg sides.
+	QuoteSide *string `json:"quoteSide,omitempty"`
+	// Reasons of state. Valid values can be `mmp_canceled`.
+	Reason *string `json:"reason,omitempty"`
+	// RFQ ID
+	RfqId *string `json:"rfqId,omitempty"`
+	// The direction of the leg. Valid values can be buy or sell.
+	Side *string `json:"side,omitempty"`
+	// The status of the quote. Valid values can be `active` `canceled` `pending_fill` `filled` `expired` or `failed`.
+	State *string `json:"state,omitempty"`
+	// Size of the leg in contracts or spot.
+	Sz *string `json:"sz,omitempty"`
+	// Quote tag.   The block trade associated with the Quote will have the same tag.
+	Tag *string `json:"tag,omitempty"`
+	// Trade mode   Margin mode: `cross` `isolated`   Non-Margin mode: `cash`.   If not provided, tdMode will inherit default values set by the system shown below:   Spot and futures mode & SPOT: `cash`   Buy options in Spot and futures mode and Multi-currency Margin: `isolated`   Other cases: `cross`
+	TdMode *string `json:"tdMode,omitempty"`
+	// Defines the unit of the “sz” attribute.   Only applicable to instType = SPOT.   The valid enumerations are `base_ccy` and `quote_ccy`. When not specified this is equal to `base_ccy` by default.
+	TgtCcy *string `json:"tgtCcy,omitempty"`
+	// A unique identifier of maker.
+	TraderCode *string `json:"traderCode,omitempty"`
+	// The timestamp the Quote was last updated, Unix timestamp format in milliseconds.
+	UTime *string `json:"uTime,omitempty"`
+	// The timestamp the Quote expires. Unix timestamp format in milliseconds.
+	ValidUntil *string `json:"validUntil,omitempty"`
 }
 
 // NewCreateRfqCreateQuoteV5RespDataInner instantiates a new CreateRfqCreateQuoteV5RespDataInner object
@@ -33,10 +69,46 @@ type CreateRfqCreateQuoteV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateRfqCreateQuoteV5RespDataInner() *CreateRfqCreateQuoteV5RespDataInner {
 	this := CreateRfqCreateQuoteV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var cTime string = ""
+	this.CTime = &cTime
+	var ccy string = ""
+	this.Ccy = &ccy
+	var clQuoteId string = ""
+	this.ClQuoteId = &clQuoteId
+	var clRfqId string = ""
+	this.ClRfqId = &clRfqId
+	var instId string = ""
+	this.InstId = &instId
+	var posSide string = ""
+	this.PosSide = &posSide
+	var px string = ""
+	this.Px = &px
+	var quoteId string = ""
+	this.QuoteId = &quoteId
+	var quoteSide string = ""
+	this.QuoteSide = &quoteSide
+	var reason string = ""
+	this.Reason = &reason
+	var rfqId string = ""
+	this.RfqId = &rfqId
+	var side string = ""
+	this.Side = &side
+	var state string = ""
+	this.State = &state
+	var sz string = ""
+	this.Sz = &sz
+	var tag string = ""
+	this.Tag = &tag
+	var tdMode string = ""
+	this.TdMode = &tdMode
+	var tgtCcy string = ""
+	this.TgtCcy = &tgtCcy
+	var traderCode string = ""
+	this.TraderCode = &traderCode
+	var uTime string = ""
+	this.UTime = &uTime
+	var validUntil string = ""
+	this.ValidUntil = &validUntil
 	return &this
 }
 
@@ -45,107 +117,719 @@ func NewCreateRfqCreateQuoteV5RespDataInner() *CreateRfqCreateQuoteV5RespDataInn
 // but it doesn't guarantee that properties required by API are set
 func NewCreateRfqCreateQuoteV5RespDataInnerWithDefaults() *CreateRfqCreateQuoteV5RespDataInner {
 	this := CreateRfqCreateQuoteV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var cTime string = ""
+	this.CTime = &cTime
+	var ccy string = ""
+	this.Ccy = &ccy
+	var clQuoteId string = ""
+	this.ClQuoteId = &clQuoteId
+	var clRfqId string = ""
+	this.ClRfqId = &clRfqId
+	var instId string = ""
+	this.InstId = &instId
+	var posSide string = ""
+	this.PosSide = &posSide
+	var px string = ""
+	this.Px = &px
+	var quoteId string = ""
+	this.QuoteId = &quoteId
+	var quoteSide string = ""
+	this.QuoteSide = &quoteSide
+	var reason string = ""
+	this.Reason = &reason
+	var rfqId string = ""
+	this.RfqId = &rfqId
+	var side string = ""
+	this.Side = &side
+	var state string = ""
+	this.State = &state
+	var sz string = ""
+	this.Sz = &sz
+	var tag string = ""
+	this.Tag = &tag
+	var tdMode string = ""
+	this.TdMode = &tdMode
+	var tgtCcy string = ""
+	this.TgtCcy = &tgtCcy
+	var traderCode string = ""
+	this.TraderCode = &traderCode
+	var uTime string = ""
+	this.UTime = &uTime
+	var validUntil string = ""
+	this.ValidUntil = &validUntil
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetCTime returns the CTime field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetCTime() string {
+	if o == nil || IsNil(o.CTime) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.CTime
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetCTimeOk returns a tuple with the CTime field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetCTimeOk() (*string, bool) {
+	if o == nil || IsNil(o.CTime) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.CTime, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasCTime returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasCTime() bool {
+	if o != nil && !IsNil(o.CTime) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateRfqCreateQuoteV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetCTime gets a reference to the given string and assigns it to the CTime field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetCTime(v string) {
+	o.CTime = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetData() []CreateRfqCreateQuoteV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateRfqCreateQuoteV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetDataOk() ([]CreateRfqCreateQuoteV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateRfqCreateQuoteV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateRfqCreateQuoteV5RespDataInner) SetData(v []CreateRfqCreateQuoteV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetCcy returns the Ccy field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetCcy() string {
+	if o == nil || IsNil(o.Ccy) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.Ccy
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetCcyOk returns a tuple with the Ccy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetCcyOk() (*string, bool) {
+	if o == nil || IsNil(o.Ccy) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.Ccy, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateRfqCreateQuoteV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasCcy returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasCcy() bool {
+	if o != nil && !IsNil(o.Ccy) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateRfqCreateQuoteV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetCcy gets a reference to the given string and assigns it to the Ccy field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetCcy(v string) {
+	o.Ccy = &v
+}
+
+// GetClQuoteId returns the ClQuoteId field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetClQuoteId() string {
+	if o == nil || IsNil(o.ClQuoteId) {
+		var ret string
+		return ret
+	}
+	return *o.ClQuoteId
+}
+
+// GetClQuoteIdOk returns a tuple with the ClQuoteId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetClQuoteIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ClQuoteId) {
+		return nil, false
+	}
+	return o.ClQuoteId, true
+}
+
+// HasClQuoteId returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasClQuoteId() bool {
+	if o != nil && !IsNil(o.ClQuoteId) {
+		return true
+	}
+
+	return false
+}
+
+// SetClQuoteId gets a reference to the given string and assigns it to the ClQuoteId field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetClQuoteId(v string) {
+	o.ClQuoteId = &v
+}
+
+// GetClRfqId returns the ClRfqId field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetClRfqId() string {
+	if o == nil || IsNil(o.ClRfqId) {
+		var ret string
+		return ret
+	}
+	return *o.ClRfqId
+}
+
+// GetClRfqIdOk returns a tuple with the ClRfqId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetClRfqIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ClRfqId) {
+		return nil, false
+	}
+	return o.ClRfqId, true
+}
+
+// HasClRfqId returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasClRfqId() bool {
+	if o != nil && !IsNil(o.ClRfqId) {
+		return true
+	}
+
+	return false
+}
+
+// SetClRfqId gets a reference to the given string and assigns it to the ClRfqId field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetClRfqId(v string) {
+	o.ClRfqId = &v
+}
+
+// GetInstId returns the InstId field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetInstId() string {
+	if o == nil || IsNil(o.InstId) {
+		var ret string
+		return ret
+	}
+	return *o.InstId
+}
+
+// GetInstIdOk returns a tuple with the InstId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetInstIdOk() (*string, bool) {
+	if o == nil || IsNil(o.InstId) {
+		return nil, false
+	}
+	return o.InstId, true
+}
+
+// HasInstId returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasInstId() bool {
+	if o != nil && !IsNil(o.InstId) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstId gets a reference to the given string and assigns it to the InstId field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetInstId(v string) {
+	o.InstId = &v
+}
+
+// GetLegs returns the Legs field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetLegs() []CreateRfqCreateQuoteV5RespDataInnerLegsInner {
+	if o == nil || IsNil(o.Legs) {
+		var ret []CreateRfqCreateQuoteV5RespDataInnerLegsInner
+		return ret
+	}
+	return o.Legs
+}
+
+// GetLegsOk returns a tuple with the Legs field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetLegsOk() ([]CreateRfqCreateQuoteV5RespDataInnerLegsInner, bool) {
+	if o == nil || IsNil(o.Legs) {
+		return nil, false
+	}
+	return o.Legs, true
+}
+
+// HasLegs returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasLegs() bool {
+	if o != nil && !IsNil(o.Legs) {
+		return true
+	}
+
+	return false
+}
+
+// SetLegs gets a reference to the given []CreateRfqCreateQuoteV5RespDataInnerLegsInner and assigns it to the Legs field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetLegs(v []CreateRfqCreateQuoteV5RespDataInnerLegsInner) {
+	o.Legs = v
+}
+
+// GetPosSide returns the PosSide field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetPosSide() string {
+	if o == nil || IsNil(o.PosSide) {
+		var ret string
+		return ret
+	}
+	return *o.PosSide
+}
+
+// GetPosSideOk returns a tuple with the PosSide field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetPosSideOk() (*string, bool) {
+	if o == nil || IsNil(o.PosSide) {
+		return nil, false
+	}
+	return o.PosSide, true
+}
+
+// HasPosSide returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasPosSide() bool {
+	if o != nil && !IsNil(o.PosSide) {
+		return true
+	}
+
+	return false
+}
+
+// SetPosSide gets a reference to the given string and assigns it to the PosSide field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetPosSide(v string) {
+	o.PosSide = &v
+}
+
+// GetPx returns the Px field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetPx() string {
+	if o == nil || IsNil(o.Px) {
+		var ret string
+		return ret
+	}
+	return *o.Px
+}
+
+// GetPxOk returns a tuple with the Px field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetPxOk() (*string, bool) {
+	if o == nil || IsNil(o.Px) {
+		return nil, false
+	}
+	return o.Px, true
+}
+
+// HasPx returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasPx() bool {
+	if o != nil && !IsNil(o.Px) {
+		return true
+	}
+
+	return false
+}
+
+// SetPx gets a reference to the given string and assigns it to the Px field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetPx(v string) {
+	o.Px = &v
+}
+
+// GetQuoteId returns the QuoteId field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetQuoteId() string {
+	if o == nil || IsNil(o.QuoteId) {
+		var ret string
+		return ret
+	}
+	return *o.QuoteId
+}
+
+// GetQuoteIdOk returns a tuple with the QuoteId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetQuoteIdOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteId) {
+		return nil, false
+	}
+	return o.QuoteId, true
+}
+
+// HasQuoteId returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasQuoteId() bool {
+	if o != nil && !IsNil(o.QuoteId) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuoteId gets a reference to the given string and assigns it to the QuoteId field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetQuoteId(v string) {
+	o.QuoteId = &v
+}
+
+// GetQuoteSide returns the QuoteSide field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetQuoteSide() string {
+	if o == nil || IsNil(o.QuoteSide) {
+		var ret string
+		return ret
+	}
+	return *o.QuoteSide
+}
+
+// GetQuoteSideOk returns a tuple with the QuoteSide field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetQuoteSideOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteSide) {
+		return nil, false
+	}
+	return o.QuoteSide, true
+}
+
+// HasQuoteSide returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasQuoteSide() bool {
+	if o != nil && !IsNil(o.QuoteSide) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuoteSide gets a reference to the given string and assigns it to the QuoteSide field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetQuoteSide(v string) {
+	o.QuoteSide = &v
+}
+
+// GetReason returns the Reason field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetReason() string {
+	if o == nil || IsNil(o.Reason) {
+		var ret string
+		return ret
+	}
+	return *o.Reason
+}
+
+// GetReasonOk returns a tuple with the Reason field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetReasonOk() (*string, bool) {
+	if o == nil || IsNil(o.Reason) {
+		return nil, false
+	}
+	return o.Reason, true
+}
+
+// HasReason returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasReason() bool {
+	if o != nil && !IsNil(o.Reason) {
+		return true
+	}
+
+	return false
+}
+
+// SetReason gets a reference to the given string and assigns it to the Reason field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetReason(v string) {
+	o.Reason = &v
+}
+
+// GetRfqId returns the RfqId field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetRfqId() string {
+	if o == nil || IsNil(o.RfqId) {
+		var ret string
+		return ret
+	}
+	return *o.RfqId
+}
+
+// GetRfqIdOk returns a tuple with the RfqId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetRfqIdOk() (*string, bool) {
+	if o == nil || IsNil(o.RfqId) {
+		return nil, false
+	}
+	return o.RfqId, true
+}
+
+// HasRfqId returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasRfqId() bool {
+	if o != nil && !IsNil(o.RfqId) {
+		return true
+	}
+
+	return false
+}
+
+// SetRfqId gets a reference to the given string and assigns it to the RfqId field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetRfqId(v string) {
+	o.RfqId = &v
+}
+
+// GetSide returns the Side field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetSide() string {
+	if o == nil || IsNil(o.Side) {
+		var ret string
+		return ret
+	}
+	return *o.Side
+}
+
+// GetSideOk returns a tuple with the Side field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetSideOk() (*string, bool) {
+	if o == nil || IsNil(o.Side) {
+		return nil, false
+	}
+	return o.Side, true
+}
+
+// HasSide returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasSide() bool {
+	if o != nil && !IsNil(o.Side) {
+		return true
+	}
+
+	return false
+}
+
+// SetSide gets a reference to the given string and assigns it to the Side field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetSide(v string) {
+	o.Side = &v
+}
+
+// GetState returns the State field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetState() string {
+	if o == nil || IsNil(o.State) {
+		var ret string
+		return ret
+	}
+	return *o.State
+}
+
+// GetStateOk returns a tuple with the State field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetStateOk() (*string, bool) {
+	if o == nil || IsNil(o.State) {
+		return nil, false
+	}
+	return o.State, true
+}
+
+// HasState returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasState() bool {
+	if o != nil && !IsNil(o.State) {
+		return true
+	}
+
+	return false
+}
+
+// SetState gets a reference to the given string and assigns it to the State field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetState(v string) {
+	o.State = &v
+}
+
+// GetSz returns the Sz field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetSz() string {
+	if o == nil || IsNil(o.Sz) {
+		var ret string
+		return ret
+	}
+	return *o.Sz
+}
+
+// GetSzOk returns a tuple with the Sz field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetSzOk() (*string, bool) {
+	if o == nil || IsNil(o.Sz) {
+		return nil, false
+	}
+	return o.Sz, true
+}
+
+// HasSz returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasSz() bool {
+	if o != nil && !IsNil(o.Sz) {
+		return true
+	}
+
+	return false
+}
+
+// SetSz gets a reference to the given string and assigns it to the Sz field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetSz(v string) {
+	o.Sz = &v
+}
+
+// GetTag returns the Tag field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTag() string {
+	if o == nil || IsNil(o.Tag) {
+		var ret string
+		return ret
+	}
+	return *o.Tag
+}
+
+// GetTagOk returns a tuple with the Tag field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTagOk() (*string, bool) {
+	if o == nil || IsNil(o.Tag) {
+		return nil, false
+	}
+	return o.Tag, true
+}
+
+// HasTag returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasTag() bool {
+	if o != nil && !IsNil(o.Tag) {
+		return true
+	}
+
+	return false
+}
+
+// SetTag gets a reference to the given string and assigns it to the Tag field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetTag(v string) {
+	o.Tag = &v
+}
+
+// GetTdMode returns the TdMode field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTdMode() string {
+	if o == nil || IsNil(o.TdMode) {
+		var ret string
+		return ret
+	}
+	return *o.TdMode
+}
+
+// GetTdModeOk returns a tuple with the TdMode field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTdModeOk() (*string, bool) {
+	if o == nil || IsNil(o.TdMode) {
+		return nil, false
+	}
+	return o.TdMode, true
+}
+
+// HasTdMode returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasTdMode() bool {
+	if o != nil && !IsNil(o.TdMode) {
+		return true
+	}
+
+	return false
+}
+
+// SetTdMode gets a reference to the given string and assigns it to the TdMode field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetTdMode(v string) {
+	o.TdMode = &v
+}
+
+// GetTgtCcy returns the TgtCcy field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTgtCcy() string {
+	if o == nil || IsNil(o.TgtCcy) {
+		var ret string
+		return ret
+	}
+	return *o.TgtCcy
+}
+
+// GetTgtCcyOk returns a tuple with the TgtCcy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTgtCcyOk() (*string, bool) {
+	if o == nil || IsNil(o.TgtCcy) {
+		return nil, false
+	}
+	return o.TgtCcy, true
+}
+
+// HasTgtCcy returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasTgtCcy() bool {
+	if o != nil && !IsNil(o.TgtCcy) {
+		return true
+	}
+
+	return false
+}
+
+// SetTgtCcy gets a reference to the given string and assigns it to the TgtCcy field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetTgtCcy(v string) {
+	o.TgtCcy = &v
+}
+
+// GetTraderCode returns the TraderCode field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTraderCode() string {
+	if o == nil || IsNil(o.TraderCode) {
+		var ret string
+		return ret
+	}
+	return *o.TraderCode
+}
+
+// GetTraderCodeOk returns a tuple with the TraderCode field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetTraderCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.TraderCode) {
+		return nil, false
+	}
+	return o.TraderCode, true
+}
+
+// HasTraderCode returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasTraderCode() bool {
+	if o != nil && !IsNil(o.TraderCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetTraderCode gets a reference to the given string and assigns it to the TraderCode field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetTraderCode(v string) {
+	o.TraderCode = &v
+}
+
+// GetUTime returns the UTime field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetUTime() string {
+	if o == nil || IsNil(o.UTime) {
+		var ret string
+		return ret
+	}
+	return *o.UTime
+}
+
+// GetUTimeOk returns a tuple with the UTime field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetUTimeOk() (*string, bool) {
+	if o == nil || IsNil(o.UTime) {
+		return nil, false
+	}
+	return o.UTime, true
+}
+
+// HasUTime returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasUTime() bool {
+	if o != nil && !IsNil(o.UTime) {
+		return true
+	}
+
+	return false
+}
+
+// SetUTime gets a reference to the given string and assigns it to the UTime field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetUTime(v string) {
+	o.UTime = &v
+}
+
+// GetValidUntil returns the ValidUntil field value if set, zero value otherwise.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetValidUntil() string {
+	if o == nil || IsNil(o.ValidUntil) {
+		var ret string
+		return ret
+	}
+	return *o.ValidUntil
+}
+
+// GetValidUntilOk returns a tuple with the ValidUntil field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) GetValidUntilOk() (*string, bool) {
+	if o == nil || IsNil(o.ValidUntil) {
+		return nil, false
+	}
+	return o.ValidUntil, true
+}
+
+// HasValidUntil returns a boolean if a field has been set.
+func (o *CreateRfqCreateQuoteV5RespDataInner) HasValidUntil() bool {
+	if o != nil && !IsNil(o.ValidUntil) {
+		return true
+	}
+
+	return false
+}
+
+// SetValidUntil gets a reference to the given string and assigns it to the ValidUntil field.
+func (o *CreateRfqCreateQuoteV5RespDataInner) SetValidUntil(v string) {
+	o.ValidUntil = &v
 }
 
 func (o CreateRfqCreateQuoteV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +842,68 @@ func (o CreateRfqCreateQuoteV5RespDataInner) MarshalJSON() ([]byte, error) {
 
 func (o CreateRfqCreateQuoteV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.CTime) {
+		toSerialize["cTime"] = o.CTime
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.Ccy) {
+		toSerialize["ccy"] = o.Ccy
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.ClQuoteId) {
+		toSerialize["clQuoteId"] = o.ClQuoteId
+	}
+	if !IsNil(o.ClRfqId) {
+		toSerialize["clRfqId"] = o.ClRfqId
+	}
+	if !IsNil(o.InstId) {
+		toSerialize["instId"] = o.InstId
+	}
+	if !IsNil(o.Legs) {
+		toSerialize["legs"] = o.Legs
+	}
+	if !IsNil(o.PosSide) {
+		toSerialize["posSide"] = o.PosSide
+	}
+	if !IsNil(o.Px) {
+		toSerialize["px"] = o.Px
+	}
+	if !IsNil(o.QuoteId) {
+		toSerialize["quoteId"] = o.QuoteId
+	}
+	if !IsNil(o.QuoteSide) {
+		toSerialize["quoteSide"] = o.QuoteSide
+	}
+	if !IsNil(o.Reason) {
+		toSerialize["reason"] = o.Reason
+	}
+	if !IsNil(o.RfqId) {
+		toSerialize["rfqId"] = o.RfqId
+	}
+	if !IsNil(o.Side) {
+		toSerialize["side"] = o.Side
+	}
+	if !IsNil(o.State) {
+		toSerialize["state"] = o.State
+	}
+	if !IsNil(o.Sz) {
+		toSerialize["sz"] = o.Sz
+	}
+	if !IsNil(o.Tag) {
+		toSerialize["tag"] = o.Tag
+	}
+	if !IsNil(o.TdMode) {
+		toSerialize["tdMode"] = o.TdMode
+	}
+	if !IsNil(o.TgtCcy) {
+		toSerialize["tgtCcy"] = o.TgtCcy
+	}
+	if !IsNil(o.TraderCode) {
+		toSerialize["traderCode"] = o.TraderCode
+	}
+	if !IsNil(o.UTime) {
+		toSerialize["uTime"] = o.UTime
+	}
+	if !IsNil(o.ValidUntil) {
+		toSerialize["validUntil"] = o.ValidUntil
 	}
 	return toSerialize, nil
 }

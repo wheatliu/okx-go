@@ -4,9 +4,9 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**Code** | Pointer to **string** | The result code, &#x60;0&#x60; means success | [optional] [default to ""]
-**Data** | Pointer to [**[]CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner**](CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner.md) | Array of objects contains the response results | [optional] 
-**Msg** | Pointer to **string** | The error message, empty if the code is 0 | [optional] [default to ""]
+**SCode** | Pointer to **string** | The code of the event execution result, &#x60;0&#x60; means success. | [optional] [default to ""]
+**SMsg** | Pointer to **string** | Rejection or success message of event execution. | [optional] [default to ""]
+**SignalOrdId** | Pointer to **string** | Order ID | [optional] [default to ""]
 
 ## Methods
 
@@ -27,80 +27,80 @@ NewCreateTradingBotSignalCancelSubOrderV5RespDataInnerWithDefaults instantiates 
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetCode
+### GetSCode
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetCode() string`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSCode() string`
 
-GetCode returns the Code field if non-nil, zero value otherwise.
+GetSCode returns the SCode field if non-nil, zero value otherwise.
 
-### GetCodeOk
+### GetSCodeOk
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetCodeOk() (*string, bool)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSCodeOk() (*string, bool)`
 
-GetCodeOk returns a tuple with the Code field if it's non-nil, zero value otherwise
+GetSCodeOk returns a tuple with the SCode field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetCode
+### SetSCode
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetCode(v string)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSCode(v string)`
 
-SetCode sets Code field to given value.
+SetSCode sets SCode field to given value.
 
-### HasCode
+### HasSCode
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasCode() bool`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSCode() bool`
 
-HasCode returns a boolean if a field has been set.
+HasSCode returns a boolean if a field has been set.
 
-### GetData
+### GetSMsg
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetData() []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSMsg() string`
 
-GetData returns the Data field if non-nil, zero value otherwise.
+GetSMsg returns the SMsg field if non-nil, zero value otherwise.
 
-### GetDataOk
+### GetSMsgOk
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetDataOk() (*[]CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner, bool)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSMsgOk() (*string, bool)`
 
-GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
+GetSMsgOk returns a tuple with the SMsg field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetData
+### SetSMsg
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetData(v []CreateTradingBotSignalCancelSubOrderV5RespDataInnerDataInner)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSMsg(v string)`
 
-SetData sets Data field to given value.
+SetSMsg sets SMsg field to given value.
 
-### HasData
+### HasSMsg
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasData() bool`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSMsg() bool`
 
-HasData returns a boolean if a field has been set.
+HasSMsg returns a boolean if a field has been set.
 
-### GetMsg
+### GetSignalOrdId
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetMsg() string`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSignalOrdId() string`
 
-GetMsg returns the Msg field if non-nil, zero value otherwise.
+GetSignalOrdId returns the SignalOrdId field if non-nil, zero value otherwise.
 
-### GetMsgOk
+### GetSignalOrdIdOk
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetMsgOk() (*string, bool)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) GetSignalOrdIdOk() (*string, bool)`
 
-GetMsgOk returns a tuple with the Msg field if it's non-nil, zero value otherwise
+GetSignalOrdIdOk returns a tuple with the SignalOrdId field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetMsg
+### SetSignalOrdId
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetMsg(v string)`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) SetSignalOrdId(v string)`
 
-SetMsg sets Msg field to given value.
+SetSignalOrdId sets SignalOrdId field to given value.
 
-### HasMsg
+### HasSignalOrdId
 
-`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasMsg() bool`
+`func (o *CreateTradingBotSignalCancelSubOrderV5RespDataInner) HasSignalOrdId() bool`
 
-HasMsg returns a boolean if a field has been set.
+HasSignalOrdId returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

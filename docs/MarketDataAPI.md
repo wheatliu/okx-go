@@ -222,7 +222,7 @@ No authorization required
 
 ## GetMarketCandlesV5
 
-> GetMarketCandlesV5Resp GetMarketCandlesV5(ctx).InstId(instId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
+> GetMarketCandlesV5(ctx).InstId(instId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 
 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
 
@@ -249,13 +249,11 @@ func main() {
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.MarketDataAPI.GetMarketCandlesV5(context.Background()).InstId(instId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
+	r, err := apiClient.MarketDataAPI.GetMarketCandlesV5(context.Background()).InstId(instId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `MarketDataAPI.GetMarketCandlesV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
 	}
-	// response from `GetMarketCandlesV5`: GetMarketCandlesV5Resp
-	fmt.Fprintf(os.Stdout, "Response from `MarketDataAPI.GetMarketCandlesV5`: %v\n", resp)
 }
 ```
 
@@ -278,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**GetMarketCandlesV5Resp**](GetMarketCandlesV5Resp.md)
+ (empty response body)
 
 ### Authorization
 

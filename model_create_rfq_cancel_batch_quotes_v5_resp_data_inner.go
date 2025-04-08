@@ -19,12 +19,14 @@ var _ MappedNullable = &CreateRfqCancelBatchQuotesV5RespDataInner{}
 
 // CreateRfqCancelBatchQuotesV5RespDataInner struct for CreateRfqCancelBatchQuotesV5RespDataInner
 type CreateRfqCancelBatchQuotesV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results
-	Data []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not 0.
-	Msg *string `json:"msg,omitempty"`
+	// Client-supplied Quote ID.
+	ClQuoteId *string `json:"clQuoteId,omitempty"`
+	// Quote ID
+	QuoteId *string `json:"quoteId,omitempty"`
+	// The code of the event execution result, `0` means success.
+	SCode *string `json:"sCode,omitempty"`
+	// Rejection message if the request is unsuccessful.
+	SMsg *string `json:"sMsg,omitempty"`
 }
 
 // NewCreateRfqCancelBatchQuotesV5RespDataInner instantiates a new CreateRfqCancelBatchQuotesV5RespDataInner object
@@ -33,10 +35,14 @@ type CreateRfqCancelBatchQuotesV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateRfqCancelBatchQuotesV5RespDataInner() *CreateRfqCancelBatchQuotesV5RespDataInner {
 	this := CreateRfqCancelBatchQuotesV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var clQuoteId string = ""
+	this.ClQuoteId = &clQuoteId
+	var quoteId string = ""
+	this.QuoteId = &quoteId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
@@ -45,107 +51,143 @@ func NewCreateRfqCancelBatchQuotesV5RespDataInner() *CreateRfqCancelBatchQuotesV
 // but it doesn't guarantee that properties required by API are set
 func NewCreateRfqCancelBatchQuotesV5RespDataInnerWithDefaults() *CreateRfqCancelBatchQuotesV5RespDataInner {
 	this := CreateRfqCancelBatchQuotesV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
+	var clQuoteId string = ""
+	this.ClQuoteId = &clQuoteId
+	var quoteId string = ""
+	this.QuoteId = &quoteId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetClQuoteId returns the ClQuoteId field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetClQuoteId() string {
+	if o == nil || IsNil(o.ClQuoteId) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.ClQuoteId
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetClQuoteIdOk returns a tuple with the ClQuoteId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetClQuoteIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ClQuoteId) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.ClQuoteId, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasClQuoteId returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasClQuoteId() bool {
+	if o != nil && !IsNil(o.ClQuoteId) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetClQuoteId gets a reference to the given string and assigns it to the ClQuoteId field.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetClQuoteId(v string) {
+	o.ClQuoteId = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetData() []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetDataOk() ([]CreateRfqCancelBatchQuotesV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetData(v []CreateRfqCancelBatchQuotesV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetQuoteId returns the QuoteId field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetQuoteId() string {
+	if o == nil || IsNil(o.QuoteId) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.QuoteId
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetQuoteIdOk returns a tuple with the QuoteId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetQuoteIdOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteId) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.QuoteId, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasQuoteId returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasQuoteId() bool {
+	if o != nil && !IsNil(o.QuoteId) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetQuoteId gets a reference to the given string and assigns it to the QuoteId field.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetQuoteId(v string) {
+	o.QuoteId = &v
+}
+
+// GetSCode returns the SCode field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSCode() string {
+	if o == nil || IsNil(o.SCode) {
+		var ret string
+		return ret
+	}
+	return *o.SCode
+}
+
+// GetSCodeOk returns a tuple with the SCode field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.SCode) {
+		return nil, false
+	}
+	return o.SCode, true
+}
+
+// HasSCode returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasSCode() bool {
+	if o != nil && !IsNil(o.SCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetSCode gets a reference to the given string and assigns it to the SCode field.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetSCode(v string) {
+	o.SCode = &v
+}
+
+// GetSMsg returns the SMsg field value if set, zero value otherwise.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSMsg() string {
+	if o == nil || IsNil(o.SMsg) {
+		var ret string
+		return ret
+	}
+	return *o.SMsg
+}
+
+// GetSMsgOk returns a tuple with the SMsg field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) GetSMsgOk() (*string, bool) {
+	if o == nil || IsNil(o.SMsg) {
+		return nil, false
+	}
+	return o.SMsg, true
+}
+
+// HasSMsg returns a boolean if a field has been set.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) HasSMsg() bool {
+	if o != nil && !IsNil(o.SMsg) {
+		return true
+	}
+
+	return false
+}
+
+// SetSMsg gets a reference to the given string and assigns it to the SMsg field.
+func (o *CreateRfqCancelBatchQuotesV5RespDataInner) SetSMsg(v string) {
+	o.SMsg = &v
 }
 
 func (o CreateRfqCancelBatchQuotesV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +200,17 @@ func (o CreateRfqCancelBatchQuotesV5RespDataInner) MarshalJSON() ([]byte, error)
 
 func (o CreateRfqCancelBatchQuotesV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.ClQuoteId) {
+		toSerialize["clQuoteId"] = o.ClQuoteId
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.QuoteId) {
+		toSerialize["quoteId"] = o.QuoteId
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.SCode) {
+		toSerialize["sCode"] = o.SCode
+	}
+	if !IsNil(o.SMsg) {
+		toSerialize["sMsg"] = o.SMsg
 	}
 	return toSerialize, nil
 }

@@ -19,16 +19,18 @@ var _ MappedNullable = &CreateTradeAmendBatchOrdersV5RespDataInner{}
 
 // CreateTradeAmendBatchOrdersV5RespDataInner struct for CreateTradeAmendBatchOrdersV5RespDataInner
 type CreateTradeAmendBatchOrdersV5RespDataInner struct {
-	// The result code, `0` means success
-	Code *string `json:"code,omitempty"`
-	// Array of objects contains the response results
-	Data []CreateTradeAmendBatchOrdersV5RespDataInnerDataInner `json:"data,omitempty"`
-	// Timestamp at REST gateway when the request is received, Unix timestamp format in microseconds, e.g. `1597026383085123`   The time is recorded after authentication.
-	InTime *string `json:"inTime,omitempty"`
-	// The error message, empty if the code is 0
-	Msg *string `json:"msg,omitempty"`
-	// Timestamp at REST gateway when the response is sent, Unix timestamp format in microseconds, e.g. `1597026383085123`
-	OutTime *string `json:"outTime,omitempty"`
+	// Client Order ID as assigned by the client
+	ClOrdId *string `json:"clOrdId,omitempty"`
+	// Order ID
+	OrdId *string `json:"ordId,omitempty"`
+	// Client Request ID as assigned by the client for order amendment.
+	ReqId *string `json:"reqId,omitempty"`
+	// The code of the event execution result, `0` means success.
+	SCode *string `json:"sCode,omitempty"`
+	// Rejection message if the request is unsuccessful.
+	SMsg *string `json:"sMsg,omitempty"`
+	// Timestamp when the order request processing is finished by our system, Unix timestamp format in milliseconds, e.g. `1597026383085`
+	Ts *string `json:"ts,omitempty"`
 }
 
 // NewCreateTradeAmendBatchOrdersV5RespDataInner instantiates a new CreateTradeAmendBatchOrdersV5RespDataInner object
@@ -37,14 +39,18 @@ type CreateTradeAmendBatchOrdersV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateTradeAmendBatchOrdersV5RespDataInner() *CreateTradeAmendBatchOrdersV5RespDataInner {
 	this := CreateTradeAmendBatchOrdersV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var inTime string = ""
-	this.InTime = &inTime
-	var msg string = ""
-	this.Msg = &msg
-	var outTime string = ""
-	this.OutTime = &outTime
+	var clOrdId string = ""
+	this.ClOrdId = &clOrdId
+	var ordId string = ""
+	this.OrdId = &ordId
+	var reqId string = ""
+	this.ReqId = &reqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
+	var ts string = ""
+	this.Ts = &ts
 	return &this
 }
 
@@ -53,175 +59,211 @@ func NewCreateTradeAmendBatchOrdersV5RespDataInner() *CreateTradeAmendBatchOrder
 // but it doesn't guarantee that properties required by API are set
 func NewCreateTradeAmendBatchOrdersV5RespDataInnerWithDefaults() *CreateTradeAmendBatchOrdersV5RespDataInner {
 	this := CreateTradeAmendBatchOrdersV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var inTime string = ""
-	this.InTime = &inTime
-	var msg string = ""
-	this.Msg = &msg
-	var outTime string = ""
-	this.OutTime = &outTime
+	var clOrdId string = ""
+	this.ClOrdId = &clOrdId
+	var ordId string = ""
+	this.OrdId = &ordId
+	var reqId string = ""
+	this.ReqId = &reqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
+	var ts string = ""
+	this.Ts = &ts
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
+// GetClOrdId returns the ClOrdId field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetClOrdId() string {
+	if o == nil || IsNil(o.ClOrdId) {
 		var ret string
 		return ret
 	}
-	return *o.Code
+	return *o.ClOrdId
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetClOrdIdOk returns a tuple with the ClOrdId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetClOrdIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ClOrdId) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.ClOrdId, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasClOrdId returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasClOrdId() bool {
+	if o != nil && !IsNil(o.ClOrdId) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetCode(v string) {
-	o.Code = &v
+// SetClOrdId gets a reference to the given string and assigns it to the ClOrdId field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetClOrdId(v string) {
+	o.ClOrdId = &v
 }
 
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetData() []CreateTradeAmendBatchOrdersV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateTradeAmendBatchOrdersV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetDataOk() ([]CreateTradeAmendBatchOrdersV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateTradeAmendBatchOrdersV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetData(v []CreateTradeAmendBatchOrdersV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetInTime returns the InTime field value if set, zero value otherwise.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetInTime() string {
-	if o == nil || IsNil(o.InTime) {
+// GetOrdId returns the OrdId field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetOrdId() string {
+	if o == nil || IsNil(o.OrdId) {
 		var ret string
 		return ret
 	}
-	return *o.InTime
+	return *o.OrdId
 }
 
-// GetInTimeOk returns a tuple with the InTime field value if set, nil otherwise
+// GetOrdIdOk returns a tuple with the OrdId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetInTimeOk() (*string, bool) {
-	if o == nil || IsNil(o.InTime) {
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetOrdIdOk() (*string, bool) {
+	if o == nil || IsNil(o.OrdId) {
 		return nil, false
 	}
-	return o.InTime, true
+	return o.OrdId, true
 }
 
-// HasInTime returns a boolean if a field has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasInTime() bool {
-	if o != nil && !IsNil(o.InTime) {
+// HasOrdId returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasOrdId() bool {
+	if o != nil && !IsNil(o.OrdId) {
 		return true
 	}
 
 	return false
 }
 
-// SetInTime gets a reference to the given string and assigns it to the InTime field.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetInTime(v string) {
-	o.InTime = &v
+// SetOrdId gets a reference to the given string and assigns it to the OrdId field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetOrdId(v string) {
+	o.OrdId = &v
 }
 
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
+// GetReqId returns the ReqId field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetReqId() string {
+	if o == nil || IsNil(o.ReqId) {
 		var ret string
 		return ret
 	}
-	return *o.Msg
+	return *o.ReqId
 }
 
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
+// GetReqIdOk returns a tuple with the ReqId field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetReqIdOk() (*string, bool) {
+	if o == nil || IsNil(o.ReqId) {
 		return nil, false
 	}
-	return o.Msg, true
+	return o.ReqId, true
 }
 
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
+// HasReqId returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasReqId() bool {
+	if o != nil && !IsNil(o.ReqId) {
 		return true
 	}
 
 	return false
 }
 
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetReqId gets a reference to the given string and assigns it to the ReqId field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetReqId(v string) {
+	o.ReqId = &v
 }
 
-// GetOutTime returns the OutTime field value if set, zero value otherwise.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetOutTime() string {
-	if o == nil || IsNil(o.OutTime) {
+// GetSCode returns the SCode field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetSCode() string {
+	if o == nil || IsNil(o.SCode) {
 		var ret string
 		return ret
 	}
-	return *o.OutTime
+	return *o.SCode
 }
 
-// GetOutTimeOk returns a tuple with the OutTime field value if set, nil otherwise
+// GetSCodeOk returns a tuple with the SCode field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetOutTimeOk() (*string, bool) {
-	if o == nil || IsNil(o.OutTime) {
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetSCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.SCode) {
 		return nil, false
 	}
-	return o.OutTime, true
+	return o.SCode, true
 }
 
-// HasOutTime returns a boolean if a field has been set.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasOutTime() bool {
-	if o != nil && !IsNil(o.OutTime) {
+// HasSCode returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasSCode() bool {
+	if o != nil && !IsNil(o.SCode) {
 		return true
 	}
 
 	return false
 }
 
-// SetOutTime gets a reference to the given string and assigns it to the OutTime field.
-func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetOutTime(v string) {
-	o.OutTime = &v
+// SetSCode gets a reference to the given string and assigns it to the SCode field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetSCode(v string) {
+	o.SCode = &v
+}
+
+// GetSMsg returns the SMsg field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetSMsg() string {
+	if o == nil || IsNil(o.SMsg) {
+		var ret string
+		return ret
+	}
+	return *o.SMsg
+}
+
+// GetSMsgOk returns a tuple with the SMsg field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetSMsgOk() (*string, bool) {
+	if o == nil || IsNil(o.SMsg) {
+		return nil, false
+	}
+	return o.SMsg, true
+}
+
+// HasSMsg returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasSMsg() bool {
+	if o != nil && !IsNil(o.SMsg) {
+		return true
+	}
+
+	return false
+}
+
+// SetSMsg gets a reference to the given string and assigns it to the SMsg field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetSMsg(v string) {
+	o.SMsg = &v
+}
+
+// GetTs returns the Ts field value if set, zero value otherwise.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetTs() string {
+	if o == nil || IsNil(o.Ts) {
+		var ret string
+		return ret
+	}
+	return *o.Ts
+}
+
+// GetTsOk returns a tuple with the Ts field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) GetTsOk() (*string, bool) {
+	if o == nil || IsNil(o.Ts) {
+		return nil, false
+	}
+	return o.Ts, true
+}
+
+// HasTs returns a boolean if a field has been set.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) HasTs() bool {
+	if o != nil && !IsNil(o.Ts) {
+		return true
+	}
+
+	return false
+}
+
+// SetTs gets a reference to the given string and assigns it to the Ts field.
+func (o *CreateTradeAmendBatchOrdersV5RespDataInner) SetTs(v string) {
+	o.Ts = &v
 }
 
 func (o CreateTradeAmendBatchOrdersV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -234,20 +276,23 @@ func (o CreateTradeAmendBatchOrdersV5RespDataInner) MarshalJSON() ([]byte, error
 
 func (o CreateTradeAmendBatchOrdersV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
+	if !IsNil(o.ClOrdId) {
+		toSerialize["clOrdId"] = o.ClOrdId
 	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
+	if !IsNil(o.OrdId) {
+		toSerialize["ordId"] = o.OrdId
 	}
-	if !IsNil(o.InTime) {
-		toSerialize["inTime"] = o.InTime
+	if !IsNil(o.ReqId) {
+		toSerialize["reqId"] = o.ReqId
 	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.SCode) {
+		toSerialize["sCode"] = o.SCode
 	}
-	if !IsNil(o.OutTime) {
-		toSerialize["outTime"] = o.OutTime
+	if !IsNil(o.SMsg) {
+		toSerialize["sMsg"] = o.SMsg
+	}
+	if !IsNil(o.Ts) {
+		toSerialize["ts"] = o.Ts
 	}
 	return toSerialize, nil
 }

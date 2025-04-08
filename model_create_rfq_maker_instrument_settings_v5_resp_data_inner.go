@@ -19,12 +19,8 @@ var _ MappedNullable = &CreateRfqMakerInstrumentSettingsV5RespDataInner{}
 
 // CreateRfqMakerInstrumentSettingsV5RespDataInner struct for CreateRfqMakerInstrumentSettingsV5RespDataInner
 type CreateRfqMakerInstrumentSettingsV5RespDataInner struct {
-	// The result code, `0` means success.
-	Code *string `json:"code,omitempty"`
-	// Array of objects containing the results.
-	Data []CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner `json:"data,omitempty"`
-	// The error message, not empty if the code is not `0`.
-	Msg *string `json:"msg,omitempty"`
+	// Result of the request  Valid value is `true` or `false`.
+	Result *bool `json:"result,omitempty"`
 }
 
 // NewCreateRfqMakerInstrumentSettingsV5RespDataInner instantiates a new CreateRfqMakerInstrumentSettingsV5RespDataInner object
@@ -33,10 +29,6 @@ type CreateRfqMakerInstrumentSettingsV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewCreateRfqMakerInstrumentSettingsV5RespDataInner() *CreateRfqMakerInstrumentSettingsV5RespDataInner {
 	this := CreateRfqMakerInstrumentSettingsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
 	return &this
 }
 
@@ -45,107 +37,39 @@ func NewCreateRfqMakerInstrumentSettingsV5RespDataInner() *CreateRfqMakerInstrum
 // but it doesn't guarantee that properties required by API are set
 func NewCreateRfqMakerInstrumentSettingsV5RespDataInnerWithDefaults() *CreateRfqMakerInstrumentSettingsV5RespDataInner {
 	this := CreateRfqMakerInstrumentSettingsV5RespDataInner{}
-	var code string = ""
-	this.Code = &code
-	var msg string = ""
-	this.Msg = &msg
 	return &this
 }
 
-// GetCode returns the Code field value if set, zero value otherwise.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetCode() string {
-	if o == nil || IsNil(o.Code) {
-		var ret string
+// GetResult returns the Result field value if set, zero value otherwise.
+func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetResult() bool {
+	if o == nil || IsNil(o.Result) {
+		var ret bool
 		return ret
 	}
-	return *o.Code
+	return *o.Result
 }
 
-// GetCodeOk returns a tuple with the Code field value if set, nil otherwise
+// GetResultOk returns a tuple with the Result field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetCodeOk() (*string, bool) {
-	if o == nil || IsNil(o.Code) {
+func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetResultOk() (*bool, bool) {
+	if o == nil || IsNil(o.Result) {
 		return nil, false
 	}
-	return o.Code, true
+	return o.Result, true
 }
 
-// HasCode returns a boolean if a field has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) HasCode() bool {
-	if o != nil && !IsNil(o.Code) {
+// HasResult returns a boolean if a field has been set.
+func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) HasResult() bool {
+	if o != nil && !IsNil(o.Result) {
 		return true
 	}
 
 	return false
 }
 
-// SetCode gets a reference to the given string and assigns it to the Code field.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) SetCode(v string) {
-	o.Code = &v
-}
-
-// GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetData() []CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner {
-	if o == nil || IsNil(o.Data) {
-		var ret []CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner
-		return ret
-	}
-	return o.Data
-}
-
-// GetDataOk returns a tuple with the Data field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetDataOk() ([]CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner, bool) {
-	if o == nil || IsNil(o.Data) {
-		return nil, false
-	}
-	return o.Data, true
-}
-
-// HasData returns a boolean if a field has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) HasData() bool {
-	if o != nil && !IsNil(o.Data) {
-		return true
-	}
-
-	return false
-}
-
-// SetData gets a reference to the given []CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner and assigns it to the Data field.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) SetData(v []CreateRfqMakerInstrumentSettingsV5RespDataInnerDataInner) {
-	o.Data = v
-}
-
-// GetMsg returns the Msg field value if set, zero value otherwise.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetMsg() string {
-	if o == nil || IsNil(o.Msg) {
-		var ret string
-		return ret
-	}
-	return *o.Msg
-}
-
-// GetMsgOk returns a tuple with the Msg field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) GetMsgOk() (*string, bool) {
-	if o == nil || IsNil(o.Msg) {
-		return nil, false
-	}
-	return o.Msg, true
-}
-
-// HasMsg returns a boolean if a field has been set.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) HasMsg() bool {
-	if o != nil && !IsNil(o.Msg) {
-		return true
-	}
-
-	return false
-}
-
-// SetMsg gets a reference to the given string and assigns it to the Msg field.
-func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) SetMsg(v string) {
-	o.Msg = &v
+// SetResult gets a reference to the given bool and assigns it to the Result field.
+func (o *CreateRfqMakerInstrumentSettingsV5RespDataInner) SetResult(v bool) {
+	o.Result = &v
 }
 
 func (o CreateRfqMakerInstrumentSettingsV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -158,14 +82,8 @@ func (o CreateRfqMakerInstrumentSettingsV5RespDataInner) MarshalJSON() ([]byte, 
 
 func (o CreateRfqMakerInstrumentSettingsV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.Code) {
-		toSerialize["code"] = o.Code
-	}
-	if !IsNil(o.Data) {
-		toSerialize["data"] = o.Data
-	}
-	if !IsNil(o.Msg) {
-		toSerialize["msg"] = o.Msg
+	if !IsNil(o.Result) {
+		toSerialize["result"] = o.Result
 	}
 	return toSerialize, nil
 }
