@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -102,7 +102,14 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringAmendOrderAlgoV5Execut
 	}
 	// body params
 	localVarPostBody = r.createTradingBotRecurringAmendOrderAlgoV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -133,7 +140,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringAmendOrderAlgoV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -144,7 +151,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringAmendOrderAlgoV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -241,7 +248,14 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringOrderAlgoV5Execute(r A
 	}
 	// body params
 	localVarPostBody = r.createTradingBotRecurringOrderAlgoV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -272,7 +286,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringOrderAlgoV5Execute(r A
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -283,7 +297,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringOrderAlgoV5Execute(r A
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -382,7 +396,14 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringStopOrderAlgoV5Execute
 	}
 	// body params
 	localVarPostBody = r.createTradingBotRecurringStopOrderAlgoV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -413,7 +434,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringStopOrderAlgoV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -424,7 +445,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringStopOrderAlgoV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -520,7 +541,14 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoDetailsV5Execut
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -551,7 +579,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoDetailsV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -562,7 +590,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoDetailsV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -699,7 +727,14 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoHistoryV5Execut
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -730,7 +765,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoHistoryV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -741,7 +776,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoHistoryV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -878,7 +913,14 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoPendingV5Execut
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -909,7 +951,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoPendingV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -920,7 +962,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoPendingV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1068,7 +1110,14 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringSubOrdersV5Execute(r ApiG
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1099,7 +1148,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringSubOrdersV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1110,7 +1159,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringSubOrdersV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

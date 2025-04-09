@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -104,7 +104,14 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 	}
 	// body params
 	localVarPostBody = r.createCopytradingAlgoOrderV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -135,7 +142,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -146,7 +153,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -245,7 +252,14 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 	}
 	// body params
 	localVarPostBody = r.createCopytradingAmendCopySettingsV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -276,7 +290,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -287,7 +301,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -386,7 +400,14 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 	}
 	// body params
 	localVarPostBody = r.createCopytradingAmendProfitSharingRatioV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -417,7 +438,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -428,7 +449,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -530,7 +551,14 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 	}
 	// body params
 	localVarPostBody = r.createCopytradingCloseSubpositionV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -561,7 +589,7 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -572,7 +600,7 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -671,7 +699,14 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 	}
 	// body params
 	localVarPostBody = r.createCopytradingFirstCopySettingsV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -702,7 +737,7 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -713,7 +748,7 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -815,7 +850,14 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 	}
 	// body params
 	localVarPostBody = r.createCopytradingSetInstrumentsV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -846,7 +888,7 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -857,7 +899,7 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -956,7 +998,14 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 	}
 	// body params
 	localVarPostBody = r.createCopytradingStopCopyTradingV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -987,7 +1036,7 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -998,7 +1047,7 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1085,7 +1134,14 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1116,7 +1172,7 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1127,7 +1183,7 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1238,7 +1294,14 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1269,7 +1332,7 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1280,7 +1343,7 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1380,7 +1443,14 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1411,7 +1481,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1422,7 +1492,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1578,7 +1648,14 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1609,7 +1686,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1620,7 +1697,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1721,7 +1798,14 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1752,7 +1836,7 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1763,7 +1847,7 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1902,7 +1986,14 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1933,7 +2024,7 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1944,7 +2035,7 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2044,7 +2135,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2075,7 +2166,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2086,7 +2177,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2210,7 +2301,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2241,7 +2332,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2252,7 +2343,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2402,7 +2493,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2433,7 +2524,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2444,7 +2535,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2674,7 +2765,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2705,7 +2796,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2716,7 +2807,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2838,7 +2929,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2869,7 +2960,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2880,7 +2971,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2991,7 +3082,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3022,7 +3113,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3033,7 +3124,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3155,7 +3246,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3186,7 +3277,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3197,7 +3288,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3350,7 +3441,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3381,7 +3472,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3392,7 +3483,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3503,7 +3594,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3534,7 +3625,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3545,7 +3636,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3700,7 +3791,14 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3731,7 +3829,7 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3742,7 +3840,7 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3842,7 +3940,14 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3873,7 +3978,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3884,7 +3989,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3984,7 +4089,14 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4015,7 +4127,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4026,7 +4138,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4129,7 +4241,14 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4160,7 +4279,7 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4171,7 +4290,7 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -106,7 +106,14 @@ func (a *AlgoTradingAPIService) CreateTradeAmendAlgosV5Execute(r ApiCreateTradeA
 	}
 	// body params
 	localVarPostBody = r.createTradeAmendAlgosV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -137,7 +144,7 @@ func (a *AlgoTradingAPIService) CreateTradeAmendAlgosV5Execute(r ApiCreateTradeA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -148,7 +155,7 @@ func (a *AlgoTradingAPIService) CreateTradeAmendAlgosV5Execute(r ApiCreateTradeA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -253,7 +260,14 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelAdvanceAlgosV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -284,7 +298,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -295,7 +309,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -396,7 +410,14 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelAlgosV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -427,7 +448,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -438,7 +459,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -541,7 +562,14 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 	}
 	// body params
 	localVarPostBody = r.createTradeOrderAlgoV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -572,7 +600,7 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -583,7 +611,7 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -694,7 +722,14 @@ func (a *AlgoTradingAPIService) GetTradeOrderAlgoV5Execute(r ApiGetTradeOrderAlg
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -725,7 +760,7 @@ func (a *AlgoTradingAPIService) GetTradeOrderAlgoV5Execute(r ApiGetTradeOrderAlg
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -736,7 +771,7 @@ func (a *AlgoTradingAPIService) GetTradeOrderAlgoV5Execute(r ApiGetTradeOrderAlg
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -925,7 +960,14 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoHistoryV5Execute(r ApiGetTrade
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -956,7 +998,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoHistoryV5Execute(r ApiGetTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -967,7 +1009,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoHistoryV5Execute(r ApiGetTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1156,7 +1198,14 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoPendingV5Execute(r ApiGetTrade
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1187,7 +1236,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoPendingV5Execute(r ApiGetTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1198,7 +1247,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoPendingV5Execute(r ApiGetTrade
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

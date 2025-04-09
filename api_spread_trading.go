@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -92,7 +92,14 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -123,7 +130,7 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -134,7 +141,7 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -233,7 +240,14 @@ func (a *SpreadTradingAPIService) CreateSprdCancelAllAfterV5Execute(r ApiCreateS
 	}
 	// body params
 	localVarPostBody = r.createSprdCancelAllAfterV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -264,7 +278,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelAllAfterV5Execute(r ApiCreateS
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -275,7 +289,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelAllAfterV5Execute(r ApiCreateS
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -374,7 +388,14 @@ func (a *SpreadTradingAPIService) CreateSprdCancelOrderV5Execute(r ApiCreateSprd
 	}
 	// body params
 	localVarPostBody = r.createSprdCancelOrderV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -405,7 +426,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelOrderV5Execute(r ApiCreateSprd
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -416,7 +437,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelOrderV5Execute(r ApiCreateSprd
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -515,7 +536,14 @@ func (a *SpreadTradingAPIService) CreateSprdMassCancelV5Execute(r ApiCreateSprdM
 	}
 	// body params
 	localVarPostBody = r.createSprdMassCancelV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -546,7 +574,7 @@ func (a *SpreadTradingAPIService) CreateSprdMassCancelV5Execute(r ApiCreateSprdM
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -557,7 +585,7 @@ func (a *SpreadTradingAPIService) CreateSprdMassCancelV5Execute(r ApiCreateSprdM
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -656,7 +684,14 @@ func (a *SpreadTradingAPIService) CreateSprdOrderV5Execute(r ApiCreateSprdOrderV
 	}
 	// body params
 	localVarPostBody = r.createSprdOrderV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -687,7 +722,7 @@ func (a *SpreadTradingAPIService) CreateSprdOrderV5Execute(r ApiCreateSprdOrderV
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -698,7 +733,7 @@ func (a *SpreadTradingAPIService) CreateSprdOrderV5Execute(r ApiCreateSprdOrderV
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -846,7 +881,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -877,7 +912,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -888,7 +923,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1036,7 +1071,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1067,7 +1102,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1078,7 +1113,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1174,7 +1209,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdTickerV5Execute(r ApiGetMarketSpr
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1205,7 +1240,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdTickerV5Execute(r ApiGetMarketSpr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1216,7 +1251,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdTickerV5Execute(r ApiGetMarketSpr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1327,7 +1362,7 @@ func (a *SpreadTradingAPIService) GetSprdBooksV5Execute(r ApiGetSprdBooksV5Reque
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1358,7 +1393,7 @@ func (a *SpreadTradingAPIService) GetSprdBooksV5Execute(r ApiGetSprdBooksV5Reque
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1369,7 +1404,7 @@ func (a *SpreadTradingAPIService) GetSprdBooksV5Execute(r ApiGetSprdBooksV5Reque
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1482,7 +1517,14 @@ func (a *SpreadTradingAPIService) GetSprdOrderV5Execute(r ApiGetSprdOrderV5Reque
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1513,7 +1555,7 @@ func (a *SpreadTradingAPIService) GetSprdOrderV5Execute(r ApiGetSprdOrderV5Reque
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1524,7 +1566,7 @@ func (a *SpreadTradingAPIService) GetSprdOrderV5Execute(r ApiGetSprdOrderV5Reque
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1741,7 +1783,14 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryArchiveV5Execute(r ApiGetS
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1772,7 +1821,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryArchiveV5Execute(r ApiGetS
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1783,7 +1832,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryArchiveV5Execute(r ApiGetS
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1974,7 +2023,14 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryV5Execute(r ApiGetSprdOrde
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2005,7 +2061,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryV5Execute(r ApiGetSprdOrde
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2016,7 +2072,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryV5Execute(r ApiGetSprdOrde
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2181,7 +2237,14 @@ func (a *SpreadTradingAPIService) GetSprdOrdersPendingV5Execute(r ApiGetSprdOrde
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2212,7 +2275,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersPendingV5Execute(r ApiGetSprdOrde
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2223,7 +2286,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersPendingV5Execute(r ApiGetSprdOrde
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2323,7 +2386,7 @@ func (a *SpreadTradingAPIService) GetSprdPublicTradesV5Execute(r ApiGetSprdPubli
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2354,7 +2417,7 @@ func (a *SpreadTradingAPIService) GetSprdPublicTradesV5Execute(r ApiGetSprdPubli
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2365,7 +2428,7 @@ func (a *SpreadTradingAPIService) GetSprdPublicTradesV5Execute(r ApiGetSprdPubli
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2504,7 +2567,7 @@ func (a *SpreadTradingAPIService) GetSprdSpreadsV5Execute(r ApiGetSprdSpreadsV5R
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2535,7 +2598,7 @@ func (a *SpreadTradingAPIService) GetSprdSpreadsV5Execute(r ApiGetSprdSpreadsV5R
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2546,7 +2609,7 @@ func (a *SpreadTradingAPIService) GetSprdSpreadsV5Execute(r ApiGetSprdSpreadsV5R
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2737,7 +2800,14 @@ func (a *SpreadTradingAPIService) GetSprdTradesV5Execute(r ApiGetSprdTradesV5Req
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2768,7 +2838,7 @@ func (a *SpreadTradingAPIService) GetSprdTradesV5Execute(r ApiGetSprdTradesV5Req
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2779,7 +2849,7 @@ func (a *SpreadTradingAPIService) GetSprdTradesV5Execute(r ApiGetSprdTradesV5Req
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

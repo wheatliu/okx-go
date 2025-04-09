@@ -1,5 +1,5 @@
 /*
-Okx Rest API
+OKX v5 API
 
 Testing PublicDataAPIService
 
@@ -14,7 +14,7 @@ import (
 	"github.com/stretchr/testify/assert"
 	"github.com/stretchr/testify/require"
 	"testing"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func Test_rest_PublicDataAPIService(t *testing.T) {

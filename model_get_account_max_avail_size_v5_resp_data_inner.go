@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */

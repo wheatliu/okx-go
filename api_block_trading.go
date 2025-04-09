@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -104,7 +104,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllAfterV5Execute(r ApiCreateRfq
 	}
 	// body params
 	localVarPostBody = r.createRfqCancelAllAfterV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -135,7 +142,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllAfterV5Execute(r ApiCreateRfq
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -146,7 +153,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllAfterV5Execute(r ApiCreateRfq
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -233,7 +240,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllQuotesV5Execute(r ApiCreateRf
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -264,7 +278,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllQuotesV5Execute(r ApiCreateRf
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -275,7 +289,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllQuotesV5Execute(r ApiCreateRf
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -362,7 +376,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllRfqsV5Execute(r ApiCreateRfqC
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -393,7 +414,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllRfqsV5Execute(r ApiCreateRfqC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -404,7 +425,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllRfqsV5Execute(r ApiCreateRfqC
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -503,7 +524,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchQuotesV5Execute(r ApiCreate
 	}
 	// body params
 	localVarPostBody = r.createRfqCancelBatchQuotesV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -534,7 +562,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchQuotesV5Execute(r ApiCreate
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -545,7 +573,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchQuotesV5Execute(r ApiCreate
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -644,7 +672,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchRfqsV5Execute(r ApiCreateRf
 	}
 	// body params
 	localVarPostBody = r.createRfqCancelBatchRfqsV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -675,7 +710,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchRfqsV5Execute(r ApiCreateRf
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -686,7 +721,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchRfqsV5Execute(r ApiCreateRf
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -785,7 +820,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelQuoteV5Execute(r ApiCreateRfqCan
 	}
 	// body params
 	localVarPostBody = r.createRfqCancelQuoteV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -816,7 +858,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelQuoteV5Execute(r ApiCreateRfqCan
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -827,7 +869,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelQuoteV5Execute(r ApiCreateRfqCan
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -926,7 +968,14 @@ func (a *BlockTradingAPIService) CreateRfqCancelRfqV5Execute(r ApiCreateRfqCance
 	}
 	// body params
 	localVarPostBody = r.createRfqCancelRfqV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -957,7 +1006,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelRfqV5Execute(r ApiCreateRfqCance
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -968,7 +1017,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelRfqV5Execute(r ApiCreateRfqCance
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1067,7 +1116,14 @@ func (a *BlockTradingAPIService) CreateRfqCreateQuoteV5Execute(r ApiCreateRfqCre
 	}
 	// body params
 	localVarPostBody = r.createRfqCreateQuoteV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1098,7 +1154,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateQuoteV5Execute(r ApiCreateRfqCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1109,7 +1165,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateQuoteV5Execute(r ApiCreateRfqCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1212,7 +1268,14 @@ func (a *BlockTradingAPIService) CreateRfqCreateRfqV5Execute(r ApiCreateRfqCreat
 	}
 	// body params
 	localVarPostBody = r.createRfqCreateRfqV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1243,7 +1306,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateRfqV5Execute(r ApiCreateRfqCreat
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1254,7 +1317,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateRfqV5Execute(r ApiCreateRfqCreat
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1353,7 +1416,14 @@ func (a *BlockTradingAPIService) CreateRfqExecuteQuoteV5Execute(r ApiCreateRfqEx
 	}
 	// body params
 	localVarPostBody = r.createRfqExecuteQuoteV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1384,7 +1454,7 @@ func (a *BlockTradingAPIService) CreateRfqExecuteQuoteV5Execute(r ApiCreateRfqEx
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1395,7 +1465,7 @@ func (a *BlockTradingAPIService) CreateRfqExecuteQuoteV5Execute(r ApiCreateRfqEx
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1494,7 +1564,14 @@ func (a *BlockTradingAPIService) CreateRfqMakerInstrumentSettingsV5Execute(r Api
 	}
 	// body params
 	localVarPostBody = r.createRfqMakerInstrumentSettingsV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1525,7 +1602,7 @@ func (a *BlockTradingAPIService) CreateRfqMakerInstrumentSettingsV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1536,7 +1613,7 @@ func (a *BlockTradingAPIService) CreateRfqMakerInstrumentSettingsV5Execute(r Api
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1637,7 +1714,14 @@ func (a *BlockTradingAPIService) CreateRfqMmpConfigV5Execute(r ApiCreateRfqMmpCo
 	}
 	// body params
 	localVarPostBody = r.createRfqMmpConfigV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1668,7 +1752,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpConfigV5Execute(r ApiCreateRfqMmpCo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1679,7 +1763,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpConfigV5Execute(r ApiCreateRfqMmpCo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1766,7 +1850,14 @@ func (a *BlockTradingAPIService) CreateRfqMmpResetV5Execute(r ApiCreateRfqMmpRes
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1797,7 +1888,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpResetV5Execute(r ApiCreateRfqMmpRes
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1808,7 +1899,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpResetV5Execute(r ApiCreateRfqMmpRes
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1904,7 +1995,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickerV5Execute(r ApiGetMarketBlo
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1935,7 +2026,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickerV5Execute(r ApiGetMarketBlo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1946,7 +2037,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickerV5Execute(r ApiGetMarketBlo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2068,7 +2159,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickersV5Execute(r ApiGetMarketBl
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2099,7 +2190,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickersV5Execute(r ApiGetMarketBl
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2110,7 +2201,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickersV5Execute(r ApiGetMarketBl
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2206,7 +2297,7 @@ func (a *BlockTradingAPIService) GetPublicBlockTradesV5Execute(r ApiGetPublicBlo
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2237,7 +2328,7 @@ func (a *BlockTradingAPIService) GetPublicBlockTradesV5Execute(r ApiGetPublicBlo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2248,7 +2339,7 @@ func (a *BlockTradingAPIService) GetPublicBlockTradesV5Execute(r ApiGetPublicBlo
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2335,7 +2426,14 @@ func (a *BlockTradingAPIService) GetRfqCounterpartiesV5Execute(r ApiGetRfqCounte
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2366,7 +2464,7 @@ func (a *BlockTradingAPIService) GetRfqCounterpartiesV5Execute(r ApiGetRfqCounte
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2377,7 +2475,7 @@ func (a *BlockTradingAPIService) GetRfqCounterpartiesV5Execute(r ApiGetRfqCounte
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2464,7 +2562,14 @@ func (a *BlockTradingAPIService) GetRfqMakerInstrumentSettingsV5Execute(r ApiGet
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2495,7 +2600,7 @@ func (a *BlockTradingAPIService) GetRfqMakerInstrumentSettingsV5Execute(r ApiGet
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2506,7 +2611,7 @@ func (a *BlockTradingAPIService) GetRfqMakerInstrumentSettingsV5Execute(r ApiGet
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2595,7 +2700,14 @@ func (a *BlockTradingAPIService) GetRfqMmpConfigV5Execute(r ApiGetRfqMmpConfigV5
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2626,7 +2738,7 @@ func (a *BlockTradingAPIService) GetRfqMmpConfigV5Execute(r ApiGetRfqMmpConfigV5
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2637,7 +2749,7 @@ func (a *BlockTradingAPIService) GetRfqMmpConfigV5Execute(r ApiGetRfqMmpConfigV5
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2761,7 +2873,7 @@ func (a *BlockTradingAPIService) GetRfqPublicTradesV5Execute(r ApiGetRfqPublicTr
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2792,7 +2904,7 @@ func (a *BlockTradingAPIService) GetRfqPublicTradesV5Execute(r ApiGetRfqPublicTr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2803,7 +2915,7 @@ func (a *BlockTradingAPIService) GetRfqPublicTradesV5Execute(r ApiGetRfqPublicTr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2994,7 +3106,14 @@ func (a *BlockTradingAPIService) GetRfqQuotesV5Execute(r ApiGetRfqQuotesV5Reques
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3025,7 +3144,7 @@ func (a *BlockTradingAPIService) GetRfqQuotesV5Execute(r ApiGetRfqQuotesV5Reques
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3036,7 +3155,7 @@ func (a *BlockTradingAPIService) GetRfqQuotesV5Execute(r ApiGetRfqQuotesV5Reques
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3201,7 +3320,14 @@ func (a *BlockTradingAPIService) GetRfqRfqsV5Execute(r ApiGetRfqRfqsV5Request) (
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3232,7 +3358,7 @@ func (a *BlockTradingAPIService) GetRfqRfqsV5Execute(r ApiGetRfqRfqsV5Request) (
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3243,7 +3369,7 @@ func (a *BlockTradingAPIService) GetRfqRfqsV5Execute(r ApiGetRfqRfqsV5Request) (
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3470,7 +3596,14 @@ func (a *BlockTradingAPIService) GetRfqTradesV5Execute(r ApiGetRfqTradesV5Reques
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3501,7 +3634,7 @@ func (a *BlockTradingAPIService) GetRfqTradesV5Execute(r ApiGetRfqTradesV5Reques
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3512,7 +3645,7 @@ func (a *BlockTradingAPIService) GetRfqTradesV5Execute(r ApiGetRfqTradesV5Reques
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -41,7 +41,7 @@ var (
 	queryDescape    = strings.NewReplacer("%5B", "[", "%5D", "]")
 )
 
-// APIClient manages communication with the Okx Rest API API v0.1.0
+// APIClient manages communication with the OKX v5 API API v0.1.0
 // In most cases there should be only one, shared, APIClient.
 type APIClient struct {
 	cfg    *Configuration
@@ -638,7 +638,7 @@ func strlen(s string) int {
 type GenericOpenAPIError struct {
 	body  []byte
 	error string
-	model interface{}
+	model *APIError
 }
 
 // Error returns non-empty string if there was an error.
@@ -652,7 +652,7 @@ func (e GenericOpenAPIError) Body() []byte {
 }
 
 // Model returns the unpacked model of the error
-func (e GenericOpenAPIError) Model() interface{} {
+func (e GenericOpenAPIError) Model() *APIError {
 	return e.model
 }
 

@@ -52,7 +52,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -113,7 +113,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -187,7 +187,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -261,7 +261,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -335,7 +335,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -401,7 +401,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -469,7 +469,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -543,7 +543,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -619,7 +619,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -695,7 +695,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -763,7 +763,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -837,7 +837,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -903,7 +903,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -969,7 +969,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1041,7 +1041,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1107,7 +1107,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1175,7 +1175,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1247,7 +1247,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1327,7 +1327,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1388,7 +1388,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1460,7 +1460,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1532,7 +1532,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1602,7 +1602,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1680,7 +1680,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1752,7 +1752,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1818,7 +1818,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1890,7 +1890,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1951,7 +1951,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {

@@ -1,7 +1,7 @@
 openapi: 3.0.3
 info:
-  description: OpenAPI specification for Okx cryptocurrency exchange - Rest API
-  title: Okx Rest API
+  description: OpenAPI specification for Okx exchange - Rest API
+  title: OKX v5 API
   version: 0.1.0
 servers:
 - description: Okx Rest API Server
@@ -45,8 +45,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountAccountLevelSwitchPresetV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Pre-set the required information for account mode switching. When switching from `Portfolio margin mode` back to `Spot and futures mode` / `Multi-currency margin mode`, and if there are existing cross-margin contract positions, it is mandatory to pre-set leverage.
 
@@ -110,8 +110,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountAccountPositionRiskV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get account and position risk
 
@@ -142,8 +142,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountActivateOptionV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/adjust-leverage-info:
@@ -282,8 +282,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountAdjustLeverageInfoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/balance:
@@ -327,8 +327,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.
 
@@ -749,8 +749,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountBillsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.
 
@@ -1172,8 +1172,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountBillsArchiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 1 year since July 1, 2024.
 
@@ -1226,8 +1226,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountBillsHistoryArchiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Apply for bill data since 1 February, 2021 except for the current quarter.
 
@@ -1265,8 +1265,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountBillsHistoryArchiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Apply for bill data since 1 February, 2021 except for the current quarter.
 
@@ -1319,8 +1319,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountCollateralAssetsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/config:
@@ -1349,8 +1349,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve current account configuration.
 
@@ -1393,8 +1393,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountGreeksV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve a greeks list of all assets in the account.
 
@@ -1497,8 +1497,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountInstrumentsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve available instruments info of current account.
 
@@ -1635,8 +1635,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountInterestAccruedV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get interest accrued data. Only data within the last one year can be obtained.
 
@@ -1698,8 +1698,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountInterestLimitsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/interest-rate:
@@ -1739,8 +1739,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountInterestRateV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get the user's current leveraged currency borrowing market interest rate
 
@@ -1824,8 +1824,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountLeverageInfoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/max-avail-size:
@@ -1932,8 +1932,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountMaxAvailSizeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Available balance for isolated margin positions and SPOT, available equity for cross margin positions.
 
@@ -2025,8 +2025,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountMaxLoanV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/max-size:
@@ -2150,8 +2150,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountMaxSizeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The maximum quantity to buy or sell. It corresponds to the "sz" from placement.
 
@@ -2198,8 +2198,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountMaxWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.
 
@@ -2243,8 +2243,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountMmpConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         This endpoint is used to get MMP configure information
 
@@ -2295,8 +2295,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountMmpConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         This endpoint is used to set MMP configure
 
@@ -2340,8 +2340,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountMmpResetV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You can unfreeze by this endpoint once MMP is triggered.
 
@@ -2386,8 +2386,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountPositionBuilderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Calculates portfolio margin information for virtual position/assets or current position of the user.
 
@@ -2479,8 +2479,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountPositionTiersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.
 
@@ -2520,8 +2520,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountPositionMarginBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.
 
@@ -2617,8 +2617,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountPositionsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve information on your positions. When the account is in `net` mode, `net` positions will be displayed, and when the account is in `long/short` mode, `long` or `short` positions will be displayed. Return in reverse chronological order using ctime.
 
@@ -2773,8 +2773,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountPositionsHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime. Getting positions history is supported under Portfolio margin mode since .
 
@@ -2813,8 +2813,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountQuickMarginBorrowRepayV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Please note that this endpoint will be deprecated soon.
 
@@ -2937,8 +2937,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountQuickMarginBorrowRepayHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get record in the past 3 months.
 
@@ -2970,8 +2970,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountRiskStateV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only applicable to Portfolio margin account
 
@@ -3014,8 +3014,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetAccountLevelV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You need to set on the Web/App for the first set of every account mode. If users plan to switch account modes while holding positions, they should first call the preset endpoint to conduct necessary settings, then call the precheck endpoint to get unmatched information, margin check, and other related information, and finally call the account mode switch endpoint to switch account modes.
 
@@ -3076,8 +3076,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountSetAccountSwitchPrecheckV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve precheck information for account mode switching.
 
@@ -3116,8 +3116,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetAutoLoanV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only applicable to `Multi-currency margin` and `Portfolio margin`
 
@@ -3156,8 +3156,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetAutoRepayV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only applicable to `Spot mode` (enabled borrowing)
 
@@ -3195,8 +3195,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetCollateralAssetsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/account/set-greeks:
@@ -3232,8 +3232,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetGreeksV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Set the display type of Greeks.
 
@@ -3272,8 +3272,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetIsolatedModeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You can set the currency margin and futures/perpetual Isolated margin trading mode
 
@@ -3333,8 +3333,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetLeverageV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "\n\nThere are 10 different scenarios for leverage setting: \n\n\n\n\
         \n1. Set leverage for `MARGIN` instruments under `isolated-margin` trade mode\
         \ at pairs level. \n\n\n2. Set leverage for `MARGIN` instruments under `cross-margin`\
@@ -3396,8 +3396,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetPositionModeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Spot and futures mode and Multi-currency mode: `FUTURES` and `SWAP` support both `long/short` mode and `net` mode. In `net` mode, users can only have positions in one direction; In `long/short` mode, users can hold positions in long and short directions.
 
@@ -3440,8 +3440,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSetRiskOffsetAmtV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Set risk offset amount. This does not represent the actual spot risk offset amount. Only applicable to Portfolio Margin Mode.
 
@@ -3548,8 +3548,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountSpotBorrowRepayHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the borrow/repay history under `Spot mode`
 
@@ -3588,8 +3588,8 @@ paths:
                 $ref: '#/components/schemas/CreateAccountSpotManualBorrowRepayV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only applicable to `Spot mode` (enabled borrowing)
 
@@ -3633,8 +3633,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountSubaccountBalancesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)
 
@@ -3691,8 +3691,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountSubaccountMaxWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the maximum withdrawal information of a sub-account via the master account (applies to master accounts only). If no currency is specified, the transferable amount of all owned currencies will be returned.
 
@@ -3828,8 +3828,8 @@ paths:
                 $ref: '#/components/schemas/GetAccountTradeFeeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Trading Account
   /api/v5/affiliate/invitee/detail:
@@ -3872,8 +3872,8 @@ paths:
                 $ref: '#/components/schemas/GetAffiliateInviteeDetailV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Affiliate
   /api/v5/asset/asset-valuation:
@@ -3916,8 +3916,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetAssetValuationV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         View account asset valuation
 
@@ -3964,8 +3964,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetBalancesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the funding account balances of all the assets and the amount that is available or on hold.
 
@@ -3995,14 +3995,14 @@ paths:
           \ to sub account (for sub-account)\n\n`28`: Manually claimed Airdrop\n\n\
           `47`: System reversal\n\n`48`: Event Reward\n\n`49`: Event Giveaway\n\n\
           `68`: Fee rebate (by rebate card)\n\n`72`: Token received\n\n`73`: Token\
-          \ given away\n\n`74`: Token refunded\n\n`75`: Subscription to savings\n\n\
-          `76`: Redemption to savings\n\n`77`: Jumpstart distribute\n\n`78`: Jumpstart\
-          \ lock up\n\n`80`: DEFI/Staking purchase\n\n`82`: DEFI/Staking redemption\n\
-          \n`83`: Staking yield\n\n`84`: Violation fee\n\n`89`: Deposit yield\n\n\
-          `116`: [Fiat] Place an order\n\n`117`: [Fiat] Fulfill an order\n\n`118`:\
-          \ [Fiat] Cancel an order\n\n`124`: Jumpstart unlocking\n\n`130`: Transferred\
-          \ from Trading account\n\n`131`: Transferred to Trading account\n\n`132`:\
-          \ [P2P] Frozen by customer service\n\n`133`: [P2P] Unfrozen by customer\
+          \ given away\n\n`74`: Token refunded\n\n`75`: [Simple earn flexible] Subscription\n\
+          \n`76`: [Simple earn flexible] Redemption\n\n`77`: Jumpstart distribute\n\
+          \n`78`: Jumpstart lock up\n\n`80`: DEFI/Staking subscription\n\n`82`: DEFI/Staking\
+          \ redemption\n\n`83`: Staking yield\n\n`84`: Violation fee\n\n`89`: Deposit\
+          \ yield\n\n`116`: [Fiat] Place an order\n\n`117`: [Fiat] Fulfill an order\n\
+          \n`118`: [Fiat] Cancel an order\n\n`124`: Jumpstart unlocking\n\n`130`:\
+          \ Transferred from Trading account\n\n`131`: Transferred to Trading account\n\
+          \n`132`: [P2P] Frozen by customer service\n\n`133`: [P2P] Unfrozen by customer\
           \ service\n\n`134`: [P2P] Transferred by customer service\n\n`135`: Cross\
           \ chain exchange\n\n`137`: [ETH Staking] Subscription\n\n`138`: [ETH Staking]\
           \ Swapping\n\n`139`: [ETH Staking] Earnings\n\n`146`: Customer feedback\n\
@@ -4068,68 +4068,68 @@ paths:
             \ from master to sub account (for sub-account)\n\n`28`: Manually claimed\
             \ Airdrop\n\n`47`: System reversal\n\n`48`: Event Reward\n\n`49`: Event\
             \ Giveaway\n\n`68`: Fee rebate (by rebate card)\n\n`72`: Token received\n\
-            \n`73`: Token given away\n\n`74`: Token refunded\n\n`75`: Subscription\
-            \ to savings\n\n`76`: Redemption to savings\n\n`77`: Jumpstart distribute\n\
-            \n`78`: Jumpstart lock up\n\n`80`: DEFI/Staking purchase\n\n`82`: DEFI/Staking\
-            \ redemption\n\n`83`: Staking yield\n\n`84`: Violation fee\n\n`89`: Deposit\
-            \ yield\n\n`116`: [Fiat] Place an order\n\n`117`: [Fiat] Fulfill an order\n\
-            \n`118`: [Fiat] Cancel an order\n\n`124`: Jumpstart unlocking\n\n`130`:\
-            \ Transferred from Trading account\n\n`131`: Transferred to Trading account\n\
-            \n`132`: [P2P] Frozen by customer service\n\n`133`: [P2P] Unfrozen by\
-            \ customer service\n\n`134`: [P2P] Transferred by customer service\n\n\
-            `135`: Cross chain exchange\n\n`137`: [ETH Staking] Subscription\n\n`138`:\
-            \ [ETH Staking] Swapping\n\n`139`: [ETH Staking] Earnings\n\n`146`: Customer\
-            \ feedback\n\n`150`: Affiliate commission\n\n`151`: Referral reward\n\n\
-            `152`: Broker reward\n\n`160`: Dual Investment subscribe\n\n`161`: Dual\
-            \ Investment collection\n\n`162`: Dual Investment profit\n\n`163`: Dual\
-            \ Investment refund\n\n`172`: [Affiliate] Sub-affiliate commission\n\n\
-            `173`: [Affiliate] Fee rebate (by trading fee)\n\n`174`: Jumpstart Pay\n\
-            \n`175`: Locked collateral\n\n`176`: Loan\n\n`177`: Added collateral\n\
-            \n`178`: Returned collateral\n\n`179`: Repayment\n\n`180`: Unlocked collateral\n\
-            \n`181`: Airdrop payment\n\n`185`: [Broker] Convert reward\n\n`187`: [Broker]\
-            \ Convert transfer\n\n`189`: Mystery box bonus\n\n`195`: Untradable asset\
-            \ withdrawal\n\n`196`: Untradable asset withdrawal revoked\n\n`197`: Untradable\
-            \ asset deposit\n\n`198`: Untradable asset collection reduce\n\n`199`:\
-            \ Untradable asset collection increase\n\n`200`: Buy\n\n`202`: Price Lock\
-            \ Subscribe\n\n`203`: Price Lock Collection\n\n`204`: Price Lock Profit\n\
-            \n`205`: Price Lock Refund\n\n`207`: Dual Investment Lite Subscribe\n\n\
-            `208`: Dual Investment Lite Collection\n\n`209`: Dual Investment Lite\
-            \ Profit\n\n`210`: Dual Investment Lite Refund\n\n`212`: [Flexible loan]\
-            \ Multi-collateral loan collateral locked\n\n`215`: [Flexible loan] Multi-collateral\
-            \ loan collateral released\n\n`217`: [Flexible loan] Multi-collateral\
-            \ loan borrowed\n\n`218`: [Flexible loan] Multi-collateral loan repaid\n\
-            \n`232`: [Flexible loan] Subsidized interest received\n\n`220`: Delisted\
-            \ crypto\n\n`221`: Blockchain's withdrawal fee\n\n`222`: Withdrawal fee\
-            \ refund\n\n`223`: SWAP lead trading profit share\n\n`225`: Shark Fin\
-            \ subscribe\n\n`226`: Shark Fin collection\n\n`227`: Shark Fin profit\n\
-            \n`228`: Shark Fin refund\n\n`229`: Airdrop\n\n`232`: Subsidized interest\
-            \ received\n\n`233`: Broker rebate compensation\n\n`240`: Snowball subscribe\n\
-            \n`241`: Snowball refund\n\n`242`: Snowball profit\n\n`243`: Snowball\
-            \ trading failed\n\n`249`: Seagull subscribe\n\n`250`: Seagull collection\n\
-            \n`251`: Seagull profit\n\n`252`: Seagull refund\n\n`263`: Strategy bots\
-            \ profit share\n\n`265`: Signal revenue\n\n`266`: SPOT lead trading profit\
-            \ share\n\n`270`: DCD broker transfer\n\n`271`: DCD broker rebate\n\n\
-            `272`: [Convert] Buy Crypto/Fiat\n\n`273`: [Convert] Sell Crypto/Fiat\n\
-            \n`284`: [Custody] Transfer out trading sub-account\n\n`285`: [Custody]\
-            \ Transfer in trading sub-account\n\n`286`: [Custody] Transfer out custody\
-            \ funding account\n\n`287`: [Custody] Transfer in custody funding account\n\
-            \n`288`: [Custody] Fund delegation \n\n`289`: [Custody] Fund undelegation\n\
-            \n`299`: Affiliate recommendation commission\n\n`300`: Fee discount rebate\n\
-            \n`303`: Snowball market maker transfer\n\n`304`: [Simple Earn Fixed]\
-            \ Order submission\n\n`305`: [Simple Earn Fixed] Order redemption\n\n\
-            `306`: [Simple Earn Fixed] Principal distribution\n\n`307`: [Simple Earn\
-            \ Fixed] Interest distribution (early termination compensation)\n\n`308`:\
-            \ [Simple Earn Fixed] Interest distribution\n\n`309`: [Simple Earn Fixed]\
-            \ Interest distribution (extension compensation) \n\n`311`: Crypto dust\
-            \ auto-transfer in\n\n`313`: Sent by gift\n\n`314`: Received from gift\n\
-            \n`315`: Refunded from gift\n\n`328`: [SOL staking] Send Liquidity Staking\
-            \ Token reward\n\n`329`: [SOL staking] Subscribe Liquidity Staking Token\
-            \ staking\n\n`330`: [SOL staking] Mint Liquidity Staking Token\n\n`331`:\
-            \ [SOL staking] Redeem Liquidity Staking Token order\n\n`332`: [SOL staking]\
-            \ Settle Liquidity Staking Token order\n\n`333`: Trial fund reward\n\n\
-            `336`: [Credit line] Loan Forced Repayment\n\n`338`: [Credit line] Forced\
-            \ Repayment Refund\n\n`354`: Copy and bot rewards\n\n`361`: Deposit from\
-            \ closed sub-account"
+            \n`73`: Token given away\n\n`74`: Token refunded\n\n`75`: [Simple earn\
+            \ flexible] Subscription\n\n`76`: [Simple earn flexible] Redemption\n\n\
+            `77`: Jumpstart distribute\n\n`78`: Jumpstart lock up\n\n`80`: DEFI/Staking\
+            \ subscription\n\n`82`: DEFI/Staking redemption\n\n`83`: Staking yield\n\
+            \n`84`: Violation fee\n\n`89`: Deposit yield\n\n`116`: [Fiat] Place an\
+            \ order\n\n`117`: [Fiat] Fulfill an order\n\n`118`: [Fiat] Cancel an order\n\
+            \n`124`: Jumpstart unlocking\n\n`130`: Transferred from Trading account\n\
+            \n`131`: Transferred to Trading account\n\n`132`: [P2P] Frozen by customer\
+            \ service\n\n`133`: [P2P] Unfrozen by customer service\n\n`134`: [P2P]\
+            \ Transferred by customer service\n\n`135`: Cross chain exchange\n\n`137`:\
+            \ [ETH Staking] Subscription\n\n`138`: [ETH Staking] Swapping\n\n`139`:\
+            \ [ETH Staking] Earnings\n\n`146`: Customer feedback\n\n`150`: Affiliate\
+            \ commission\n\n`151`: Referral reward\n\n`152`: Broker reward\n\n`160`:\
+            \ Dual Investment subscribe\n\n`161`: Dual Investment collection\n\n`162`:\
+            \ Dual Investment profit\n\n`163`: Dual Investment refund\n\n`172`: [Affiliate]\
+            \ Sub-affiliate commission\n\n`173`: [Affiliate] Fee rebate (by trading\
+            \ fee)\n\n`174`: Jumpstart Pay\n\n`175`: Locked collateral\n\n`176`: Loan\n\
+            \n`177`: Added collateral\n\n`178`: Returned collateral\n\n`179`: Repayment\n\
+            \n`180`: Unlocked collateral\n\n`181`: Airdrop payment\n\n`185`: [Broker]\
+            \ Convert reward\n\n`187`: [Broker] Convert transfer\n\n`189`: Mystery\
+            \ box bonus\n\n`195`: Untradable asset withdrawal\n\n`196`: Untradable\
+            \ asset withdrawal revoked\n\n`197`: Untradable asset deposit\n\n`198`:\
+            \ Untradable asset collection reduce\n\n`199`: Untradable asset collection\
+            \ increase\n\n`200`: Buy\n\n`202`: Price Lock Subscribe\n\n`203`: Price\
+            \ Lock Collection\n\n`204`: Price Lock Profit\n\n`205`: Price Lock Refund\n\
+            \n`207`: Dual Investment Lite Subscribe\n\n`208`: Dual Investment Lite\
+            \ Collection\n\n`209`: Dual Investment Lite Profit\n\n`210`: Dual Investment\
+            \ Lite Refund\n\n`212`: [Flexible loan] Multi-collateral loan collateral\
+            \ locked\n\n`215`: [Flexible loan] Multi-collateral loan collateral released\n\
+            \n`217`: [Flexible loan] Multi-collateral loan borrowed\n\n`218`: [Flexible\
+            \ loan] Multi-collateral loan repaid\n\n`232`: [Flexible loan] Subsidized\
+            \ interest received\n\n`220`: Delisted crypto\n\n`221`: Blockchain's withdrawal\
+            \ fee\n\n`222`: Withdrawal fee refund\n\n`223`: SWAP lead trading profit\
+            \ share\n\n`225`: Shark Fin subscribe\n\n`226`: Shark Fin collection\n\
+            \n`227`: Shark Fin profit\n\n`228`: Shark Fin refund\n\n`229`: Airdrop\n\
+            \n`232`: Subsidized interest received\n\n`233`: Broker rebate compensation\n\
+            \n`240`: Snowball subscribe\n\n`241`: Snowball refund\n\n`242`: Snowball\
+            \ profit\n\n`243`: Snowball trading failed\n\n`249`: Seagull subscribe\n\
+            \n`250`: Seagull collection\n\n`251`: Seagull profit\n\n`252`: Seagull\
+            \ refund\n\n`263`: Strategy bots profit share\n\n`265`: Signal revenue\n\
+            \n`266`: SPOT lead trading profit share\n\n`270`: DCD broker transfer\n\
+            \n`271`: DCD broker rebate\n\n`272`: [Convert] Buy Crypto/Fiat\n\n`273`:\
+            \ [Convert] Sell Crypto/Fiat\n\n`284`: [Custody] Transfer out trading\
+            \ sub-account\n\n`285`: [Custody] Transfer in trading sub-account\n\n\
+            `286`: [Custody] Transfer out custody funding account\n\n`287`: [Custody]\
+            \ Transfer in custody funding account\n\n`288`: [Custody] Fund delegation\
+            \ \n\n`289`: [Custody] Fund undelegation\n\n`299`: Affiliate recommendation\
+            \ commission\n\n`300`: Fee discount rebate\n\n`303`: Snowball market maker\
+            \ transfer\n\n`304`: [Simple Earn Fixed] Order submission\n\n`305`: [Simple\
+            \ Earn Fixed] Order redemption\n\n`306`: [Simple Earn Fixed] Principal\
+            \ distribution\n\n`307`: [Simple Earn Fixed] Interest distribution (early\
+            \ termination compensation)\n\n`308`: [Simple Earn Fixed] Interest distribution\n\
+            \n`309`: [Simple Earn Fixed] Interest distribution (extension compensation)\
+            \ \n\n`311`: Crypto dust auto-transfer in\n\n`313`: Sent by gift\n\n`314`:\
+            \ Received from gift\n\n`315`: Refunded from gift\n\n`328`: [SOL staking]\
+            \ Send Liquidity Staking Token reward\n\n`329`: [SOL staking] Subscribe\
+            \ Liquidity Staking Token staking\n\n`330`: [SOL staking] Mint Liquidity\
+            \ Staking Token\n\n`331`: [SOL staking] Redeem Liquidity Staking Token\
+            \ order\n\n`332`: [SOL staking] Settle Liquidity Staking Token order\n\
+            \n`333`: Trial fund reward\n\n`336`: [Credit line] Loan Forced Repayment\n\
+            \n`338`: [Credit line] Forced Repayment Refund\n\n`354`: Copy and bot\
+            \ rewards\n\n`361`: Deposit from closed sub-account"
           type: string
         style: form
       - description: |-
@@ -4204,8 +4204,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetBillsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Query the billing record in the past month.
 
@@ -4244,8 +4244,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetCancelWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.
 
@@ -4276,8 +4276,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetConvertCurrenciesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Funding Account
   /api/v5/asset/convert/currency-pair:
@@ -4305,8 +4305,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetConvertCurrencyPairV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Funding Account
   /api/v5/asset/convert/estimate-quote:
@@ -4342,8 +4342,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetConvertEstimateQuoteV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Funding Account
   /api/v5/asset/convert/history:
@@ -4444,8 +4444,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetConvertHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Funding Account
   /api/v5/asset/convert/trade:
@@ -4483,8 +4483,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetConvertTradeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "You should make  before convert trade. \n\nFor the same side (buy/sell),\
         \ there's a trading limit of 1 request per 5 seconds.\n\n"
       tags:
@@ -4528,8 +4528,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetCurrenciesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve a list of all currencies available which are related to the current account's KYC entity.
 
@@ -4572,8 +4572,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetDepositAddressV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the deposit addresses of currencies, including previously-used addresses.
 
@@ -4728,8 +4728,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetDepositHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.
 
@@ -4825,8 +4825,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetDepositWithdrawStatusV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve deposit's and withdrawal's detailed status and estimated complete time.
 
@@ -4835,8 +4835,7 @@ paths:
   /api/v5/asset/exchange-list:
     get:
       description: "Authentication is not required for this public endpoint.\n\n####\
-        \ Rate Limit: 6 requests per second \n\n#### Rate limit rule: IP \n\n####\
-        \ Permission: Read \n\n"
+        \ Rate Limit: 6 requests per second \n\n#### Rate limit rule: IP \n\n"
       operationId: GetAssetExchangeListV5
       responses:
         "4XX":
@@ -4901,8 +4900,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetMonthlyStatementV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve monthly statement in the past year.
 
@@ -4940,8 +4939,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetMonthlyStatementV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Apply for monthly statement in the past year.
 
@@ -4985,8 +4984,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetNonTradableAssetsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Funding Account
   /api/v5/asset/subaccount/balances:
@@ -5039,8 +5038,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetSubaccountBalancesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)
 
@@ -5151,8 +5150,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetSubaccountBillsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Applies to master accounts only.
 
@@ -5272,8 +5271,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetSubaccountManagedSubaccountBillsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only applicable to the trading team's master account to getting transfer records of managed sub accounts entrusted to oneself.
 
@@ -5312,8 +5311,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetSubaccountTransferV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Applies to master accounts only. \n\nOnly API keys with `Trade` privilege\
         \ can call this endpoint.\n\n"
       tags:
@@ -5358,8 +5357,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetTransferV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only API keys with `Trade` privilege can call this endpoint.
 
@@ -5453,8 +5452,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetTransferStateV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the transfer state data of the last 2 weeks.
 
@@ -5509,8 +5508,8 @@ paths:
                 $ref: '#/components/schemas/CreateAssetWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Only supported withdrawal of assets from funding account. Common sub-account\
         \ does not support withdrawal. \n\n"
       tags:
@@ -5667,8 +5666,8 @@ paths:
                 $ref: '#/components/schemas/GetAssetWithdrawalHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.
 
@@ -5710,8 +5709,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingAlgoOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Set TP/SL for the current lead position that are not closed.
 
@@ -5750,8 +5749,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingAmendCopySettingsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You need to use this endpoint to amend copy settings
 
@@ -5790,8 +5789,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingAmendProfitSharingRatioV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "It is used to amend profit sharing ratio. \n\n"
       tags:
       - Copy Trading
@@ -5829,8 +5828,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingCloseSubpositionV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "You can only close a lead position once a time. \n\n\nIt is required\
         \ to pass subPosId which can get from .\n\n"
       tags:
@@ -5861,8 +5860,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve current account configuration related to copy/lead trading.
 
@@ -5927,8 +5926,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingCopySettingsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the copy settings about certain lead trader.
 
@@ -5976,8 +5975,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingCurrentLeadTradersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve my lead traders.
 
@@ -6079,8 +6078,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingCurrentSubpositionsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve lead positions that are not closed.
 
@@ -6124,8 +6123,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingFirstCopySettingsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The first copy settings for the certain lead trader. You need to first copy settings after stopping copying.
 
@@ -6179,8 +6178,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingInstrumentsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Retrieve instruments that are supported to lead by the platform. \n\
         Retrieve instruments that the lead trader has set.\n\n"
       tags:
@@ -6270,8 +6269,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingProfitSharingDetailsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The leading trader gets profits shared details for the last 3 months.
 
@@ -7111,8 +7110,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingSetInstrumentsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The leading trader can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.
 
@@ -7154,8 +7153,8 @@ paths:
                 $ref: '#/components/schemas/CreateCopytradingStopCopyTradingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You need to use this endpoint to stop copy trading
 
@@ -7257,8 +7256,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingSubpositionsHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Retrieve the completed lead position of the last 3 months.\n\n\nReturns\
         \ reverse chronological order with `subPosId`. \n\n"
       tags:
@@ -7314,8 +7313,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingTotalProfitSharingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The leading trader gets the total amount of profit shared since joining the platform.
 
@@ -7364,8 +7363,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingTotalUnrealizedProfitSharingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The leading trader gets the total unrealized amount of profit shared.
 
@@ -7424,8 +7423,8 @@ paths:
                 $ref: '#/components/schemas/GetCopytradingUnrealizedProfitSharingDetailsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.
 
@@ -7467,8 +7466,8 @@ paths:
                 $ref: '#/components/schemas/CreateFiatCancelWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel a pending fiat withdrawal order, currently only applicable to TRY
 
@@ -7508,8 +7507,8 @@ paths:
                 $ref: '#/components/schemas/CreateFiatCreateWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Initiate a fiat withdrawal request (Authenticated endpoint, Only for API keys with "Withdrawal" access)
 
@@ -7554,8 +7553,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatDepositV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get fiat deposit order detail
 
@@ -7692,8 +7691,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatDepositOrderHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get fiat deposit order history
 
@@ -7736,8 +7735,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatDepositPaymentMethodsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         To display all the available fiat deposit payment methods
 
@@ -7780,8 +7779,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatWithdrawalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get fiat withdraw order detail
 
@@ -7918,8 +7917,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatWithdrawalOrderHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get fiat withdrawal order history
 
@@ -7962,8 +7961,8 @@ paths:
                 $ref: '#/components/schemas/GetFiatWithdrawalPaymentMethodsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         To display all the available fiat withdrawal payment methods
 
@@ -8001,8 +8000,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceFlexible-LoanAdjustCollateralV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/flexible-loan/borrow-currencies:
@@ -8030,8 +8029,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanBorrowCurrenciesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get borrowable currencies
 
@@ -8074,8 +8073,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanCollateralAssetsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get collateral assets in funding account.
 
@@ -8153,8 +8152,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanInterestAccruedV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/flexible-loan/loan-history:
@@ -8263,8 +8262,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanLoanHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/flexible-loan/loan-info:
@@ -8292,8 +8291,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanLoanInfoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/flexible-loan/max-collateral-redeem-amount:
@@ -8332,8 +8331,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceFlexible-LoanMaxCollateralRedeemAmountV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/flexible-loan/max-loan:
@@ -8368,8 +8367,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceFlexible-LoanMaxLoanV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Flexible Loan
   /api/v5/finance/savings/balance:
@@ -8408,8 +8407,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceSavingsBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Simple Earn Flexible
   /api/v5/finance/savings/lending-history:
@@ -8485,8 +8484,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceSavingsLendingHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Return data in the past month.
 
@@ -8496,7 +8495,7 @@ paths:
     get:
       description: "Authentication is not required for this public endpoint.\n\n\n\
         Only returned records after December 14, 2021.\n\n#### Rate Limit: 6 requests\
-        \ per second \n\n#### Rate limit rule: IP \n\n#### Permission: Read \n\n"
+        \ per second \n\n#### Rate limit rule: IP \n\n"
       operationId: GetFinanceSavingsLendingRateHistoryV5
       parameters:
       - description: "Currency, e.g. `BTC`"
@@ -8579,8 +8578,7 @@ paths:
   /api/v5/finance/savings/lending-rate-summary:
     get:
       description: "Authentication is not required for this public endpoint.\n\n####\
-        \ Rate Limit: 6 requests per second \n\n#### Rate limit rule: IP \n\n####\
-        \ Permission: Read \n\n"
+        \ Rate Limit: 6 requests per second \n\n#### Rate limit rule: IP \n\n"
       operationId: GetFinanceSavingsLendingRateSummaryV5
       parameters:
       - description: "Currency, e.g. `BTC`"
@@ -8650,8 +8648,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceSavingsPurchaseRedemptV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only the assets in the funding account can be used for saving.
 
@@ -8689,8 +8687,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceSavingsSetLendingRateV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Simple Earn Flexible
   /api/v5/finance/staking-defi/cancel:
@@ -8726,15 +8724,14 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiCancelV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/eth/apy-history:
     get:
       description: "Public endpoints don't need authorization.\n\n#### Rate Limit:\
-        \ 6 requests per second \n\n#### Rate limit rule: IP \n\n#### Permission:\
-        \ Read \n\n"
+        \ 6 requests per second \n\n#### Rate limit rule: IP \n\n"
       operationId: GetFinanceStaking-DefiEthApyHistoryV5
       parameters:
       - description: |-
@@ -8803,8 +8800,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiEthBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The balance is a snapshot summarized all BETH assets (including assets in redeeming) in account.
 
@@ -8835,8 +8832,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiEthProductInfoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Eth Staking
   /api/v5/finance/staking-defi/eth/purchase:
@@ -8872,8 +8869,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiEthPurchaseV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Staking ETH for BETH
 
@@ -8990,8 +8987,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiEthPurchaseRedeemHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Eth Staking
   /api/v5/finance/staking-defi/eth/redeem:
@@ -9028,8 +9025,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiEthRedeemV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only the assets in the funding account can be used. If your BETH is in your trading account, you can make funding transfer first.
 
@@ -9099,8 +9096,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiOffersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/orders-active:
@@ -9177,8 +9174,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiOrdersActiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/orders-history:
@@ -9279,8 +9276,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiOrdersHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/purchase:
@@ -9315,8 +9312,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiPurchaseV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/redeem:
@@ -9351,15 +9348,14 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiRedeemV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - On Chain Earn
   /api/v5/finance/staking-defi/sol/apy-history:
     get:
       description: "Public endpoints don't need authorization.\n\n#### Rate Limit:\
-        \ 6 requests per second \n\n#### Rate limit rule: IP \n\n#### Permission:\
-        \ Read \n\n"
+        \ 6 requests per second \n\n#### Rate limit rule: IP \n\n"
       operationId: GetFinanceStaking-DefiSolApyHistoryV5
       parameters:
       - description: |-
@@ -9428,8 +9424,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiSolBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The balance is summarized all OKSOL assets (including assets in redeeming) in account.
 
@@ -9468,8 +9464,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiSolPurchaseV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Staking SOL for OKSOL
 
@@ -9586,8 +9582,8 @@ paths:
                 $ref: '#/components/schemas/GetFinanceStaking-DefiSolPurchaseRedeemHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Sol Staking
   /api/v5/finance/staking-defi/sol/redeem:
@@ -9624,8 +9620,8 @@ paths:
                 $ref: '#/components/schemas/CreateFinanceStaking-DefiSolRedeemV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Only the assets in the funding account can be used. If your OKSOL is in your trading account, you can make funding transfer first.
 
@@ -12941,8 +12937,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelAllAfterV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel all quotes after the countdown timeout.
 
@@ -12974,8 +12970,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelAllQuotesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancels all active Quotes.
 
@@ -13006,8 +13002,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelAllRfqsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancels all active RFQs.
 
@@ -13047,8 +13043,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelBatchQuotesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel one or multiple active Quote(s) in a single batch. Maximum 100 quote orders can be canceled per request.
 
@@ -13088,8 +13084,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelBatchRfqsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel one or multiple active RFQ(s) in a single batch. Maximum 100 RFQ orders can be canceled per request.
 
@@ -13128,8 +13124,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelQuoteV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancels an existing active Quote you have created in response to an RFQ.
 
@@ -13168,8 +13164,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCancelRfqV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel an existing active RFQ that you have created previously.
 
@@ -13201,8 +13197,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqCounterpartiesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Retrieves the list of counterparties that the user is permitted to\
         \ trade with. \n\n"
       tags:
@@ -13242,8 +13238,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCreateQuoteV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Allows the user to Quote an RFQ that they are a counterparty to. The\
         \ user MUST quote the entire RFQ and not part of the legs or part of the quantity.\
         \ Partial quoting is not allowed. \n\n"
@@ -13284,8 +13280,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqCreateRfqV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Creates a new RFQ\n\nTo learn more, please visit \n\n"
       tags:
       - Block Trading
@@ -13322,8 +13318,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqExecuteQuoteV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Executes a Quote. It is only used by the creator of the RFQ
 
@@ -13356,8 +13352,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqMakerInstrumentSettingsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Retrieve the products which makers want to quote and receive RFQs\
         \ for, and the corresponding price and size limit. \n\n"
       tags:
@@ -13395,8 +13391,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqMakerInstrumentSettingsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Customize the products which makers want to quote and receive RFQs\
         \ for, and the corresponding price and size limit. \n\n"
       tags:
@@ -13428,8 +13424,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqMmpConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         This endpoint is used to get MMP configure information and only applicable to block trading market makers
 
@@ -13469,8 +13465,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqMmpConfigV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         This endpoint is used to set MMP configure and only applicable to block trading makers
 
@@ -13504,8 +13500,8 @@ paths:
                 $ref: '#/components/schemas/CreateRfqMmpResetV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Reset the MMP status to be inactive.
 
@@ -13701,8 +13697,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqQuotesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve all Quotes that the user is a counterparty to (either as the creator or the receiver).
 
@@ -13808,8 +13804,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqRfqsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Retrieves details of RFQs that the user is a counterparty to (either\
         \ as the creator or the receiver of the RFQ). \n\n"
       tags:
@@ -13977,8 +13973,8 @@ paths:
                 $ref: '#/components/schemas/GetRfqTradesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieves the executed trades that the user is a counterparty to (either as the creator or the receiver).
 
@@ -15114,8 +15110,8 @@ paths:
                 $ref: '#/components/schemas/CreateSprdAmendOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Amend an incomplete order.
 
@@ -15207,8 +15203,8 @@ paths:
                 $ref: '#/components/schemas/CreateSprdCancelAllAfterV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel all pending orders after the countdown timeout. Only applicable to spread trading.
 
@@ -15247,8 +15243,8 @@ paths:
                 $ref: '#/components/schemas/CreateSprdCancelOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel an incomplete order.
 
@@ -15287,8 +15283,8 @@ paths:
                 $ref: '#/components/schemas/CreateSprdMassCancelV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel all pending orders.
 
@@ -15344,8 +15340,8 @@ paths:
                 $ref: '#/components/schemas/GetSprdOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve order details.
 
@@ -15382,8 +15378,8 @@ paths:
                 $ref: '#/components/schemas/CreateSprdOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Place a new order
 
@@ -15510,8 +15506,8 @@ paths:
                 $ref: '#/components/schemas/GetSprdOrdersHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the completed order data for the last 21 days, and the incomplete orders (filledSz =0 & state = canceled) that have been canceled are only reserved for 2 hours. Results are returned in counter chronological order of orders creation.
 
@@ -15664,8 +15660,8 @@ paths:
                 $ref: '#/components/schemas/GetSprdOrdersHistoryArchiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed in the last 3 months. Results are returned in counter chronological order.
 
@@ -15766,8 +15762,8 @@ paths:
                 $ref: '#/components/schemas/GetSprdOrdersPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve all incomplete orders under the current account.
 
@@ -16004,8 +16000,8 @@ paths:
                 $ref: '#/components/schemas/GetSprdTradesV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve historical transaction details . Results are returned in counter chronological order.
 
@@ -16039,8 +16035,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeAccountRateLimitV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Get account rate limit related information. \n\n\n\nOnly new order\
         \ requests and amendment order requests will be counted towards this limit.\
         \ For batch order requests consisting of multiple orders, each order will\
@@ -16081,8 +16077,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeAmendAlgosV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Amend unfilled algo orders (Support Stop order and Trigger order only, not including Move_order_stop order, Iceberg order, TWAP order, Trailing Stop order).
 
@@ -16130,8 +16126,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeAmendBatchOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.
 
@@ -16175,8 +16171,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeAmendOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Amend an incomplete order.
 
@@ -16225,8 +16221,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeBatchOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Place orders in batches. Maximum 20 orders can be placed per request.\
         \ \n\n\nRequest parameters should be passed in the form of an array. Orders\
         \ will be placed in turn\n\n\n\nRate limit of this endpoint will also be affected\
@@ -16270,8 +16266,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeCancelAdvanceAlgosV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "This endpoint will be offline soon, please use  \n\n\n\nCancel unfilled\
         \ algo orders (including Iceberg order, TWAP order, Trailing Stop order).\
         \ A maximum of 10 orders can be canceled per request. Request parameters should\
@@ -16313,8 +16309,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeCancelAlgosV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel unfilled algo orders. A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.
 
@@ -16354,8 +16350,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeCancelAllAfterV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel all pending orders after the countdown timeout. Applicable to all trading symbols through order book (except Spread trading)
 
@@ -16401,8 +16397,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeCancelBatchOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.
 
@@ -16442,8 +16438,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeCancelOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel an incomplete order.
 
@@ -16483,8 +16479,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeClosePositionV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Close the position of an instrument via a market order.
 
@@ -16523,8 +16519,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeEasyConvertV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Convert small currencies to mainstream currencies. \n\n"
       tags:
       - Trade
@@ -16580,8 +16576,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeEasyConvertCurrencyListV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.
 
@@ -16650,8 +16646,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeEasyConvertHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get the history and status of easy convert trades in the past 7 days.
 
@@ -16869,8 +16865,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeFillsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve recently-filled transaction details in the last 3 day.
 
@@ -17088,8 +17084,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeFillsHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve recently-filled transaction details in the last 3 months.
 
@@ -17129,8 +17125,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeMassCancelV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel all the MMP pending orders of an instrument family.
 
@@ -17175,8 +17171,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeOneClickRepayV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Trade one-click repay to repay cross debts. Isolated debts are not applicable.
         The maximum repayment amount is based on the remaining available balance of funding and trading accounts.
@@ -17222,8 +17218,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOneClickRepayCurrencyListV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts. Only applicable to `Multi-currency margin`/`Portfolio margin`.
 
@@ -17255,8 +17251,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOneClickRepayCurrencyListV2V5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get list of debt currency data and repay currencies. Only applicable to `SPOT mode`.
 
@@ -17326,8 +17322,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOneClickRepayHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get the history and status of one-click repay trades in the past 7 days. Only applicable to `Multi-currency margin`/`Portfolio margin`.
 
@@ -17400,8 +17396,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOneClickRepayHistoryV2V5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Get the history and status of one-click repay trades in the past 7 days. Only applicable to `SPOT mode`.
 
@@ -17440,8 +17436,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeOneClickRepayV2V5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Trade one-click repay to repay debts. Only applicable to `SPOT mode`.\
         \ \n\n"
       tags:
@@ -17518,8 +17514,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve order details.
 
@@ -17560,8 +17556,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You can place an order only if you have sufficient funds.
 
@@ -17627,8 +17623,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Algo Trading
     post:
@@ -17666,8 +17662,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The algo order includes `trigger` order, `oco` order, `chase` order, `conditional` order, `twap` order and trailing order.
 
@@ -17707,8 +17703,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradeOrderPrecheckV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "This endpoint is used to precheck the account information before and\
         \ after placing the order. \n\n\nOnly applicable to `Multi-currency margin\
         \ mode`, and `Portfolio margin mode`.\n\n"
@@ -17872,8 +17868,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrdersAlgoHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve a list of all algo orders under the current account in the last 3 months.
 
@@ -18026,8 +18022,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrdersAlgoPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve a list of untriggered Algo orders under the current account.
 
@@ -18254,8 +18250,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrdersHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Get completed orders which are placed in the last 7 days, including\
         \ those placed 7 days ago but completed in the last 7 days.  \n\n\n\nThe incomplete\
         \ orders that have been canceled are only reserved for 2 hours.\n\n"
@@ -18469,8 +18465,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrdersHistoryArchiveV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "Get completed orders which are placed in the last 3 months, including\
         \ those placed 3 months ago but completed in the last 3 months.  \n\n\n\n"
       tags:
@@ -18644,8 +18640,8 @@ paths:
                 $ref: '#/components/schemas/GetTradeOrdersPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve all incomplete orders under the current account.
 
@@ -18684,8 +18680,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridAdjustInvestmentV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         It is used to add investment and only applicable to contract gird.
 
@@ -18828,8 +18824,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridAmendOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/cancel-close-order:
@@ -18864,8 +18860,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridCancelCloseOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/close-position:
@@ -18901,8 +18897,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridClosePositionV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Close position when the contract grid stop type is 'keep position'.
 
@@ -18940,8 +18936,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridComputeMarginBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/grid-quantity:
@@ -19092,8 +19088,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridMarginBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/min-investment:
@@ -19165,8 +19161,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/order-instant-trigger:
@@ -19201,8 +19197,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridOrderInstantTriggerV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/orders-algo-details:
@@ -19261,8 +19257,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotGridOrdersAlgoDetailsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/orders-algo-history:
@@ -19395,8 +19391,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotGridOrdersAlgoHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/orders-algo-pending:
@@ -19529,8 +19525,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotGridOrdersAlgoPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/positions:
@@ -19585,8 +19581,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotGridPositionsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/stop-order-algo:
@@ -19622,8 +19618,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridStopOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         A maximum of 10 orders can be stopped per request.
 
@@ -19751,8 +19747,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotGridSubOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/grid/withdraw-income:
@@ -19787,8 +19783,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotGridWithdrawIncomeV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Grid Trading
   /api/v5/tradingBot/public/rsi-back-testing:
@@ -19982,8 +19978,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotRecurringAmendOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/recurring/order-algo:
@@ -20018,8 +20014,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotRecurringOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/recurring/orders-algo-details:
@@ -20058,8 +20054,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotRecurringOrdersAlgoDetailsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/recurring/orders-algo-history:
@@ -20134,8 +20130,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotRecurringOrdersAlgoHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/recurring/orders-algo-pending:
@@ -20210,8 +20206,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotRecurringOrdersAlgoPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/recurring/stop-order-algo:
@@ -20247,8 +20243,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotRecurringStopOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         A maximum of 10 orders can be stopped per request.
 
@@ -20336,8 +20332,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotRecurringSubOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Recurring Buy
   /api/v5/tradingBot/signal/amendTPSL:
@@ -20372,8 +20368,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalAmendTPSLV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/cancel-sub-order:
@@ -20409,8 +20405,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalCancelSubOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Cancel an incomplete order.
 
@@ -20449,8 +20445,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalClosePositionV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Close the position of an instrument via a market order.
 
@@ -20488,8 +20484,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalCreateSignalV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/event-history:
@@ -20566,8 +20562,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalEventHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/margin-balance:
@@ -20602,8 +20598,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalMarginBalanceV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/order-algo:
@@ -20638,8 +20634,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/orders-algo-details:
@@ -20694,8 +20690,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalOrdersAlgoDetailsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/orders-algo-history:
@@ -20787,8 +20783,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalOrdersAlgoHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/orders-algo-pending:
@@ -20880,8 +20876,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalOrdersAlgoPendingV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/positions:
@@ -20936,8 +20932,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalPositionsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/positions-history:
@@ -21024,8 +21020,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalPositionsHistoryV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.
 
@@ -21063,8 +21059,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalSetInstrumentsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/signals:
@@ -21166,8 +21162,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalSignalsV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/tradingBot/signal/stop-order-algo:
@@ -21203,8 +21199,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalStopOrderAlgoV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         A maximum of 10 orders can be stopped per request.
 
@@ -21243,8 +21239,8 @@ paths:
                 $ref: '#/components/schemas/CreateTradingBotSignalSubOrderV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         You can place an order only if you have sufficient funds.
 
@@ -21431,8 +21427,8 @@ paths:
                 $ref: '#/components/schemas/GetTradingBotSignalSubOrdersV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       tags:
       - Signal Bot Trading
   /api/v5/users/entrust-subaccount-list:
@@ -21472,8 +21468,8 @@ paths:
                 $ref: '#/components/schemas/GetUsersEntrustSubaccountListV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         The trading team uses this interface to view the list of sub-accounts currently under escrow
 
@@ -21519,8 +21515,8 @@ paths:
                 $ref: '#/components/schemas/GetUsersPartnerIfRebateV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: "This endpoint will be offline soon, please use  \n\n\n\nIt is used\
         \ to get the user's affiliate rebate information for affiliate.\n\n"
       tags:
@@ -21612,8 +21608,8 @@ paths:
                 $ref: '#/components/schemas/GetUsersSubaccountListV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Applies to master accounts only
 
@@ -21653,8 +21649,8 @@ paths:
                 $ref: '#/components/schemas/CreateUsersSubaccountModifyApikeyV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Applies to master accounts only and master accounts API Key must be linked to IP addresses. Only API keys with `Trade` privilege can call this endpoint.
 
@@ -21694,8 +21690,8 @@ paths:
                 $ref: '#/components/schemas/CreateUsersSubaccountSetTransferOutV5Resp'
           description: Successful operation
       security:
-      - OK-ACCESS-KEY: []
-      - OK-ACCESS-PASSPHRASE: []
+      - APIKey: []
+        Passphrase: []
       summary: |+
         Set permission of transfer out for sub-account (only applicable to master account API key). Sub-account can transfer out to master account by default.
 
@@ -45668,8 +45664,8 @@ components:
           type: string
         state:
           default: ""
-          description: "Order state\n\n8: Pending \n\n13: Cancelling \n\n9: Onchain\
-            \ \n\n1: Earning \n\n2: Redeeming"
+          description: "Order state\n\n`8`: Pending \n\n`13`: Cancelling \n\n`9`:\
+            \ Onchain \n\n`1`: Earning \n\n`2`: Redeeming"
           type: string
         tag:
           default: ""
@@ -53653,11 +53649,11 @@ components:
           type: string
       type: object
   securitySchemes:
-    OK-ACCESS-KEY:
+    APIKey:
       in: header
       name: OK-ACCESS-KEY
       type: apiKey
-    OK-ACCESS-PASSPHRASE:
+    Passphrase:
       in: header
       name: OK-ACCESS-PASSPHRASE
       type: apiKey

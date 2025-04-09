@@ -41,7 +41,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -78,7 +78,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -107,7 +107,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -144,7 +144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -173,7 +173,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -210,7 +210,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -239,7 +239,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -276,7 +276,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -305,7 +305,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -342,7 +342,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -371,7 +371,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -408,7 +408,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -437,7 +437,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -474,7 +474,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -503,7 +503,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -540,7 +540,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -569,7 +569,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -606,7 +606,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -635,7 +635,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -678,7 +678,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -707,7 +707,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -746,7 +746,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -775,7 +775,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -820,7 +820,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -849,7 +849,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -894,7 +894,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -923,7 +923,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -968,7 +968,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -997,7 +997,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1036,7 +1036,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1065,7 +1065,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1110,7 +1110,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1139,7 +1139,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1196,7 +1196,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 

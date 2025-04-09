@@ -53,7 +53,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -90,7 +90,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -119,7 +119,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -156,7 +156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -185,7 +185,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -222,7 +222,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -251,7 +251,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -317,7 +317,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -383,7 +383,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -449,7 +449,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -515,7 +515,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -581,7 +581,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -647,7 +647,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -713,12 +713,12 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
 	ccy := "ccy_example" // string | Currency (optional) (default to "")
-	type_ := "type__example" // string | Bill type  `1`: Deposit  `2`: Withdrawal  `13`: Canceled withdrawal  `20`: Transfer to sub account (for master account)  `21`: Transfer from sub account (for master account)  `22`: Transfer out from sub to master account (for sub-account)  `23`: Transfer in from master to sub account (for sub-account)  `28`: Manually claimed Airdrop  `47`: System reversal  `48`: Event Reward  `49`: Event Giveaway  `68`: Fee rebate (by rebate card)  `72`: Token received  `73`: Token given away  `74`: Token refunded  `75`: Subscription to savings  `76`: Redemption to savings  `77`: Jumpstart distribute  `78`: Jumpstart lock up  `80`: DEFI/Staking purchase  `82`: DEFI/Staking redemption  `83`: Staking yield  `84`: Violation fee  `89`: Deposit yield  `116`: [Fiat] Place an order  `117`: [Fiat] Fulfill an order  `118`: [Fiat] Cancel an order  `124`: Jumpstart unlocking  `130`: Transferred from Trading account  `131`: Transferred to Trading account  `132`: [P2P] Frozen by customer service  `133`: [P2P] Unfrozen by customer service  `134`: [P2P] Transferred by customer service  `135`: Cross chain exchange  `137`: [ETH Staking] Subscription  `138`: [ETH Staking] Swapping  `139`: [ETH Staking] Earnings  `146`: Customer feedback  `150`: Affiliate commission  `151`: Referral reward  `152`: Broker reward  `160`: Dual Investment subscribe  `161`: Dual Investment collection  `162`: Dual Investment profit  `163`: Dual Investment refund  `172`: [Affiliate] Sub-affiliate commission  `173`: [Affiliate] Fee rebate (by trading fee)  `174`: Jumpstart Pay  `175`: Locked collateral  `176`: Loan  `177`: Added collateral  `178`: Returned collateral  `179`: Repayment  `180`: Unlocked collateral  `181`: Airdrop payment  `185`: [Broker] Convert reward  `187`: [Broker] Convert transfer  `189`: Mystery box bonus  `195`: Untradable asset withdrawal  `196`: Untradable asset withdrawal revoked  `197`: Untradable asset deposit  `198`: Untradable asset collection reduce  `199`: Untradable asset collection increase  `200`: Buy  `202`: Price Lock Subscribe  `203`: Price Lock Collection  `204`: Price Lock Profit  `205`: Price Lock Refund  `207`: Dual Investment Lite Subscribe  `208`: Dual Investment Lite Collection  `209`: Dual Investment Lite Profit  `210`: Dual Investment Lite Refund  `212`: [Flexible loan] Multi-collateral loan collateral locked  `215`: [Flexible loan] Multi-collateral loan collateral released  `217`: [Flexible loan] Multi-collateral loan borrowed  `218`: [Flexible loan] Multi-collateral loan repaid  `232`: [Flexible loan] Subsidized interest received  `220`: Delisted crypto  `221`: Blockchain's withdrawal fee  `222`: Withdrawal fee refund  `223`: SWAP lead trading profit share  `225`: Shark Fin subscribe  `226`: Shark Fin collection  `227`: Shark Fin profit  `228`: Shark Fin refund  `229`: Airdrop  `232`: Subsidized interest received  `233`: Broker rebate compensation  `240`: Snowball subscribe  `241`: Snowball refund  `242`: Snowball profit  `243`: Snowball trading failed  `249`: Seagull subscribe  `250`: Seagull collection  `251`: Seagull profit  `252`: Seagull refund  `263`: Strategy bots profit share  `265`: Signal revenue  `266`: SPOT lead trading profit share  `270`: DCD broker transfer  `271`: DCD broker rebate  `272`: [Convert] Buy Crypto/Fiat  `273`: [Convert] Sell Crypto/Fiat  `284`: [Custody] Transfer out trading sub-account  `285`: [Custody] Transfer in trading sub-account  `286`: [Custody] Transfer out custody funding account  `287`: [Custody] Transfer in custody funding account  `288`: [Custody] Fund delegation   `289`: [Custody] Fund undelegation  `299`: Affiliate recommendation commission  `300`: Fee discount rebate  `303`: Snowball market maker transfer  `304`: [Simple Earn Fixed] Order submission  `305`: [Simple Earn Fixed] Order redemption  `306`: [Simple Earn Fixed] Principal distribution  `307`: [Simple Earn Fixed] Interest distribution (early termination compensation)  `308`: [Simple Earn Fixed] Interest distribution  `309`: [Simple Earn Fixed] Interest distribution (extension compensation)   `311`: Crypto dust auto-transfer in  `313`: Sent by gift  `314`: Received from gift  `315`: Refunded from gift  `328`: [SOL staking] Send Liquidity Staking Token reward  `329`: [SOL staking] Subscribe Liquidity Staking Token staking  `330`: [SOL staking] Mint Liquidity Staking Token  `331`: [SOL staking] Redeem Liquidity Staking Token order  `332`: [SOL staking] Settle Liquidity Staking Token order  `333`: Trial fund reward  `336`: [Credit line] Loan Forced Repayment  `338`: [Credit line] Forced Repayment Refund  `354`: Copy and bot rewards  `361`: Deposit from closed sub-account (optional) (default to "")
+	type_ := "type__example" // string | Bill type  `1`: Deposit  `2`: Withdrawal  `13`: Canceled withdrawal  `20`: Transfer to sub account (for master account)  `21`: Transfer from sub account (for master account)  `22`: Transfer out from sub to master account (for sub-account)  `23`: Transfer in from master to sub account (for sub-account)  `28`: Manually claimed Airdrop  `47`: System reversal  `48`: Event Reward  `49`: Event Giveaway  `68`: Fee rebate (by rebate card)  `72`: Token received  `73`: Token given away  `74`: Token refunded  `75`: [Simple earn flexible] Subscription  `76`: [Simple earn flexible] Redemption  `77`: Jumpstart distribute  `78`: Jumpstart lock up  `80`: DEFI/Staking subscription  `82`: DEFI/Staking redemption  `83`: Staking yield  `84`: Violation fee  `89`: Deposit yield  `116`: [Fiat] Place an order  `117`: [Fiat] Fulfill an order  `118`: [Fiat] Cancel an order  `124`: Jumpstart unlocking  `130`: Transferred from Trading account  `131`: Transferred to Trading account  `132`: [P2P] Frozen by customer service  `133`: [P2P] Unfrozen by customer service  `134`: [P2P] Transferred by customer service  `135`: Cross chain exchange  `137`: [ETH Staking] Subscription  `138`: [ETH Staking] Swapping  `139`: [ETH Staking] Earnings  `146`: Customer feedback  `150`: Affiliate commission  `151`: Referral reward  `152`: Broker reward  `160`: Dual Investment subscribe  `161`: Dual Investment collection  `162`: Dual Investment profit  `163`: Dual Investment refund  `172`: [Affiliate] Sub-affiliate commission  `173`: [Affiliate] Fee rebate (by trading fee)  `174`: Jumpstart Pay  `175`: Locked collateral  `176`: Loan  `177`: Added collateral  `178`: Returned collateral  `179`: Repayment  `180`: Unlocked collateral  `181`: Airdrop payment  `185`: [Broker] Convert reward  `187`: [Broker] Convert transfer  `189`: Mystery box bonus  `195`: Untradable asset withdrawal  `196`: Untradable asset withdrawal revoked  `197`: Untradable asset deposit  `198`: Untradable asset collection reduce  `199`: Untradable asset collection increase  `200`: Buy  `202`: Price Lock Subscribe  `203`: Price Lock Collection  `204`: Price Lock Profit  `205`: Price Lock Refund  `207`: Dual Investment Lite Subscribe  `208`: Dual Investment Lite Collection  `209`: Dual Investment Lite Profit  `210`: Dual Investment Lite Refund  `212`: [Flexible loan] Multi-collateral loan collateral locked  `215`: [Flexible loan] Multi-collateral loan collateral released  `217`: [Flexible loan] Multi-collateral loan borrowed  `218`: [Flexible loan] Multi-collateral loan repaid  `232`: [Flexible loan] Subsidized interest received  `220`: Delisted crypto  `221`: Blockchain's withdrawal fee  `222`: Withdrawal fee refund  `223`: SWAP lead trading profit share  `225`: Shark Fin subscribe  `226`: Shark Fin collection  `227`: Shark Fin profit  `228`: Shark Fin refund  `229`: Airdrop  `232`: Subsidized interest received  `233`: Broker rebate compensation  `240`: Snowball subscribe  `241`: Snowball refund  `242`: Snowball profit  `243`: Snowball trading failed  `249`: Seagull subscribe  `250`: Seagull collection  `251`: Seagull profit  `252`: Seagull refund  `263`: Strategy bots profit share  `265`: Signal revenue  `266`: SPOT lead trading profit share  `270`: DCD broker transfer  `271`: DCD broker rebate  `272`: [Convert] Buy Crypto/Fiat  `273`: [Convert] Sell Crypto/Fiat  `284`: [Custody] Transfer out trading sub-account  `285`: [Custody] Transfer in trading sub-account  `286`: [Custody] Transfer out custody funding account  `287`: [Custody] Transfer in custody funding account  `288`: [Custody] Fund delegation   `289`: [Custody] Fund undelegation  `299`: Affiliate recommendation commission  `300`: Fee discount rebate  `303`: Snowball market maker transfer  `304`: [Simple Earn Fixed] Order submission  `305`: [Simple Earn Fixed] Order redemption  `306`: [Simple Earn Fixed] Principal distribution  `307`: [Simple Earn Fixed] Interest distribution (early termination compensation)  `308`: [Simple Earn Fixed] Interest distribution  `309`: [Simple Earn Fixed] Interest distribution (extension compensation)   `311`: Crypto dust auto-transfer in  `313`: Sent by gift  `314`: Received from gift  `315`: Refunded from gift  `328`: [SOL staking] Send Liquidity Staking Token reward  `329`: [SOL staking] Subscribe Liquidity Staking Token staking  `330`: [SOL staking] Mint Liquidity Staking Token  `331`: [SOL staking] Redeem Liquidity Staking Token order  `332`: [SOL staking] Settle Liquidity Staking Token order  `333`: Trial fund reward  `336`: [Credit line] Loan Forced Repayment  `338`: [Credit line] Forced Repayment Refund  `354`: Copy and bot rewards  `361`: Deposit from closed sub-account (optional) (default to "")
 	clientId := "clientId_example" // string | Client-supplied ID for transfer or withdrawal  A combination of case-sensitive alphanumerics, all numbers, or all letters of up to 32 characters. (optional) (default to "")
 	after := "after_example" // string | Pagination of data to return records earlier than the requested `ts`, Unix timestamp format in milliseconds, e.g. `1597026383085` (optional) (default to "")
 	before := "before_example" // string | Pagination of data to return records newer than the requested `ts`, Unix timestamp format in milliseconds, e.g. `1597026383085` (optional) (default to "")
@@ -748,7 +748,7 @@ Other parameters are passed through a pointer to a apiGetAssetBillsV5Request str
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **ccy** | **string** | Currency | [default to &quot;&quot;]
- **type_** | **string** | Bill type  &#x60;1&#x60;: Deposit  &#x60;2&#x60;: Withdrawal  &#x60;13&#x60;: Canceled withdrawal  &#x60;20&#x60;: Transfer to sub account (for master account)  &#x60;21&#x60;: Transfer from sub account (for master account)  &#x60;22&#x60;: Transfer out from sub to master account (for sub-account)  &#x60;23&#x60;: Transfer in from master to sub account (for sub-account)  &#x60;28&#x60;: Manually claimed Airdrop  &#x60;47&#x60;: System reversal  &#x60;48&#x60;: Event Reward  &#x60;49&#x60;: Event Giveaway  &#x60;68&#x60;: Fee rebate (by rebate card)  &#x60;72&#x60;: Token received  &#x60;73&#x60;: Token given away  &#x60;74&#x60;: Token refunded  &#x60;75&#x60;: Subscription to savings  &#x60;76&#x60;: Redemption to savings  &#x60;77&#x60;: Jumpstart distribute  &#x60;78&#x60;: Jumpstart lock up  &#x60;80&#x60;: DEFI/Staking purchase  &#x60;82&#x60;: DEFI/Staking redemption  &#x60;83&#x60;: Staking yield  &#x60;84&#x60;: Violation fee  &#x60;89&#x60;: Deposit yield  &#x60;116&#x60;: [Fiat] Place an order  &#x60;117&#x60;: [Fiat] Fulfill an order  &#x60;118&#x60;: [Fiat] Cancel an order  &#x60;124&#x60;: Jumpstart unlocking  &#x60;130&#x60;: Transferred from Trading account  &#x60;131&#x60;: Transferred to Trading account  &#x60;132&#x60;: [P2P] Frozen by customer service  &#x60;133&#x60;: [P2P] Unfrozen by customer service  &#x60;134&#x60;: [P2P] Transferred by customer service  &#x60;135&#x60;: Cross chain exchange  &#x60;137&#x60;: [ETH Staking] Subscription  &#x60;138&#x60;: [ETH Staking] Swapping  &#x60;139&#x60;: [ETH Staking] Earnings  &#x60;146&#x60;: Customer feedback  &#x60;150&#x60;: Affiliate commission  &#x60;151&#x60;: Referral reward  &#x60;152&#x60;: Broker reward  &#x60;160&#x60;: Dual Investment subscribe  &#x60;161&#x60;: Dual Investment collection  &#x60;162&#x60;: Dual Investment profit  &#x60;163&#x60;: Dual Investment refund  &#x60;172&#x60;: [Affiliate] Sub-affiliate commission  &#x60;173&#x60;: [Affiliate] Fee rebate (by trading fee)  &#x60;174&#x60;: Jumpstart Pay  &#x60;175&#x60;: Locked collateral  &#x60;176&#x60;: Loan  &#x60;177&#x60;: Added collateral  &#x60;178&#x60;: Returned collateral  &#x60;179&#x60;: Repayment  &#x60;180&#x60;: Unlocked collateral  &#x60;181&#x60;: Airdrop payment  &#x60;185&#x60;: [Broker] Convert reward  &#x60;187&#x60;: [Broker] Convert transfer  &#x60;189&#x60;: Mystery box bonus  &#x60;195&#x60;: Untradable asset withdrawal  &#x60;196&#x60;: Untradable asset withdrawal revoked  &#x60;197&#x60;: Untradable asset deposit  &#x60;198&#x60;: Untradable asset collection reduce  &#x60;199&#x60;: Untradable asset collection increase  &#x60;200&#x60;: Buy  &#x60;202&#x60;: Price Lock Subscribe  &#x60;203&#x60;: Price Lock Collection  &#x60;204&#x60;: Price Lock Profit  &#x60;205&#x60;: Price Lock Refund  &#x60;207&#x60;: Dual Investment Lite Subscribe  &#x60;208&#x60;: Dual Investment Lite Collection  &#x60;209&#x60;: Dual Investment Lite Profit  &#x60;210&#x60;: Dual Investment Lite Refund  &#x60;212&#x60;: [Flexible loan] Multi-collateral loan collateral locked  &#x60;215&#x60;: [Flexible loan] Multi-collateral loan collateral released  &#x60;217&#x60;: [Flexible loan] Multi-collateral loan borrowed  &#x60;218&#x60;: [Flexible loan] Multi-collateral loan repaid  &#x60;232&#x60;: [Flexible loan] Subsidized interest received  &#x60;220&#x60;: Delisted crypto  &#x60;221&#x60;: Blockchain&#39;s withdrawal fee  &#x60;222&#x60;: Withdrawal fee refund  &#x60;223&#x60;: SWAP lead trading profit share  &#x60;225&#x60;: Shark Fin subscribe  &#x60;226&#x60;: Shark Fin collection  &#x60;227&#x60;: Shark Fin profit  &#x60;228&#x60;: Shark Fin refund  &#x60;229&#x60;: Airdrop  &#x60;232&#x60;: Subsidized interest received  &#x60;233&#x60;: Broker rebate compensation  &#x60;240&#x60;: Snowball subscribe  &#x60;241&#x60;: Snowball refund  &#x60;242&#x60;: Snowball profit  &#x60;243&#x60;: Snowball trading failed  &#x60;249&#x60;: Seagull subscribe  &#x60;250&#x60;: Seagull collection  &#x60;251&#x60;: Seagull profit  &#x60;252&#x60;: Seagull refund  &#x60;263&#x60;: Strategy bots profit share  &#x60;265&#x60;: Signal revenue  &#x60;266&#x60;: SPOT lead trading profit share  &#x60;270&#x60;: DCD broker transfer  &#x60;271&#x60;: DCD broker rebate  &#x60;272&#x60;: [Convert] Buy Crypto/Fiat  &#x60;273&#x60;: [Convert] Sell Crypto/Fiat  &#x60;284&#x60;: [Custody] Transfer out trading sub-account  &#x60;285&#x60;: [Custody] Transfer in trading sub-account  &#x60;286&#x60;: [Custody] Transfer out custody funding account  &#x60;287&#x60;: [Custody] Transfer in custody funding account  &#x60;288&#x60;: [Custody] Fund delegation   &#x60;289&#x60;: [Custody] Fund undelegation  &#x60;299&#x60;: Affiliate recommendation commission  &#x60;300&#x60;: Fee discount rebate  &#x60;303&#x60;: Snowball market maker transfer  &#x60;304&#x60;: [Simple Earn Fixed] Order submission  &#x60;305&#x60;: [Simple Earn Fixed] Order redemption  &#x60;306&#x60;: [Simple Earn Fixed] Principal distribution  &#x60;307&#x60;: [Simple Earn Fixed] Interest distribution (early termination compensation)  &#x60;308&#x60;: [Simple Earn Fixed] Interest distribution  &#x60;309&#x60;: [Simple Earn Fixed] Interest distribution (extension compensation)   &#x60;311&#x60;: Crypto dust auto-transfer in  &#x60;313&#x60;: Sent by gift  &#x60;314&#x60;: Received from gift  &#x60;315&#x60;: Refunded from gift  &#x60;328&#x60;: [SOL staking] Send Liquidity Staking Token reward  &#x60;329&#x60;: [SOL staking] Subscribe Liquidity Staking Token staking  &#x60;330&#x60;: [SOL staking] Mint Liquidity Staking Token  &#x60;331&#x60;: [SOL staking] Redeem Liquidity Staking Token order  &#x60;332&#x60;: [SOL staking] Settle Liquidity Staking Token order  &#x60;333&#x60;: Trial fund reward  &#x60;336&#x60;: [Credit line] Loan Forced Repayment  &#x60;338&#x60;: [Credit line] Forced Repayment Refund  &#x60;354&#x60;: Copy and bot rewards  &#x60;361&#x60;: Deposit from closed sub-account | [default to &quot;&quot;]
+ **type_** | **string** | Bill type  &#x60;1&#x60;: Deposit  &#x60;2&#x60;: Withdrawal  &#x60;13&#x60;: Canceled withdrawal  &#x60;20&#x60;: Transfer to sub account (for master account)  &#x60;21&#x60;: Transfer from sub account (for master account)  &#x60;22&#x60;: Transfer out from sub to master account (for sub-account)  &#x60;23&#x60;: Transfer in from master to sub account (for sub-account)  &#x60;28&#x60;: Manually claimed Airdrop  &#x60;47&#x60;: System reversal  &#x60;48&#x60;: Event Reward  &#x60;49&#x60;: Event Giveaway  &#x60;68&#x60;: Fee rebate (by rebate card)  &#x60;72&#x60;: Token received  &#x60;73&#x60;: Token given away  &#x60;74&#x60;: Token refunded  &#x60;75&#x60;: [Simple earn flexible] Subscription  &#x60;76&#x60;: [Simple earn flexible] Redemption  &#x60;77&#x60;: Jumpstart distribute  &#x60;78&#x60;: Jumpstart lock up  &#x60;80&#x60;: DEFI/Staking subscription  &#x60;82&#x60;: DEFI/Staking redemption  &#x60;83&#x60;: Staking yield  &#x60;84&#x60;: Violation fee  &#x60;89&#x60;: Deposit yield  &#x60;116&#x60;: [Fiat] Place an order  &#x60;117&#x60;: [Fiat] Fulfill an order  &#x60;118&#x60;: [Fiat] Cancel an order  &#x60;124&#x60;: Jumpstart unlocking  &#x60;130&#x60;: Transferred from Trading account  &#x60;131&#x60;: Transferred to Trading account  &#x60;132&#x60;: [P2P] Frozen by customer service  &#x60;133&#x60;: [P2P] Unfrozen by customer service  &#x60;134&#x60;: [P2P] Transferred by customer service  &#x60;135&#x60;: Cross chain exchange  &#x60;137&#x60;: [ETH Staking] Subscription  &#x60;138&#x60;: [ETH Staking] Swapping  &#x60;139&#x60;: [ETH Staking] Earnings  &#x60;146&#x60;: Customer feedback  &#x60;150&#x60;: Affiliate commission  &#x60;151&#x60;: Referral reward  &#x60;152&#x60;: Broker reward  &#x60;160&#x60;: Dual Investment subscribe  &#x60;161&#x60;: Dual Investment collection  &#x60;162&#x60;: Dual Investment profit  &#x60;163&#x60;: Dual Investment refund  &#x60;172&#x60;: [Affiliate] Sub-affiliate commission  &#x60;173&#x60;: [Affiliate] Fee rebate (by trading fee)  &#x60;174&#x60;: Jumpstart Pay  &#x60;175&#x60;: Locked collateral  &#x60;176&#x60;: Loan  &#x60;177&#x60;: Added collateral  &#x60;178&#x60;: Returned collateral  &#x60;179&#x60;: Repayment  &#x60;180&#x60;: Unlocked collateral  &#x60;181&#x60;: Airdrop payment  &#x60;185&#x60;: [Broker] Convert reward  &#x60;187&#x60;: [Broker] Convert transfer  &#x60;189&#x60;: Mystery box bonus  &#x60;195&#x60;: Untradable asset withdrawal  &#x60;196&#x60;: Untradable asset withdrawal revoked  &#x60;197&#x60;: Untradable asset deposit  &#x60;198&#x60;: Untradable asset collection reduce  &#x60;199&#x60;: Untradable asset collection increase  &#x60;200&#x60;: Buy  &#x60;202&#x60;: Price Lock Subscribe  &#x60;203&#x60;: Price Lock Collection  &#x60;204&#x60;: Price Lock Profit  &#x60;205&#x60;: Price Lock Refund  &#x60;207&#x60;: Dual Investment Lite Subscribe  &#x60;208&#x60;: Dual Investment Lite Collection  &#x60;209&#x60;: Dual Investment Lite Profit  &#x60;210&#x60;: Dual Investment Lite Refund  &#x60;212&#x60;: [Flexible loan] Multi-collateral loan collateral locked  &#x60;215&#x60;: [Flexible loan] Multi-collateral loan collateral released  &#x60;217&#x60;: [Flexible loan] Multi-collateral loan borrowed  &#x60;218&#x60;: [Flexible loan] Multi-collateral loan repaid  &#x60;232&#x60;: [Flexible loan] Subsidized interest received  &#x60;220&#x60;: Delisted crypto  &#x60;221&#x60;: Blockchain&#39;s withdrawal fee  &#x60;222&#x60;: Withdrawal fee refund  &#x60;223&#x60;: SWAP lead trading profit share  &#x60;225&#x60;: Shark Fin subscribe  &#x60;226&#x60;: Shark Fin collection  &#x60;227&#x60;: Shark Fin profit  &#x60;228&#x60;: Shark Fin refund  &#x60;229&#x60;: Airdrop  &#x60;232&#x60;: Subsidized interest received  &#x60;233&#x60;: Broker rebate compensation  &#x60;240&#x60;: Snowball subscribe  &#x60;241&#x60;: Snowball refund  &#x60;242&#x60;: Snowball profit  &#x60;243&#x60;: Snowball trading failed  &#x60;249&#x60;: Seagull subscribe  &#x60;250&#x60;: Seagull collection  &#x60;251&#x60;: Seagull profit  &#x60;252&#x60;: Seagull refund  &#x60;263&#x60;: Strategy bots profit share  &#x60;265&#x60;: Signal revenue  &#x60;266&#x60;: SPOT lead trading profit share  &#x60;270&#x60;: DCD broker transfer  &#x60;271&#x60;: DCD broker rebate  &#x60;272&#x60;: [Convert] Buy Crypto/Fiat  &#x60;273&#x60;: [Convert] Sell Crypto/Fiat  &#x60;284&#x60;: [Custody] Transfer out trading sub-account  &#x60;285&#x60;: [Custody] Transfer in trading sub-account  &#x60;286&#x60;: [Custody] Transfer out custody funding account  &#x60;287&#x60;: [Custody] Transfer in custody funding account  &#x60;288&#x60;: [Custody] Fund delegation   &#x60;289&#x60;: [Custody] Fund undelegation  &#x60;299&#x60;: Affiliate recommendation commission  &#x60;300&#x60;: Fee discount rebate  &#x60;303&#x60;: Snowball market maker transfer  &#x60;304&#x60;: [Simple Earn Fixed] Order submission  &#x60;305&#x60;: [Simple Earn Fixed] Order redemption  &#x60;306&#x60;: [Simple Earn Fixed] Principal distribution  &#x60;307&#x60;: [Simple Earn Fixed] Interest distribution (early termination compensation)  &#x60;308&#x60;: [Simple Earn Fixed] Interest distribution  &#x60;309&#x60;: [Simple Earn Fixed] Interest distribution (extension compensation)   &#x60;311&#x60;: Crypto dust auto-transfer in  &#x60;313&#x60;: Sent by gift  &#x60;314&#x60;: Received from gift  &#x60;315&#x60;: Refunded from gift  &#x60;328&#x60;: [SOL staking] Send Liquidity Staking Token reward  &#x60;329&#x60;: [SOL staking] Subscribe Liquidity Staking Token staking  &#x60;330&#x60;: [SOL staking] Mint Liquidity Staking Token  &#x60;331&#x60;: [SOL staking] Redeem Liquidity Staking Token order  &#x60;332&#x60;: [SOL staking] Settle Liquidity Staking Token order  &#x60;333&#x60;: Trial fund reward  &#x60;336&#x60;: [Credit line] Loan Forced Repayment  &#x60;338&#x60;: [Credit line] Forced Repayment Refund  &#x60;354&#x60;: Copy and bot rewards  &#x60;361&#x60;: Deposit from closed sub-account | [default to &quot;&quot;]
  **clientId** | **string** | Client-supplied ID for transfer or withdrawal  A combination of case-sensitive alphanumerics, all numbers, or all letters of up to 32 characters. | [default to &quot;&quot;]
  **after** | **string** | Pagination of data to return records earlier than the requested &#x60;ts&#x60;, Unix timestamp format in milliseconds, e.g. &#x60;1597026383085&#x60; | [default to &quot;&quot;]
  **before** | **string** | Pagination of data to return records newer than the requested &#x60;ts&#x60;, Unix timestamp format in milliseconds, e.g. &#x60;1597026383085&#x60; | [default to &quot;&quot;]
@@ -760,7 +760,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -789,7 +789,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -821,7 +821,7 @@ Other parameters are passed through a pointer to a apiGetAssetConvertCurrenciesV
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -850,7 +850,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -882,7 +882,7 @@ Other parameters are passed through a pointer to a apiGetAssetConvertCurrencyPai
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -911,7 +911,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -956,7 +956,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -985,7 +985,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1022,7 +1022,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1051,7 +1051,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1088,7 +1088,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1117,7 +1117,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1170,7 +1170,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1199,7 +1199,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1244,7 +1244,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1273,7 +1273,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1334,7 +1334,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1371,7 +1371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1400,7 +1400,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1437,7 +1437,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1466,7 +1466,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1507,7 +1507,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1536,7 +1536,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1589,7 +1589,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1618,7 +1618,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1665,7 +1665,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1694,7 +1694,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1731,7 +1731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1760,7 +1760,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1797,7 +1797,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1826,7 +1826,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1873,7 +1873,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1902,7 +1902,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -1939,7 +1939,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 
@@ -1968,7 +1968,7 @@ import (
 	"context"
 	"fmt"
 	"os"
-	openapiclient "github.com/wheatliu/okx-go"
+	openapiclient "github.com/openxapi/okx-go/rest"
 )
 
 func main() {
@@ -2005,7 +2005,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[OK-ACCESS-KEY](../README.md#OK-ACCESS-KEY), [OK-ACCESS-PASSPHRASE](../README.md#OK-ACCESS-PASSPHRASE)
+[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
 
 ### HTTP request headers
 

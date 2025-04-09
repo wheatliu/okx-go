@@ -16,7 +16,7 @@ Name | Type | Description | Notes
 **Protocol** | Pointer to **string** | Protocol | [optional] [default to ""]
 **ProtocolType** | Pointer to **string** | Protocol type  &#x60;defi&#x60;: on-chain earn | [optional] [default to ""]
 **PurchasedTime** | Pointer to **string** | Order purchased time, Unix timestamp format in milliseconds, e.g. &#x60;1597026383085&#x60; | [optional] [default to ""]
-**State** | Pointer to **string** | Order state  8: Pending   13: Cancelling   9: Onchain   1: Earning   2: Redeeming | [optional] [default to ""]
+**State** | Pointer to **string** | Order state  &#x60;8&#x60;: Pending   &#x60;13&#x60;: Cancelling   &#x60;9&#x60;: Onchain   &#x60;1&#x60;: Earning   &#x60;2&#x60;: Redeeming | [optional] [default to ""]
 **Tag** | Pointer to **string** | Order tag | [optional] [default to ""]
 **Term** | Pointer to **string** | Protocol term  It will return the days of fixed term and will return &#x60;0&#x60; for flexible product | [optional] [default to ""]
 

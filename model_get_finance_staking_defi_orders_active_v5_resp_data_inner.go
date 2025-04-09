@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -43,7 +43,7 @@ type GetFinanceStakingDefiOrdersActiveV5RespDataInner struct {
 	ProtocolType *string `json:"protocolType,omitempty"`
 	// Order purchased time, Unix timestamp format in milliseconds, e.g. `1597026383085`
 	PurchasedTime *string `json:"purchasedTime,omitempty"`
-	// Order state  8: Pending   13: Cancelling   9: Onchain   1: Earning   2: Redeeming
+	// Order state  `8`: Pending   `13`: Cancelling   `9`: Onchain   `1`: Earning   `2`: Redeeming
 	State *string `json:"state,omitempty"`
 	// Order tag
 	Tag *string `json:"tag,omitempty"`

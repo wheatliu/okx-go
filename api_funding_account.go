@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -104,7 +104,14 @@ func (a *FundingAccountAPIService) CreateAssetCancelWithdrawalV5Execute(r ApiCre
 	}
 	// body params
 	localVarPostBody = r.createAssetCancelWithdrawalV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -135,7 +142,7 @@ func (a *FundingAccountAPIService) CreateAssetCancelWithdrawalV5Execute(r ApiCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -146,7 +153,7 @@ func (a *FundingAccountAPIService) CreateAssetCancelWithdrawalV5Execute(r ApiCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -247,7 +254,14 @@ func (a *FundingAccountAPIService) CreateAssetConvertEstimateQuoteV5Execute(r Ap
 	}
 	// body params
 	localVarPostBody = r.createAssetConvertEstimateQuoteV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -278,7 +292,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertEstimateQuoteV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -289,7 +303,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertEstimateQuoteV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -392,7 +406,14 @@ func (a *FundingAccountAPIService) CreateAssetConvertTradeV5Execute(r ApiCreateA
 	}
 	// body params
 	localVarPostBody = r.createAssetConvertTradeV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -423,7 +444,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertTradeV5Execute(r ApiCreateA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -434,7 +455,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertTradeV5Execute(r ApiCreateA
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -533,7 +554,14 @@ func (a *FundingAccountAPIService) CreateAssetMonthlyStatementV5Execute(r ApiCre
 	}
 	// body params
 	localVarPostBody = r.createAssetMonthlyStatementV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -564,7 +592,7 @@ func (a *FundingAccountAPIService) CreateAssetMonthlyStatementV5Execute(r ApiCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -575,7 +603,7 @@ func (a *FundingAccountAPIService) CreateAssetMonthlyStatementV5Execute(r ApiCre
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -680,7 +708,14 @@ func (a *FundingAccountAPIService) CreateAssetTransferV5Execute(r ApiCreateAsset
 	}
 	// body params
 	localVarPostBody = r.createAssetTransferV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -711,7 +746,7 @@ func (a *FundingAccountAPIService) CreateAssetTransferV5Execute(r ApiCreateAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -722,7 +757,7 @@ func (a *FundingAccountAPIService) CreateAssetTransferV5Execute(r ApiCreateAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -829,7 +864,14 @@ func (a *FundingAccountAPIService) CreateAssetWithdrawalV5Execute(r ApiCreateAss
 	}
 	// body params
 	localVarPostBody = r.createAssetWithdrawalV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -860,7 +902,7 @@ func (a *FundingAccountAPIService) CreateAssetWithdrawalV5Execute(r ApiCreateAss
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -871,7 +913,7 @@ func (a *FundingAccountAPIService) CreateAssetWithdrawalV5Execute(r ApiCreateAss
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -970,7 +1012,14 @@ func (a *FundingAccountAPIService) CreateFiatCancelWithdrawalV5Execute(r ApiCrea
 	}
 	// body params
 	localVarPostBody = r.createFiatCancelWithdrawalV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1001,7 +1050,7 @@ func (a *FundingAccountAPIService) CreateFiatCancelWithdrawalV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1012,7 +1061,7 @@ func (a *FundingAccountAPIService) CreateFiatCancelWithdrawalV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1114,7 +1163,14 @@ func (a *FundingAccountAPIService) CreateFiatCreateWithdrawalV5Execute(r ApiCrea
 	}
 	// body params
 	localVarPostBody = r.createFiatCreateWithdrawalV5Req
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1145,7 +1201,7 @@ func (a *FundingAccountAPIService) CreateFiatCreateWithdrawalV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1156,7 +1212,7 @@ func (a *FundingAccountAPIService) CreateFiatCreateWithdrawalV5Execute(r ApiCrea
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1256,7 +1312,14 @@ func (a *FundingAccountAPIService) GetAssetAssetValuationV5Execute(r ApiGetAsset
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1287,7 +1350,7 @@ func (a *FundingAccountAPIService) GetAssetAssetValuationV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1298,7 +1361,7 @@ func (a *FundingAccountAPIService) GetAssetAssetValuationV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1400,7 +1463,14 @@ func (a *FundingAccountAPIService) GetAssetBalancesV5Execute(r ApiGetAssetBalanc
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1431,7 +1501,7 @@ func (a *FundingAccountAPIService) GetAssetBalancesV5Execute(r ApiGetAssetBalanc
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1442,7 +1512,7 @@ func (a *FundingAccountAPIService) GetAssetBalancesV5Execute(r ApiGetAssetBalanc
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1476,7 +1546,7 @@ func (r ApiGetAssetBillsV5Request) Ccy(ccy string) ApiGetAssetBillsV5Request {
 	return r
 }
 
-// Bill type  &#x60;1&#x60;: Deposit  &#x60;2&#x60;: Withdrawal  &#x60;13&#x60;: Canceled withdrawal  &#x60;20&#x60;: Transfer to sub account (for master account)  &#x60;21&#x60;: Transfer from sub account (for master account)  &#x60;22&#x60;: Transfer out from sub to master account (for sub-account)  &#x60;23&#x60;: Transfer in from master to sub account (for sub-account)  &#x60;28&#x60;: Manually claimed Airdrop  &#x60;47&#x60;: System reversal  &#x60;48&#x60;: Event Reward  &#x60;49&#x60;: Event Giveaway  &#x60;68&#x60;: Fee rebate (by rebate card)  &#x60;72&#x60;: Token received  &#x60;73&#x60;: Token given away  &#x60;74&#x60;: Token refunded  &#x60;75&#x60;: Subscription to savings  &#x60;76&#x60;: Redemption to savings  &#x60;77&#x60;: Jumpstart distribute  &#x60;78&#x60;: Jumpstart lock up  &#x60;80&#x60;: DEFI/Staking purchase  &#x60;82&#x60;: DEFI/Staking redemption  &#x60;83&#x60;: Staking yield  &#x60;84&#x60;: Violation fee  &#x60;89&#x60;: Deposit yield  &#x60;116&#x60;: [Fiat] Place an order  &#x60;117&#x60;: [Fiat] Fulfill an order  &#x60;118&#x60;: [Fiat] Cancel an order  &#x60;124&#x60;: Jumpstart unlocking  &#x60;130&#x60;: Transferred from Trading account  &#x60;131&#x60;: Transferred to Trading account  &#x60;132&#x60;: [P2P] Frozen by customer service  &#x60;133&#x60;: [P2P] Unfrozen by customer service  &#x60;134&#x60;: [P2P] Transferred by customer service  &#x60;135&#x60;: Cross chain exchange  &#x60;137&#x60;: [ETH Staking] Subscription  &#x60;138&#x60;: [ETH Staking] Swapping  &#x60;139&#x60;: [ETH Staking] Earnings  &#x60;146&#x60;: Customer feedback  &#x60;150&#x60;: Affiliate commission  &#x60;151&#x60;: Referral reward  &#x60;152&#x60;: Broker reward  &#x60;160&#x60;: Dual Investment subscribe  &#x60;161&#x60;: Dual Investment collection  &#x60;162&#x60;: Dual Investment profit  &#x60;163&#x60;: Dual Investment refund  &#x60;172&#x60;: [Affiliate] Sub-affiliate commission  &#x60;173&#x60;: [Affiliate] Fee rebate (by trading fee)  &#x60;174&#x60;: Jumpstart Pay  &#x60;175&#x60;: Locked collateral  &#x60;176&#x60;: Loan  &#x60;177&#x60;: Added collateral  &#x60;178&#x60;: Returned collateral  &#x60;179&#x60;: Repayment  &#x60;180&#x60;: Unlocked collateral  &#x60;181&#x60;: Airdrop payment  &#x60;185&#x60;: [Broker] Convert reward  &#x60;187&#x60;: [Broker] Convert transfer  &#x60;189&#x60;: Mystery box bonus  &#x60;195&#x60;: Untradable asset withdrawal  &#x60;196&#x60;: Untradable asset withdrawal revoked  &#x60;197&#x60;: Untradable asset deposit  &#x60;198&#x60;: Untradable asset collection reduce  &#x60;199&#x60;: Untradable asset collection increase  &#x60;200&#x60;: Buy  &#x60;202&#x60;: Price Lock Subscribe  &#x60;203&#x60;: Price Lock Collection  &#x60;204&#x60;: Price Lock Profit  &#x60;205&#x60;: Price Lock Refund  &#x60;207&#x60;: Dual Investment Lite Subscribe  &#x60;208&#x60;: Dual Investment Lite Collection  &#x60;209&#x60;: Dual Investment Lite Profit  &#x60;210&#x60;: Dual Investment Lite Refund  &#x60;212&#x60;: [Flexible loan] Multi-collateral loan collateral locked  &#x60;215&#x60;: [Flexible loan] Multi-collateral loan collateral released  &#x60;217&#x60;: [Flexible loan] Multi-collateral loan borrowed  &#x60;218&#x60;: [Flexible loan] Multi-collateral loan repaid  &#x60;232&#x60;: [Flexible loan] Subsidized interest received  &#x60;220&#x60;: Delisted crypto  &#x60;221&#x60;: Blockchain&#39;s withdrawal fee  &#x60;222&#x60;: Withdrawal fee refund  &#x60;223&#x60;: SWAP lead trading profit share  &#x60;225&#x60;: Shark Fin subscribe  &#x60;226&#x60;: Shark Fin collection  &#x60;227&#x60;: Shark Fin profit  &#x60;228&#x60;: Shark Fin refund  &#x60;229&#x60;: Airdrop  &#x60;232&#x60;: Subsidized interest received  &#x60;233&#x60;: Broker rebate compensation  &#x60;240&#x60;: Snowball subscribe  &#x60;241&#x60;: Snowball refund  &#x60;242&#x60;: Snowball profit  &#x60;243&#x60;: Snowball trading failed  &#x60;249&#x60;: Seagull subscribe  &#x60;250&#x60;: Seagull collection  &#x60;251&#x60;: Seagull profit  &#x60;252&#x60;: Seagull refund  &#x60;263&#x60;: Strategy bots profit share  &#x60;265&#x60;: Signal revenue  &#x60;266&#x60;: SPOT lead trading profit share  &#x60;270&#x60;: DCD broker transfer  &#x60;271&#x60;: DCD broker rebate  &#x60;272&#x60;: [Convert] Buy Crypto/Fiat  &#x60;273&#x60;: [Convert] Sell Crypto/Fiat  &#x60;284&#x60;: [Custody] Transfer out trading sub-account  &#x60;285&#x60;: [Custody] Transfer in trading sub-account  &#x60;286&#x60;: [Custody] Transfer out custody funding account  &#x60;287&#x60;: [Custody] Transfer in custody funding account  &#x60;288&#x60;: [Custody] Fund delegation   &#x60;289&#x60;: [Custody] Fund undelegation  &#x60;299&#x60;: Affiliate recommendation commission  &#x60;300&#x60;: Fee discount rebate  &#x60;303&#x60;: Snowball market maker transfer  &#x60;304&#x60;: [Simple Earn Fixed] Order submission  &#x60;305&#x60;: [Simple Earn Fixed] Order redemption  &#x60;306&#x60;: [Simple Earn Fixed] Principal distribution  &#x60;307&#x60;: [Simple Earn Fixed] Interest distribution (early termination compensation)  &#x60;308&#x60;: [Simple Earn Fixed] Interest distribution  &#x60;309&#x60;: [Simple Earn Fixed] Interest distribution (extension compensation)   &#x60;311&#x60;: Crypto dust auto-transfer in  &#x60;313&#x60;: Sent by gift  &#x60;314&#x60;: Received from gift  &#x60;315&#x60;: Refunded from gift  &#x60;328&#x60;: [SOL staking] Send Liquidity Staking Token reward  &#x60;329&#x60;: [SOL staking] Subscribe Liquidity Staking Token staking  &#x60;330&#x60;: [SOL staking] Mint Liquidity Staking Token  &#x60;331&#x60;: [SOL staking] Redeem Liquidity Staking Token order  &#x60;332&#x60;: [SOL staking] Settle Liquidity Staking Token order  &#x60;333&#x60;: Trial fund reward  &#x60;336&#x60;: [Credit line] Loan Forced Repayment  &#x60;338&#x60;: [Credit line] Forced Repayment Refund  &#x60;354&#x60;: Copy and bot rewards  &#x60;361&#x60;: Deposit from closed sub-account
+// Bill type  &#x60;1&#x60;: Deposit  &#x60;2&#x60;: Withdrawal  &#x60;13&#x60;: Canceled withdrawal  &#x60;20&#x60;: Transfer to sub account (for master account)  &#x60;21&#x60;: Transfer from sub account (for master account)  &#x60;22&#x60;: Transfer out from sub to master account (for sub-account)  &#x60;23&#x60;: Transfer in from master to sub account (for sub-account)  &#x60;28&#x60;: Manually claimed Airdrop  &#x60;47&#x60;: System reversal  &#x60;48&#x60;: Event Reward  &#x60;49&#x60;: Event Giveaway  &#x60;68&#x60;: Fee rebate (by rebate card)  &#x60;72&#x60;: Token received  &#x60;73&#x60;: Token given away  &#x60;74&#x60;: Token refunded  &#x60;75&#x60;: [Simple earn flexible] Subscription  &#x60;76&#x60;: [Simple earn flexible] Redemption  &#x60;77&#x60;: Jumpstart distribute  &#x60;78&#x60;: Jumpstart lock up  &#x60;80&#x60;: DEFI/Staking subscription  &#x60;82&#x60;: DEFI/Staking redemption  &#x60;83&#x60;: Staking yield  &#x60;84&#x60;: Violation fee  &#x60;89&#x60;: Deposit yield  &#x60;116&#x60;: [Fiat] Place an order  &#x60;117&#x60;: [Fiat] Fulfill an order  &#x60;118&#x60;: [Fiat] Cancel an order  &#x60;124&#x60;: Jumpstart unlocking  &#x60;130&#x60;: Transferred from Trading account  &#x60;131&#x60;: Transferred to Trading account  &#x60;132&#x60;: [P2P] Frozen by customer service  &#x60;133&#x60;: [P2P] Unfrozen by customer service  &#x60;134&#x60;: [P2P] Transferred by customer service  &#x60;135&#x60;: Cross chain exchange  &#x60;137&#x60;: [ETH Staking] Subscription  &#x60;138&#x60;: [ETH Staking] Swapping  &#x60;139&#x60;: [ETH Staking] Earnings  &#x60;146&#x60;: Customer feedback  &#x60;150&#x60;: Affiliate commission  &#x60;151&#x60;: Referral reward  &#x60;152&#x60;: Broker reward  &#x60;160&#x60;: Dual Investment subscribe  &#x60;161&#x60;: Dual Investment collection  &#x60;162&#x60;: Dual Investment profit  &#x60;163&#x60;: Dual Investment refund  &#x60;172&#x60;: [Affiliate] Sub-affiliate commission  &#x60;173&#x60;: [Affiliate] Fee rebate (by trading fee)  &#x60;174&#x60;: Jumpstart Pay  &#x60;175&#x60;: Locked collateral  &#x60;176&#x60;: Loan  &#x60;177&#x60;: Added collateral  &#x60;178&#x60;: Returned collateral  &#x60;179&#x60;: Repayment  &#x60;180&#x60;: Unlocked collateral  &#x60;181&#x60;: Airdrop payment  &#x60;185&#x60;: [Broker] Convert reward  &#x60;187&#x60;: [Broker] Convert transfer  &#x60;189&#x60;: Mystery box bonus  &#x60;195&#x60;: Untradable asset withdrawal  &#x60;196&#x60;: Untradable asset withdrawal revoked  &#x60;197&#x60;: Untradable asset deposit  &#x60;198&#x60;: Untradable asset collection reduce  &#x60;199&#x60;: Untradable asset collection increase  &#x60;200&#x60;: Buy  &#x60;202&#x60;: Price Lock Subscribe  &#x60;203&#x60;: Price Lock Collection  &#x60;204&#x60;: Price Lock Profit  &#x60;205&#x60;: Price Lock Refund  &#x60;207&#x60;: Dual Investment Lite Subscribe  &#x60;208&#x60;: Dual Investment Lite Collection  &#x60;209&#x60;: Dual Investment Lite Profit  &#x60;210&#x60;: Dual Investment Lite Refund  &#x60;212&#x60;: [Flexible loan] Multi-collateral loan collateral locked  &#x60;215&#x60;: [Flexible loan] Multi-collateral loan collateral released  &#x60;217&#x60;: [Flexible loan] Multi-collateral loan borrowed  &#x60;218&#x60;: [Flexible loan] Multi-collateral loan repaid  &#x60;232&#x60;: [Flexible loan] Subsidized interest received  &#x60;220&#x60;: Delisted crypto  &#x60;221&#x60;: Blockchain&#39;s withdrawal fee  &#x60;222&#x60;: Withdrawal fee refund  &#x60;223&#x60;: SWAP lead trading profit share  &#x60;225&#x60;: Shark Fin subscribe  &#x60;226&#x60;: Shark Fin collection  &#x60;227&#x60;: Shark Fin profit  &#x60;228&#x60;: Shark Fin refund  &#x60;229&#x60;: Airdrop  &#x60;232&#x60;: Subsidized interest received  &#x60;233&#x60;: Broker rebate compensation  &#x60;240&#x60;: Snowball subscribe  &#x60;241&#x60;: Snowball refund  &#x60;242&#x60;: Snowball profit  &#x60;243&#x60;: Snowball trading failed  &#x60;249&#x60;: Seagull subscribe  &#x60;250&#x60;: Seagull collection  &#x60;251&#x60;: Seagull profit  &#x60;252&#x60;: Seagull refund  &#x60;263&#x60;: Strategy bots profit share  &#x60;265&#x60;: Signal revenue  &#x60;266&#x60;: SPOT lead trading profit share  &#x60;270&#x60;: DCD broker transfer  &#x60;271&#x60;: DCD broker rebate  &#x60;272&#x60;: [Convert] Buy Crypto/Fiat  &#x60;273&#x60;: [Convert] Sell Crypto/Fiat  &#x60;284&#x60;: [Custody] Transfer out trading sub-account  &#x60;285&#x60;: [Custody] Transfer in trading sub-account  &#x60;286&#x60;: [Custody] Transfer out custody funding account  &#x60;287&#x60;: [Custody] Transfer in custody funding account  &#x60;288&#x60;: [Custody] Fund delegation   &#x60;289&#x60;: [Custody] Fund undelegation  &#x60;299&#x60;: Affiliate recommendation commission  &#x60;300&#x60;: Fee discount rebate  &#x60;303&#x60;: Snowball market maker transfer  &#x60;304&#x60;: [Simple Earn Fixed] Order submission  &#x60;305&#x60;: [Simple Earn Fixed] Order redemption  &#x60;306&#x60;: [Simple Earn Fixed] Principal distribution  &#x60;307&#x60;: [Simple Earn Fixed] Interest distribution (early termination compensation)  &#x60;308&#x60;: [Simple Earn Fixed] Interest distribution  &#x60;309&#x60;: [Simple Earn Fixed] Interest distribution (extension compensation)   &#x60;311&#x60;: Crypto dust auto-transfer in  &#x60;313&#x60;: Sent by gift  &#x60;314&#x60;: Received from gift  &#x60;315&#x60;: Refunded from gift  &#x60;328&#x60;: [SOL staking] Send Liquidity Staking Token reward  &#x60;329&#x60;: [SOL staking] Subscribe Liquidity Staking Token staking  &#x60;330&#x60;: [SOL staking] Mint Liquidity Staking Token  &#x60;331&#x60;: [SOL staking] Redeem Liquidity Staking Token order  &#x60;332&#x60;: [SOL staking] Settle Liquidity Staking Token order  &#x60;333&#x60;: Trial fund reward  &#x60;336&#x60;: [Credit line] Loan Forced Repayment  &#x60;338&#x60;: [Credit line] Forced Repayment Refund  &#x60;354&#x60;: Copy and bot rewards  &#x60;361&#x60;: Deposit from closed sub-account
 func (r ApiGetAssetBillsV5Request) Type_(type_ string) ApiGetAssetBillsV5Request {
 	r.type_ = &type_
 	return r
@@ -1607,7 +1677,14 @@ func (a *FundingAccountAPIService) GetAssetBillsV5Execute(r ApiGetAssetBillsV5Re
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1638,7 +1715,7 @@ func (a *FundingAccountAPIService) GetAssetBillsV5Execute(r ApiGetAssetBillsV5Re
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1649,7 +1726,7 @@ func (a *FundingAccountAPIService) GetAssetBillsV5Execute(r ApiGetAssetBillsV5Re
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1734,7 +1811,14 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1765,7 +1849,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1776,7 +1860,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1861,7 +1945,14 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -1892,7 +1983,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1903,7 +1994,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2051,7 +2142,14 @@ func (a *FundingAccountAPIService) GetAssetConvertHistoryV5Execute(r ApiGetAsset
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2082,7 +2180,7 @@ func (a *FundingAccountAPIService) GetAssetConvertHistoryV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2093,7 +2191,7 @@ func (a *FundingAccountAPIService) GetAssetConvertHistoryV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2193,7 +2291,14 @@ func (a *FundingAccountAPIService) GetAssetCurrenciesV5Execute(r ApiGetAssetCurr
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2224,7 +2329,7 @@ func (a *FundingAccountAPIService) GetAssetCurrenciesV5Execute(r ApiGetAssetCurr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2235,7 +2340,7 @@ func (a *FundingAccountAPIService) GetAssetCurrenciesV5Execute(r ApiGetAssetCurr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2333,7 +2438,14 @@ func (a *FundingAccountAPIService) GetAssetDepositAddressV5Execute(r ApiGetAsset
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2364,7 +2476,7 @@ func (a *FundingAccountAPIService) GetAssetDepositAddressV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2375,7 +2487,7 @@ func (a *FundingAccountAPIService) GetAssetDepositAddressV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2582,7 +2694,14 @@ func (a *FundingAccountAPIService) GetAssetDepositHistoryV5Execute(r ApiGetAsset
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2613,7 +2732,7 @@ func (a *FundingAccountAPIService) GetAssetDepositHistoryV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2624,7 +2743,7 @@ func (a *FundingAccountAPIService) GetAssetDepositHistoryV5Execute(r ApiGetAsset
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2776,7 +2895,14 @@ func (a *FundingAccountAPIService) GetAssetDepositWithdrawStatusV5Execute(r ApiG
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2807,7 +2933,7 @@ func (a *FundingAccountAPIService) GetAssetDepositWithdrawStatusV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2818,7 +2944,7 @@ func (a *FundingAccountAPIService) GetAssetDepositWithdrawStatusV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2852,8 +2978,6 @@ Authentication is not required for this public endpoint.
 #### Rate Limit: 6 requests per second 
 
 #### Rate limit rule: IP 
-
-#### Permission: Read 
 
 
 
@@ -2905,7 +3029,7 @@ func (a *FundingAccountAPIService) GetAssetExchangeListV5Execute(r ApiGetAssetEx
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -2936,7 +3060,7 @@ func (a *FundingAccountAPIService) GetAssetExchangeListV5Execute(r ApiGetAssetEx
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2947,7 +3071,7 @@ func (a *FundingAccountAPIService) GetAssetExchangeListV5Execute(r ApiGetAssetEx
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3045,7 +3169,14 @@ func (a *FundingAccountAPIService) GetAssetMonthlyStatementV5Execute(r ApiGetAss
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3076,7 +3207,7 @@ func (a *FundingAccountAPIService) GetAssetMonthlyStatementV5Execute(r ApiGetAss
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3087,7 +3218,7 @@ func (a *FundingAccountAPIService) GetAssetMonthlyStatementV5Execute(r ApiGetAss
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3185,7 +3316,14 @@ func (a *FundingAccountAPIService) GetAssetNonTradableAssetsV5Execute(r ApiGetAs
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3216,7 +3354,7 @@ func (a *FundingAccountAPIService) GetAssetNonTradableAssetsV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3227,7 +3365,7 @@ func (a *FundingAccountAPIService) GetAssetNonTradableAssetsV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3353,7 +3491,14 @@ func (a *FundingAccountAPIService) GetAssetTransferStateV5Execute(r ApiGetAssetT
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3384,7 +3529,7 @@ func (a *FundingAccountAPIService) GetAssetTransferStateV5Execute(r ApiGetAssetT
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3395,7 +3540,7 @@ func (a *FundingAccountAPIService) GetAssetTransferStateV5Execute(r ApiGetAssetT
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3602,7 +3747,14 @@ func (a *FundingAccountAPIService) GetAssetWithdrawalHistoryV5Execute(r ApiGetAs
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3633,7 +3785,7 @@ func (a *FundingAccountAPIService) GetAssetWithdrawalHistoryV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3644,7 +3796,7 @@ func (a *FundingAccountAPIService) GetAssetWithdrawalHistoryV5Execute(r ApiGetAs
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3809,7 +3961,14 @@ func (a *FundingAccountAPIService) GetFiatDepositOrderHistoryV5Execute(r ApiGetF
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3840,7 +3999,7 @@ func (a *FundingAccountAPIService) GetFiatDepositOrderHistoryV5Execute(r ApiGetF
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3851,7 +4010,7 @@ func (a *FundingAccountAPIService) GetFiatDepositOrderHistoryV5Execute(r ApiGetF
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3949,7 +4108,14 @@ func (a *FundingAccountAPIService) GetFiatDepositPaymentMethodsV5Execute(r ApiGe
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -3980,7 +4146,7 @@ func (a *FundingAccountAPIService) GetFiatDepositPaymentMethodsV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3991,7 +4157,7 @@ func (a *FundingAccountAPIService) GetFiatDepositPaymentMethodsV5Execute(r ApiGe
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4089,7 +4255,14 @@ func (a *FundingAccountAPIService) GetFiatDepositV5Execute(r ApiGetFiatDepositV5
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4120,7 +4293,7 @@ func (a *FundingAccountAPIService) GetFiatDepositV5Execute(r ApiGetFiatDepositV5
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4131,7 +4304,7 @@ func (a *FundingAccountAPIService) GetFiatDepositV5Execute(r ApiGetFiatDepositV5
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4296,7 +4469,14 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalOrderHistoryV5Execute(r ApiG
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4327,7 +4507,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalOrderHistoryV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4338,7 +4518,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalOrderHistoryV5Execute(r ApiG
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4436,7 +4616,14 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalPaymentMethodsV5Execute(r Ap
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4467,7 +4654,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalPaymentMethodsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4478,7 +4665,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalPaymentMethodsV5Execute(r Ap
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4576,7 +4763,14 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalV5Execute(r ApiGetFiatWithdr
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-
+	if r.ctx != nil {
+		// API Key Authentication
+		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
+			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
+			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
+		}
+	}
+	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
 		return localVarReturnValue, nil, err
@@ -4607,7 +4801,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalV5Execute(r ApiGetFiatWithdr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4618,7 +4812,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalV5Execute(r ApiGetFiatWithdr
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
 					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = v
+					newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

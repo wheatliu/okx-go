@@ -1,7 +1,7 @@
 /*
-Okx Rest API
+OKX v5 API
 
-OpenAPI specification for Okx cryptocurrency exchange - Rest API
+OpenAPI specification for Okx exchange - Rest API
 
 API version: 0.1.0
 */
@@ -91,7 +91,7 @@ type Configuration struct {
 func NewConfiguration() *Configuration {
 	cfg := &Configuration{
 		DefaultHeader: make(map[string]string),
-		UserAgent:        "OpenAPI-Generator/0.1.1/go",
+		UserAgent:        "OpenAPI-Generator/0.1.0/go",
 		Debug:            false,
 		Servers:          ServerConfigurations{
 			{
