@@ -11,11 +11,13 @@ API version: 0.1.0
 package rest
 
 import (
+	"fmt"
 	"bytes"
 	"context"
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 )
 
 
@@ -141,8 +143,8 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -152,17 +154,30 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -289,8 +304,8 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -300,17 +315,30 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -437,8 +465,8 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -448,17 +476,30 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -588,8 +629,8 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -599,17 +640,30 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -736,8 +790,8 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -747,17 +801,30 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -887,8 +954,8 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -898,17 +965,30 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1035,8 +1115,8 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1046,17 +1126,30 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1171,8 +1264,8 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1182,17 +1275,30 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1331,8 +1437,8 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1342,17 +1448,30 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1480,8 +1599,8 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1491,17 +1610,30 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1685,8 +1817,8 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1696,17 +1828,30 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1835,8 +1980,8 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1846,17 +1991,30 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2023,8 +2181,8 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2034,17 +2192,30 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2165,8 +2336,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2176,17 +2347,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2331,8 +2515,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2342,17 +2526,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2523,8 +2720,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2534,17 +2731,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2795,8 +3005,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2806,17 +3016,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2959,8 +3182,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2970,17 +3193,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3112,8 +3348,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3123,17 +3359,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3276,8 +3525,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3287,17 +3536,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3471,8 +3733,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3482,17 +3744,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3624,8 +3899,8 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3635,17 +3910,30 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3828,8 +4116,8 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3839,17 +4127,30 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3977,8 +4278,8 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3988,17 +4289,30 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4126,8 +4440,8 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4137,17 +4451,30 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4278,8 +4605,8 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4289,17 +4616,30 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

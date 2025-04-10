@@ -11,11 +11,13 @@ API version: 0.1.0
 package rest
 
 import (
+	"fmt"
 	"bytes"
 	"context"
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 )
 
 
@@ -120,8 +122,8 @@ func (a *PublicDataAPIService) GetMarketExchangeRateV5Execute(r ApiGetMarketExch
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -131,17 +133,30 @@ func (a *PublicDataAPIService) GetMarketExchangeRateV5Execute(r ApiGetMarketExch
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -310,8 +325,8 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -321,17 +336,30 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -500,8 +528,8 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -511,17 +539,30 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -690,8 +731,8 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -701,17 +742,30 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -828,8 +882,8 @@ func (a *PublicDataAPIService) GetMarketIndexComponentsV5Execute(r ApiGetMarketI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -839,17 +893,30 @@ func (a *PublicDataAPIService) GetMarketIndexComponentsV5Execute(r ApiGetMarketI
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -981,8 +1048,8 @@ func (a *PublicDataAPIService) GetMarketIndexTickersV5Execute(r ApiGetMarketInde
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -992,17 +1059,30 @@ func (a *PublicDataAPIService) GetMarketIndexTickersV5Execute(r ApiGetMarketInde
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1171,8 +1251,8 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1182,17 +1262,30 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1372,8 +1465,8 @@ func (a *PublicDataAPIService) GetPublicConvertContractCoinV5Execute(r ApiGetPub
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1383,17 +1476,30 @@ func (a *PublicDataAPIService) GetPublicConvertContractCoinV5Execute(r ApiGetPub
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1575,8 +1681,8 @@ func (a *PublicDataAPIService) GetPublicDeliveryExerciseHistoryV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1586,17 +1692,30 @@ func (a *PublicDataAPIService) GetPublicDeliveryExerciseHistoryV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1728,8 +1847,8 @@ func (a *PublicDataAPIService) GetPublicDiscountRateInterestFreeQuotaV5Execute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1739,17 +1858,30 @@ func (a *PublicDataAPIService) GetPublicDiscountRateInterestFreeQuotaV5Execute(r
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1922,8 +2054,8 @@ func (a *PublicDataAPIService) GetPublicEconomicCalendarV5Execute(r ApiGetPublic
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1933,17 +2065,30 @@ func (a *PublicDataAPIService) GetPublicEconomicCalendarV5Execute(r ApiGetPublic
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2060,8 +2205,8 @@ func (a *PublicDataAPIService) GetPublicEstimatedPriceV5Execute(r ApiGetPublicEs
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2071,17 +2216,30 @@ func (a *PublicDataAPIService) GetPublicEstimatedPriceV5Execute(r ApiGetPublicEs
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2198,8 +2356,8 @@ func (a *PublicDataAPIService) GetPublicEstimatedSettlementInfoV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2209,17 +2367,30 @@ func (a *PublicDataAPIService) GetPublicEstimatedSettlementInfoV5Execute(r ApiGe
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2375,8 +2546,8 @@ func (a *PublicDataAPIService) GetPublicFundingRateHistoryV5Execute(r ApiGetPubl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2386,17 +2557,30 @@ func (a *PublicDataAPIService) GetPublicFundingRateHistoryV5Execute(r ApiGetPubl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2513,8 +2697,8 @@ func (a *PublicDataAPIService) GetPublicFundingRateV5Execute(r ApiGetPublicFundi
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2524,17 +2708,30 @@ func (a *PublicDataAPIService) GetPublicFundingRateV5Execute(r ApiGetPublicFundi
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2664,8 +2861,8 @@ func (a *PublicDataAPIService) GetPublicInstrumentTickBandsV5Execute(r ApiGetPub
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2675,17 +2872,30 @@ func (a *PublicDataAPIService) GetPublicInstrumentTickBandsV5Execute(r ApiGetPub
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -2841,8 +3051,8 @@ func (a *PublicDataAPIService) GetPublicInstrumentsV5Execute(r ApiGetPublicInstr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -2852,17 +3062,30 @@ func (a *PublicDataAPIService) GetPublicInstrumentsV5Execute(r ApiGetPublicInstr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3070,8 +3293,8 @@ func (a *PublicDataAPIService) GetPublicInsuranceFundV5Execute(r ApiGetPublicIns
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3081,17 +3304,30 @@ func (a *PublicDataAPIService) GetPublicInsuranceFundV5Execute(r ApiGetPublicIns
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3197,8 +3433,8 @@ func (a *PublicDataAPIService) GetPublicInterestRateLoanQuotaV5Execute(r ApiGetP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3208,17 +3444,30 @@ func (a *PublicDataAPIService) GetPublicInterestRateLoanQuotaV5Execute(r ApiGetP
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3376,8 +3625,8 @@ func (a *PublicDataAPIService) GetPublicMarkPriceV5Execute(r ApiGetPublicMarkPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3387,17 +3636,30 @@ func (a *PublicDataAPIService) GetPublicMarkPriceV5Execute(r ApiGetPublicMarkPri
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3553,8 +3815,8 @@ func (a *PublicDataAPIService) GetPublicOpenInterestV5Execute(r ApiGetPublicOpen
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3564,17 +3826,30 @@ func (a *PublicDataAPIService) GetPublicOpenInterestV5Execute(r ApiGetPublicOpen
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3719,8 +3994,8 @@ func (a *PublicDataAPIService) GetPublicOptSummaryV5Execute(r ApiGetPublicOptSum
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3730,17 +4005,30 @@ func (a *PublicDataAPIService) GetPublicOptSummaryV5Execute(r ApiGetPublicOptSum
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -3933,8 +4221,8 @@ func (a *PublicDataAPIService) GetPublicPositionTiersV5Execute(r ApiGetPublicPos
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -3944,17 +4232,30 @@ func (a *PublicDataAPIService) GetPublicPositionTiersV5Execute(r ApiGetPublicPos
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4110,8 +4411,8 @@ func (a *PublicDataAPIService) GetPublicPremiumHistoryV5Execute(r ApiGetPublicPr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4121,17 +4422,30 @@ func (a *PublicDataAPIService) GetPublicPremiumHistoryV5Execute(r ApiGetPublicPr
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4248,8 +4562,8 @@ func (a *PublicDataAPIService) GetPublicPriceLimitV5Execute(r ApiGetPublicPriceL
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4259,17 +4573,30 @@ func (a *PublicDataAPIService) GetPublicPriceLimitV5Execute(r ApiGetPublicPriceL
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4425,8 +4752,8 @@ func (a *PublicDataAPIService) GetPublicSettlementHistoryV5Execute(r ApiGetPubli
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4436,17 +4763,30 @@ func (a *PublicDataAPIService) GetPublicSettlementHistoryV5Execute(r ApiGetPubli
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4552,8 +4892,8 @@ func (a *PublicDataAPIService) GetPublicTimeV5Execute(r ApiGetPublicTimeV5Reques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4563,17 +4903,30 @@ func (a *PublicDataAPIService) GetPublicTimeV5Execute(r ApiGetPublicTimeV5Reques
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -4688,8 +5041,8 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -4699,17 +5052,30 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

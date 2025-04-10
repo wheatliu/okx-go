@@ -11,11 +11,13 @@ API version: 0.1.0
 package rest
 
 import (
+	"fmt"
 	"bytes"
 	"context"
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 )
 
 
@@ -146,8 +148,8 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolPurchaseV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -157,17 +159,30 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolPurchaseV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -296,8 +311,8 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolRedeemV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -307,17 +322,30 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolRedeemV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -434,8 +462,8 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolApyHistoryV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -445,17 +473,30 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolApyHistoryV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -570,8 +611,8 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolBalanceV5Execute(r ApiGet
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -581,17 +622,30 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolBalanceV5Execute(r ApiGet
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -769,8 +823,8 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolPurchaseRedeemHistoryV5Ex
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -780,17 +834,30 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolPurchaseRedeemHistoryV5Ex
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}

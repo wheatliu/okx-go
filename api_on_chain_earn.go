@@ -11,11 +11,13 @@ API version: 0.1.0
 package rest
 
 import (
+	"fmt"
 	"bytes"
 	"context"
 	"io"
 	"net/http"
 	"net/url"
+	"strings"
 )
 
 
@@ -141,8 +143,8 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiCancelV5Execute(r ApiCre
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -152,17 +154,30 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiCancelV5Execute(r ApiCre
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -287,8 +302,8 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiPurchaseV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -298,17 +313,30 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiPurchaseV5Execute(r ApiC
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -433,8 +461,8 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiRedeemV5Execute(r ApiCre
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -444,17 +472,30 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiRedeemV5Execute(r ApiCre
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -606,8 +647,8 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOffersV5Execute(r ApiGetFin
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -617,17 +658,30 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOffersV5Execute(r ApiGetFin
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -792,8 +846,8 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersActiveV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -803,17 +857,30 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersActiveV5Execute(r Api
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
@@ -1004,8 +1071,8 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersHistoryV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 			return localVarReturnValue, localVarHTTPResponse, newErr
 		}
 		if localVarHTTPResponse.StatusCode >= 500 {
@@ -1015,17 +1082,30 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersHistoryV5Execute(r Ap
 				newErr.error = err.Error()
 				return localVarReturnValue, localVarHTTPResponse, newErr
 			}
-					newErr.error = formatErrorMessage(localVarHTTPResponse.Status, &v)
-					newErr.model = &v
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-
+	
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
 			body:  localVarBody,
 			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+	
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
