@@ -835,7 +835,7 @@ Other parameters are passed through a pointer to a apiGetAssetConvertCurrenciesV
 
 ## GetAssetConvertCurrencyPairV5
 
-> GetAssetConvertCurrencyPairV5Resp GetAssetConvertCurrencyPairV5(ctx).Execute()
+> GetAssetConvertCurrencyPairV5Resp GetAssetConvertCurrencyPairV5(ctx).FromCcy(fromCcy).ToCcy(toCcy).Execute()
 
 
 
@@ -854,10 +854,12 @@ import (
 )
 
 func main() {
+	fromCcy := "fromCcy_example" // string | Currency to convert from, e.g. `USDT` (default to "")
+	toCcy := "toCcy_example" // string | Currency to convert to, e.g. `BTC` (default to "")
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.FundingAccountAPI.GetAssetConvertCurrencyPairV5(context.Background()).Execute()
+	resp, r, err := apiClient.FundingAccountAPI.GetAssetConvertCurrencyPairV5(context.Background()).FromCcy(fromCcy).ToCcy(toCcy).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `FundingAccountAPI.GetAssetConvertCurrencyPairV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -869,12 +871,17 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiGetAssetConvertCurrencyPairV5Request struct via the builder pattern
 
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **fromCcy** | **string** | Currency to convert from, e.g. &#x60;USDT&#x60; | [default to &quot;&quot;]
+ **toCcy** | **string** | Currency to convert to, e.g. &#x60;BTC&#x60; | [default to &quot;&quot;]
 
 ### Return type
 

@@ -4,8 +4,13 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**FromCcy** | Pointer to **string** | Currency to convert from, e.g. &#x60;USDT&#x60; | [optional] [default to ""]
-**ToCcy** | Pointer to **string** | Currency to convert to, e.g. &#x60;BTC&#x60; | [optional] [default to ""]
+**BaseCcy** | Pointer to **string** | Base currency, e.g. &#x60;BTC&#x60; in &#x60;BTC-USDT&#x60; | [optional] [default to ""]
+**BaseCcyMax** | Pointer to **string** | Maximum amount of base currency | [optional] [default to ""]
+**BaseCcyMin** | Pointer to **string** | Minimum amount of base currency | [optional] [default to ""]
+**InstId** | Pointer to **string** | Currency pair, e.g. &#x60;BTC-USDT&#x60; | [optional] [default to ""]
+**QuoteCcy** | Pointer to **string** | Quote currency, e.g. &#x60;USDT&#x60; in &#x60;BTC-USDT&#x60; | [optional] [default to ""]
+**QuoteCcyMax** | Pointer to **string** | Maximum amount of quote currency | [optional] [default to ""]
+**QuoteCcyMin** | Pointer to **string** | Minimum amount of quote currency | [optional] [default to ""]
 
 ## Methods
 
@@ -26,55 +31,180 @@ NewGetAssetConvertCurrencyPairV5RespDataInnerWithDefaults instantiates a new Get
 This constructor will only assign default values to properties that have it defined,
 but it doesn't guarantee that properties required by API are set
 
-### GetFromCcy
+### GetBaseCcy
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetFromCcy() string`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcy() string`
 
-GetFromCcy returns the FromCcy field if non-nil, zero value otherwise.
+GetBaseCcy returns the BaseCcy field if non-nil, zero value otherwise.
 
-### GetFromCcyOk
+### GetBaseCcyOk
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetFromCcyOk() (*string, bool)`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyOk() (*string, bool)`
 
-GetFromCcyOk returns a tuple with the FromCcy field if it's non-nil, zero value otherwise
+GetBaseCcyOk returns a tuple with the BaseCcy field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetFromCcy
+### SetBaseCcy
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetFromCcy(v string)`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcy(v string)`
 
-SetFromCcy sets FromCcy field to given value.
+SetBaseCcy sets BaseCcy field to given value.
 
-### HasFromCcy
+### HasBaseCcy
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasFromCcy() bool`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcy() bool`
 
-HasFromCcy returns a boolean if a field has been set.
+HasBaseCcy returns a boolean if a field has been set.
 
-### GetToCcy
+### GetBaseCcyMax
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetToCcy() string`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMax() string`
 
-GetToCcy returns the ToCcy field if non-nil, zero value otherwise.
+GetBaseCcyMax returns the BaseCcyMax field if non-nil, zero value otherwise.
 
-### GetToCcyOk
+### GetBaseCcyMaxOk
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetToCcyOk() (*string, bool)`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMaxOk() (*string, bool)`
 
-GetToCcyOk returns a tuple with the ToCcy field if it's non-nil, zero value otherwise
+GetBaseCcyMaxOk returns a tuple with the BaseCcyMax field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
-### SetToCcy
+### SetBaseCcyMax
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetToCcy(v string)`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcyMax(v string)`
 
-SetToCcy sets ToCcy field to given value.
+SetBaseCcyMax sets BaseCcyMax field to given value.
 
-### HasToCcy
+### HasBaseCcyMax
 
-`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasToCcy() bool`
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcyMax() bool`
 
-HasToCcy returns a boolean if a field has been set.
+HasBaseCcyMax returns a boolean if a field has been set.
+
+### GetBaseCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMin() string`
+
+GetBaseCcyMin returns the BaseCcyMin field if non-nil, zero value otherwise.
+
+### GetBaseCcyMinOk
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMinOk() (*string, bool)`
+
+GetBaseCcyMinOk returns a tuple with the BaseCcyMin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetBaseCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcyMin(v string)`
+
+SetBaseCcyMin sets BaseCcyMin field to given value.
+
+### HasBaseCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcyMin() bool`
+
+HasBaseCcyMin returns a boolean if a field has been set.
+
+### GetInstId
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetInstId() string`
+
+GetInstId returns the InstId field if non-nil, zero value otherwise.
+
+### GetInstIdOk
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetInstIdOk() (*string, bool)`
+
+GetInstIdOk returns a tuple with the InstId field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetInstId
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetInstId(v string)`
+
+SetInstId sets InstId field to given value.
+
+### HasInstId
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasInstId() bool`
+
+HasInstId returns a boolean if a field has been set.
+
+### GetQuoteCcy
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcy() string`
+
+GetQuoteCcy returns the QuoteCcy field if non-nil, zero value otherwise.
+
+### GetQuoteCcyOk
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyOk() (*string, bool)`
+
+GetQuoteCcyOk returns a tuple with the QuoteCcy field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuoteCcy
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcy(v string)`
+
+SetQuoteCcy sets QuoteCcy field to given value.
+
+### HasQuoteCcy
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcy() bool`
+
+HasQuoteCcy returns a boolean if a field has been set.
+
+### GetQuoteCcyMax
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMax() string`
+
+GetQuoteCcyMax returns the QuoteCcyMax field if non-nil, zero value otherwise.
+
+### GetQuoteCcyMaxOk
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMaxOk() (*string, bool)`
+
+GetQuoteCcyMaxOk returns a tuple with the QuoteCcyMax field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuoteCcyMax
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcyMax(v string)`
+
+SetQuoteCcyMax sets QuoteCcyMax field to given value.
+
+### HasQuoteCcyMax
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcyMax() bool`
+
+HasQuoteCcyMax returns a boolean if a field has been set.
+
+### GetQuoteCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMin() string`
+
+GetQuoteCcyMin returns the QuoteCcyMin field if non-nil, zero value otherwise.
+
+### GetQuoteCcyMinOk
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMinOk() (*string, bool)`
+
+GetQuoteCcyMinOk returns a tuple with the QuoteCcyMin field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetQuoteCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcyMin(v string)`
+
+SetQuoteCcyMin sets QuoteCcyMin field to given value.
+
+### HasQuoteCcyMin
+
+`func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcyMin() bool`
+
+HasQuoteCcyMin returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

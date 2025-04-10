@@ -19,10 +19,20 @@ var _ MappedNullable = &GetAssetConvertCurrencyPairV5RespDataInner{}
 
 // GetAssetConvertCurrencyPairV5RespDataInner struct for GetAssetConvertCurrencyPairV5RespDataInner
 type GetAssetConvertCurrencyPairV5RespDataInner struct {
-	// Currency to convert from, e.g. `USDT`
-	FromCcy *string `json:"fromCcy,omitempty"`
-	// Currency to convert to, e.g. `BTC`
-	ToCcy *string `json:"toCcy,omitempty"`
+	// Base currency, e.g. `BTC` in `BTC-USDT`
+	BaseCcy *string `json:"baseCcy,omitempty"`
+	// Maximum amount of base currency
+	BaseCcyMax *string `json:"baseCcyMax,omitempty"`
+	// Minimum amount of base currency
+	BaseCcyMin *string `json:"baseCcyMin,omitempty"`
+	// Currency pair, e.g. `BTC-USDT`
+	InstId *string `json:"instId,omitempty"`
+	// Quote currency, e.g. `USDT` in `BTC-USDT`
+	QuoteCcy *string `json:"quoteCcy,omitempty"`
+	// Maximum amount of quote currency
+	QuoteCcyMax *string `json:"quoteCcyMax,omitempty"`
+	// Minimum amount of quote currency
+	QuoteCcyMin *string `json:"quoteCcyMin,omitempty"`
 }
 
 // NewGetAssetConvertCurrencyPairV5RespDataInner instantiates a new GetAssetConvertCurrencyPairV5RespDataInner object
@@ -31,10 +41,20 @@ type GetAssetConvertCurrencyPairV5RespDataInner struct {
 // will change when the set of required properties is changed
 func NewGetAssetConvertCurrencyPairV5RespDataInner() *GetAssetConvertCurrencyPairV5RespDataInner {
 	this := GetAssetConvertCurrencyPairV5RespDataInner{}
-	var fromCcy string = ""
-	this.FromCcy = &fromCcy
-	var toCcy string = ""
-	this.ToCcy = &toCcy
+	var baseCcy string = ""
+	this.BaseCcy = &baseCcy
+	var baseCcyMax string = ""
+	this.BaseCcyMax = &baseCcyMax
+	var baseCcyMin string = ""
+	this.BaseCcyMin = &baseCcyMin
+	var instId string = ""
+	this.InstId = &instId
+	var quoteCcy string = ""
+	this.QuoteCcy = &quoteCcy
+	var quoteCcyMax string = ""
+	this.QuoteCcyMax = &quoteCcyMax
+	var quoteCcyMin string = ""
+	this.QuoteCcyMin = &quoteCcyMin
 	return &this
 }
 
@@ -43,75 +63,245 @@ func NewGetAssetConvertCurrencyPairV5RespDataInner() *GetAssetConvertCurrencyPai
 // but it doesn't guarantee that properties required by API are set
 func NewGetAssetConvertCurrencyPairV5RespDataInnerWithDefaults() *GetAssetConvertCurrencyPairV5RespDataInner {
 	this := GetAssetConvertCurrencyPairV5RespDataInner{}
-	var fromCcy string = ""
-	this.FromCcy = &fromCcy
-	var toCcy string = ""
-	this.ToCcy = &toCcy
+	var baseCcy string = ""
+	this.BaseCcy = &baseCcy
+	var baseCcyMax string = ""
+	this.BaseCcyMax = &baseCcyMax
+	var baseCcyMin string = ""
+	this.BaseCcyMin = &baseCcyMin
+	var instId string = ""
+	this.InstId = &instId
+	var quoteCcy string = ""
+	this.QuoteCcy = &quoteCcy
+	var quoteCcyMax string = ""
+	this.QuoteCcyMax = &quoteCcyMax
+	var quoteCcyMin string = ""
+	this.QuoteCcyMin = &quoteCcyMin
 	return &this
 }
 
-// GetFromCcy returns the FromCcy field value if set, zero value otherwise.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetFromCcy() string {
-	if o == nil || IsNil(o.FromCcy) {
+// GetBaseCcy returns the BaseCcy field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcy() string {
+	if o == nil || IsNil(o.BaseCcy) {
 		var ret string
 		return ret
 	}
-	return *o.FromCcy
+	return *o.BaseCcy
 }
 
-// GetFromCcyOk returns a tuple with the FromCcy field value if set, nil otherwise
+// GetBaseCcyOk returns a tuple with the BaseCcy field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetFromCcyOk() (*string, bool) {
-	if o == nil || IsNil(o.FromCcy) {
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyOk() (*string, bool) {
+	if o == nil || IsNil(o.BaseCcy) {
 		return nil, false
 	}
-	return o.FromCcy, true
+	return o.BaseCcy, true
 }
 
-// HasFromCcy returns a boolean if a field has been set.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasFromCcy() bool {
-	if o != nil && !IsNil(o.FromCcy) {
+// HasBaseCcy returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcy() bool {
+	if o != nil && !IsNil(o.BaseCcy) {
 		return true
 	}
 
 	return false
 }
 
-// SetFromCcy gets a reference to the given string and assigns it to the FromCcy field.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetFromCcy(v string) {
-	o.FromCcy = &v
+// SetBaseCcy gets a reference to the given string and assigns it to the BaseCcy field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcy(v string) {
+	o.BaseCcy = &v
 }
 
-// GetToCcy returns the ToCcy field value if set, zero value otherwise.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetToCcy() string {
-	if o == nil || IsNil(o.ToCcy) {
+// GetBaseCcyMax returns the BaseCcyMax field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMax() string {
+	if o == nil || IsNil(o.BaseCcyMax) {
 		var ret string
 		return ret
 	}
-	return *o.ToCcy
+	return *o.BaseCcyMax
 }
 
-// GetToCcyOk returns a tuple with the ToCcy field value if set, nil otherwise
+// GetBaseCcyMaxOk returns a tuple with the BaseCcyMax field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetToCcyOk() (*string, bool) {
-	if o == nil || IsNil(o.ToCcy) {
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMaxOk() (*string, bool) {
+	if o == nil || IsNil(o.BaseCcyMax) {
 		return nil, false
 	}
-	return o.ToCcy, true
+	return o.BaseCcyMax, true
 }
 
-// HasToCcy returns a boolean if a field has been set.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasToCcy() bool {
-	if o != nil && !IsNil(o.ToCcy) {
+// HasBaseCcyMax returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcyMax() bool {
+	if o != nil && !IsNil(o.BaseCcyMax) {
 		return true
 	}
 
 	return false
 }
 
-// SetToCcy gets a reference to the given string and assigns it to the ToCcy field.
-func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetToCcy(v string) {
-	o.ToCcy = &v
+// SetBaseCcyMax gets a reference to the given string and assigns it to the BaseCcyMax field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcyMax(v string) {
+	o.BaseCcyMax = &v
+}
+
+// GetBaseCcyMin returns the BaseCcyMin field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMin() string {
+	if o == nil || IsNil(o.BaseCcyMin) {
+		var ret string
+		return ret
+	}
+	return *o.BaseCcyMin
+}
+
+// GetBaseCcyMinOk returns a tuple with the BaseCcyMin field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetBaseCcyMinOk() (*string, bool) {
+	if o == nil || IsNil(o.BaseCcyMin) {
+		return nil, false
+	}
+	return o.BaseCcyMin, true
+}
+
+// HasBaseCcyMin returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasBaseCcyMin() bool {
+	if o != nil && !IsNil(o.BaseCcyMin) {
+		return true
+	}
+
+	return false
+}
+
+// SetBaseCcyMin gets a reference to the given string and assigns it to the BaseCcyMin field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetBaseCcyMin(v string) {
+	o.BaseCcyMin = &v
+}
+
+// GetInstId returns the InstId field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetInstId() string {
+	if o == nil || IsNil(o.InstId) {
+		var ret string
+		return ret
+	}
+	return *o.InstId
+}
+
+// GetInstIdOk returns a tuple with the InstId field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetInstIdOk() (*string, bool) {
+	if o == nil || IsNil(o.InstId) {
+		return nil, false
+	}
+	return o.InstId, true
+}
+
+// HasInstId returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasInstId() bool {
+	if o != nil && !IsNil(o.InstId) {
+		return true
+	}
+
+	return false
+}
+
+// SetInstId gets a reference to the given string and assigns it to the InstId field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetInstId(v string) {
+	o.InstId = &v
+}
+
+// GetQuoteCcy returns the QuoteCcy field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcy() string {
+	if o == nil || IsNil(o.QuoteCcy) {
+		var ret string
+		return ret
+	}
+	return *o.QuoteCcy
+}
+
+// GetQuoteCcyOk returns a tuple with the QuoteCcy field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteCcy) {
+		return nil, false
+	}
+	return o.QuoteCcy, true
+}
+
+// HasQuoteCcy returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcy() bool {
+	if o != nil && !IsNil(o.QuoteCcy) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuoteCcy gets a reference to the given string and assigns it to the QuoteCcy field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcy(v string) {
+	o.QuoteCcy = &v
+}
+
+// GetQuoteCcyMax returns the QuoteCcyMax field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMax() string {
+	if o == nil || IsNil(o.QuoteCcyMax) {
+		var ret string
+		return ret
+	}
+	return *o.QuoteCcyMax
+}
+
+// GetQuoteCcyMaxOk returns a tuple with the QuoteCcyMax field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMaxOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteCcyMax) {
+		return nil, false
+	}
+	return o.QuoteCcyMax, true
+}
+
+// HasQuoteCcyMax returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcyMax() bool {
+	if o != nil && !IsNil(o.QuoteCcyMax) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuoteCcyMax gets a reference to the given string and assigns it to the QuoteCcyMax field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcyMax(v string) {
+	o.QuoteCcyMax = &v
+}
+
+// GetQuoteCcyMin returns the QuoteCcyMin field value if set, zero value otherwise.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMin() string {
+	if o == nil || IsNil(o.QuoteCcyMin) {
+		var ret string
+		return ret
+	}
+	return *o.QuoteCcyMin
+}
+
+// GetQuoteCcyMinOk returns a tuple with the QuoteCcyMin field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) GetQuoteCcyMinOk() (*string, bool) {
+	if o == nil || IsNil(o.QuoteCcyMin) {
+		return nil, false
+	}
+	return o.QuoteCcyMin, true
+}
+
+// HasQuoteCcyMin returns a boolean if a field has been set.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) HasQuoteCcyMin() bool {
+	if o != nil && !IsNil(o.QuoteCcyMin) {
+		return true
+	}
+
+	return false
+}
+
+// SetQuoteCcyMin gets a reference to the given string and assigns it to the QuoteCcyMin field.
+func (o *GetAssetConvertCurrencyPairV5RespDataInner) SetQuoteCcyMin(v string) {
+	o.QuoteCcyMin = &v
 }
 
 func (o GetAssetConvertCurrencyPairV5RespDataInner) MarshalJSON() ([]byte, error) {
@@ -124,11 +314,26 @@ func (o GetAssetConvertCurrencyPairV5RespDataInner) MarshalJSON() ([]byte, error
 
 func (o GetAssetConvertCurrencyPairV5RespDataInner) ToMap() (map[string]interface{}, error) {
 	toSerialize := map[string]interface{}{}
-	if !IsNil(o.FromCcy) {
-		toSerialize["fromCcy"] = o.FromCcy
+	if !IsNil(o.BaseCcy) {
+		toSerialize["baseCcy"] = o.BaseCcy
 	}
-	if !IsNil(o.ToCcy) {
-		toSerialize["toCcy"] = o.ToCcy
+	if !IsNil(o.BaseCcyMax) {
+		toSerialize["baseCcyMax"] = o.BaseCcyMax
+	}
+	if !IsNil(o.BaseCcyMin) {
+		toSerialize["baseCcyMin"] = o.BaseCcyMin
+	}
+	if !IsNil(o.InstId) {
+		toSerialize["instId"] = o.InstId
+	}
+	if !IsNil(o.QuoteCcy) {
+		toSerialize["quoteCcy"] = o.QuoteCcy
+	}
+	if !IsNil(o.QuoteCcyMax) {
+		toSerialize["quoteCcyMax"] = o.QuoteCcyMax
+	}
+	if !IsNil(o.QuoteCcyMin) {
+		toSerialize["quoteCcyMin"] = o.QuoteCcyMin
 	}
 	return toSerialize, nil
 }

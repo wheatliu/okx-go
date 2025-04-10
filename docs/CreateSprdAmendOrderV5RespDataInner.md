@@ -4,11 +4,11 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**ClOrdId** | Pointer to **string** | Client Order ID as assigned by the client | [optional] [default to ""]
-**NewPx** | Pointer to **string** | New price after amendment   Either &#x60;newSz&#x60; or &#x60;newPx&#x60; is required. | [optional] [default to ""]
-**NewSz** | Pointer to **string** | New quantity after amendment   Either &#x60;newSz&#x60; or &#x60;newPx&#x60; is required.   When amending a partially-filled order, the newSz should include the amount that has been filled. | [optional] [default to ""]
-**OrdId** | Pointer to **string** | Order ID   Either &#x60;ordId&#x60; or &#x60;clOrdId&#x60; is required. If both are passed, ordId will be used. | [optional] [default to ""]
-**ReqId** | Pointer to **string** | Client Request ID as assigned by the client for order amendment   A combination of case-sensitive alphanumerics, all numbers, or all letters of up to 32 characters.   The response will include the corresponding reqId to help you identify the request if you provide it in the request. | [optional] [default to ""]
+**ClOrdId** | Pointer to **string** | Client Order ID as assigned by the client. | [optional] [default to ""]
+**OrdId** | Pointer to **string** | Order ID | [optional] [default to ""]
+**ReqId** | Pointer to **string** | Client Request ID as assigned by the client for order amendment. | [optional] [default to ""]
+**SCode** | Pointer to **string** | The code of the event execution result, 0 means success. | [optional] [default to ""]
+**SMsg** | Pointer to **string** | Rejection message if the request is unsuccessful. | [optional] [default to ""]
 
 ## Methods
 
@@ -53,56 +53,6 @@ SetClOrdId sets ClOrdId field to given value.
 `func (o *CreateSprdAmendOrderV5RespDataInner) HasClOrdId() bool`
 
 HasClOrdId returns a boolean if a field has been set.
-
-### GetNewPx
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) GetNewPx() string`
-
-GetNewPx returns the NewPx field if non-nil, zero value otherwise.
-
-### GetNewPxOk
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) GetNewPxOk() (*string, bool)`
-
-GetNewPxOk returns a tuple with the NewPx field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNewPx
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) SetNewPx(v string)`
-
-SetNewPx sets NewPx field to given value.
-
-### HasNewPx
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) HasNewPx() bool`
-
-HasNewPx returns a boolean if a field has been set.
-
-### GetNewSz
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) GetNewSz() string`
-
-GetNewSz returns the NewSz field if non-nil, zero value otherwise.
-
-### GetNewSzOk
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) GetNewSzOk() (*string, bool)`
-
-GetNewSzOk returns a tuple with the NewSz field if it's non-nil, zero value otherwise
-and a boolean to check if the value has been set.
-
-### SetNewSz
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) SetNewSz(v string)`
-
-SetNewSz sets NewSz field to given value.
-
-### HasNewSz
-
-`func (o *CreateSprdAmendOrderV5RespDataInner) HasNewSz() bool`
-
-HasNewSz returns a boolean if a field has been set.
 
 ### GetOrdId
 
@@ -153,6 +103,56 @@ SetReqId sets ReqId field to given value.
 `func (o *CreateSprdAmendOrderV5RespDataInner) HasReqId() bool`
 
 HasReqId returns a boolean if a field has been set.
+
+### GetSCode
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) GetSCode() string`
+
+GetSCode returns the SCode field if non-nil, zero value otherwise.
+
+### GetSCodeOk
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) GetSCodeOk() (*string, bool)`
+
+GetSCodeOk returns a tuple with the SCode field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSCode
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) SetSCode(v string)`
+
+SetSCode sets SCode field to given value.
+
+### HasSCode
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) HasSCode() bool`
+
+HasSCode returns a boolean if a field has been set.
+
+### GetSMsg
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) GetSMsg() string`
+
+GetSMsg returns the SMsg field if non-nil, zero value otherwise.
+
+### GetSMsgOk
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) GetSMsgOk() (*string, bool)`
+
+GetSMsgOk returns a tuple with the SMsg field if it's non-nil, zero value otherwise
+and a boolean to check if the value has been set.
+
+### SetSMsg
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) SetSMsg(v string)`
+
+SetSMsg sets SMsg field to given value.
+
+### HasSMsg
+
+`func (o *CreateSprdAmendOrderV5RespDataInner) HasSMsg() bool`
+
+HasSMsg returns a boolean if a field has been set.
 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)

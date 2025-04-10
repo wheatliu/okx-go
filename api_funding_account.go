@@ -2038,6 +2038,20 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 type ApiGetAssetConvertCurrencyPairV5Request struct {
 	ctx context.Context
 	ApiService *FundingAccountAPIService
+	fromCcy *string
+	toCcy *string
+}
+
+// Currency to convert from, e.g. &#x60;USDT&#x60;
+func (r ApiGetAssetConvertCurrencyPairV5Request) FromCcy(fromCcy string) ApiGetAssetConvertCurrencyPairV5Request {
+	r.fromCcy = &fromCcy
+	return r
+}
+
+// Currency to convert to, e.g. &#x60;BTC&#x60;
+func (r ApiGetAssetConvertCurrencyPairV5Request) ToCcy(toCcy string) ApiGetAssetConvertCurrencyPairV5Request {
+	r.toCcy = &toCcy
+	return r
 }
 
 func (r ApiGetAssetConvertCurrencyPairV5Request) Execute() (*GetAssetConvertCurrencyPairV5Resp, *http.Response, error) {
@@ -2085,7 +2099,15 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+	if r.fromCcy == nil {
+		return localVarReturnValue, nil, reportError("fromCcy is required and must be specified")
+	}
+	if r.toCcy == nil {
+		return localVarReturnValue, nil, reportError("toCcy is required and must be specified")
+	}
 
+	parameterAddToHeaderOrQuery(localVarQueryParams, "fromCcy", r.fromCcy, "form", "")
+	parameterAddToHeaderOrQuery(localVarQueryParams, "toCcy", r.toCcy, "form", "")
 	// to determine the Content-Type header
 	localVarHTTPContentTypes := []string{}
 

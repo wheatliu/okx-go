@@ -27,6 +27,13 @@ type SpreadTradingAPIService service
 type ApiCreateSprdAmendOrderV5Request struct {
 	ctx context.Context
 	ApiService *SpreadTradingAPIService
+	createSprdAmendOrderV5Req *CreateSprdAmendOrderV5Req
+}
+
+// The request body for CreateSprdAmendOrderV5
+func (r ApiCreateSprdAmendOrderV5Request) CreateSprdAmendOrderV5Req(createSprdAmendOrderV5Req CreateSprdAmendOrderV5Req) ApiCreateSprdAmendOrderV5Request {
+	r.createSprdAmendOrderV5Req = &createSprdAmendOrderV5Req
+	return r
 }
 
 func (r ApiCreateSprdAmendOrderV5Request) Execute() (*CreateSprdAmendOrderV5Resp, *http.Response, error) {
@@ -76,9 +83,12 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 	localVarHeaderParams := make(map[string]string)
 	localVarQueryParams := url.Values{}
 	localVarFormParams := url.Values{}
+	if r.createSprdAmendOrderV5Req == nil {
+		return localVarReturnValue, nil, reportError("createSprdAmendOrderV5Req is required and must be specified")
+	}
 
 	// to determine the Content-Type header
-	localVarHTTPContentTypes := []string{}
+	localVarHTTPContentTypes := []string{"application/json"}
 
 	// set Content-Type header
 	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
@@ -94,6 +104,8 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
+	// body params
+	localVarPostBody = r.createSprdAmendOrderV5Req
 	if r.ctx != nil {
 		// API Key Authentication
 		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {

@@ -19,16 +19,16 @@ var _ MappedNullable = &CreateSprdAmendOrderV5RespDataInner{}
 
 // CreateSprdAmendOrderV5RespDataInner struct for CreateSprdAmendOrderV5RespDataInner
 type CreateSprdAmendOrderV5RespDataInner struct {
-	// Client Order ID as assigned by the client
+	// Client Order ID as assigned by the client.
 	ClOrdId *string `json:"clOrdId,omitempty"`
-	// New price after amendment   Either `newSz` or `newPx` is required.
-	NewPx *string `json:"newPx,omitempty"`
-	// New quantity after amendment   Either `newSz` or `newPx` is required.   When amending a partially-filled order, the newSz should include the amount that has been filled.
-	NewSz *string `json:"newSz,omitempty"`
-	// Order ID   Either `ordId` or `clOrdId` is required. If both are passed, ordId will be used.
+	// Order ID
 	OrdId *string `json:"ordId,omitempty"`
-	// Client Request ID as assigned by the client for order amendment   A combination of case-sensitive alphanumerics, all numbers, or all letters of up to 32 characters.   The response will include the corresponding reqId to help you identify the request if you provide it in the request.
+	// Client Request ID as assigned by the client for order amendment.
 	ReqId *string `json:"reqId,omitempty"`
+	// The code of the event execution result, 0 means success.
+	SCode *string `json:"sCode,omitempty"`
+	// Rejection message if the request is unsuccessful.
+	SMsg *string `json:"sMsg,omitempty"`
 }
 
 // NewCreateSprdAmendOrderV5RespDataInner instantiates a new CreateSprdAmendOrderV5RespDataInner object
@@ -39,14 +39,14 @@ func NewCreateSprdAmendOrderV5RespDataInner() *CreateSprdAmendOrderV5RespDataInn
 	this := CreateSprdAmendOrderV5RespDataInner{}
 	var clOrdId string = ""
 	this.ClOrdId = &clOrdId
-	var newPx string = ""
-	this.NewPx = &newPx
-	var newSz string = ""
-	this.NewSz = &newSz
 	var ordId string = ""
 	this.OrdId = &ordId
 	var reqId string = ""
 	this.ReqId = &reqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
@@ -57,14 +57,14 @@ func NewCreateSprdAmendOrderV5RespDataInnerWithDefaults() *CreateSprdAmendOrderV
 	this := CreateSprdAmendOrderV5RespDataInner{}
 	var clOrdId string = ""
 	this.ClOrdId = &clOrdId
-	var newPx string = ""
-	this.NewPx = &newPx
-	var newSz string = ""
-	this.NewSz = &newSz
 	var ordId string = ""
 	this.OrdId = &ordId
 	var reqId string = ""
 	this.ReqId = &reqId
+	var sCode string = ""
+	this.SCode = &sCode
+	var sMsg string = ""
+	this.SMsg = &sMsg
 	return &this
 }
 
@@ -98,70 +98,6 @@ func (o *CreateSprdAmendOrderV5RespDataInner) HasClOrdId() bool {
 // SetClOrdId gets a reference to the given string and assigns it to the ClOrdId field.
 func (o *CreateSprdAmendOrderV5RespDataInner) SetClOrdId(v string) {
 	o.ClOrdId = &v
-}
-
-// GetNewPx returns the NewPx field value if set, zero value otherwise.
-func (o *CreateSprdAmendOrderV5RespDataInner) GetNewPx() string {
-	if o == nil || IsNil(o.NewPx) {
-		var ret string
-		return ret
-	}
-	return *o.NewPx
-}
-
-// GetNewPxOk returns a tuple with the NewPx field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateSprdAmendOrderV5RespDataInner) GetNewPxOk() (*string, bool) {
-	if o == nil || IsNil(o.NewPx) {
-		return nil, false
-	}
-	return o.NewPx, true
-}
-
-// HasNewPx returns a boolean if a field has been set.
-func (o *CreateSprdAmendOrderV5RespDataInner) HasNewPx() bool {
-	if o != nil && !IsNil(o.NewPx) {
-		return true
-	}
-
-	return false
-}
-
-// SetNewPx gets a reference to the given string and assigns it to the NewPx field.
-func (o *CreateSprdAmendOrderV5RespDataInner) SetNewPx(v string) {
-	o.NewPx = &v
-}
-
-// GetNewSz returns the NewSz field value if set, zero value otherwise.
-func (o *CreateSprdAmendOrderV5RespDataInner) GetNewSz() string {
-	if o == nil || IsNil(o.NewSz) {
-		var ret string
-		return ret
-	}
-	return *o.NewSz
-}
-
-// GetNewSzOk returns a tuple with the NewSz field value if set, nil otherwise
-// and a boolean to check if the value has been set.
-func (o *CreateSprdAmendOrderV5RespDataInner) GetNewSzOk() (*string, bool) {
-	if o == nil || IsNil(o.NewSz) {
-		return nil, false
-	}
-	return o.NewSz, true
-}
-
-// HasNewSz returns a boolean if a field has been set.
-func (o *CreateSprdAmendOrderV5RespDataInner) HasNewSz() bool {
-	if o != nil && !IsNil(o.NewSz) {
-		return true
-	}
-
-	return false
-}
-
-// SetNewSz gets a reference to the given string and assigns it to the NewSz field.
-func (o *CreateSprdAmendOrderV5RespDataInner) SetNewSz(v string) {
-	o.NewSz = &v
 }
 
 // GetOrdId returns the OrdId field value if set, zero value otherwise.
@@ -228,6 +164,70 @@ func (o *CreateSprdAmendOrderV5RespDataInner) SetReqId(v string) {
 	o.ReqId = &v
 }
 
+// GetSCode returns the SCode field value if set, zero value otherwise.
+func (o *CreateSprdAmendOrderV5RespDataInner) GetSCode() string {
+	if o == nil || IsNil(o.SCode) {
+		var ret string
+		return ret
+	}
+	return *o.SCode
+}
+
+// GetSCodeOk returns a tuple with the SCode field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateSprdAmendOrderV5RespDataInner) GetSCodeOk() (*string, bool) {
+	if o == nil || IsNil(o.SCode) {
+		return nil, false
+	}
+	return o.SCode, true
+}
+
+// HasSCode returns a boolean if a field has been set.
+func (o *CreateSprdAmendOrderV5RespDataInner) HasSCode() bool {
+	if o != nil && !IsNil(o.SCode) {
+		return true
+	}
+
+	return false
+}
+
+// SetSCode gets a reference to the given string and assigns it to the SCode field.
+func (o *CreateSprdAmendOrderV5RespDataInner) SetSCode(v string) {
+	o.SCode = &v
+}
+
+// GetSMsg returns the SMsg field value if set, zero value otherwise.
+func (o *CreateSprdAmendOrderV5RespDataInner) GetSMsg() string {
+	if o == nil || IsNil(o.SMsg) {
+		var ret string
+		return ret
+	}
+	return *o.SMsg
+}
+
+// GetSMsgOk returns a tuple with the SMsg field value if set, nil otherwise
+// and a boolean to check if the value has been set.
+func (o *CreateSprdAmendOrderV5RespDataInner) GetSMsgOk() (*string, bool) {
+	if o == nil || IsNil(o.SMsg) {
+		return nil, false
+	}
+	return o.SMsg, true
+}
+
+// HasSMsg returns a boolean if a field has been set.
+func (o *CreateSprdAmendOrderV5RespDataInner) HasSMsg() bool {
+	if o != nil && !IsNil(o.SMsg) {
+		return true
+	}
+
+	return false
+}
+
+// SetSMsg gets a reference to the given string and assigns it to the SMsg field.
+func (o *CreateSprdAmendOrderV5RespDataInner) SetSMsg(v string) {
+	o.SMsg = &v
+}
+
 func (o CreateSprdAmendOrderV5RespDataInner) MarshalJSON() ([]byte, error) {
 	toSerialize,err := o.ToMap()
 	if err != nil {
@@ -241,17 +241,17 @@ func (o CreateSprdAmendOrderV5RespDataInner) ToMap() (map[string]interface{}, er
 	if !IsNil(o.ClOrdId) {
 		toSerialize["clOrdId"] = o.ClOrdId
 	}
-	if !IsNil(o.NewPx) {
-		toSerialize["newPx"] = o.NewPx
-	}
-	if !IsNil(o.NewSz) {
-		toSerialize["newSz"] = o.NewSz
-	}
 	if !IsNil(o.OrdId) {
 		toSerialize["ordId"] = o.OrdId
 	}
 	if !IsNil(o.ReqId) {
 		toSerialize["reqId"] = o.ReqId
+	}
+	if !IsNil(o.SCode) {
+		toSerialize["sCode"] = o.SCode
+	}
+	if !IsNil(o.SMsg) {
+		toSerialize["sMsg"] = o.SMsg
 	}
 	return toSerialize, nil
 }

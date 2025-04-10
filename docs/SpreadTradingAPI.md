@@ -25,7 +25,7 @@ Method | HTTP request | Description
 
 ## CreateSprdAmendOrderV5
 
-> CreateSprdAmendOrderV5Resp CreateSprdAmendOrderV5(ctx).Execute()
+> CreateSprdAmendOrderV5Resp CreateSprdAmendOrderV5(ctx).CreateSprdAmendOrderV5Req(createSprdAmendOrderV5Req).Execute()
 
 Amend an incomplete order.  
 
@@ -44,10 +44,11 @@ import (
 )
 
 func main() {
+	createSprdAmendOrderV5Req := *openapiclient.NewCreateSprdAmendOrderV5Req() // CreateSprdAmendOrderV5Req | The request body for CreateSprdAmendOrderV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
-	resp, r, err := apiClient.SpreadTradingAPI.CreateSprdAmendOrderV5(context.Background()).Execute()
+	resp, r, err := apiClient.SpreadTradingAPI.CreateSprdAmendOrderV5(context.Background()).CreateSprdAmendOrderV5Req(createSprdAmendOrderV5Req).Execute()
 	if err != nil {
 		fmt.Fprintf(os.Stderr, "Error when calling `SpreadTradingAPI.CreateSprdAmendOrderV5``: %v\n", err)
 		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
@@ -59,12 +60,16 @@ func main() {
 
 ### Path Parameters
 
-This endpoint does not need any parameter.
+
 
 ### Other Parameters
 
 Other parameters are passed through a pointer to a apiCreateSprdAmendOrderV5Request struct via the builder pattern
 
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **createSprdAmendOrderV5Req** | [**CreateSprdAmendOrderV5Req**](CreateSprdAmendOrderV5Req.md) | The request body for CreateSprdAmendOrderV5 | 
 
 ### Return type
 
@@ -76,7 +81,7 @@ Other parameters are passed through a pointer to a apiCreateSprdAmendOrderV5Requ
 
 ### HTTP request headers
 
-- **Content-Type**: Not defined
+- **Content-Type**: application/json
 - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)

@@ -636,6 +636,7 @@ Class | Method | HTTP request | Description
  - [CreateRfqMmpConfigV5RespDataInner](docs/CreateRfqMmpConfigV5RespDataInner.md)
  - [CreateRfqMmpResetV5Resp](docs/CreateRfqMmpResetV5Resp.md)
  - [CreateRfqMmpResetV5RespDataInner](docs/CreateRfqMmpResetV5RespDataInner.md)
+ - [CreateSprdAmendOrderV5Req](docs/CreateSprdAmendOrderV5Req.md)
  - [CreateSprdAmendOrderV5Resp](docs/CreateSprdAmendOrderV5Resp.md)
  - [CreateSprdAmendOrderV5RespDataInner](docs/CreateSprdAmendOrderV5RespDataInner.md)
  - [CreateSprdCancelAllAfterV5Req](docs/CreateSprdCancelAllAfterV5Req.md)
