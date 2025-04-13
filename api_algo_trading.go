@@ -41,7 +41,7 @@ func (r ApiCreateTradeAmendAlgosV5Request) Execute() (*CreateTradeAmendAlgosV5Re
 }
 
 /*
-CreateTradeAmendAlgosV5 Amend unfilled algo orders (Support Stop order and Trigger order only, not including Move_order_stop order, Iceberg order, TWAP order, Trailing Stop order).    
+CreateTradeAmendAlgosV5 POST / Amend algo order
 
 Amend unfilled algo orders (Support Stop order and Trigger order only, not including Move_order_stop order, Iceberg order, TWAP order, Trailing Stop order).
 
@@ -161,7 +161,7 @@ func (a *AlgoTradingAPIService) CreateTradeAmendAlgosV5Execute(r ApiCreateTradeA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -170,7 +170,7 @@ func (a *AlgoTradingAPIService) CreateTradeAmendAlgosV5Execute(r ApiCreateTradeA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -204,7 +204,7 @@ func (r ApiCreateTradeCancelAdvanceAlgosV5Request) Execute() (*CreateTradeCancel
 }
 
 /*
-CreateTradeCancelAdvanceAlgosV5 This endpoint will be offline soon, please use      Cancel unfilled algo orders (including Iceberg order, TWAP order, Trailing Stop order). A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+CreateTradeCancelAdvanceAlgosV5 POST / Cancel advance algo order
 
 This endpoint will be offline soon, please use  
 
@@ -275,13 +275,6 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelAdvanceAlgosV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -328,7 +321,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -337,7 +330,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAdvanceAlgosV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -371,7 +364,7 @@ func (r ApiCreateTradeCancelAlgosV5Request) Execute() (*CreateTradeCancelAlgosV5
 }
 
 /*
-CreateTradeCancelAlgosV5 Cancel unfilled algo orders. A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+CreateTradeCancelAlgosV5 POST / Cancel algo order
 
 Cancel unfilled algo orders. A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.
 
@@ -438,13 +431,6 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelAlgosV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -491,7 +477,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -500,7 +486,7 @@ func (a *AlgoTradingAPIService) CreateTradeCancelAlgosV5Execute(r ApiCreateTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -534,7 +520,7 @@ func (r ApiCreateTradeOrderAlgoV5Request) Execute() (*CreateTradeOrderAlgoV5Resp
 }
 
 /*
-CreateTradeOrderAlgoV5 The algo order includes `trigger` order, `oco` order, `chase` order, `conditional` order, `twap` order and trailing order.  
+CreateTradeOrderAlgoV5 POST / Place algo order
 
 The algo order includes `trigger` order, `oco` order, `chase` order, `conditional` order, `twap` order and trailing order.
 
@@ -603,13 +589,6 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 	}
 	// body params
 	localVarPostBody = r.createTradeOrderAlgoV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -656,7 +635,7 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -665,7 +644,7 @@ func (a *AlgoTradingAPIService) CreateTradeOrderAlgoV5Execute(r ApiCreateTradeOr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -706,7 +685,7 @@ func (r ApiGetTradeOrderAlgoV5Request) Execute() (*GetTradeOrderAlgoV5Resp, *htt
 }
 
 /*
-GetTradeOrderAlgoV5 Method for GetTradeOrderAlgoV5
+GetTradeOrderAlgoV5 GET / Algo order details
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -829,7 +808,7 @@ func (a *AlgoTradingAPIService) GetTradeOrderAlgoV5Execute(r ApiGetTradeOrderAlg
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -838,7 +817,7 @@ func (a *AlgoTradingAPIService) GetTradeOrderAlgoV5Execute(r ApiGetTradeOrderAlg
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -921,7 +900,7 @@ func (r ApiGetTradeOrdersAlgoHistoryV5Request) Execute() (*GetTradeOrdersAlgoHis
 }
 
 /*
-GetTradeOrdersAlgoHistoryV5 Retrieve a list of all algo orders under the current account in the last 3 months.  
+GetTradeOrdersAlgoHistoryV5 GET / Algo order history
 
 Retrieve a list of all algo orders under the current account in the last 3 months.
 
@@ -1080,7 +1059,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoHistoryV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1089,7 +1068,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoHistoryV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1172,7 +1151,7 @@ func (r ApiGetTradeOrdersAlgoPendingV5Request) Execute() (*GetTradeOrdersAlgoPen
 }
 
 /*
-GetTradeOrdersAlgoPendingV5 Retrieve a list of untriggered Algo orders under the current account.  
+GetTradeOrdersAlgoPendingV5 GET / Algo order list
 
 Retrieve a list of untriggered Algo orders under the current account.
 
@@ -1331,7 +1310,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoPendingV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1340,7 +1319,7 @@ func (a *AlgoTradingAPIService) GetTradeOrdersAlgoPendingV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

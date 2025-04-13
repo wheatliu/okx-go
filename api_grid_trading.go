@@ -41,7 +41,7 @@ func (r ApiCreateTradingBotGridAdjustInvestmentV5Request) Execute() (*CreateTrad
 }
 
 /*
-CreateTradingBotGridAdjustInvestmentV5 It is used to add investment and only applicable to contract gird.  
+CreateTradingBotGridAdjustInvestmentV5 POST / Add investment
 
 It is used to add investment and only applicable to contract gird.
 
@@ -159,7 +159,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridAdjustInvestmentV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridAdjustInvestmentV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -202,7 +202,7 @@ func (r ApiCreateTradingBotGridAmendOrderAlgoV5Request) Execute() (*CreateTradin
 }
 
 /*
-CreateTradingBotGridAmendOrderAlgoV5 Method for CreateTradingBotGridAmendOrderAlgoV5
+CreateTradingBotGridAmendOrderAlgoV5 POST / Amend grid algo order
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -318,7 +318,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridAmendOrderAlgoV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -327,7 +327,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridAmendOrderAlgoV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -361,7 +361,7 @@ func (r ApiCreateTradingBotGridCancelCloseOrderV5Request) Execute() (*CreateTrad
 }
 
 /*
-CreateTradingBotGridCancelCloseOrderV5 Method for CreateTradingBotGridCancelCloseOrderV5
+CreateTradingBotGridCancelCloseOrderV5 POST / Cancel close position order for contract grid
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -477,7 +477,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridCancelCloseOrderV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -486,7 +486,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridCancelCloseOrderV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -520,7 +520,7 @@ func (r ApiCreateTradingBotGridClosePositionV5Request) Execute() (*CreateTrading
 }
 
 /*
-CreateTradingBotGridClosePositionV5 Close position when the contract grid stop type is 'keep position'.  
+CreateTradingBotGridClosePositionV5 POST / Close position for contract grid
 
 Close position when the contract grid stop type is 'keep position'.
 
@@ -638,7 +638,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridClosePositionV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -647,7 +647,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridClosePositionV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -681,7 +681,7 @@ func (r ApiCreateTradingBotGridComputeMarginBalanceV5Request) Execute() (*Create
 }
 
 /*
-CreateTradingBotGridComputeMarginBalanceV5 Method for CreateTradingBotGridComputeMarginBalanceV5
+CreateTradingBotGridComputeMarginBalanceV5 POST / Compute margin balance
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -797,7 +797,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridComputeMarginBalanceV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -806,7 +806,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridComputeMarginBalanceV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -840,7 +840,7 @@ func (r ApiCreateTradingBotGridMarginBalanceV5Request) Execute() (*CreateTrading
 }
 
 /*
-CreateTradingBotGridMarginBalanceV5 Method for CreateTradingBotGridMarginBalanceV5
+CreateTradingBotGridMarginBalanceV5 POST / Adjust margin balance
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -956,7 +956,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridMarginBalanceV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -965,7 +965,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridMarginBalanceV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -999,7 +999,7 @@ func (r ApiCreateTradingBotGridMinInvestmentV5Request) Execute() (*CreateTrading
 }
 
 /*
-CreateTradingBotGridMinInvestmentV5 Authentication is not required for this public endpoint.  
+CreateTradingBotGridMinInvestmentV5 POST / Compute min investment (public)
 
 Authentication is not required for this public endpoint.
 
@@ -1110,7 +1110,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridMinInvestmentV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1119,7 +1119,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridMinInvestmentV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1153,7 +1153,7 @@ func (r ApiCreateTradingBotGridOrderAlgoV5Request) Execute() (*CreateTradingBotG
 }
 
 /*
-CreateTradingBotGridOrderAlgoV5 Method for CreateTradingBotGridOrderAlgoV5
+CreateTradingBotGridOrderAlgoV5 POST / Place grid algo order
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1269,7 +1269,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridOrderAlgoV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1278,7 +1278,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridOrderAlgoV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1312,7 +1312,7 @@ func (r ApiCreateTradingBotGridOrderInstantTriggerV5Request) Execute() (*CreateT
 }
 
 /*
-CreateTradingBotGridOrderInstantTriggerV5 Method for CreateTradingBotGridOrderInstantTriggerV5
+CreateTradingBotGridOrderInstantTriggerV5 POST / Instant trigger grid algo order
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1428,7 +1428,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridOrderInstantTriggerV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1437,7 +1437,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridOrderInstantTriggerV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1471,7 +1471,7 @@ func (r ApiCreateTradingBotGridStopOrderAlgoV5Request) Execute() (*CreateTrading
 }
 
 /*
-CreateTradingBotGridStopOrderAlgoV5 A maximum of 10 orders can be stopped per request.  
+CreateTradingBotGridStopOrderAlgoV5 POST / Stop grid algo order
 
 A maximum of 10 orders can be stopped per request.
 
@@ -1589,7 +1589,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridStopOrderAlgoV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1598,7 +1598,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridStopOrderAlgoV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1632,7 +1632,7 @@ func (r ApiCreateTradingBotGridWithdrawIncomeV5Request) Execute() (*CreateTradin
 }
 
 /*
-CreateTradingBotGridWithdrawIncomeV5 Method for CreateTradingBotGridWithdrawIncomeV5
+CreateTradingBotGridWithdrawIncomeV5 POST / Spot grid withdraw income
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1748,7 +1748,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridWithdrawIncomeV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1757,7 +1757,7 @@ func (a *GridTradingAPIService) CreateTradingBotGridWithdrawIncomeV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1812,7 +1812,7 @@ func (r ApiGetTradingBotGridAiParamV5Request) Execute() (*GetTradingBotGridAiPar
 }
 
 /*
-GetTradingBotGridAiParamV5 Authentication is not required for this public endpoint.  
+GetTradingBotGridAiParamV5 GET / Grid AI parameter (public)
 
 Authentication is not required for this public endpoint.
 
@@ -1938,7 +1938,7 @@ func (a *GridTradingAPIService) GetTradingBotGridAiParamV5Execute(r ApiGetTradin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1947,7 +1947,7 @@ func (a *GridTradingAPIService) GetTradingBotGridAiParamV5Execute(r ApiGetTradin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2016,7 +2016,7 @@ func (r ApiGetTradingBotGridGridQuantityV5Request) Execute() (*GetTradingBotGrid
 }
 
 /*
-GetTradingBotGridGridQuantityV5 Authentication is not required for this public endpoint.    Maximum grid quantity can be retrieved from this endpoint. Minimum grid quantity always is 2.  
+GetTradingBotGridGridQuantityV5 GET / Max grid quantity (public)
 
 Authentication is not required for this public endpoint.
 
@@ -2152,7 +2152,7 @@ func (a *GridTradingAPIService) GetTradingBotGridGridQuantityV5Execute(r ApiGetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2161,7 +2161,7 @@ func (a *GridTradingAPIService) GetTradingBotGridGridQuantityV5Execute(r ApiGetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2202,7 +2202,7 @@ func (r ApiGetTradingBotGridOrdersAlgoDetailsV5Request) Execute() (*GetTradingBo
 }
 
 /*
-GetTradingBotGridOrdersAlgoDetailsV5 Method for GetTradingBotGridOrdersAlgoDetailsV5
+GetTradingBotGridOrdersAlgoDetailsV5 GET / Grid algo order details
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2321,7 +2321,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoDetailsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2330,7 +2330,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoDetailsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2406,7 +2406,7 @@ func (r ApiGetTradingBotGridOrdersAlgoHistoryV5Request) Execute() (*GetTradingBo
 }
 
 /*
-GetTradingBotGridOrdersAlgoHistoryV5 Method for GetTradingBotGridOrdersAlgoHistoryV5
+GetTradingBotGridOrdersAlgoHistoryV5 GET / Grid algo order history
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2557,7 +2557,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2566,7 +2566,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2642,7 +2642,7 @@ func (r ApiGetTradingBotGridOrdersAlgoPendingV5Request) Execute() (*GetTradingBo
 }
 
 /*
-GetTradingBotGridOrdersAlgoPendingV5 Method for GetTradingBotGridOrdersAlgoPendingV5
+GetTradingBotGridOrdersAlgoPendingV5 GET / Grid algo order list
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2793,7 +2793,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoPendingV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2802,7 +2802,7 @@ func (a *GridTradingAPIService) GetTradingBotGridOrdersAlgoPendingV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2843,7 +2843,7 @@ func (r ApiGetTradingBotGridPositionsV5Request) Execute() (*GetTradingBotGridPos
 }
 
 /*
-GetTradingBotGridPositionsV5 Method for GetTradingBotGridPositionsV5
+GetTradingBotGridPositionsV5 GET / Grid algo order positions
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2962,7 +2962,7 @@ func (a *GridTradingAPIService) GetTradingBotGridPositionsV5Execute(r ApiGetTrad
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2971,7 +2971,7 @@ func (a *GridTradingAPIService) GetTradingBotGridPositionsV5Execute(r ApiGetTrad
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3047,7 +3047,7 @@ func (r ApiGetTradingBotGridSubOrdersV5Request) Execute() (*GetTradingBotGridSub
 }
 
 /*
-GetTradingBotGridSubOrdersV5 Method for GetTradingBotGridSubOrdersV5
+GetTradingBotGridSubOrdersV5 GET / Grid algo sub orders
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -3194,7 +3194,7 @@ func (a *GridTradingAPIService) GetTradingBotGridSubOrdersV5Execute(r ApiGetTrad
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3203,7 +3203,7 @@ func (a *GridTradingAPIService) GetTradingBotGridSubOrdersV5Execute(r ApiGetTrad
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3272,7 +3272,7 @@ func (r ApiGetTradingBotPublicRsiBackTestingV5Request) Execute() (*GetTradingBot
 }
 
 /*
-GetTradingBotPublicRsiBackTestingV5 Authentication is not required for this public endpoint.  
+GetTradingBotPublicRsiBackTestingV5 GET / RSI back testing (public)
 
 Authentication is not required for this public endpoint.
 
@@ -3406,7 +3406,7 @@ func (a *GridTradingAPIService) GetTradingBotPublicRsiBackTestingV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3415,7 +3415,7 @@ func (a *GridTradingAPIService) GetTradingBotPublicRsiBackTestingV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

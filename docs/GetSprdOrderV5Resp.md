@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to **[]map[string]interface{}** |  | [optional] 
+**Data** | Pointer to [**[]GetSprdOrderV5RespDataInner**](GetSprdOrderV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *GetSprdOrderV5Resp) GetData() []map[string]interface{}`
+`func (o *GetSprdOrderV5Resp) GetData() []GetSprdOrderV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *GetSprdOrderV5Resp) GetDataOk() (*[]map[string]interface{}, bool)`
+`func (o *GetSprdOrderV5Resp) GetDataOk() (*[]GetSprdOrderV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *GetSprdOrderV5Resp) SetData(v []map[string]interface{})`
+`func (o *GetSprdOrderV5Resp) SetData(v []GetSprdOrderV5RespDataInner)`
 
 SetData sets Data field to given value.
 

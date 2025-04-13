@@ -41,7 +41,7 @@ func (r ApiCreateAssetSubaccountTransferV5Request) Execute() (*CreateAssetSubacc
 }
 
 /*
-CreateAssetSubaccountTransferV5 Applies to master accounts only.   Only API keys with `Trade` privilege can call this endpoint.  
+CreateAssetSubaccountTransferV5 Master accounts manage the transfers between sub-accounts
 
 Applies to master accounts only. 
 
@@ -161,7 +161,7 @@ func (a *SubAccountAPIService) CreateAssetSubaccountTransferV5Execute(r ApiCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -170,7 +170,7 @@ func (a *SubAccountAPIService) CreateAssetSubaccountTransferV5Execute(r ApiCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -204,7 +204,7 @@ func (r ApiCreateUsersSubaccountModifyApikeyV5Request) Execute() (*CreateUsersSu
 }
 
 /*
-CreateUsersSubaccountModifyApikeyV5 Applies to master accounts only and master accounts API Key must be linked to IP addresses. Only API keys with `Trade` privilege can call this endpoint.  
+CreateUsersSubaccountModifyApikeyV5 Reset the API Key of a sub-account
 
 Applies to master accounts only and master accounts API Key must be linked to IP addresses. Only API keys with `Trade` privilege can call this endpoint.
 
@@ -322,7 +322,7 @@ func (a *SubAccountAPIService) CreateUsersSubaccountModifyApikeyV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -331,7 +331,7 @@ func (a *SubAccountAPIService) CreateUsersSubaccountModifyApikeyV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -365,7 +365,7 @@ func (r ApiCreateUsersSubaccountSetTransferOutV5Request) Execute() (*CreateUsers
 }
 
 /*
-CreateUsersSubaccountSetTransferOutV5 Set permission of transfer out for sub-account (only applicable to master account API key). Sub-account can transfer out to master account by default.  
+CreateUsersSubaccountSetTransferOutV5 Set permission of transfer out
 
 Set permission of transfer out for sub-account (only applicable to master account API key). Sub-account can transfer out to master account by default.
 
@@ -483,7 +483,7 @@ func (a *SubAccountAPIService) CreateUsersSubaccountSetTransferOutV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -492,7 +492,7 @@ func (a *SubAccountAPIService) CreateUsersSubaccountSetTransferOutV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -526,7 +526,7 @@ func (r ApiGetAccountSubaccountBalancesV5Request) Execute() (*GetAccountSubaccou
 }
 
 /*
-GetAccountSubaccountBalancesV5 Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)  
+GetAccountSubaccountBalancesV5 Get sub-account trading balance
 
 Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)
 
@@ -643,7 +643,7 @@ func (a *SubAccountAPIService) GetAccountSubaccountBalancesV5Execute(r ApiGetAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -652,7 +652,7 @@ func (a *SubAccountAPIService) GetAccountSubaccountBalancesV5Execute(r ApiGetAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -693,7 +693,7 @@ func (r ApiGetAccountSubaccountMaxWithdrawalV5Request) Execute() (*GetAccountSub
 }
 
 /*
-GetAccountSubaccountMaxWithdrawalV5 Retrieve the maximum withdrawal information of a sub-account via the master account (applies to master accounts only). If no currency is specified, the transferable amount of all owned currencies will be returned.  
+GetAccountSubaccountMaxWithdrawalV5 Get sub-account maximum withdrawals
 
 Retrieve the maximum withdrawal information of a sub-account via the master account (applies to master accounts only). If no currency is specified, the transferable amount of all owned currencies will be returned.
 
@@ -816,7 +816,7 @@ func (a *SubAccountAPIService) GetAccountSubaccountMaxWithdrawalV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -825,7 +825,7 @@ func (a *SubAccountAPIService) GetAccountSubaccountMaxWithdrawalV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -866,7 +866,7 @@ func (r ApiGetAssetSubaccountBalancesV5Request) Execute() (*GetAssetSubaccountBa
 }
 
 /*
-GetAssetSubaccountBalancesV5 Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)  
+GetAssetSubaccountBalancesV5 Get sub-account funding balance
 
 Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)
 
@@ -989,7 +989,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountBalancesV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -998,7 +998,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountBalancesV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1067,7 +1067,7 @@ func (r ApiGetAssetSubaccountBillsV5Request) Execute() (*GetAssetSubaccountBills
 }
 
 /*
-GetAssetSubaccountBillsV5 Applies to master accounts only.  
+GetAssetSubaccountBillsV5 Get history of sub-account transfer
 
 Applies to master accounts only.
 
@@ -1216,7 +1216,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountBillsV5Execute(r ApiGetAssetSub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1225,7 +1225,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountBillsV5Execute(r ApiGetAssetSub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1301,7 +1301,7 @@ func (r ApiGetAssetSubaccountManagedSubaccountBillsV5Request) Execute() (*GetAss
 }
 
 /*
-GetAssetSubaccountManagedSubaccountBillsV5 Only applicable to the trading team's master account to getting transfer records of managed sub accounts entrusted to oneself.  
+GetAssetSubaccountManagedSubaccountBillsV5 Get history of managed sub-account transfer
 
 Only applicable to the trading team's master account to getting transfer records of managed sub accounts entrusted to oneself.
 
@@ -1456,7 +1456,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountManagedSubaccountBillsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1465,7 +1465,7 @@ func (a *SubAccountAPIService) GetAssetSubaccountManagedSubaccountBillsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1499,7 +1499,7 @@ func (r ApiGetUsersEntrustSubaccountListV5Request) Execute() (*GetUsersEntrustSu
 }
 
 /*
-GetUsersEntrustSubaccountListV5 The trading team uses this interface to view the list of sub-accounts currently under escrow  
+GetUsersEntrustSubaccountListV5 Get custody trading sub-account list
 
 The trading team uses this interface to view the list of sub-accounts currently under escrow
 
@@ -1618,7 +1618,7 @@ func (a *SubAccountAPIService) GetUsersEntrustSubaccountListV5Execute(r ApiGetUs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1627,7 +1627,7 @@ func (a *SubAccountAPIService) GetUsersEntrustSubaccountListV5Execute(r ApiGetUs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1689,7 +1689,7 @@ func (r ApiGetUsersSubaccountListV5Request) Execute() (*GetUsersSubaccountListV5
 }
 
 /*
-GetUsersSubaccountListV5 Applies to master accounts only  
+GetUsersSubaccountListV5 Get sub-account list
 
 Applies to master accounts only
 
@@ -1832,7 +1832,7 @@ func (a *SubAccountAPIService) GetUsersSubaccountListV5Execute(r ApiGetUsersSuba
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1841,7 +1841,7 @@ func (a *SubAccountAPIService) GetUsersSubaccountListV5Execute(r ApiGetUsersSuba
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

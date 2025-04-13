@@ -4,23 +4,23 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTradingBotSignalAmendTPSLV5**](SignalBotTradingAPI.md#CreateTradingBotSignalAmendTPSLV5) | **Post** /api/v5/tradingBot/signal/amendTPSL | 
-[**CreateTradingBotSignalCancelSubOrderV5**](SignalBotTradingAPI.md#CreateTradingBotSignalCancelSubOrderV5) | **Post** /api/v5/tradingBot/signal/cancel-sub-order | Cancel an incomplete order.  
-[**CreateTradingBotSignalClosePositionV5**](SignalBotTradingAPI.md#CreateTradingBotSignalClosePositionV5) | **Post** /api/v5/tradingBot/signal/close-position | Close the position of an instrument via a market order.  
-[**CreateTradingBotSignalCreateSignalV5**](SignalBotTradingAPI.md#CreateTradingBotSignalCreateSignalV5) | **Post** /api/v5/tradingBot/signal/create-signal | 
-[**CreateTradingBotSignalMarginBalanceV5**](SignalBotTradingAPI.md#CreateTradingBotSignalMarginBalanceV5) | **Post** /api/v5/tradingBot/signal/margin-balance | 
-[**CreateTradingBotSignalOrderAlgoV5**](SignalBotTradingAPI.md#CreateTradingBotSignalOrderAlgoV5) | **Post** /api/v5/tradingBot/signal/order-algo | 
-[**CreateTradingBotSignalSetInstrumentsV5**](SignalBotTradingAPI.md#CreateTradingBotSignalSetInstrumentsV5) | **Post** /api/v5/tradingBot/signal/set-instruments | 
-[**CreateTradingBotSignalStopOrderAlgoV5**](SignalBotTradingAPI.md#CreateTradingBotSignalStopOrderAlgoV5) | **Post** /api/v5/tradingBot/signal/stop-order-algo | A maximum of 10 orders can be stopped per request.  
-[**CreateTradingBotSignalSubOrderV5**](SignalBotTradingAPI.md#CreateTradingBotSignalSubOrderV5) | **Post** /api/v5/tradingBot/signal/sub-order | You can place an order only if you have sufficient funds.      
-[**GetTradingBotSignalEventHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalEventHistoryV5) | **Get** /api/v5/tradingBot/signal/event-history | 
-[**GetTradingBotSignalOrdersAlgoDetailsV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/signal/orders-algo-details | 
-[**GetTradingBotSignalOrdersAlgoHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/signal/orders-algo-history | 
-[**GetTradingBotSignalOrdersAlgoPendingV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/signal/orders-algo-pending | 
-[**GetTradingBotSignalPositionsHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalPositionsHistoryV5) | **Get** /api/v5/tradingBot/signal/positions-history | Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.  
-[**GetTradingBotSignalPositionsV5**](SignalBotTradingAPI.md#GetTradingBotSignalPositionsV5) | **Get** /api/v5/tradingBot/signal/positions | 
-[**GetTradingBotSignalSignalsV5**](SignalBotTradingAPI.md#GetTradingBotSignalSignalsV5) | **Get** /api/v5/tradingBot/signal/signals | 
-[**GetTradingBotSignalSubOrdersV5**](SignalBotTradingAPI.md#GetTradingBotSignalSubOrdersV5) | **Get** /api/v5/tradingBot/signal/sub-orders | 
+[**CreateTradingBotSignalAmendTPSLV5**](SignalBotTradingAPI.md#CreateTradingBotSignalAmendTPSLV5) | **Post** /api/v5/tradingBot/signal/amendTPSL | POST / Amend TPSL
+[**CreateTradingBotSignalCancelSubOrderV5**](SignalBotTradingAPI.md#CreateTradingBotSignalCancelSubOrderV5) | **Post** /api/v5/tradingBot/signal/cancel-sub-order | POST / Cancel sub order
+[**CreateTradingBotSignalClosePositionV5**](SignalBotTradingAPI.md#CreateTradingBotSignalClosePositionV5) | **Post** /api/v5/tradingBot/signal/close-position | POST / Close position
+[**CreateTradingBotSignalCreateSignalV5**](SignalBotTradingAPI.md#CreateTradingBotSignalCreateSignalV5) | **Post** /api/v5/tradingBot/signal/create-signal | POST / Create signal
+[**CreateTradingBotSignalMarginBalanceV5**](SignalBotTradingAPI.md#CreateTradingBotSignalMarginBalanceV5) | **Post** /api/v5/tradingBot/signal/margin-balance | POST / Adjust margin balance
+[**CreateTradingBotSignalOrderAlgoV5**](SignalBotTradingAPI.md#CreateTradingBotSignalOrderAlgoV5) | **Post** /api/v5/tradingBot/signal/order-algo | POST / Create signal bot
+[**CreateTradingBotSignalSetInstrumentsV5**](SignalBotTradingAPI.md#CreateTradingBotSignalSetInstrumentsV5) | **Post** /api/v5/tradingBot/signal/set-instruments | POST / Set instruments
+[**CreateTradingBotSignalStopOrderAlgoV5**](SignalBotTradingAPI.md#CreateTradingBotSignalStopOrderAlgoV5) | **Post** /api/v5/tradingBot/signal/stop-order-algo | POST / Cancel signal bots
+[**CreateTradingBotSignalSubOrderV5**](SignalBotTradingAPI.md#CreateTradingBotSignalSubOrderV5) | **Post** /api/v5/tradingBot/signal/sub-order | POST / Place sub order
+[**GetTradingBotSignalEventHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalEventHistoryV5) | **Get** /api/v5/tradingBot/signal/event-history | GET / Signal bot event history
+[**GetTradingBotSignalOrdersAlgoDetailsV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/signal/orders-algo-details | GET / Signal bot order details
+[**GetTradingBotSignalOrdersAlgoHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/signal/orders-algo-history | GET / Signal bot history
+[**GetTradingBotSignalOrdersAlgoPendingV5**](SignalBotTradingAPI.md#GetTradingBotSignalOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/signal/orders-algo-pending | GET / Active signal bot
+[**GetTradingBotSignalPositionsHistoryV5**](SignalBotTradingAPI.md#GetTradingBotSignalPositionsHistoryV5) | **Get** /api/v5/tradingBot/signal/positions-history | GET / Position history
+[**GetTradingBotSignalPositionsV5**](SignalBotTradingAPI.md#GetTradingBotSignalPositionsV5) | **Get** /api/v5/tradingBot/signal/positions | GET / Signal bot order positions
+[**GetTradingBotSignalSignalsV5**](SignalBotTradingAPI.md#GetTradingBotSignalSignalsV5) | **Get** /api/v5/tradingBot/signal/signals | GET / Signals
+[**GetTradingBotSignalSubOrdersV5**](SignalBotTradingAPI.md#GetTradingBotSignalSubOrdersV5) | **Get** /api/v5/tradingBot/signal/sub-orders | GET / Signal bot sub orders
 
 
 
@@ -28,7 +28,7 @@ Method | HTTP request | Description
 
 > CreateTradingBotSignalAmendTPSLV5Resp CreateTradingBotSignalAmendTPSLV5(ctx).CreateTradingBotSignalAmendTPSLV5Req(createTradingBotSignalAmendTPSLV5Req).Execute()
 
-
+POST / Amend TPSL
 
 
 
@@ -94,7 +94,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalCancelSubOrderV5Resp CreateTradingBotSignalCancelSubOrderV5(ctx).CreateTradingBotSignalCancelSubOrderV5Req(createTradingBotSignalCancelSubOrderV5Req).Execute()
 
-Cancel an incomplete order.  
+POST / Cancel sub order
 
 
 
@@ -160,7 +160,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalClosePositionV5Resp CreateTradingBotSignalClosePositionV5(ctx).CreateTradingBotSignalClosePositionV5Req(createTradingBotSignalClosePositionV5Req).Execute()
 
-Close the position of an instrument via a market order.  
+POST / Close position
 
 
 
@@ -226,7 +226,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalCreateSignalV5Resp CreateTradingBotSignalCreateSignalV5(ctx).CreateTradingBotSignalCreateSignalV5Req(createTradingBotSignalCreateSignalV5Req).Execute()
 
-
+POST / Create signal
 
 
 
@@ -292,7 +292,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalMarginBalanceV5Resp CreateTradingBotSignalMarginBalanceV5(ctx).CreateTradingBotSignalMarginBalanceV5Req(createTradingBotSignalMarginBalanceV5Req).Execute()
 
-
+POST / Adjust margin balance
 
 
 
@@ -358,7 +358,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalOrderAlgoV5Resp CreateTradingBotSignalOrderAlgoV5(ctx).CreateTradingBotSignalOrderAlgoV5Req(createTradingBotSignalOrderAlgoV5Req).Execute()
 
-
+POST / Create signal bot
 
 
 
@@ -424,7 +424,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalSetInstrumentsV5Resp CreateTradingBotSignalSetInstrumentsV5(ctx).CreateTradingBotSignalSetInstrumentsV5Req(createTradingBotSignalSetInstrumentsV5Req).Execute()
 
-
+POST / Set instruments
 
 
 
@@ -490,7 +490,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalStopOrderAlgoV5Resp CreateTradingBotSignalStopOrderAlgoV5(ctx).CreateTradingBotSignalStopOrderAlgoV5Req(createTradingBotSignalStopOrderAlgoV5Req).Execute()
 
-A maximum of 10 orders can be stopped per request.  
+POST / Cancel signal bots
 
 
 
@@ -556,7 +556,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotSignalSubOrderV5Resp CreateTradingBotSignalSubOrderV5(ctx).CreateTradingBotSignalSubOrderV5Req(createTradingBotSignalSubOrderV5Req).Execute()
 
-You can place an order only if you have sufficient funds.      
+POST / Place sub order
 
 
 
@@ -622,7 +622,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalEventHistoryV5Resp GetTradingBotSignalEventHistoryV5(ctx).AlgoId(algoId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Signal bot event history
 
 
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalOrdersAlgoDetailsV5Resp GetTradingBotSignalOrdersAlgoDetailsV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).Execute()
 
-
+GET / Signal bot order details
 
 
 
@@ -762,7 +762,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalOrdersAlgoHistoryV5Resp GetTradingBotSignalOrdersAlgoHistoryV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Signal bot history
 
 
 
@@ -836,7 +836,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalOrdersAlgoPendingV5Resp GetTradingBotSignalOrdersAlgoPendingV5(ctx).AlgoOrdType(algoOrdType).After(after).AlgoId(algoId).Before(before).Limit(limit).Execute()
 
-
+GET / Active signal bot
 
 
 
@@ -910,7 +910,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalPositionsHistoryV5Resp GetTradingBotSignalPositionsHistoryV5(ctx).AlgoId(algoId).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.  
+GET / Position history
 
 
 
@@ -984,7 +984,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalPositionsV5Resp GetTradingBotSignalPositionsV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).Execute()
 
-
+GET / Signal bot order positions
 
 
 
@@ -1052,7 +1052,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalSignalsV5Resp GetTradingBotSignalSignalsV5(ctx).SignalSourceType(signalSourceType).SignalChanId(signalChanId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Signals
 
 
 
@@ -1126,7 +1126,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotSignalSubOrdersV5Resp GetTradingBotSignalSubOrdersV5(ctx).AlgoId(algoId).AlgoOrdType(algoOrdType).State(state).SignalOrdId(signalOrdId).After(after).Before(before).Begin(begin).End(end).Limit(limit).Type_(type_).ClOrdId(clOrdId).Execute()
 
-
+GET / Signal bot sub orders
 
 
 

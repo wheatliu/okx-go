@@ -41,7 +41,7 @@ func (r ApiCreateAccountAccountLevelSwitchPresetV5Request) Execute() (*CreateAcc
 }
 
 /*
-CreateAccountAccountLevelSwitchPresetV5 Pre-set the required information for account mode switching. When switching from `Portfolio margin mode` back to `Spot and futures mode` / `Multi-currency margin mode`, and if there are existing cross-margin contract positions, it is mandatory to pre-set leverage.  If the user does not follow the required settings, they will receive an error message during the pre-check or when setting the account mode.  
+CreateAccountAccountLevelSwitchPresetV5 Preset account mode switch
 
 Pre-set the required information for account mode switching. When switching from `Portfolio margin mode` back to `Spot and futures mode` / `Multi-currency margin mode`, and if there are existing cross-margin contract positions, it is mandatory to pre-set leverage.
 
@@ -161,7 +161,7 @@ func (a *TradingAccountAPIService) CreateAccountAccountLevelSwitchPresetV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -170,7 +170,7 @@ func (a *TradingAccountAPIService) CreateAccountAccountLevelSwitchPresetV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -197,7 +197,7 @@ func (r ApiCreateAccountActivateOptionV5Request) Execute() (*CreateAccountActiva
 }
 
 /*
-CreateAccountActivateOptionV5 Method for CreateAccountActivateOptionV5
+CreateAccountActivateOptionV5 Activate option
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -308,7 +308,7 @@ func (a *TradingAccountAPIService) CreateAccountActivateOptionV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -317,7 +317,7 @@ func (a *TradingAccountAPIService) CreateAccountActivateOptionV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -351,7 +351,7 @@ func (r ApiCreateAccountBillsHistoryArchiveV5Request) Execute() (*CreateAccountB
 }
 
 /*
-CreateAccountBillsHistoryArchiveV5 Apply for bill data since 1 February, 2021 except for the current quarter.  
+CreateAccountBillsHistoryArchiveV5 Apply bills details (since 2021)
 
 Apply for bill data since 1 February, 2021 except for the current quarter.
 
@@ -469,7 +469,7 @@ func (a *TradingAccountAPIService) CreateAccountBillsHistoryArchiveV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -478,7 +478,7 @@ func (a *TradingAccountAPIService) CreateAccountBillsHistoryArchiveV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -512,7 +512,7 @@ func (r ApiCreateAccountMmpConfigV5Request) Execute() (*CreateAccountMmpConfigV5
 }
 
 /*
-CreateAccountMmpConfigV5 This endpoint is used to set MMP configure    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+CreateAccountMmpConfigV5 Set MMP
 
 This endpoint is used to set MMP configure
 
@@ -636,7 +636,7 @@ func (a *TradingAccountAPIService) CreateAccountMmpConfigV5Execute(r ApiCreateAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -645,7 +645,7 @@ func (a *TradingAccountAPIService) CreateAccountMmpConfigV5Execute(r ApiCreateAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -679,7 +679,7 @@ func (r ApiCreateAccountMmpResetV5Request) Execute() (*CreateAccountMmpResetV5Re
 }
 
 /*
-CreateAccountMmpResetV5 You can unfreeze by this endpoint once MMP is triggered.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+CreateAccountMmpResetV5 Reset MMP Status
 
 You can unfreeze by this endpoint once MMP is triggered.
 
@@ -801,7 +801,7 @@ func (a *TradingAccountAPIService) CreateAccountMmpResetV5Execute(r ApiCreateAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -810,7 +810,7 @@ func (a *TradingAccountAPIService) CreateAccountMmpResetV5Execute(r ApiCreateAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -844,7 +844,7 @@ func (r ApiCreateAccountPositionBuilderV5Request) Execute() (*CreateAccountPosit
 }
 
 /*
-CreateAccountPositionBuilderV5 Calculates portfolio margin information for virtual position/assets or current position of the user.   You can add up to 200 virtual positions and 200 virtual assets in one request.  
+CreateAccountPositionBuilderV5 Position builder (new)
 
 Calculates portfolio margin information for virtual position/assets or current position of the user.
 
@@ -965,7 +965,7 @@ func (a *TradingAccountAPIService) CreateAccountPositionBuilderV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -974,7 +974,7 @@ func (a *TradingAccountAPIService) CreateAccountPositionBuilderV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1008,7 +1008,7 @@ func (r ApiCreateAccountPositionMarginBalanceV5Request) Execute() (*CreateAccoun
 }
 
 /*
-CreateAccountPositionMarginBalanceV5 Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.  
+CreateAccountPositionMarginBalanceV5 Increase/decrease margin
 
 Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.
 
@@ -1126,7 +1126,7 @@ func (a *TradingAccountAPIService) CreateAccountPositionMarginBalanceV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1135,7 +1135,7 @@ func (a *TradingAccountAPIService) CreateAccountPositionMarginBalanceV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1169,7 +1169,7 @@ func (r ApiCreateAccountQuickMarginBorrowRepayV5Request) Execute() (*CreateAccou
 }
 
 /*
-CreateAccountQuickMarginBorrowRepayV5 Please note that this endpoint will be deprecated soon.  
+CreateAccountQuickMarginBorrowRepayV5 Manual borrow and repay in Quick Margin Mode
 
 Please note that this endpoint will be deprecated soon.
 
@@ -1287,7 +1287,7 @@ func (a *TradingAccountAPIService) CreateAccountQuickMarginBorrowRepayV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1296,7 +1296,7 @@ func (a *TradingAccountAPIService) CreateAccountQuickMarginBorrowRepayV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1330,7 +1330,7 @@ func (r ApiCreateAccountSetAccountLevelV5Request) Execute() (*CreateAccountSetAc
 }
 
 /*
-CreateAccountSetAccountLevelV5 You need to set on the Web/App for the first set of every account mode. If users plan to switch account modes while holding positions, they should first call the preset endpoint to conduct necessary settings, then call the precheck endpoint to get unmatched information, margin check, and other related information, and finally call the account mode switch endpoint to switch account modes.  
+CreateAccountSetAccountLevelV5 Set account mode
 
 You need to set on the Web/App for the first set of every account mode. If users plan to switch account modes while holding positions, they should first call the preset endpoint to conduct necessary settings, then call the precheck endpoint to get unmatched information, margin check, and other related information, and finally call the account mode switch endpoint to switch account modes.
 
@@ -1448,7 +1448,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAccountLevelV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1457,7 +1457,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAccountLevelV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1491,7 +1491,7 @@ func (r ApiCreateAccountSetAutoLoanV5Request) Execute() (*CreateAccountSetAutoLo
 }
 
 /*
-CreateAccountSetAutoLoanV5 Only applicable to `Multi-currency margin` and `Portfolio margin`  
+CreateAccountSetAutoLoanV5 Set auto loan
 
 Only applicable to `Multi-currency margin` and `Portfolio margin`
 
@@ -1609,7 +1609,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAutoLoanV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1618,7 +1618,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAutoLoanV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1652,7 +1652,7 @@ func (r ApiCreateAccountSetAutoRepayV5Request) Execute() (*CreateAccountSetAutoR
 }
 
 /*
-CreateAccountSetAutoRepayV5 Only applicable to `Spot mode` (enabled borrowing)  
+CreateAccountSetAutoRepayV5 Set auto repay
 
 Only applicable to `Spot mode` (enabled borrowing)
 
@@ -1770,7 +1770,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAutoRepayV5Execute(r ApiCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1779,7 +1779,7 @@ func (a *TradingAccountAPIService) CreateAccountSetAutoRepayV5Execute(r ApiCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1813,7 +1813,7 @@ func (r ApiCreateAccountSetCollateralAssetsV5Request) Execute() (*CreateAccountS
 }
 
 /*
-CreateAccountSetCollateralAssetsV5 Method for CreateAccountSetCollateralAssetsV5
+CreateAccountSetCollateralAssetsV5 Set collateral assets
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -1929,7 +1929,7 @@ func (a *TradingAccountAPIService) CreateAccountSetCollateralAssetsV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1938,7 +1938,7 @@ func (a *TradingAccountAPIService) CreateAccountSetCollateralAssetsV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1972,7 +1972,7 @@ func (r ApiCreateAccountSetGreeksV5Request) Execute() (*CreateAccountSetGreeksV5
 }
 
 /*
-CreateAccountSetGreeksV5 Set the display type of Greeks.  
+CreateAccountSetGreeksV5 Set greeks (PA/BS)
 
 Set the display type of Greeks.
 
@@ -2090,7 +2090,7 @@ func (a *TradingAccountAPIService) CreateAccountSetGreeksV5Execute(r ApiCreateAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2099,7 +2099,7 @@ func (a *TradingAccountAPIService) CreateAccountSetGreeksV5Execute(r ApiCreateAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2133,7 +2133,7 @@ func (r ApiCreateAccountSetIsolatedModeV5Request) Execute() (*CreateAccountSetIs
 }
 
 /*
-CreateAccountSetIsolatedModeV5 You can set the currency margin and futures/perpetual Isolated margin trading mode  
+CreateAccountSetIsolatedModeV5 Isolated margin trading settings
 
 You can set the currency margin and futures/perpetual Isolated margin trading mode
 
@@ -2251,7 +2251,7 @@ func (a *TradingAccountAPIService) CreateAccountSetIsolatedModeV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2260,7 +2260,7 @@ func (a *TradingAccountAPIService) CreateAccountSetIsolatedModeV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2294,7 +2294,7 @@ func (r ApiCreateAccountSetLeverageV5Request) Execute() (*CreateAccountSetLevera
 }
 
 /*
-CreateAccountSetLeverageV5   There are 10 different scenarios for leverage setting:      1. Set leverage for `MARGIN` instruments under `isolated-margin` trade mode at pairs level.    2. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Spot mode (enabled borrow) at currency level.    3. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Spot and futures mode account mode at pairs level.    4. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Multi-currency margin at currency level.    5. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Portfolio margin at currency level.    6. Set leverage for `FUTURES` instruments under `cross-margin` trade mode at underlying level.    7. Set leverage for `FUTURES` instruments under `isolated-margin` trade mode and buy/sell position mode at contract level.    8. Set leverage for `FUTURES` instruments under `isolated-margin` trade mode and long/short position mode at contract and position side level.    9. Set leverage for `SWAP` instruments under `cross-margin` trade at contract level.    10. Set leverage for `SWAP` instruments under `isolated-margin` trade mode and buy/sell position mode at contract level.    11. Set leverage for `SWAP` instruments under `isolated-margin` trade mode and long/short position mode at contract and position side level.       Note that the request parameter `posSide` is only required when margin mode is isolated in long/short position mode for FUTURES/SWAP instruments (see scenario 8 and 11 above).    Please refer to the request examples on the right for each case.     
+CreateAccountSetLeverageV5 Set leverage
 
 
 
@@ -2460,7 +2460,7 @@ func (a *TradingAccountAPIService) CreateAccountSetLeverageV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2469,7 +2469,7 @@ func (a *TradingAccountAPIService) CreateAccountSetLeverageV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2503,7 +2503,7 @@ func (r ApiCreateAccountSetPositionModeV5Request) Execute() (*CreateAccountSetPo
 }
 
 /*
-CreateAccountSetPositionModeV5 Spot and futures mode and Multi-currency mode: `FUTURES` and `SWAP` support both `long/short` mode and `net` mode. In `net` mode, users can only have positions in one direction; In `long/short` mode, users can hold positions in long and short directions.   Portfolio margin mode: `FUTURES` and `SWAP` only support `net` mode  
+CreateAccountSetPositionModeV5 Set position mode
 
 Spot and futures mode and Multi-currency mode: `FUTURES` and `SWAP` support both `long/short` mode and `net` mode. In `net` mode, users can only have positions in one direction; In `long/short` mode, users can hold positions in long and short directions.
 
@@ -2624,7 +2624,7 @@ func (a *TradingAccountAPIService) CreateAccountSetPositionModeV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2633,7 +2633,7 @@ func (a *TradingAccountAPIService) CreateAccountSetPositionModeV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2667,7 +2667,7 @@ func (r ApiCreateAccountSetRiskOffsetAmtV5Request) Execute() (*CreateAccountSetR
 }
 
 /*
-CreateAccountSetRiskOffsetAmtV5 Set risk offset amount. This does not represent the actual spot risk offset amount. Only applicable to Portfolio Margin Mode.  
+CreateAccountSetRiskOffsetAmtV5 Set risk offset amount
 
 Set risk offset amount. This does not represent the actual spot risk offset amount. Only applicable to Portfolio Margin Mode.
 
@@ -2785,7 +2785,7 @@ func (a *TradingAccountAPIService) CreateAccountSetRiskOffsetAmtV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2794,7 +2794,7 @@ func (a *TradingAccountAPIService) CreateAccountSetRiskOffsetAmtV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2828,7 +2828,7 @@ func (r ApiCreateAccountSpotManualBorrowRepayV5Request) Execute() (*CreateAccoun
 }
 
 /*
-CreateAccountSpotManualBorrowRepayV5 Only applicable to `Spot mode` (enabled borrowing)  
+CreateAccountSpotManualBorrowRepayV5 Manual borrow / repay
 
 Only applicable to `Spot mode` (enabled borrowing)
 
@@ -2946,7 +2946,7 @@ func (a *TradingAccountAPIService) CreateAccountSpotManualBorrowRepayV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2955,7 +2955,7 @@ func (a *TradingAccountAPIService) CreateAccountSpotManualBorrowRepayV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2989,7 +2989,7 @@ func (r ApiGetAccountAccountPositionRiskV5Request) Execute() (*GetAccountAccount
 }
 
 /*
-GetAccountAccountPositionRiskV5 Get account and position risk  
+GetAccountAccountPositionRiskV5 Get account and position risk
 
 Get account and position risk
 
@@ -3110,7 +3110,7 @@ func (a *TradingAccountAPIService) GetAccountAccountPositionRiskV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3119,7 +3119,7 @@ func (a *TradingAccountAPIService) GetAccountAccountPositionRiskV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3188,7 +3188,7 @@ func (r ApiGetAccountAdjustLeverageInfoV5Request) Execute() (*GetAccountAdjustLe
 }
 
 /*
-GetAccountAdjustLeverageInfoV5 Method for GetAccountAdjustLeverageInfoV5
+GetAccountAdjustLeverageInfoV5 Get leverage estimated info
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -3329,7 +3329,7 @@ func (a *TradingAccountAPIService) GetAccountAdjustLeverageInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3338,7 +3338,7 @@ func (a *TradingAccountAPIService) GetAccountAdjustLeverageInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3372,7 +3372,7 @@ func (r ApiGetAccountBalanceV5Request) Execute() (*GetAccountBalanceV5Resp, *htt
 }
 
 /*
-GetAccountBalanceV5 Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.  
+GetAccountBalanceV5 Get balance
 
 Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.
 
@@ -3493,7 +3493,7 @@ func (a *TradingAccountAPIService) GetAccountBalanceV5Execute(r ApiGetAccountBal
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3502,7 +3502,7 @@ func (a *TradingAccountAPIService) GetAccountBalanceV5Execute(r ApiGetAccountBal
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3613,7 +3613,7 @@ func (r ApiGetAccountBillsArchiveV5Request) Execute() (*GetAccountBillsArchiveV5
 }
 
 /*
-GetAccountBillsArchiveV5 Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 1 year since July 1, 2024.  
+GetAccountBillsArchiveV5 Get bills details (last 1 year)
 
 Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 1 year since July 1, 2024.
 
@@ -3798,7 +3798,7 @@ func (a *TradingAccountAPIService) GetAccountBillsArchiveV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3807,7 +3807,7 @@ func (a *TradingAccountAPIService) GetAccountBillsArchiveV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3848,7 +3848,7 @@ func (r ApiGetAccountBillsHistoryArchiveV5Request) Execute() (*GetAccountBillsHi
 }
 
 /*
-GetAccountBillsHistoryArchiveV5 Apply for bill data since 1 February, 2021 except for the current quarter.  
+GetAccountBillsHistoryArchiveV5 Get bills details (since 2021)
 
 Apply for bill data since 1 February, 2021 except for the current quarter.
 
@@ -3969,7 +3969,7 @@ func (a *TradingAccountAPIService) GetAccountBillsHistoryArchiveV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3978,7 +3978,7 @@ func (a *TradingAccountAPIService) GetAccountBillsHistoryArchiveV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4089,7 +4089,7 @@ func (r ApiGetAccountBillsV5Request) Execute() (*GetAccountBillsV5Resp, *http.Re
 }
 
 /*
-GetAccountBillsV5 Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.  
+GetAccountBillsV5 Get bills details (last 7 days)
 
 Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.
 
@@ -4274,7 +4274,7 @@ func (a *TradingAccountAPIService) GetAccountBillsV5Execute(r ApiGetAccountBills
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4283,7 +4283,7 @@ func (a *TradingAccountAPIService) GetAccountBillsV5Execute(r ApiGetAccountBills
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4324,7 +4324,7 @@ func (r ApiGetAccountCollateralAssetsV5Request) Execute() (*GetAccountCollateral
 }
 
 /*
-GetAccountCollateralAssetsV5 Method for GetAccountCollateralAssetsV5
+GetAccountCollateralAssetsV5 Get collateral assets
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -4444,7 +4444,7 @@ func (a *TradingAccountAPIService) GetAccountCollateralAssetsV5Execute(r ApiGetA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4453,7 +4453,7 @@ func (a *TradingAccountAPIService) GetAccountCollateralAssetsV5Execute(r ApiGetA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4480,7 +4480,7 @@ func (r ApiGetAccountConfigV5Request) Execute() (*GetAccountConfigV5Resp, *http.
 }
 
 /*
-GetAccountConfigV5 Retrieve current account configuration.  
+GetAccountConfigV5 Get account configuration
 
 Retrieve current account configuration.
 
@@ -4593,7 +4593,7 @@ func (a *TradingAccountAPIService) GetAccountConfigV5Execute(r ApiGetAccountConf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4602,7 +4602,7 @@ func (a *TradingAccountAPIService) GetAccountConfigV5Execute(r ApiGetAccountConf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4636,7 +4636,7 @@ func (r ApiGetAccountGreeksV5Request) Execute() (*GetAccountGreeksV5Resp, *http.
 }
 
 /*
-GetAccountGreeksV5 Retrieve a greeks list of all assets in the account.  
+GetAccountGreeksV5 Get Greeks
 
 Retrieve a greeks list of all assets in the account.
 
@@ -4755,7 +4755,7 @@ func (a *TradingAccountAPIService) GetAccountGreeksV5Execute(r ApiGetAccountGree
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4764,7 +4764,7 @@ func (a *TradingAccountAPIService) GetAccountGreeksV5Execute(r ApiGetAccountGree
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4819,7 +4819,7 @@ func (r ApiGetAccountInstrumentsV5Request) Execute() (*GetAccountInstrumentsV5Re
 }
 
 /*
-GetAccountInstrumentsV5 Retrieve available instruments info of current account.  
+GetAccountInstrumentsV5 Get instruments
 
 Retrieve available instruments info of current account.
 
@@ -4954,7 +4954,7 @@ func (a *TradingAccountAPIService) GetAccountInstrumentsV5Execute(r ApiGetAccoun
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4963,7 +4963,7 @@ func (a *TradingAccountAPIService) GetAccountInstrumentsV5Execute(r ApiGetAccoun
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5039,7 +5039,7 @@ func (r ApiGetAccountInterestAccruedV5Request) Execute() (*GetAccountInterestAcc
 }
 
 /*
-GetAccountInterestAccruedV5 Get interest accrued data. Only data within the last one year can be obtained.  
+GetAccountInterestAccruedV5 Get interest accrued data
 
 Get interest accrued data. Only data within the last one year can be obtained.
 
@@ -5194,7 +5194,7 @@ func (a *TradingAccountAPIService) GetAccountInterestAccruedV5Execute(r ApiGetAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5203,7 +5203,7 @@ func (a *TradingAccountAPIService) GetAccountInterestAccruedV5Execute(r ApiGetAc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5244,7 +5244,7 @@ func (r ApiGetAccountInterestLimitsV5Request) Execute() (*GetAccountInterestLimi
 }
 
 /*
-GetAccountInterestLimitsV5 Method for GetAccountInterestLimitsV5
+GetAccountInterestLimitsV5 Get borrow interest and limit
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -5367,7 +5367,7 @@ func (a *TradingAccountAPIService) GetAccountInterestLimitsV5Execute(r ApiGetAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5376,7 +5376,7 @@ func (a *TradingAccountAPIService) GetAccountInterestLimitsV5Execute(r ApiGetAcc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5410,7 +5410,7 @@ func (r ApiGetAccountInterestRateV5Request) Execute() (*GetAccountInterestRateV5
 }
 
 /*
-GetAccountInterestRateV5 Get the user's current leveraged currency borrowing market interest rate  
+GetAccountInterestRateV5 Get interest rate
 
 Get the user's current leveraged currency borrowing market interest rate
 
@@ -5529,7 +5529,7 @@ func (a *TradingAccountAPIService) GetAccountInterestRateV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5538,7 +5538,7 @@ func (a *TradingAccountAPIService) GetAccountInterestRateV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5586,7 +5586,7 @@ func (r ApiGetAccountLeverageInfoV5Request) Execute() (*GetAccountLeverageInfoV5
 }
 
 /*
-GetAccountLeverageInfoV5 Method for GetAccountLeverageInfoV5
+GetAccountLeverageInfoV5 Get leverage
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -5713,7 +5713,7 @@ func (a *TradingAccountAPIService) GetAccountLeverageInfoV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5722,7 +5722,7 @@ func (a *TradingAccountAPIService) GetAccountLeverageInfoV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5784,7 +5784,7 @@ func (r ApiGetAccountMaxAvailSizeV5Request) Execute() (*GetAccountMaxAvailSizeV5
 }
 
 /*
-GetAccountMaxAvailSizeV5 Available balance for isolated margin positions and SPOT, available equity for cross margin positions.  
+GetAccountMaxAvailSizeV5 Get maximum available balance/equity
 
 Available balance for isolated margin positions and SPOT, available equity for cross margin positions.
 
@@ -5920,7 +5920,7 @@ func (a *TradingAccountAPIService) GetAccountMaxAvailSizeV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5929,7 +5929,7 @@ func (a *TradingAccountAPIService) GetAccountMaxAvailSizeV5Execute(r ApiGetAccou
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5984,7 +5984,7 @@ func (r ApiGetAccountMaxLoanV5Request) Execute() (*GetAccountMaxLoanV5Resp, *htt
 }
 
 /*
-GetAccountMaxLoanV5 Method for GetAccountMaxLoanV5
+GetAccountMaxLoanV5 Get the maximum loan of instrument
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -6117,7 +6117,7 @@ func (a *TradingAccountAPIService) GetAccountMaxLoanV5Execute(r ApiGetAccountMax
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -6126,7 +6126,7 @@ func (a *TradingAccountAPIService) GetAccountMaxLoanV5Execute(r ApiGetAccountMax
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -6188,7 +6188,7 @@ func (r ApiGetAccountMaxSizeV5Request) Execute() (*GetAccountMaxSizeV5Resp, *htt
 }
 
 /*
-GetAccountMaxSizeV5 The maximum quantity to buy or sell. It corresponds to the \"sz\" from placement.  
+GetAccountMaxSizeV5 Get maximum order quantity
 
 The maximum quantity to buy or sell. It corresponds to the "sz" from placement.
 
@@ -6329,7 +6329,7 @@ func (a *TradingAccountAPIService) GetAccountMaxSizeV5Execute(r ApiGetAccountMax
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -6338,7 +6338,7 @@ func (a *TradingAccountAPIService) GetAccountMaxSizeV5Execute(r ApiGetAccountMax
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -6372,7 +6372,7 @@ func (r ApiGetAccountMaxWithdrawalV5Request) Execute() (*GetAccountMaxWithdrawal
 }
 
 /*
-GetAccountMaxWithdrawalV5 Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.  
+GetAccountMaxWithdrawalV5 Get maximum withdrawals
 
 Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.
 
@@ -6491,7 +6491,7 @@ func (a *TradingAccountAPIService) GetAccountMaxWithdrawalV5Execute(r ApiGetAcco
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -6500,7 +6500,7 @@ func (a *TradingAccountAPIService) GetAccountMaxWithdrawalV5Execute(r ApiGetAcco
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -6534,7 +6534,7 @@ func (r ApiGetAccountMmpConfigV5Request) Execute() (*GetAccountMmpConfigV5Resp, 
 }
 
 /*
-GetAccountMmpConfigV5 This endpoint is used to get MMP configure information    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+GetAccountMmpConfigV5 GET MMP Config
 
 This endpoint is used to get MMP configure information
 
@@ -6657,7 +6657,7 @@ func (a *TradingAccountAPIService) GetAccountMmpConfigV5Execute(r ApiGetAccountM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -6666,7 +6666,7 @@ func (a *TradingAccountAPIService) GetAccountMmpConfigV5Execute(r ApiGetAccountM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -6714,7 +6714,7 @@ func (r ApiGetAccountPositionTiersV5Request) Execute() (*GetAccountPositionTiers
 }
 
 /*
-GetAccountPositionTiersV5 Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.  
+GetAccountPositionTiersV5 Get PM position limitation
 
 Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.
 
@@ -6843,7 +6843,7 @@ func (a *TradingAccountAPIService) GetAccountPositionTiersV5Execute(r ApiGetAcco
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -6852,7 +6852,7 @@ func (a *TradingAccountAPIService) GetAccountPositionTiersV5Execute(r ApiGetAcco
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -6935,7 +6935,7 @@ func (r ApiGetAccountPositionsHistoryV5Request) Execute() (*GetAccountPositionsH
 }
 
 /*
-GetAccountPositionsHistoryV5 Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime. Getting positions history is supported under Portfolio margin mode since .  
+GetAccountPositionsHistoryV5 Get positions history
 
 Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime. Getting positions history is supported under Portfolio margin mode since .
 
@@ -7096,7 +7096,7 @@ func (a *TradingAccountAPIService) GetAccountPositionsHistoryV5Execute(r ApiGetA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -7105,7 +7105,7 @@ func (a *TradingAccountAPIService) GetAccountPositionsHistoryV5Execute(r ApiGetA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -7153,7 +7153,7 @@ func (r ApiGetAccountPositionsV5Request) Execute() (*GetAccountPositionsV5Resp, 
 }
 
 /*
-GetAccountPositionsV5 Retrieve information on your positions. When the account is in `net` mode, `net` positions will be displayed, and when the account is in `long/short` mode, `long` or `short` positions will be displayed. Return in reverse chronological order using ctime.  
+GetAccountPositionsV5 Get positions
 
 Retrieve information on your positions. When the account is in `net` mode, `net` positions will be displayed, and when the account is in `long/short` mode, `long` or `short` positions will be displayed. Return in reverse chronological order using ctime.
 
@@ -7284,7 +7284,7 @@ func (a *TradingAccountAPIService) GetAccountPositionsV5Execute(r ApiGetAccountP
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -7293,7 +7293,7 @@ func (a *TradingAccountAPIService) GetAccountPositionsV5Execute(r ApiGetAccountP
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -7376,7 +7376,7 @@ func (r ApiGetAccountQuickMarginBorrowRepayHistoryV5Request) Execute() (*GetAcco
 }
 
 /*
-GetAccountQuickMarginBorrowRepayHistoryV5 Get record in the past 3 months.  
+GetAccountQuickMarginBorrowRepayHistoryV5 Get borrow and repay history in Quick Margin Mode
 
 Get record in the past 3 months.
 
@@ -7537,7 +7537,7 @@ func (a *TradingAccountAPIService) GetAccountQuickMarginBorrowRepayHistoryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -7546,7 +7546,7 @@ func (a *TradingAccountAPIService) GetAccountQuickMarginBorrowRepayHistoryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -7573,7 +7573,7 @@ func (r ApiGetAccountRiskStateV5Request) Execute() (*GetAccountRiskStateV5Resp, 
 }
 
 /*
-GetAccountRiskStateV5 Only applicable to Portfolio margin account  
+GetAccountRiskStateV5 Get account risk state
 
 Only applicable to Portfolio margin account
 
@@ -7686,7 +7686,7 @@ func (a *TradingAccountAPIService) GetAccountRiskStateV5Execute(r ApiGetAccountR
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -7695,7 +7695,7 @@ func (a *TradingAccountAPIService) GetAccountRiskStateV5Execute(r ApiGetAccountR
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -7729,7 +7729,7 @@ func (r ApiGetAccountSetAccountSwitchPrecheckV5Request) Execute() (*GetAccountSe
 }
 
 /*
-GetAccountSetAccountSwitchPrecheckV5 Retrieve precheck information for account mode switching.  
+GetAccountSetAccountSwitchPrecheckV5 Precheck account mode switch
 
 Retrieve precheck information for account mode switching.
 
@@ -7846,7 +7846,7 @@ func (a *TradingAccountAPIService) GetAccountSetAccountSwitchPrecheckV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -7855,7 +7855,7 @@ func (a *TradingAccountAPIService) GetAccountSetAccountSwitchPrecheckV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -7917,7 +7917,7 @@ func (r ApiGetAccountSpotBorrowRepayHistoryV5Request) Execute() (*GetAccountSpot
 }
 
 /*
-GetAccountSpotBorrowRepayHistoryV5 Retrieve the borrow/repay history under `Spot mode`  
+GetAccountSpotBorrowRepayHistoryV5 Get borrow/repay history
 
 Retrieve the borrow/repay history under `Spot mode`
 
@@ -8060,7 +8060,7 @@ func (a *TradingAccountAPIService) GetAccountSpotBorrowRepayHistoryV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -8069,7 +8069,7 @@ func (a *TradingAccountAPIService) GetAccountSpotBorrowRepayHistoryV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -8131,7 +8131,7 @@ func (r ApiGetAccountTradeFeeV5Request) Execute() (*GetAccountTradeFeeV5Resp, *h
 }
 
 /*
-GetAccountTradeFeeV5 Method for GetAccountTradeFeeV5
+GetAccountTradeFeeV5 Get fee rates
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -8268,7 +8268,7 @@ func (a *TradingAccountAPIService) GetAccountTradeFeeV5Execute(r ApiGetAccountTr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -8277,7 +8277,7 @@ func (a *TradingAccountAPIService) GetAccountTradeFeeV5Execute(r ApiGetAccountTr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

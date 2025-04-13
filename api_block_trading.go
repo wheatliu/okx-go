@@ -41,7 +41,7 @@ func (r ApiCreateRfqCancelAllAfterV5Request) Execute() (*CreateRfqCancelAllAfter
 }
 
 /*
-CreateRfqCancelAllAfterV5 Cancel all quotes after the countdown timeout.  
+CreateRfqCancelAllAfterV5 Cancel All After
 
 Cancel all quotes after the countdown timeout.
 
@@ -159,7 +159,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllAfterV5Execute(r ApiCreateRfq
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllAfterV5Execute(r ApiCreateRfq
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -195,7 +195,7 @@ func (r ApiCreateRfqCancelAllQuotesV5Request) Execute() (*CreateRfqCancelAllQuot
 }
 
 /*
-CreateRfqCancelAllQuotesV5 Cancels all active Quotes.  
+CreateRfqCancelAllQuotesV5 Cancel all Quotes
 
 Cancels all active Quotes.
 
@@ -308,7 +308,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllQuotesV5Execute(r ApiCreateRf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -317,7 +317,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllQuotesV5Execute(r ApiCreateRf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -344,7 +344,7 @@ func (r ApiCreateRfqCancelAllRfqsV5Request) Execute() (*CreateRfqCancelAllRfqsV5
 }
 
 /*
-CreateRfqCancelAllRfqsV5 Cancels all active RFQs.  
+CreateRfqCancelAllRfqsV5 Cancel all RFQs
 
 Cancels all active RFQs.
 
@@ -457,7 +457,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllRfqsV5Execute(r ApiCreateRfqC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -466,7 +466,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelAllRfqsV5Execute(r ApiCreateRfqC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -500,7 +500,7 @@ func (r ApiCreateRfqCancelBatchQuotesV5Request) Execute() (*CreateRfqCancelBatch
 }
 
 /*
-CreateRfqCancelBatchQuotesV5 Cancel one or multiple active Quote(s) in a single batch. Maximum 100 quote orders can be canceled per request.  
+CreateRfqCancelBatchQuotesV5 Cancel multiple Quotes
 
 Cancel one or multiple active Quote(s) in a single batch. Maximum 100 quote orders can be canceled per request.
 
@@ -618,7 +618,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchQuotesV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -627,7 +627,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchQuotesV5Execute(r ApiCreate
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -661,7 +661,7 @@ func (r ApiCreateRfqCancelBatchRfqsV5Request) Execute() (*CreateRfqCancelBatchRf
 }
 
 /*
-CreateRfqCancelBatchRfqsV5 Cancel one or multiple active RFQ(s) in a single batch. Maximum 100 RFQ orders can be canceled per request.  
+CreateRfqCancelBatchRfqsV5 Cancel multiple RFQs
 
 Cancel one or multiple active RFQ(s) in a single batch. Maximum 100 RFQ orders can be canceled per request.
 
@@ -779,7 +779,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchRfqsV5Execute(r ApiCreateRf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -788,7 +788,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelBatchRfqsV5Execute(r ApiCreateRf
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -822,7 +822,7 @@ func (r ApiCreateRfqCancelQuoteV5Request) Execute() (*CreateRfqCancelQuoteV5Resp
 }
 
 /*
-CreateRfqCancelQuoteV5 Cancels an existing active Quote you have created in response to an RFQ.  
+CreateRfqCancelQuoteV5 Cancel Quote
 
 Cancels an existing active Quote you have created in response to an RFQ.
 
@@ -940,7 +940,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelQuoteV5Execute(r ApiCreateRfqCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -949,7 +949,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelQuoteV5Execute(r ApiCreateRfqCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -983,7 +983,7 @@ func (r ApiCreateRfqCancelRfqV5Request) Execute() (*CreateRfqCancelRfqV5Resp, *h
 }
 
 /*
-CreateRfqCancelRfqV5 Cancel an existing active RFQ that you have created previously.  
+CreateRfqCancelRfqV5 Cancel RFQ
 
 Cancel an existing active RFQ that you have created previously.
 
@@ -1101,7 +1101,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelRfqV5Execute(r ApiCreateRfqCance
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1110,7 +1110,7 @@ func (a *BlockTradingAPIService) CreateRfqCancelRfqV5Execute(r ApiCreateRfqCance
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1144,7 +1144,7 @@ func (r ApiCreateRfqCreateQuoteV5Request) Execute() (*CreateRfqCreateQuoteV5Resp
 }
 
 /*
-CreateRfqCreateQuoteV5 Allows the user to Quote an RFQ that they are a counterparty to. The user MUST quote the entire RFQ and not part of the legs or part of the quantity. Partial quoting is not allowed.   
+CreateRfqCreateQuoteV5 Create Quote
 
 Allows the user to Quote an RFQ that they are a counterparty to. The user MUST quote the entire RFQ and not part of the legs or part of the quantity. Partial quoting is not allowed. 
 
@@ -1262,7 +1262,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateQuoteV5Execute(r ApiCreateRfqCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1271,7 +1271,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateQuoteV5Execute(r ApiCreateRfqCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1305,7 +1305,7 @@ func (r ApiCreateRfqCreateRfqV5Request) Execute() (*CreateRfqCreateRfqV5Resp, *h
 }
 
 /*
-CreateRfqCreateRfqV5 Creates a new RFQ  To learn more, please visit   
+CreateRfqCreateRfqV5 Create RFQ
 
 Creates a new RFQ
 
@@ -1427,7 +1427,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateRfqV5Execute(r ApiCreateRfqCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1436,7 +1436,7 @@ func (a *BlockTradingAPIService) CreateRfqCreateRfqV5Execute(r ApiCreateRfqCreat
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1470,7 +1470,7 @@ func (r ApiCreateRfqExecuteQuoteV5Request) Execute() (*CreateRfqExecuteQuoteV5Re
 }
 
 /*
-CreateRfqExecuteQuoteV5 Executes a Quote. It is only used by the creator of the RFQ  
+CreateRfqExecuteQuoteV5 Execute Quote
 
 Executes a Quote. It is only used by the creator of the RFQ
 
@@ -1588,7 +1588,7 @@ func (a *BlockTradingAPIService) CreateRfqExecuteQuoteV5Execute(r ApiCreateRfqEx
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1597,7 +1597,7 @@ func (a *BlockTradingAPIService) CreateRfqExecuteQuoteV5Execute(r ApiCreateRfqEx
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1631,7 +1631,7 @@ func (r ApiCreateRfqMakerInstrumentSettingsV5Request) Execute() (*CreateRfqMaker
 }
 
 /*
-CreateRfqMakerInstrumentSettingsV5 Customize the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
+CreateRfqMakerInstrumentSettingsV5 Set Quote products
 
 Customize the products which makers want to quote and receive RFQs for, and the corresponding price and size limit. 
 
@@ -1749,7 +1749,7 @@ func (a *BlockTradingAPIService) CreateRfqMakerInstrumentSettingsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1758,7 +1758,7 @@ func (a *BlockTradingAPIService) CreateRfqMakerInstrumentSettingsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1792,7 +1792,7 @@ func (r ApiCreateRfqMmpConfigV5Request) Execute() (*CreateRfqMmpConfigV5Resp, *h
 }
 
 /*
-CreateRfqMmpConfigV5 This endpoint is used to set MMP configure and only applicable to block trading makers    
+CreateRfqMmpConfigV5 Set MMP
 
 This endpoint is used to set MMP configure and only applicable to block trading makers
 
@@ -1912,7 +1912,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpConfigV5Execute(r ApiCreateRfqMmpCo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1921,7 +1921,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpConfigV5Execute(r ApiCreateRfqMmpCo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1948,7 +1948,7 @@ func (r ApiCreateRfqMmpResetV5Request) Execute() (*CreateRfqMmpResetV5Resp, *htt
 }
 
 /*
-CreateRfqMmpResetV5 Reset the MMP status to be inactive.  
+CreateRfqMmpResetV5 Reset MMP status
 
 Reset the MMP status to be inactive.
 
@@ -2061,7 +2061,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpResetV5Execute(r ApiCreateRfqMmpRes
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2070,7 +2070,7 @@ func (a *BlockTradingAPIService) CreateRfqMmpResetV5Execute(r ApiCreateRfqMmpRes
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2104,7 +2104,7 @@ func (r ApiGetMarketBlockTickerV5Request) Execute() (*GetMarketBlockTickerV5Resp
 }
 
 /*
-GetMarketBlockTickerV5 Retrieve the latest block trading volume in the last 24 hours.  
+GetMarketBlockTickerV5 Get block ticker
 
 Retrieve the latest block trading volume in the last 24 hours.
 
@@ -2212,7 +2212,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickerV5Execute(r ApiGetMarketBlo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2221,7 +2221,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickerV5Execute(r ApiGetMarketBlo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2269,7 +2269,7 @@ func (r ApiGetMarketBlockTickersV5Request) Execute() (*GetMarketBlockTickersV5Re
 }
 
 /*
-GetMarketBlockTickersV5 Retrieve the latest block trading volume in the last 24 hours.  
+GetMarketBlockTickersV5 Get block tickers
 
 Retrieve the latest block trading volume in the last 24 hours.
 
@@ -2389,7 +2389,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickersV5Execute(r ApiGetMarketBl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2398,7 +2398,7 @@ func (a *BlockTradingAPIService) GetMarketBlockTickersV5Execute(r ApiGetMarketBl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2432,7 +2432,7 @@ func (r ApiGetPublicBlockTradesV5Request) Execute() (*GetPublicBlockTradesV5Resp
 }
 
 /*
-GetPublicBlockTradesV5 Retrieve the recent block trading transactions of an instrument. Descending order by tradeId. The data will be updated 15 minutes after the block trade execution.  
+GetPublicBlockTradesV5 Get public single-leg transactions of block trades
 
 Retrieve the recent block trading transactions of an instrument. Descending order by tradeId. The data will be updated 15 minutes after the block trade execution.
 
@@ -2540,7 +2540,7 @@ func (a *BlockTradingAPIService) GetPublicBlockTradesV5Execute(r ApiGetPublicBlo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2549,7 +2549,7 @@ func (a *BlockTradingAPIService) GetPublicBlockTradesV5Execute(r ApiGetPublicBlo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2576,7 +2576,7 @@ func (r ApiGetRfqCounterpartiesV5Request) Execute() (*GetRfqCounterpartiesV5Resp
 }
 
 /*
-GetRfqCounterpartiesV5 Retrieves the list of counterparties that the user is permitted to trade with.   
+GetRfqCounterpartiesV5 Get Counterparties
 
 Retrieves the list of counterparties that the user is permitted to trade with. 
 
@@ -2689,7 +2689,7 @@ func (a *BlockTradingAPIService) GetRfqCounterpartiesV5Execute(r ApiGetRfqCounte
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2698,7 +2698,7 @@ func (a *BlockTradingAPIService) GetRfqCounterpartiesV5Execute(r ApiGetRfqCounte
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2725,7 +2725,7 @@ func (r ApiGetRfqMakerInstrumentSettingsV5Request) Execute() (*GetRfqMakerInstru
 }
 
 /*
-GetRfqMakerInstrumentSettingsV5 Retrieve the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
+GetRfqMakerInstrumentSettingsV5 Get Quote products
 
 Retrieve the products which makers want to quote and receive RFQs for, and the corresponding price and size limit. 
 
@@ -2838,7 +2838,7 @@ func (a *BlockTradingAPIService) GetRfqMakerInstrumentSettingsV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2847,7 +2847,7 @@ func (a *BlockTradingAPIService) GetRfqMakerInstrumentSettingsV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2874,7 +2874,7 @@ func (r ApiGetRfqMmpConfigV5Request) Execute() (*GetRfqMmpConfigV5Resp, *http.Re
 }
 
 /*
-GetRfqMmpConfigV5 This endpoint is used to get MMP configure information and only applicable to block trading market makers    
+GetRfqMmpConfigV5 Get MMP Config
 
 This endpoint is used to get MMP configure information and only applicable to block trading market makers
 
@@ -2989,7 +2989,7 @@ func (a *BlockTradingAPIService) GetRfqMmpConfigV5Execute(r ApiGetRfqMmpConfigV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2998,7 +2998,7 @@ func (a *BlockTradingAPIService) GetRfqMmpConfigV5Execute(r ApiGetRfqMmpConfigV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3046,7 +3046,7 @@ func (r ApiGetRfqPublicTradesV5Request) Execute() (*GetRfqPublicTradesV5Resp, *h
 }
 
 /*
-GetRfqPublicTradesV5 Retrieves the executed block trades. The data will be updated 15 minutes after the block trade execution.  
+GetRfqPublicTradesV5 Get public multi-leg transactions of block trades
 
 Retrieves the executed block trades. The data will be updated 15 minutes after the block trade execution.
 
@@ -3168,7 +3168,7 @@ func (a *BlockTradingAPIService) GetRfqPublicTradesV5Execute(r ApiGetRfqPublicTr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3177,7 +3177,7 @@ func (a *BlockTradingAPIService) GetRfqPublicTradesV5Execute(r ApiGetRfqPublicTr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3260,7 +3260,7 @@ func (r ApiGetRfqQuotesV5Request) Execute() (*GetRfqQuotesV5Resp, *http.Response
 }
 
 /*
-GetRfqQuotesV5 Retrieve all Quotes that the user is a counterparty to (either as the creator or the receiver).  
+GetRfqQuotesV5 Get quotes
 
 Retrieve all Quotes that the user is a counterparty to (either as the creator or the receiver).
 
@@ -3421,7 +3421,7 @@ func (a *BlockTradingAPIService) GetRfqQuotesV5Execute(r ApiGetRfqQuotesV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3430,7 +3430,7 @@ func (a *BlockTradingAPIService) GetRfqQuotesV5Execute(r ApiGetRfqQuotesV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3499,7 +3499,7 @@ func (r ApiGetRfqRfqsV5Request) Execute() (*GetRfqRfqsV5Resp, *http.Response, er
 }
 
 /*
-GetRfqRfqsV5 Retrieves details of RFQs that the user is a counterparty to (either as the creator or the receiver of the RFQ).   
+GetRfqRfqsV5 Get rfqs
 
 Retrieves details of RFQs that the user is a counterparty to (either as the creator or the receiver of the RFQ). 
 
@@ -3648,7 +3648,7 @@ func (a *BlockTradingAPIService) GetRfqRfqsV5Execute(r ApiGetRfqRfqsV5Request) (
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3657,7 +3657,7 @@ func (a *BlockTradingAPIService) GetRfqRfqsV5Execute(r ApiGetRfqRfqsV5Request) (
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3761,7 +3761,7 @@ func (r ApiGetRfqTradesV5Request) Execute() (*GetRfqTradesV5Resp, *http.Response
 }
 
 /*
-GetRfqTradesV5 Retrieves the executed trades that the user is a counterparty to (either as the creator or the receiver).  
+GetRfqTradesV5 Get trades
 
 Retrieves the executed trades that the user is a counterparty to (either as the creator or the receiver).
 
@@ -3937,7 +3937,7 @@ func (a *BlockTradingAPIService) GetRfqTradesV5Execute(r ApiGetRfqTradesV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3946,7 +3946,7 @@ func (a *BlockTradingAPIService) GetRfqTradesV5Execute(r ApiGetRfqTradesV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

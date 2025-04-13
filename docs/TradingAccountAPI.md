@@ -4,51 +4,51 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAccountAccountLevelSwitchPresetV5**](TradingAccountAPI.md#CreateAccountAccountLevelSwitchPresetV5) | **Post** /api/v5/account/account-level-switch-preset | Pre-set the required information for account mode switching. When switching from &#x60;Portfolio margin mode&#x60; back to &#x60;Spot and futures mode&#x60; / &#x60;Multi-currency margin mode&#x60;, and if there are existing cross-margin contract positions, it is mandatory to pre-set leverage.  If the user does not follow the required settings, they will receive an error message during the pre-check or when setting the account mode.  
-[**CreateAccountActivateOptionV5**](TradingAccountAPI.md#CreateAccountActivateOptionV5) | **Post** /api/v5/account/activate-option | 
-[**CreateAccountBillsHistoryArchiveV5**](TradingAccountAPI.md#CreateAccountBillsHistoryArchiveV5) | **Post** /api/v5/account/bills-history-archive | Apply for bill data since 1 February, 2021 except for the current quarter.  
-[**CreateAccountMmpConfigV5**](TradingAccountAPI.md#CreateAccountMmpConfigV5) | **Post** /api/v5/account/mmp-config | This endpoint is used to set MMP configure    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
-[**CreateAccountMmpResetV5**](TradingAccountAPI.md#CreateAccountMmpResetV5) | **Post** /api/v5/account/mmp-reset | You can unfreeze by this endpoint once MMP is triggered.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
-[**CreateAccountPositionBuilderV5**](TradingAccountAPI.md#CreateAccountPositionBuilderV5) | **Post** /api/v5/account/position-builder | Calculates portfolio margin information for virtual position/assets or current position of the user.   You can add up to 200 virtual positions and 200 virtual assets in one request.  
-[**CreateAccountPositionMarginBalanceV5**](TradingAccountAPI.md#CreateAccountPositionMarginBalanceV5) | **Post** /api/v5/account/position/margin-balance | Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.  
-[**CreateAccountQuickMarginBorrowRepayV5**](TradingAccountAPI.md#CreateAccountQuickMarginBorrowRepayV5) | **Post** /api/v5/account/quick-margin-borrow-repay | Please note that this endpoint will be deprecated soon.  
-[**CreateAccountSetAccountLevelV5**](TradingAccountAPI.md#CreateAccountSetAccountLevelV5) | **Post** /api/v5/account/set-account-level | You need to set on the Web/App for the first set of every account mode. If users plan to switch account modes while holding positions, they should first call the preset endpoint to conduct necessary settings, then call the precheck endpoint to get unmatched information, margin check, and other related information, and finally call the account mode switch endpoint to switch account modes.  
-[**CreateAccountSetAutoLoanV5**](TradingAccountAPI.md#CreateAccountSetAutoLoanV5) | **Post** /api/v5/account/set-auto-loan | Only applicable to &#x60;Multi-currency margin&#x60; and &#x60;Portfolio margin&#x60;  
-[**CreateAccountSetAutoRepayV5**](TradingAccountAPI.md#CreateAccountSetAutoRepayV5) | **Post** /api/v5/account/set-auto-repay | Only applicable to &#x60;Spot mode&#x60; (enabled borrowing)  
-[**CreateAccountSetCollateralAssetsV5**](TradingAccountAPI.md#CreateAccountSetCollateralAssetsV5) | **Post** /api/v5/account/set-collateral-assets | 
-[**CreateAccountSetGreeksV5**](TradingAccountAPI.md#CreateAccountSetGreeksV5) | **Post** /api/v5/account/set-greeks | Set the display type of Greeks.  
-[**CreateAccountSetIsolatedModeV5**](TradingAccountAPI.md#CreateAccountSetIsolatedModeV5) | **Post** /api/v5/account/set-isolated-mode | You can set the currency margin and futures/perpetual Isolated margin trading mode  
-[**CreateAccountSetLeverageV5**](TradingAccountAPI.md#CreateAccountSetLeverageV5) | **Post** /api/v5/account/set-leverage |   There are 10 different scenarios for leverage setting:      1. Set leverage for &#x60;MARGIN&#x60; instruments under &#x60;isolated-margin&#x60; trade mode at pairs level.    2. Set leverage for &#x60;MARGIN&#x60; instruments under &#x60;cross-margin&#x60; trade mode and Spot mode (enabled borrow) at currency level.    3. Set leverage for &#x60;MARGIN&#x60; instruments under &#x60;cross-margin&#x60; trade mode and Spot and futures mode account mode at pairs level.    4. Set leverage for &#x60;MARGIN&#x60; instruments under &#x60;cross-margin&#x60; trade mode and Multi-currency margin at currency level.    5. Set leverage for &#x60;MARGIN&#x60; instruments under &#x60;cross-margin&#x60; trade mode and Portfolio margin at currency level.    6. Set leverage for &#x60;FUTURES&#x60; instruments under &#x60;cross-margin&#x60; trade mode at underlying level.    7. Set leverage for &#x60;FUTURES&#x60; instruments under &#x60;isolated-margin&#x60; trade mode and buy/sell position mode at contract level.    8. Set leverage for &#x60;FUTURES&#x60; instruments under &#x60;isolated-margin&#x60; trade mode and long/short position mode at contract and position side level.    9. Set leverage for &#x60;SWAP&#x60; instruments under &#x60;cross-margin&#x60; trade at contract level.    10. Set leverage for &#x60;SWAP&#x60; instruments under &#x60;isolated-margin&#x60; trade mode and buy/sell position mode at contract level.    11. Set leverage for &#x60;SWAP&#x60; instruments under &#x60;isolated-margin&#x60; trade mode and long/short position mode at contract and position side level.       Note that the request parameter &#x60;posSide&#x60; is only required when margin mode is isolated in long/short position mode for FUTURES/SWAP instruments (see scenario 8 and 11 above).    Please refer to the request examples on the right for each case.     
-[**CreateAccountSetPositionModeV5**](TradingAccountAPI.md#CreateAccountSetPositionModeV5) | **Post** /api/v5/account/set-position-mode | Spot and futures mode and Multi-currency mode: &#x60;FUTURES&#x60; and &#x60;SWAP&#x60; support both &#x60;long/short&#x60; mode and &#x60;net&#x60; mode. In &#x60;net&#x60; mode, users can only have positions in one direction; In &#x60;long/short&#x60; mode, users can hold positions in long and short directions.   Portfolio margin mode: &#x60;FUTURES&#x60; and &#x60;SWAP&#x60; only support &#x60;net&#x60; mode  
-[**CreateAccountSetRiskOffsetAmtV5**](TradingAccountAPI.md#CreateAccountSetRiskOffsetAmtV5) | **Post** /api/v5/account/set-riskOffset-amt | Set risk offset amount. This does not represent the actual spot risk offset amount. Only applicable to Portfolio Margin Mode.  
-[**CreateAccountSpotManualBorrowRepayV5**](TradingAccountAPI.md#CreateAccountSpotManualBorrowRepayV5) | **Post** /api/v5/account/spot-manual-borrow-repay | Only applicable to &#x60;Spot mode&#x60; (enabled borrowing)  
-[**GetAccountAccountPositionRiskV5**](TradingAccountAPI.md#GetAccountAccountPositionRiskV5) | **Get** /api/v5/account/account-position-risk | Get account and position risk  
-[**GetAccountAdjustLeverageInfoV5**](TradingAccountAPI.md#GetAccountAdjustLeverageInfoV5) | **Get** /api/v5/account/adjust-leverage-info | 
-[**GetAccountBalanceV5**](TradingAccountAPI.md#GetAccountBalanceV5) | **Get** /api/v5/account/balance | Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.  
-[**GetAccountBillsArchiveV5**](TradingAccountAPI.md#GetAccountBillsArchiveV5) | **Get** /api/v5/account/bills-archive | Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 1 year since July 1, 2024.  
-[**GetAccountBillsHistoryArchiveV5**](TradingAccountAPI.md#GetAccountBillsHistoryArchiveV5) | **Get** /api/v5/account/bills-history-archive | Apply for bill data since 1 February, 2021 except for the current quarter.  
-[**GetAccountBillsV5**](TradingAccountAPI.md#GetAccountBillsV5) | **Get** /api/v5/account/bills | Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.  
-[**GetAccountCollateralAssetsV5**](TradingAccountAPI.md#GetAccountCollateralAssetsV5) | **Get** /api/v5/account/collateral-assets | 
-[**GetAccountConfigV5**](TradingAccountAPI.md#GetAccountConfigV5) | **Get** /api/v5/account/config | Retrieve current account configuration.  
-[**GetAccountGreeksV5**](TradingAccountAPI.md#GetAccountGreeksV5) | **Get** /api/v5/account/greeks | Retrieve a greeks list of all assets in the account.  
-[**GetAccountInstrumentsV5**](TradingAccountAPI.md#GetAccountInstrumentsV5) | **Get** /api/v5/account/instruments | Retrieve available instruments info of current account.  
-[**GetAccountInterestAccruedV5**](TradingAccountAPI.md#GetAccountInterestAccruedV5) | **Get** /api/v5/account/interest-accrued | Get interest accrued data. Only data within the last one year can be obtained.  
-[**GetAccountInterestLimitsV5**](TradingAccountAPI.md#GetAccountInterestLimitsV5) | **Get** /api/v5/account/interest-limits | 
-[**GetAccountInterestRateV5**](TradingAccountAPI.md#GetAccountInterestRateV5) | **Get** /api/v5/account/interest-rate | Get the user&#39;s current leveraged currency borrowing market interest rate  
-[**GetAccountLeverageInfoV5**](TradingAccountAPI.md#GetAccountLeverageInfoV5) | **Get** /api/v5/account/leverage-info | 
-[**GetAccountMaxAvailSizeV5**](TradingAccountAPI.md#GetAccountMaxAvailSizeV5) | **Get** /api/v5/account/max-avail-size | Available balance for isolated margin positions and SPOT, available equity for cross margin positions.  
-[**GetAccountMaxLoanV5**](TradingAccountAPI.md#GetAccountMaxLoanV5) | **Get** /api/v5/account/max-loan | 
-[**GetAccountMaxSizeV5**](TradingAccountAPI.md#GetAccountMaxSizeV5) | **Get** /api/v5/account/max-size | The maximum quantity to buy or sell. It corresponds to the \&quot;sz\&quot; from placement.  
-[**GetAccountMaxWithdrawalV5**](TradingAccountAPI.md#GetAccountMaxWithdrawalV5) | **Get** /api/v5/account/max-withdrawal | Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.  
-[**GetAccountMmpConfigV5**](TradingAccountAPI.md#GetAccountMmpConfigV5) | **Get** /api/v5/account/mmp-config | This endpoint is used to get MMP configure information    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
-[**GetAccountPositionTiersV5**](TradingAccountAPI.md#GetAccountPositionTiersV5) | **Get** /api/v5/account/position-tiers | Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.  
-[**GetAccountPositionsHistoryV5**](TradingAccountAPI.md#GetAccountPositionsHistoryV5) | **Get** /api/v5/account/positions-history | Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime. Getting positions history is supported under Portfolio margin mode since .  
-[**GetAccountPositionsV5**](TradingAccountAPI.md#GetAccountPositionsV5) | **Get** /api/v5/account/positions | Retrieve information on your positions. When the account is in &#x60;net&#x60; mode, &#x60;net&#x60; positions will be displayed, and when the account is in &#x60;long/short&#x60; mode, &#x60;long&#x60; or &#x60;short&#x60; positions will be displayed. Return in reverse chronological order using ctime.  
-[**GetAccountQuickMarginBorrowRepayHistoryV5**](TradingAccountAPI.md#GetAccountQuickMarginBorrowRepayHistoryV5) | **Get** /api/v5/account/quick-margin-borrow-repay-history | Get record in the past 3 months.  
-[**GetAccountRiskStateV5**](TradingAccountAPI.md#GetAccountRiskStateV5) | **Get** /api/v5/account/risk-state | Only applicable to Portfolio margin account  
-[**GetAccountSetAccountSwitchPrecheckV5**](TradingAccountAPI.md#GetAccountSetAccountSwitchPrecheckV5) | **Get** /api/v5/account/set-account-switch-precheck | Retrieve precheck information for account mode switching.  
-[**GetAccountSpotBorrowRepayHistoryV5**](TradingAccountAPI.md#GetAccountSpotBorrowRepayHistoryV5) | **Get** /api/v5/account/spot-borrow-repay-history | Retrieve the borrow/repay history under &#x60;Spot mode&#x60;  
-[**GetAccountTradeFeeV5**](TradingAccountAPI.md#GetAccountTradeFeeV5) | **Get** /api/v5/account/trade-fee | 
+[**CreateAccountAccountLevelSwitchPresetV5**](TradingAccountAPI.md#CreateAccountAccountLevelSwitchPresetV5) | **Post** /api/v5/account/account-level-switch-preset | Preset account mode switch
+[**CreateAccountActivateOptionV5**](TradingAccountAPI.md#CreateAccountActivateOptionV5) | **Post** /api/v5/account/activate-option | Activate option
+[**CreateAccountBillsHistoryArchiveV5**](TradingAccountAPI.md#CreateAccountBillsHistoryArchiveV5) | **Post** /api/v5/account/bills-history-archive | Apply bills details (since 2021)
+[**CreateAccountMmpConfigV5**](TradingAccountAPI.md#CreateAccountMmpConfigV5) | **Post** /api/v5/account/mmp-config | Set MMP
+[**CreateAccountMmpResetV5**](TradingAccountAPI.md#CreateAccountMmpResetV5) | **Post** /api/v5/account/mmp-reset | Reset MMP Status
+[**CreateAccountPositionBuilderV5**](TradingAccountAPI.md#CreateAccountPositionBuilderV5) | **Post** /api/v5/account/position-builder | Position builder (new)
+[**CreateAccountPositionMarginBalanceV5**](TradingAccountAPI.md#CreateAccountPositionMarginBalanceV5) | **Post** /api/v5/account/position/margin-balance | Increase/decrease margin
+[**CreateAccountQuickMarginBorrowRepayV5**](TradingAccountAPI.md#CreateAccountQuickMarginBorrowRepayV5) | **Post** /api/v5/account/quick-margin-borrow-repay | Manual borrow and repay in Quick Margin Mode
+[**CreateAccountSetAccountLevelV5**](TradingAccountAPI.md#CreateAccountSetAccountLevelV5) | **Post** /api/v5/account/set-account-level | Set account mode
+[**CreateAccountSetAutoLoanV5**](TradingAccountAPI.md#CreateAccountSetAutoLoanV5) | **Post** /api/v5/account/set-auto-loan | Set auto loan
+[**CreateAccountSetAutoRepayV5**](TradingAccountAPI.md#CreateAccountSetAutoRepayV5) | **Post** /api/v5/account/set-auto-repay | Set auto repay
+[**CreateAccountSetCollateralAssetsV5**](TradingAccountAPI.md#CreateAccountSetCollateralAssetsV5) | **Post** /api/v5/account/set-collateral-assets | Set collateral assets
+[**CreateAccountSetGreeksV5**](TradingAccountAPI.md#CreateAccountSetGreeksV5) | **Post** /api/v5/account/set-greeks | Set greeks (PA/BS)
+[**CreateAccountSetIsolatedModeV5**](TradingAccountAPI.md#CreateAccountSetIsolatedModeV5) | **Post** /api/v5/account/set-isolated-mode | Isolated margin trading settings
+[**CreateAccountSetLeverageV5**](TradingAccountAPI.md#CreateAccountSetLeverageV5) | **Post** /api/v5/account/set-leverage | Set leverage
+[**CreateAccountSetPositionModeV5**](TradingAccountAPI.md#CreateAccountSetPositionModeV5) | **Post** /api/v5/account/set-position-mode | Set position mode
+[**CreateAccountSetRiskOffsetAmtV5**](TradingAccountAPI.md#CreateAccountSetRiskOffsetAmtV5) | **Post** /api/v5/account/set-riskOffset-amt | Set risk offset amount
+[**CreateAccountSpotManualBorrowRepayV5**](TradingAccountAPI.md#CreateAccountSpotManualBorrowRepayV5) | **Post** /api/v5/account/spot-manual-borrow-repay | Manual borrow / repay
+[**GetAccountAccountPositionRiskV5**](TradingAccountAPI.md#GetAccountAccountPositionRiskV5) | **Get** /api/v5/account/account-position-risk | Get account and position risk
+[**GetAccountAdjustLeverageInfoV5**](TradingAccountAPI.md#GetAccountAdjustLeverageInfoV5) | **Get** /api/v5/account/adjust-leverage-info | Get leverage estimated info
+[**GetAccountBalanceV5**](TradingAccountAPI.md#GetAccountBalanceV5) | **Get** /api/v5/account/balance | Get balance
+[**GetAccountBillsArchiveV5**](TradingAccountAPI.md#GetAccountBillsArchiveV5) | **Get** /api/v5/account/bills-archive | Get bills details (last 1 year)
+[**GetAccountBillsHistoryArchiveV5**](TradingAccountAPI.md#GetAccountBillsHistoryArchiveV5) | **Get** /api/v5/account/bills-history-archive | Get bills details (since 2021)
+[**GetAccountBillsV5**](TradingAccountAPI.md#GetAccountBillsV5) | **Get** /api/v5/account/bills | Get bills details (last 7 days)
+[**GetAccountCollateralAssetsV5**](TradingAccountAPI.md#GetAccountCollateralAssetsV5) | **Get** /api/v5/account/collateral-assets | Get collateral assets
+[**GetAccountConfigV5**](TradingAccountAPI.md#GetAccountConfigV5) | **Get** /api/v5/account/config | Get account configuration
+[**GetAccountGreeksV5**](TradingAccountAPI.md#GetAccountGreeksV5) | **Get** /api/v5/account/greeks | Get Greeks
+[**GetAccountInstrumentsV5**](TradingAccountAPI.md#GetAccountInstrumentsV5) | **Get** /api/v5/account/instruments | Get instruments
+[**GetAccountInterestAccruedV5**](TradingAccountAPI.md#GetAccountInterestAccruedV5) | **Get** /api/v5/account/interest-accrued | Get interest accrued data
+[**GetAccountInterestLimitsV5**](TradingAccountAPI.md#GetAccountInterestLimitsV5) | **Get** /api/v5/account/interest-limits | Get borrow interest and limit
+[**GetAccountInterestRateV5**](TradingAccountAPI.md#GetAccountInterestRateV5) | **Get** /api/v5/account/interest-rate | Get interest rate
+[**GetAccountLeverageInfoV5**](TradingAccountAPI.md#GetAccountLeverageInfoV5) | **Get** /api/v5/account/leverage-info | Get leverage
+[**GetAccountMaxAvailSizeV5**](TradingAccountAPI.md#GetAccountMaxAvailSizeV5) | **Get** /api/v5/account/max-avail-size | Get maximum available balance/equity
+[**GetAccountMaxLoanV5**](TradingAccountAPI.md#GetAccountMaxLoanV5) | **Get** /api/v5/account/max-loan | Get the maximum loan of instrument
+[**GetAccountMaxSizeV5**](TradingAccountAPI.md#GetAccountMaxSizeV5) | **Get** /api/v5/account/max-size | Get maximum order quantity
+[**GetAccountMaxWithdrawalV5**](TradingAccountAPI.md#GetAccountMaxWithdrawalV5) | **Get** /api/v5/account/max-withdrawal | Get maximum withdrawals
+[**GetAccountMmpConfigV5**](TradingAccountAPI.md#GetAccountMmpConfigV5) | **Get** /api/v5/account/mmp-config | GET MMP Config
+[**GetAccountPositionTiersV5**](TradingAccountAPI.md#GetAccountPositionTiersV5) | **Get** /api/v5/account/position-tiers | Get PM position limitation
+[**GetAccountPositionsHistoryV5**](TradingAccountAPI.md#GetAccountPositionsHistoryV5) | **Get** /api/v5/account/positions-history | Get positions history
+[**GetAccountPositionsV5**](TradingAccountAPI.md#GetAccountPositionsV5) | **Get** /api/v5/account/positions | Get positions
+[**GetAccountQuickMarginBorrowRepayHistoryV5**](TradingAccountAPI.md#GetAccountQuickMarginBorrowRepayHistoryV5) | **Get** /api/v5/account/quick-margin-borrow-repay-history | Get borrow and repay history in Quick Margin Mode
+[**GetAccountRiskStateV5**](TradingAccountAPI.md#GetAccountRiskStateV5) | **Get** /api/v5/account/risk-state | Get account risk state
+[**GetAccountSetAccountSwitchPrecheckV5**](TradingAccountAPI.md#GetAccountSetAccountSwitchPrecheckV5) | **Get** /api/v5/account/set-account-switch-precheck | Precheck account mode switch
+[**GetAccountSpotBorrowRepayHistoryV5**](TradingAccountAPI.md#GetAccountSpotBorrowRepayHistoryV5) | **Get** /api/v5/account/spot-borrow-repay-history | Get borrow/repay history
+[**GetAccountTradeFeeV5**](TradingAccountAPI.md#GetAccountTradeFeeV5) | **Get** /api/v5/account/trade-fee | Get fee rates
 
 
 
@@ -56,7 +56,7 @@ Method | HTTP request | Description
 
 > CreateAccountAccountLevelSwitchPresetV5Resp CreateAccountAccountLevelSwitchPresetV5(ctx).CreateAccountAccountLevelSwitchPresetV5Req(createAccountAccountLevelSwitchPresetV5Req).Execute()
 
-Pre-set the required information for account mode switching. When switching from `Portfolio margin mode` back to `Spot and futures mode` / `Multi-currency margin mode`, and if there are existing cross-margin contract positions, it is mandatory to pre-set leverage.  If the user does not follow the required settings, they will receive an error message during the pre-check or when setting the account mode.  
+Preset account mode switch
 
 
 
@@ -122,7 +122,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountActivateOptionV5Resp CreateAccountActivateOptionV5(ctx).Execute()
 
-
+Activate option
 
 
 
@@ -183,7 +183,7 @@ Other parameters are passed through a pointer to a apiCreateAccountActivateOptio
 
 > CreateAccountBillsHistoryArchiveV5Resp CreateAccountBillsHistoryArchiveV5(ctx).CreateAccountBillsHistoryArchiveV5Req(createAccountBillsHistoryArchiveV5Req).Execute()
 
-Apply for bill data since 1 February, 2021 except for the current quarter.  
+Apply bills details (since 2021)
 
 
 
@@ -249,7 +249,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountMmpConfigV5Resp CreateAccountMmpConfigV5(ctx).CreateAccountMmpConfigV5Req(createAccountMmpConfigV5Req).Execute()
 
-This endpoint is used to set MMP configure    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+Set MMP
 
 
 
@@ -315,7 +315,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountMmpResetV5Resp CreateAccountMmpResetV5(ctx).CreateAccountMmpResetV5Req(createAccountMmpResetV5Req).Execute()
 
-You can unfreeze by this endpoint once MMP is triggered.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+Reset MMP Status
 
 
 
@@ -381,7 +381,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountPositionBuilderV5Resp CreateAccountPositionBuilderV5(ctx).CreateAccountPositionBuilderV5Req(createAccountPositionBuilderV5Req).Execute()
 
-Calculates portfolio margin information for virtual position/assets or current position of the user.   You can add up to 200 virtual positions and 200 virtual assets in one request.  
+Position builder (new)
 
 
 
@@ -447,7 +447,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountPositionMarginBalanceV5Resp CreateAccountPositionMarginBalanceV5(ctx).CreateAccountPositionMarginBalanceV5Req(createAccountPositionMarginBalanceV5Req).Execute()
 
-Increase or decrease the margin of the isolated position. Margin reduction may result in the change of the actual leverage.  
+Increase/decrease margin
 
 
 
@@ -513,7 +513,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountQuickMarginBorrowRepayV5Resp CreateAccountQuickMarginBorrowRepayV5(ctx).CreateAccountQuickMarginBorrowRepayV5Req(createAccountQuickMarginBorrowRepayV5Req).Execute()
 
-Please note that this endpoint will be deprecated soon.  
+Manual borrow and repay in Quick Margin Mode
 
 
 
@@ -579,7 +579,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetAccountLevelV5Resp CreateAccountSetAccountLevelV5(ctx).CreateAccountSetAccountLevelV5Req(createAccountSetAccountLevelV5Req).Execute()
 
-You need to set on the Web/App for the first set of every account mode. If users plan to switch account modes while holding positions, they should first call the preset endpoint to conduct necessary settings, then call the precheck endpoint to get unmatched information, margin check, and other related information, and finally call the account mode switch endpoint to switch account modes.  
+Set account mode
 
 
 
@@ -645,7 +645,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetAutoLoanV5Resp CreateAccountSetAutoLoanV5(ctx).CreateAccountSetAutoLoanV5Req(createAccountSetAutoLoanV5Req).Execute()
 
-Only applicable to `Multi-currency margin` and `Portfolio margin`  
+Set auto loan
 
 
 
@@ -711,7 +711,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetAutoRepayV5Resp CreateAccountSetAutoRepayV5(ctx).CreateAccountSetAutoRepayV5Req(createAccountSetAutoRepayV5Req).Execute()
 
-Only applicable to `Spot mode` (enabled borrowing)  
+Set auto repay
 
 
 
@@ -777,7 +777,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetCollateralAssetsV5Resp CreateAccountSetCollateralAssetsV5(ctx).CreateAccountSetCollateralAssetsV5Req(createAccountSetCollateralAssetsV5Req).Execute()
 
-
+Set collateral assets
 
 
 
@@ -843,7 +843,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetGreeksV5Resp CreateAccountSetGreeksV5(ctx).CreateAccountSetGreeksV5Req(createAccountSetGreeksV5Req).Execute()
 
-Set the display type of Greeks.  
+Set greeks (PA/BS)
 
 
 
@@ -909,7 +909,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetIsolatedModeV5Resp CreateAccountSetIsolatedModeV5(ctx).CreateAccountSetIsolatedModeV5Req(createAccountSetIsolatedModeV5Req).Execute()
 
-You can set the currency margin and futures/perpetual Isolated margin trading mode  
+Isolated margin trading settings
 
 
 
@@ -975,7 +975,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetLeverageV5Resp CreateAccountSetLeverageV5(ctx).CreateAccountSetLeverageV5Req(createAccountSetLeverageV5Req).Execute()
 
-  There are 10 different scenarios for leverage setting:      1. Set leverage for `MARGIN` instruments under `isolated-margin` trade mode at pairs level.    2. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Spot mode (enabled borrow) at currency level.    3. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Spot and futures mode account mode at pairs level.    4. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Multi-currency margin at currency level.    5. Set leverage for `MARGIN` instruments under `cross-margin` trade mode and Portfolio margin at currency level.    6. Set leverage for `FUTURES` instruments under `cross-margin` trade mode at underlying level.    7. Set leverage for `FUTURES` instruments under `isolated-margin` trade mode and buy/sell position mode at contract level.    8. Set leverage for `FUTURES` instruments under `isolated-margin` trade mode and long/short position mode at contract and position side level.    9. Set leverage for `SWAP` instruments under `cross-margin` trade at contract level.    10. Set leverage for `SWAP` instruments under `isolated-margin` trade mode and buy/sell position mode at contract level.    11. Set leverage for `SWAP` instruments under `isolated-margin` trade mode and long/short position mode at contract and position side level.       Note that the request parameter `posSide` is only required when margin mode is isolated in long/short position mode for FUTURES/SWAP instruments (see scenario 8 and 11 above).    Please refer to the request examples on the right for each case.     
+Set leverage
 
 
 
@@ -1041,7 +1041,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetPositionModeV5Resp CreateAccountSetPositionModeV5(ctx).CreateAccountSetPositionModeV5Req(createAccountSetPositionModeV5Req).Execute()
 
-Spot and futures mode and Multi-currency mode: `FUTURES` and `SWAP` support both `long/short` mode and `net` mode. In `net` mode, users can only have positions in one direction; In `long/short` mode, users can hold positions in long and short directions.   Portfolio margin mode: `FUTURES` and `SWAP` only support `net` mode  
+Set position mode
 
 
 
@@ -1107,7 +1107,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSetRiskOffsetAmtV5Resp CreateAccountSetRiskOffsetAmtV5(ctx).CreateAccountSetRiskOffsetAmtV5Req(createAccountSetRiskOffsetAmtV5Req).Execute()
 
-Set risk offset amount. This does not represent the actual spot risk offset amount. Only applicable to Portfolio Margin Mode.  
+Set risk offset amount
 
 
 
@@ -1173,7 +1173,7 @@ Name | Type | Description  | Notes
 
 > CreateAccountSpotManualBorrowRepayV5Resp CreateAccountSpotManualBorrowRepayV5(ctx).CreateAccountSpotManualBorrowRepayV5Req(createAccountSpotManualBorrowRepayV5Req).Execute()
 
-Only applicable to `Spot mode` (enabled borrowing)  
+Manual borrow / repay
 
 
 
@@ -1239,7 +1239,7 @@ Name | Type | Description  | Notes
 
 > GetAccountAccountPositionRiskV5Resp GetAccountAccountPositionRiskV5(ctx).InstType(instType).Execute()
 
-Get account and position risk  
+Get account and position risk
 
 
 
@@ -1305,7 +1305,7 @@ Name | Type | Description  | Notes
 
 > GetAccountAdjustLeverageInfoV5Resp GetAccountAdjustLeverageInfoV5(ctx).InstType(instType).MgnMode(mgnMode).Lever(lever).InstId(instId).Ccy(ccy).PosSide(posSide).Execute()
 
-
+Get leverage estimated info
 
 
 
@@ -1381,7 +1381,7 @@ Name | Type | Description  | Notes
 
 > GetAccountBalanceV5Resp GetAccountBalanceV5(ctx).Ccy(ccy).Execute()
 
-Retrieve a list of assets (with non-zero balance), remaining balance, and available amount in the trading account.  
+Get balance
 
 
 
@@ -1447,7 +1447,7 @@ Name | Type | Description  | Notes
 
 > GetAccountBillsArchiveV5Resp GetAccountBillsArchiveV5(ctx).InstType(instType).InstId(instId).Ccy(ccy).MgnMode(mgnMode).CtType(ctType).Type_(type_).SubType(subType).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve the account’s bills. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with most recent first. This endpoint can retrieve data from the last 1 year since July 1, 2024.  
+Get bills details (last 1 year)
 
 
 
@@ -1535,7 +1535,7 @@ Name | Type | Description  | Notes
 
 > GetAccountBillsHistoryArchiveV5Resp GetAccountBillsHistoryArchiveV5(ctx).Year(year).Quarter(quarter).Execute()
 
-Apply for bill data since 1 February, 2021 except for the current quarter.  
+Get bills details (since 2021)
 
 
 
@@ -1603,7 +1603,7 @@ Name | Type | Description  | Notes
 
 > GetAccountBillsV5Resp GetAccountBillsV5(ctx).InstType(instType).InstId(instId).Ccy(ccy).MgnMode(mgnMode).CtType(ctType).Type_(type_).SubType(subType).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve the bills of the account. The bill refers to all transaction records that result in changing the balance of an account. Pagination is supported, and the response is sorted with the most recent first. This endpoint can retrieve data from the last 7 days.  
+Get bills details (last 7 days)
 
 
 
@@ -1691,7 +1691,7 @@ Name | Type | Description  | Notes
 
 > GetAccountCollateralAssetsV5Resp GetAccountCollateralAssetsV5(ctx).Ccy(ccy).CollateralEnabled(collateralEnabled).Execute()
 
-
+Get collateral assets
 
 
 
@@ -1759,7 +1759,7 @@ Name | Type | Description  | Notes
 
 > GetAccountConfigV5Resp GetAccountConfigV5(ctx).Execute()
 
-Retrieve current account configuration.  
+Get account configuration
 
 
 
@@ -1820,7 +1820,7 @@ Other parameters are passed through a pointer to a apiGetAccountConfigV5Request 
 
 > GetAccountGreeksV5Resp GetAccountGreeksV5(ctx).Ccy(ccy).Execute()
 
-Retrieve a greeks list of all assets in the account.  
+Get Greeks
 
 
 
@@ -1886,7 +1886,7 @@ Name | Type | Description  | Notes
 
 > GetAccountInstrumentsV5Resp GetAccountInstrumentsV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).Execute()
 
-Retrieve available instruments info of current account.  
+Get instruments
 
 
 
@@ -1958,7 +1958,7 @@ Name | Type | Description  | Notes
 
 > GetAccountInterestAccruedV5Resp GetAccountInterestAccruedV5(ctx).Type_(type_).Ccy(ccy).InstId(instId).MgnMode(mgnMode).After(after).Before(before).Limit(limit).Execute()
 
-Get interest accrued data. Only data within the last one year can be obtained.  
+Get interest accrued data
 
 
 
@@ -2036,7 +2036,7 @@ Name | Type | Description  | Notes
 
 > GetAccountInterestLimitsV5Resp GetAccountInterestLimitsV5(ctx).Type_(type_).Ccy(ccy).Execute()
 
-
+Get borrow interest and limit
 
 
 
@@ -2104,7 +2104,7 @@ Name | Type | Description  | Notes
 
 > GetAccountInterestRateV5Resp GetAccountInterestRateV5(ctx).Ccy(ccy).Execute()
 
-Get the user's current leveraged currency borrowing market interest rate  
+Get interest rate
 
 
 
@@ -2170,7 +2170,7 @@ Name | Type | Description  | Notes
 
 > GetAccountLeverageInfoV5Resp GetAccountLeverageInfoV5(ctx).MgnMode(mgnMode).InstId(instId).Ccy(ccy).Execute()
 
-
+Get leverage
 
 
 
@@ -2240,7 +2240,7 @@ Name | Type | Description  | Notes
 
 > GetAccountMaxAvailSizeV5Resp GetAccountMaxAvailSizeV5(ctx).InstId(instId).TdMode(tdMode).Ccy(ccy).ReduceOnly(reduceOnly).Px(px).Execute()
 
-Available balance for isolated margin positions and SPOT, available equity for cross margin positions.  
+Get maximum available balance/equity
 
 
 
@@ -2314,7 +2314,7 @@ Name | Type | Description  | Notes
 
 > GetAccountMaxLoanV5Resp GetAccountMaxLoanV5(ctx).MgnMode(mgnMode).InstId(instId).Ccy(ccy).MgnCcy(mgnCcy).Execute()
 
-
+Get the maximum loan of instrument
 
 
 
@@ -2386,7 +2386,7 @@ Name | Type | Description  | Notes
 
 > GetAccountMaxSizeV5Resp GetAccountMaxSizeV5(ctx).InstId(instId).TdMode(tdMode).Ccy(ccy).Px(px).Leverage(leverage).Execute()
 
-The maximum quantity to buy or sell. It corresponds to the \"sz\" from placement.  
+Get maximum order quantity
 
 
 
@@ -2460,7 +2460,7 @@ Name | Type | Description  | Notes
 
 > GetAccountMaxWithdrawalV5Resp GetAccountMaxWithdrawalV5(ctx).Ccy(ccy).Execute()
 
-Retrieve the maximum transferable amount from trading account to funding account. If no currency is specified, the transferable amount of all owned currencies will be returned.  
+Get maximum withdrawals
 
 
 
@@ -2526,7 +2526,7 @@ Name | Type | Description  | Notes
 
 > GetAccountMmpConfigV5Resp GetAccountMmpConfigV5(ctx).InstFamily(instFamily).Execute()
 
-This endpoint is used to get MMP configure information    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+GET MMP Config
 
 
 
@@ -2592,7 +2592,7 @@ Name | Type | Description  | Notes
 
 > GetAccountPositionTiersV5Resp GetAccountPositionTiersV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).Execute()
 
-Retrieve cross position limitation of SWAP/FUTURES/OPTION under Portfolio margin mode.  
+Get PM position limitation
 
 
 
@@ -2662,7 +2662,7 @@ Name | Type | Description  | Notes
 
 > GetAccountPositionsHistoryV5Resp GetAccountPositionsHistoryV5(ctx).InstType(instType).InstId(instId).MgnMode(mgnMode).Type_(type_).PosId(posId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime. Getting positions history is supported under Portfolio margin mode since .  
+Get positions history
 
 
 
@@ -2742,7 +2742,7 @@ Name | Type | Description  | Notes
 
 > GetAccountPositionsV5Resp GetAccountPositionsV5(ctx).InstType(instType).InstId(instId).PosId(posId).Execute()
 
-Retrieve information on your positions. When the account is in `net` mode, `net` positions will be displayed, and when the account is in `long/short` mode, `long` or `short` positions will be displayed. Return in reverse chronological order using ctime.  
+Get positions
 
 
 
@@ -2812,7 +2812,7 @@ Name | Type | Description  | Notes
 
 > GetAccountQuickMarginBorrowRepayHistoryV5Resp GetAccountQuickMarginBorrowRepayHistoryV5(ctx).InstId(instId).Ccy(ccy).Side(side).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Get record in the past 3 months.  
+Get borrow and repay history in Quick Margin Mode
 
 
 
@@ -2892,7 +2892,7 @@ Name | Type | Description  | Notes
 
 > GetAccountRiskStateV5Resp GetAccountRiskStateV5(ctx).Execute()
 
-Only applicable to Portfolio margin account  
+Get account risk state
 
 
 
@@ -2953,7 +2953,7 @@ Other parameters are passed through a pointer to a apiGetAccountRiskStateV5Reque
 
 > GetAccountSetAccountSwitchPrecheckV5Resp GetAccountSetAccountSwitchPrecheckV5(ctx).AcctLv(acctLv).Execute()
 
-Retrieve precheck information for account mode switching.  
+Precheck account mode switch
 
 
 
@@ -3019,7 +3019,7 @@ Name | Type | Description  | Notes
 
 > GetAccountSpotBorrowRepayHistoryV5Resp GetAccountSpotBorrowRepayHistoryV5(ctx).Ccy(ccy).Type_(type_).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the borrow/repay history under `Spot mode`  
+Get borrow/repay history
 
 
 
@@ -3093,7 +3093,7 @@ Name | Type | Description  | Notes
 
 > GetAccountTradeFeeV5Resp GetAccountTradeFeeV5(ctx).InstType(instType).RuleType(ruleType).InstId(instId).Uly(uly).InstFamily(instFamily).Execute()
 
-
+Get fee rates
 
 
 

@@ -4,12 +4,12 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateFinanceStakingDefiCancelV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiCancelV5) | **Post** /api/v5/finance/staking-defi/cancel | 
-[**CreateFinanceStakingDefiPurchaseV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiPurchaseV5) | **Post** /api/v5/finance/staking-defi/purchase | 
-[**CreateFinanceStakingDefiRedeemV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiRedeemV5) | **Post** /api/v5/finance/staking-defi/redeem | 
-[**GetFinanceStakingDefiOffersV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOffersV5) | **Get** /api/v5/finance/staking-defi/offers | 
-[**GetFinanceStakingDefiOrdersActiveV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOrdersActiveV5) | **Get** /api/v5/finance/staking-defi/orders-active | 
-[**GetFinanceStakingDefiOrdersHistoryV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOrdersHistoryV5) | **Get** /api/v5/finance/staking-defi/orders-history | 
+[**CreateFinanceStakingDefiCancelV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiCancelV5) | **Post** /api/v5/finance/staking-defi/cancel | POST / Cancel purchases/redemptions
+[**CreateFinanceStakingDefiPurchaseV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiPurchaseV5) | **Post** /api/v5/finance/staking-defi/purchase | POST / Purchase
+[**CreateFinanceStakingDefiRedeemV5**](OnChainEarnAPI.md#CreateFinanceStakingDefiRedeemV5) | **Post** /api/v5/finance/staking-defi/redeem | POST / Redeem
+[**GetFinanceStakingDefiOffersV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOffersV5) | **Get** /api/v5/finance/staking-defi/offers | GET / Offers
+[**GetFinanceStakingDefiOrdersActiveV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOrdersActiveV5) | **Get** /api/v5/finance/staking-defi/orders-active | GET / Active orders
+[**GetFinanceStakingDefiOrdersHistoryV5**](OnChainEarnAPI.md#GetFinanceStakingDefiOrdersHistoryV5) | **Get** /api/v5/finance/staking-defi/orders-history | GET / Order history
 
 
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 > CreateFinanceStakingDefiCancelV5Resp CreateFinanceStakingDefiCancelV5(ctx).CreateFinanceStakingDefiCancelV5Req(createFinanceStakingDefiCancelV5Req).Execute()
 
-
+POST / Cancel purchases/redemptions
 
 
 
@@ -34,7 +34,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiCancelV5Req := *openapiclient.NewCreateFinanceStakingDefiCancelV5Req("OrdId_example", "ProtocolType_example") // CreateFinanceStakingDefiCancelV5Req | The request body for CreateFinanceStaking-DefiCancelV5
+	createFinanceStakingDefiCancelV5Req := *openapiclient.NewCreateFinanceStakingDefiCancelV5Req("OrdId_example", "ProtocolType_example") // CreateFinanceStakingDefiCancelV5Req | The request body for CreateFinanceStakingDefiCancelV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiCa
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiCancelV5Req** | [**CreateFinanceStakingDefiCancelV5Req**](CreateFinanceStakingDefiCancelV5Req.md) | The request body for CreateFinanceStaking-DefiCancelV5 | 
+ **createFinanceStakingDefiCancelV5Req** | [**CreateFinanceStakingDefiCancelV5Req**](CreateFinanceStakingDefiCancelV5Req.md) | The request body for CreateFinanceStakingDefiCancelV5 | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceStakingDefiPurchaseV5Resp CreateFinanceStakingDefiPurchaseV5(ctx).CreateFinanceStakingDefiPurchaseV5Req(createFinanceStakingDefiPurchaseV5Req).Execute()
 
-
+POST / Purchase
 
 
 
@@ -100,7 +100,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiPurchaseV5Req([]openapiclient.CreateFinanceStakingDefiPurchaseV5ReqInvestDataInner{*openapiclient.NewCreateFinanceStakingDefiPurchaseV5ReqInvestDataInner()}, "ProductId_example") // CreateFinanceStakingDefiPurchaseV5Req | The request body for CreateFinanceStaking-DefiPurchaseV5
+	createFinanceStakingDefiPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiPurchaseV5Req([]openapiclient.CreateFinanceStakingDefiPurchaseV5ReqInvestDataInner{*openapiclient.NewCreateFinanceStakingDefiPurchaseV5ReqInvestDataInner()}, "ProductId_example") // CreateFinanceStakingDefiPurchaseV5Req | The request body for CreateFinanceStakingDefiPurchaseV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiPu
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiPurchaseV5Req** | [**CreateFinanceStakingDefiPurchaseV5Req**](CreateFinanceStakingDefiPurchaseV5Req.md) | The request body for CreateFinanceStaking-DefiPurchaseV5 | 
+ **createFinanceStakingDefiPurchaseV5Req** | [**CreateFinanceStakingDefiPurchaseV5Req**](CreateFinanceStakingDefiPurchaseV5Req.md) | The request body for CreateFinanceStakingDefiPurchaseV5 | 
 
 ### Return type
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceStakingDefiRedeemV5Resp CreateFinanceStakingDefiRedeemV5(ctx).CreateFinanceStakingDefiRedeemV5Req(createFinanceStakingDefiRedeemV5Req).Execute()
 
-
+POST / Redeem
 
 
 
@@ -166,7 +166,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiRedeemV5Req("OrdId_example", "ProtocolType_example") // CreateFinanceStakingDefiRedeemV5Req | The request body for CreateFinanceStaking-DefiRedeemV5
+	createFinanceStakingDefiRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiRedeemV5Req("OrdId_example", "ProtocolType_example") // CreateFinanceStakingDefiRedeemV5Req | The request body for CreateFinanceStakingDefiRedeemV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -191,7 +191,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiRe
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiRedeemV5Req** | [**CreateFinanceStakingDefiRedeemV5Req**](CreateFinanceStakingDefiRedeemV5Req.md) | The request body for CreateFinanceStaking-DefiRedeemV5 | 
+ **createFinanceStakingDefiRedeemV5Req** | [**CreateFinanceStakingDefiRedeemV5Req**](CreateFinanceStakingDefiRedeemV5Req.md) | The request body for CreateFinanceStakingDefiRedeemV5 | 
 
 ### Return type
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceStakingDefiOffersV5Resp GetFinanceStakingDefiOffersV5(ctx).ProductId(productId).ProtocolType(protocolType).Ccy(ccy).Execute()
 
-
+GET / Offers
 
 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceStakingDefiOrdersActiveV5Resp GetFinanceStakingDefiOrdersActiveV5(ctx).ProductId(productId).ProtocolType(protocolType).Ccy(ccy).State(state).Execute()
 
-
+GET / Active orders
 
 
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceStakingDefiOrdersHistoryV5Resp GetFinanceStakingDefiOrdersHistoryV5(ctx).ProductId(productId).ProtocolType(protocolType).Ccy(ccy).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Order history
 
 
 

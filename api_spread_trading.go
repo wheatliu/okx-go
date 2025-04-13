@@ -41,7 +41,7 @@ func (r ApiCreateSprdAmendOrderV5Request) Execute() (*CreateSprdAmendOrderV5Resp
 }
 
 /*
-CreateSprdAmendOrderV5 Amend an incomplete order.  
+CreateSprdAmendOrderV5 Amend order
 
 Amend an incomplete order.
 
@@ -159,7 +159,7 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *SpreadTradingAPIService) CreateSprdAmendOrderV5Execute(r ApiCreateSprdA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -202,7 +202,7 @@ func (r ApiCreateSprdCancelAllAfterV5Request) Execute() (*CreateSprdCancelAllAft
 }
 
 /*
-CreateSprdCancelAllAfterV5 Cancel all pending orders after the countdown timeout. Only applicable to spread trading.  
+CreateSprdCancelAllAfterV5 Cancel All After
 
 Cancel all pending orders after the countdown timeout. Only applicable to spread trading.
 
@@ -320,7 +320,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelAllAfterV5Execute(r ApiCreateS
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -329,7 +329,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelAllAfterV5Execute(r ApiCreateS
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -363,7 +363,7 @@ func (r ApiCreateSprdCancelOrderV5Request) Execute() (*CreateSprdCancelOrderV5Re
 }
 
 /*
-CreateSprdCancelOrderV5 Cancel an incomplete order.  
+CreateSprdCancelOrderV5 Cancel order
 
 Cancel an incomplete order.
 
@@ -481,7 +481,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelOrderV5Execute(r ApiCreateSprd
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -490,7 +490,7 @@ func (a *SpreadTradingAPIService) CreateSprdCancelOrderV5Execute(r ApiCreateSprd
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -524,7 +524,7 @@ func (r ApiCreateSprdMassCancelV5Request) Execute() (*CreateSprdMassCancelV5Resp
 }
 
 /*
-CreateSprdMassCancelV5 Cancel all pending orders.  
+CreateSprdMassCancelV5 Cancel All orders
 
 Cancel all pending orders.
 
@@ -642,7 +642,7 @@ func (a *SpreadTradingAPIService) CreateSprdMassCancelV5Execute(r ApiCreateSprdM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -651,7 +651,7 @@ func (a *SpreadTradingAPIService) CreateSprdMassCancelV5Execute(r ApiCreateSprdM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -685,7 +685,7 @@ func (r ApiCreateSprdOrderV5Request) Execute() (*CreateSprdOrderV5Resp, *http.Re
 }
 
 /*
-CreateSprdOrderV5 Place a new order  
+CreateSprdOrderV5 Place order
 
 Place a new order
 
@@ -803,7 +803,7 @@ func (a *SpreadTradingAPIService) CreateSprdOrderV5Execute(r ApiCreateSprdOrderV
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -812,7 +812,7 @@ func (a *SpreadTradingAPIService) CreateSprdOrderV5Execute(r ApiCreateSprdOrderV
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -874,7 +874,7 @@ func (r ApiGetMarketSprdCandlesV5Request) Execute() (*GetMarketSprdCandlesV5Resp
 }
 
 /*
-GetMarketSprdCandlesV5 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
+GetMarketSprdCandlesV5 Get candlesticks
 
 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
 
@@ -1006,7 +1006,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1015,7 +1015,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdCandlesV5Execute(r ApiGetMarketSp
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1077,7 +1077,7 @@ func (r ApiGetMarketSprdHistoryCandlesV5Request) Execute() (*GetMarketSprdHistor
 }
 
 /*
-GetMarketSprdHistoryCandlesV5 Retrieve history candlestick charts from recent years.  
+GetMarketSprdHistoryCandlesV5 Get candlesticks history
 
 Retrieve history candlestick charts from recent years.
 
@@ -1209,7 +1209,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1218,7 +1218,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdHistoryCandlesV5Execute(r ApiGetM
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1252,7 +1252,7 @@ func (r ApiGetMarketSprdTickerV5Request) Execute() (*GetMarketSprdTickerV5Resp, 
 }
 
 /*
-GetMarketSprdTickerV5 Retrieve the latest price snapshot, best bid/ask price and quantity.  
+GetMarketSprdTickerV5 Get ticker (Public)
 
 Retrieve the latest price snapshot, best bid/ask price and quantity.
 
@@ -1360,7 +1360,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdTickerV5Execute(r ApiGetMarketSpr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1369,7 +1369,7 @@ func (a *SpreadTradingAPIService) GetMarketSprdTickerV5Execute(r ApiGetMarketSpr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1410,7 +1410,7 @@ func (r ApiGetSprdBooksV5Request) Execute() (*GetSprdBooksV5Resp, *http.Response
 }
 
 /*
-GetSprdBooksV5 Retrieve the order book of the spread.  
+GetSprdBooksV5 Get order book (Public)
 
 Retrieve the order book of the spread.
 
@@ -1526,7 +1526,7 @@ func (a *SpreadTradingAPIService) GetSprdBooksV5Execute(r ApiGetSprdBooksV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1535,7 +1535,7 @@ func (a *SpreadTradingAPIService) GetSprdBooksV5Execute(r ApiGetSprdBooksV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1576,7 +1576,7 @@ func (r ApiGetSprdOrderV5Request) Execute() (*GetSprdOrderV5Resp, *http.Response
 }
 
 /*
-GetSprdOrderV5 Retrieve order details.  
+GetSprdOrderV5 Get order details
 
 Retrieve order details.
 
@@ -1701,7 +1701,7 @@ func (a *SpreadTradingAPIService) GetSprdOrderV5Execute(r ApiGetSprdOrderV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1710,7 +1710,7 @@ func (a *SpreadTradingAPIService) GetSprdOrderV5Execute(r ApiGetSprdOrderV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1807,7 +1807,7 @@ func (r ApiGetSprdOrdersHistoryArchiveV5Request) Execute() (*GetSprdOrdersHistor
 }
 
 /*
-GetSprdOrdersHistoryArchiveV5 Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed in the last 3 months. Results are returned in counter chronological order.  
+GetSprdOrdersHistoryArchiveV5 Get orders history (last 3 months)
 
 Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed in the last 3 months. Results are returned in counter chronological order.
 
@@ -1980,7 +1980,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryArchiveV5Execute(r ApiGetS
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1989,7 +1989,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryArchiveV5Execute(r ApiGetS
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2072,7 +2072,7 @@ func (r ApiGetSprdOrdersHistoryV5Request) Execute() (*GetSprdOrdersHistoryV5Resp
 }
 
 /*
-GetSprdOrdersHistoryV5 Retrieve the completed order data for the last 21 days, and the incomplete orders (filledSz =0 & state = canceled) that have been canceled are only reserved for 2 hours. Results are returned in counter chronological order of orders creation.  
+GetSprdOrdersHistoryV5 Get orders (last 21 days)
 
 Retrieve the completed order data for the last 21 days, and the incomplete orders (filledSz =0 & state = canceled) that have been canceled are only reserved for 2 hours. Results are returned in counter chronological order of orders creation.
 
@@ -2233,7 +2233,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryV5Execute(r ApiGetSprdOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2242,7 +2242,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersHistoryV5Execute(r ApiGetSprdOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2311,7 +2311,7 @@ func (r ApiGetSprdOrdersPendingV5Request) Execute() (*GetSprdOrdersPendingV5Resp
 }
 
 /*
-GetSprdOrdersPendingV5 Retrieve all incomplete orders under the current account.  
+GetSprdOrdersPendingV5 Get active orders
 
 Retrieve all incomplete orders under the current account.
 
@@ -2460,7 +2460,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersPendingV5Execute(r ApiGetSprdOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2469,7 +2469,7 @@ func (a *SpreadTradingAPIService) GetSprdOrdersPendingV5Execute(r ApiGetSprdOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2503,7 +2503,7 @@ func (r ApiGetSprdPublicTradesV5Request) Execute() (*GetSprdPublicTradesV5Resp, 
 }
 
 /*
-GetSprdPublicTradesV5 Retrieve the recent transactions of an instrument (at most 500 records per request). Results are returned in counter chronological order.   
+GetSprdPublicTradesV5 Get public trades (Public)
 
 Retrieve the recent transactions of an instrument (at most 500 records per request). Results are returned in counter chronological order. 
 
@@ -2615,7 +2615,7 @@ func (a *SpreadTradingAPIService) GetSprdPublicTradesV5Execute(r ApiGetSprdPubli
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2624,7 +2624,7 @@ func (a *SpreadTradingAPIService) GetSprdPublicTradesV5Execute(r ApiGetSprdPubli
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2679,7 +2679,7 @@ func (r ApiGetSprdSpreadsV5Request) Execute() (*GetSprdSpreadsV5Resp, *http.Resp
 }
 
 /*
-GetSprdSpreadsV5 Retrieve all available spreads based on the request parameters.  
+GetSprdSpreadsV5 Get Spreads (Public)
 
 Retrieve all available spreads based on the request parameters.
 
@@ -2809,7 +2809,7 @@ func (a *SpreadTradingAPIService) GetSprdSpreadsV5Execute(r ApiGetSprdSpreadsV5R
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2818,7 +2818,7 @@ func (a *SpreadTradingAPIService) GetSprdSpreadsV5Execute(r ApiGetSprdSpreadsV5R
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2901,7 +2901,7 @@ func (r ApiGetSprdTradesV5Request) Execute() (*GetSprdTradesV5Resp, *http.Respon
 }
 
 /*
-GetSprdTradesV5 Retrieve historical transaction details . Results are returned in counter chronological order.  
+GetSprdTradesV5 Get trades (last 7 days)
 
 Retrieve historical transaction details . Results are returned in counter chronological order.
 
@@ -3062,7 +3062,7 @@ func (a *SpreadTradingAPIService) GetSprdTradesV5Execute(r ApiGetSprdTradesV5Req
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3071,7 +3071,7 @@ func (a *SpreadTradingAPIService) GetSprdTradesV5Execute(r ApiGetSprdTradesV5Req
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

@@ -4,11 +4,11 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateFinanceStakingDefiSolPurchaseV5**](SolStakingAPI.md#CreateFinanceStakingDefiSolPurchaseV5) | **Post** /api/v5/finance/staking-defi/sol/purchase | Staking SOL for OKSOL   Only the assets in the funding account can be used.    
-[**CreateFinanceStakingDefiSolRedeemV5**](SolStakingAPI.md#CreateFinanceStakingDefiSolRedeemV5) | **Post** /api/v5/finance/staking-defi/sol/redeem | Only the assets in the funding account can be used. If your OKSOL is in your trading account, you can make funding transfer first.    
-[**GetFinanceStakingDefiSolApyHistoryV5**](SolStakingAPI.md#GetFinanceStakingDefiSolApyHistoryV5) | **Get** /api/v5/finance/staking-defi/sol/apy-history | Public endpoints don&#39;t need authorization.  
-[**GetFinanceStakingDefiSolBalanceV5**](SolStakingAPI.md#GetFinanceStakingDefiSolBalanceV5) | **Get** /api/v5/finance/staking-defi/sol/balance | The balance is summarized all OKSOL assets (including assets in redeeming) in account.  
-[**GetFinanceStakingDefiSolPurchaseRedeemHistoryV5**](SolStakingAPI.md#GetFinanceStakingDefiSolPurchaseRedeemHistoryV5) | **Get** /api/v5/finance/staking-defi/sol/purchase-redeem-history | 
+[**CreateFinanceStakingDefiSolPurchaseV5**](SolStakingAPI.md#CreateFinanceStakingDefiSolPurchaseV5) | **Post** /api/v5/finance/staking-defi/sol/purchase | POST / Purchase
+[**CreateFinanceStakingDefiSolRedeemV5**](SolStakingAPI.md#CreateFinanceStakingDefiSolRedeemV5) | **Post** /api/v5/finance/staking-defi/sol/redeem | POST / Redeem
+[**GetFinanceStakingDefiSolApyHistoryV5**](SolStakingAPI.md#GetFinanceStakingDefiSolApyHistoryV5) | **Get** /api/v5/finance/staking-defi/sol/apy-history | GET / APY history (Public)
+[**GetFinanceStakingDefiSolBalanceV5**](SolStakingAPI.md#GetFinanceStakingDefiSolBalanceV5) | **Get** /api/v5/finance/staking-defi/sol/balance | GET / Balance
+[**GetFinanceStakingDefiSolPurchaseRedeemHistoryV5**](SolStakingAPI.md#GetFinanceStakingDefiSolPurchaseRedeemHistoryV5) | **Get** /api/v5/finance/staking-defi/sol/purchase-redeem-history | GET / Purchase&amp;Redeem history
 
 
 
@@ -16,7 +16,7 @@ Method | HTTP request | Description
 
 > CreateFinanceStakingDefiSolPurchaseV5Resp CreateFinanceStakingDefiSolPurchaseV5(ctx).CreateFinanceStakingDefiSolPurchaseV5Req(createFinanceStakingDefiSolPurchaseV5Req).Execute()
 
-Staking SOL for OKSOL   Only the assets in the funding account can be used.    
+POST / Purchase
 
 
 
@@ -33,7 +33,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiSolPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiSolPurchaseV5Req("Amt_example") // CreateFinanceStakingDefiSolPurchaseV5Req | The request body for CreateFinanceStaking-DefiSolPurchaseV5
+	createFinanceStakingDefiSolPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiSolPurchaseV5Req("Amt_example") // CreateFinanceStakingDefiSolPurchaseV5Req | The request body for CreateFinanceStakingDefiSolPurchaseV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -58,7 +58,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiSo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiSolPurchaseV5Req** | [**CreateFinanceStakingDefiSolPurchaseV5Req**](CreateFinanceStakingDefiSolPurchaseV5Req.md) | The request body for CreateFinanceStaking-DefiSolPurchaseV5 | 
+ **createFinanceStakingDefiSolPurchaseV5Req** | [**CreateFinanceStakingDefiSolPurchaseV5Req**](CreateFinanceStakingDefiSolPurchaseV5Req.md) | The request body for CreateFinanceStakingDefiSolPurchaseV5 | 
 
 ### Return type
 
@@ -82,7 +82,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceStakingDefiSolRedeemV5Resp CreateFinanceStakingDefiSolRedeemV5(ctx).CreateFinanceStakingDefiSolRedeemV5Req(createFinanceStakingDefiSolRedeemV5Req).Execute()
 
-Only the assets in the funding account can be used. If your OKSOL is in your trading account, you can make funding transfer first.    
+POST / Redeem
 
 
 
@@ -99,7 +99,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiSolRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiSolRedeemV5Req("Amt_example") // CreateFinanceStakingDefiSolRedeemV5Req | The request body for CreateFinanceStaking-DefiSolRedeemV5
+	createFinanceStakingDefiSolRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiSolRedeemV5Req("Amt_example") // CreateFinanceStakingDefiSolRedeemV5Req | The request body for CreateFinanceStakingDefiSolRedeemV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -124,7 +124,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiSo
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiSolRedeemV5Req** | [**CreateFinanceStakingDefiSolRedeemV5Req**](CreateFinanceStakingDefiSolRedeemV5Req.md) | The request body for CreateFinanceStaking-DefiSolRedeemV5 | 
+ **createFinanceStakingDefiSolRedeemV5Req** | [**CreateFinanceStakingDefiSolRedeemV5Req**](CreateFinanceStakingDefiSolRedeemV5Req.md) | The request body for CreateFinanceStakingDefiSolRedeemV5 | 
 
 ### Return type
 
@@ -148,7 +148,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceStakingDefiSolApyHistoryV5Resp GetFinanceStakingDefiSolApyHistoryV5(ctx).Days(days).Execute()
 
-Public endpoints don't need authorization.  
+GET / APY history (Public)
 
 
 
@@ -214,7 +214,7 @@ No authorization required
 
 > GetFinanceStakingDefiSolBalanceV5Resp GetFinanceStakingDefiSolBalanceV5(ctx).Execute()
 
-The balance is summarized all OKSOL assets (including assets in redeeming) in account.  
+GET / Balance
 
 
 
@@ -275,7 +275,7 @@ Other parameters are passed through a pointer to a apiGetFinanceStakingDefiSolBa
 
 > GetFinanceStakingDefiSolPurchaseRedeemHistoryV5Resp GetFinanceStakingDefiSolPurchaseRedeemHistoryV5(ctx).Type_(type_).Status(status).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Purchase&Redeem history
 
 
 

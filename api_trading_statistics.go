@@ -69,7 +69,7 @@ func (r ApiGetRubikStatContractsLongShortAccountRatioContractTopTraderV5Request)
 }
 
 /*
-GetRubikStatContractsLongShortAccountRatioContractTopTraderV5 Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
+GetRubikStatContractsLongShortAccountRatioContractTopTraderV5 Get top traders contract long/short ratio
 
 Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.
 
@@ -201,7 +201,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -210,7 +210,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -272,7 +272,7 @@ func (r ApiGetRubikStatContractsLongShortAccountRatioContractV5Request) Execute(
 }
 
 /*
-GetRubikStatContractsLongShortAccountRatioContractV5 Retrieve the account long/short ratio of a contract. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+GetRubikStatContractsLongShortAccountRatioContractV5 Get contract long/short ratio
 
 Retrieve the account long/short ratio of a contract. This endpoint can retrieve the latest 1,440 data entries. 
 
@@ -408,7 +408,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -417,7 +417,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -472,7 +472,7 @@ func (r ApiGetRubikStatContractsLongShortAccountRatioV5Request) Execute() (*GetR
 }
 
 /*
-GetRubikStatContractsLongShortAccountRatioV5 Retrieve the ratio of users with net long vs net short positions for Expiry Futures and Perpetual Futures.  
+GetRubikStatContractsLongShortAccountRatioV5 Get long/short ratio
 
 Retrieve the ratio of users with net long vs net short positions for Expiry Futures and Perpetual Futures.
 
@@ -598,7 +598,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -607,7 +607,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortAccountRatio
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -669,7 +669,7 @@ func (r ApiGetRubikStatContractsLongShortPositionRatioContractTopTraderV5Request
 }
 
 /*
-GetRubikStatContractsLongShortPositionRatioContractTopTraderV5 Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
+GetRubikStatContractsLongShortPositionRatioContractTopTraderV5 Get top traders contract long/short ratio (by position)
 
 Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.
 
@@ -801,7 +801,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -810,7 +810,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsLongShortPositionRati
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -872,7 +872,7 @@ func (r ApiGetRubikStatContractsOpenInterestHistoryV5Request) Execute() (*GetRub
 }
 
 /*
-GetRubikStatContractsOpenInterestHistoryV5 Retrieve the contract open interest statistics of futures and perp. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+GetRubikStatContractsOpenInterestHistoryV5 Get contract open interest history
 
 Retrieve the contract open interest statistics of futures and perp. This endpoint can retrieve the latest 1,440 data entries. 
 
@@ -1008,7 +1008,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1017,7 +1017,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestHistoryV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1072,7 +1072,7 @@ func (r ApiGetRubikStatContractsOpenInterestVolumeV5Request) Execute() (*GetRubi
 }
 
 /*
-GetRubikStatContractsOpenInterestVolumeV5 Retrieve the open interest and trading volume for Expiry Futures and Perpetual Futures.  
+GetRubikStatContractsOpenInterestVolumeV5 Get contracts open interest and volume
 
 Retrieve the open interest and trading volume for Expiry Futures and Perpetual Futures.
 
@@ -1198,7 +1198,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestVolumeV5E
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1207,7 +1207,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatContractsOpenInterestVolumeV5E
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1262,7 +1262,7 @@ func (r ApiGetRubikStatMarginLoanRatioV5Request) Execute() (*GetRubikStatMarginL
 }
 
 /*
-GetRubikStatMarginLoanRatioV5 Retrieve the ratio of cumulative amount of quote currency to base currency.  
+GetRubikStatMarginLoanRatioV5 Get margin long/short ratio
 
 Retrieve the ratio of cumulative amount of quote currency to base currency.
 
@@ -1388,7 +1388,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatMarginLoanRatioV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1397,7 +1397,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatMarginLoanRatioV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1438,7 +1438,7 @@ func (r ApiGetRubikStatOptionOpenInterestVolumeExpiryV5Request) Execute() (*GetR
 }
 
 /*
-GetRubikStatOptionOpenInterestVolumeExpiryV5 Retrieve the open interest and trading volume of calls and puts for each upcoming expiration.  
+GetRubikStatOptionOpenInterestVolumeExpiryV5 Get open interest and volume (expiry)
 
 Retrieve the open interest and trading volume of calls and puts for each upcoming expiration.
 
@@ -1552,7 +1552,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeExpiry
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1561,7 +1561,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeExpiry
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1602,7 +1602,7 @@ func (r ApiGetRubikStatOptionOpenInterestVolumeRatioV5Request) Execute() (*GetRu
 }
 
 /*
-GetRubikStatOptionOpenInterestVolumeRatioV5 Retrieve the open interest ratio and trading volume ratio of calls vs puts.  
+GetRubikStatOptionOpenInterestVolumeRatioV5 Get put/call ratio
 
 Retrieve the open interest ratio and trading volume ratio of calls vs puts.
 
@@ -1716,7 +1716,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeRatioV
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1725,7 +1725,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeRatioV
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1773,7 +1773,7 @@ func (r ApiGetRubikStatOptionOpenInterestVolumeStrikeV5Request) Execute() (*GetR
 }
 
 /*
-GetRubikStatOptionOpenInterestVolumeStrikeV5 Retrieve the taker volume for both buyers and sellers of calls and puts.  
+GetRubikStatOptionOpenInterestVolumeStrikeV5 Get open interest and volume (strike)
 
 Retrieve the taker volume for both buyers and sellers of calls and puts.
 
@@ -1891,7 +1891,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeStrike
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1900,7 +1900,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeStrike
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1941,7 +1941,7 @@ func (r ApiGetRubikStatOptionOpenInterestVolumeV5Request) Execute() (*GetRubikSt
 }
 
 /*
-GetRubikStatOptionOpenInterestVolumeV5 Retrieve the open interest and trading volume for options.  
+GetRubikStatOptionOpenInterestVolumeV5 Get options open interest and volume
 
 Retrieve the open interest and trading volume for options.
 
@@ -2055,7 +2055,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2064,7 +2064,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionOpenInterestVolumeV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2105,7 +2105,7 @@ func (r ApiGetRubikStatOptionTakerBlockVolumeV5Request) Execute() (*GetRubikStat
 }
 
 /*
-GetRubikStatOptionTakerBlockVolumeV5 This shows the relative buy/sell volume for calls and puts. It shows whether traders are bullish or bearish on price and volatility.  
+GetRubikStatOptionTakerBlockVolumeV5 Get taker flow
 
 This shows the relative buy/sell volume for calls and puts. It shows whether traders are bullish or bearish on price and volatility.
 
@@ -2219,7 +2219,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionTakerBlockVolumeV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2228,7 +2228,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatOptionTakerBlockVolumeV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2297,7 +2297,7 @@ func (r ApiGetRubikStatTakerVolumeContractV5Request) Execute() (*GetRubikStatTak
 }
 
 /*
-GetRubikStatTakerVolumeContractV5 Retrieve the contract taker volume for both buyers and sellers. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+GetRubikStatTakerVolumeContractV5 Get contract taker volume
 
 Retrieve the contract taker volume for both buyers and sellers. This endpoint can retrieve the latest 1,440 data entries. 
 
@@ -2439,7 +2439,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2448,7 +2448,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeContractV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2510,7 +2510,7 @@ func (r ApiGetRubikStatTakerVolumeV5Request) Execute() (*GetRubikStatTakerVolume
 }
 
 /*
-GetRubikStatTakerVolumeV5 Retrieve the taker volume for both buyers and sellers.  
+GetRubikStatTakerVolumeV5 Get taker volume
 
 Retrieve the taker volume for both buyers and sellers.
 
@@ -2640,7 +2640,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeV5Execute(r ApiGetR
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2649,7 +2649,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTakerVolumeV5Execute(r ApiGetR
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2676,7 +2676,7 @@ func (r ApiGetRubikStatTradingDataSupportCoinV5Request) Execute() (*GetRubikStat
 }
 
 /*
-GetRubikStatTradingDataSupportCoinV5 Retrieve the currencies supported by the trading statistics endpoints.  
+GetRubikStatTradingDataSupportCoinV5 Get support coin
 
 Retrieve the currencies supported by the trading statistics endpoints.
 
@@ -2780,7 +2780,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTradingDataSupportCoinV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2789,7 +2789,7 @@ func (a *TradingStatisticsAPIService) GetRubikStatTradingDataSupportCoinV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

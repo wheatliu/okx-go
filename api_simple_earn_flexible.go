@@ -41,7 +41,7 @@ func (r ApiCreateFinanceSavingsPurchaseRedemptV5Request) Execute() (*CreateFinan
 }
 
 /*
-CreateFinanceSavingsPurchaseRedemptV5 Only the assets in the funding account can be used for saving.  
+CreateFinanceSavingsPurchaseRedemptV5 POST / Savings purchase/redemption
 
 Only the assets in the funding account can be used for saving.
 
@@ -159,7 +159,7 @@ func (a *SimpleEarnFlexibleAPIService) CreateFinanceSavingsPurchaseRedemptV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *SimpleEarnFlexibleAPIService) CreateFinanceSavingsPurchaseRedemptV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -202,7 +202,7 @@ func (r ApiCreateFinanceSavingsSetLendingRateV5Request) Execute() (*CreateFinanc
 }
 
 /*
-CreateFinanceSavingsSetLendingRateV5 Method for CreateFinanceSavingsSetLendingRateV5
+CreateFinanceSavingsSetLendingRateV5 POST / Set lending rate
 
 #### Rate Limit: 6 requests per second 
 
@@ -318,7 +318,7 @@ func (a *SimpleEarnFlexibleAPIService) CreateFinanceSavingsSetLendingRateV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -327,7 +327,7 @@ func (a *SimpleEarnFlexibleAPIService) CreateFinanceSavingsSetLendingRateV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -361,7 +361,7 @@ func (r ApiGetFinanceSavingsBalanceV5Request) Execute() (*GetFinanceSavingsBalan
 }
 
 /*
-GetFinanceSavingsBalanceV5 Method for GetFinanceSavingsBalanceV5
+GetFinanceSavingsBalanceV5 GET / Saving balance
 
 #### Rate Limit: 6 requests per second 
 
@@ -478,7 +478,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsBalanceV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -487,7 +487,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsBalanceV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -542,7 +542,7 @@ func (r ApiGetFinanceSavingsLendingHistoryV5Request) Execute() (*GetFinanceSavin
 }
 
 /*
-GetFinanceSavingsLendingHistoryV5 Return data in the past month.  
+GetFinanceSavingsLendingHistoryV5 GET / Lending history
 
 Return data in the past month.
 
@@ -679,7 +679,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingHistoryV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -688,7 +688,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingHistoryV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -743,7 +743,7 @@ func (r ApiGetFinanceSavingsLendingRateHistoryV5Request) Execute() (*GetFinanceS
 }
 
 /*
-GetFinanceSavingsLendingRateHistoryV5 Authentication is not required for this public endpoint.   Only returned records after December 14, 2021.  
+GetFinanceSavingsLendingRateHistoryV5 GET / Public borrow history (public)
 
 Authentication is not required for this public endpoint.
 
@@ -874,7 +874,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingRateHistoryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -883,7 +883,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingRateHistoryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -917,7 +917,7 @@ func (r ApiGetFinanceSavingsLendingRateSummaryV5Request) Execute() (*GetFinanceS
 }
 
 /*
-GetFinanceSavingsLendingRateSummaryV5 Authentication is not required for this public endpoint.  
+GetFinanceSavingsLendingRateSummaryV5 GET / Public borrow info (public)
 
 Authentication is not required for this public endpoint.
 
@@ -1027,7 +1027,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingRateSummaryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1036,7 +1036,7 @@ func (a *SimpleEarnFlexibleAPIService) GetFinanceSavingsLendingRateSummaryV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

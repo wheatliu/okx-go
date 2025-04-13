@@ -41,7 +41,7 @@ func (r ApiCreateCopytradingAlgoOrderV5Request) Execute() (*CreateCopytradingAlg
 }
 
 /*
-CreateCopytradingAlgoOrderV5 Set TP/SL for the current lead position that are not closed.  
+CreateCopytradingAlgoOrderV5 POST / Place lead stop order
 
 Set TP/SL for the current lead position that are not closed.
 
@@ -159,7 +159,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAlgoOrderV5Execute(r ApiCreateC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -202,7 +202,7 @@ func (r ApiCreateCopytradingAmendCopySettingsV5Request) Execute() (*CreateCopytr
 }
 
 /*
-CreateCopytradingAmendCopySettingsV5 You need to use this endpoint to amend copy settings  
+CreateCopytradingAmendCopySettingsV5 POST / Amend copy settings
 
 You need to use this endpoint to amend copy settings
 
@@ -320,7 +320,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -329,7 +329,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendCopySettingsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -363,7 +363,7 @@ func (r ApiCreateCopytradingAmendProfitSharingRatioV5Request) Execute() (*Create
 }
 
 /*
-CreateCopytradingAmendProfitSharingRatioV5 It is used to amend profit sharing ratio.   
+CreateCopytradingAmendProfitSharingRatioV5 POST / Amend profit sharing ratio
 
 It is used to amend profit sharing ratio. 
 
@@ -481,7 +481,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -490,7 +490,7 @@ func (a *CopyTradingAPIService) CreateCopytradingAmendProfitSharingRatioV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -524,7 +524,7 @@ func (r ApiCreateCopytradingCloseSubpositionV5Request) Execute() (*CreateCopytra
 }
 
 /*
-CreateCopytradingCloseSubpositionV5 You can only close a lead position once a time.    It is required to pass subPosId which can get from .  
+CreateCopytradingCloseSubpositionV5 POST / Close lead position
 
 You can only close a lead position once a time. 
 
@@ -645,7 +645,7 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -654,7 +654,7 @@ func (a *CopyTradingAPIService) CreateCopytradingCloseSubpositionV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -688,7 +688,7 @@ func (r ApiCreateCopytradingFirstCopySettingsV5Request) Execute() (*CreateCopytr
 }
 
 /*
-CreateCopytradingFirstCopySettingsV5 The first copy settings for the certain lead trader. You need to first copy settings after stopping copying.  
+CreateCopytradingFirstCopySettingsV5 POST / First copy settings
 
 The first copy settings for the certain lead trader. You need to first copy settings after stopping copying.
 
@@ -806,7 +806,7 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -815,7 +815,7 @@ func (a *CopyTradingAPIService) CreateCopytradingFirstCopySettingsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -849,7 +849,7 @@ func (r ApiCreateCopytradingSetInstrumentsV5Request) Execute() (*CreateCopytradi
 }
 
 /*
-CreateCopytradingSetInstrumentsV5 The leading trader can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.   All non-leading instruments can't have position or pending orders for the current request when setting non-leading instruments as leading instruments.  
+CreateCopytradingSetInstrumentsV5 POST / Amend leading instruments
 
 The leading trader can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.
 
@@ -970,7 +970,7 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -979,7 +979,7 @@ func (a *CopyTradingAPIService) CreateCopytradingSetInstrumentsV5Execute(r ApiCr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1013,7 +1013,7 @@ func (r ApiCreateCopytradingStopCopyTradingV5Request) Execute() (*CreateCopytrad
 }
 
 /*
-CreateCopytradingStopCopyTradingV5 You need to use this endpoint to stop copy trading  
+CreateCopytradingStopCopyTradingV5 POST / Stop copying
 
 You need to use this endpoint to stop copy trading
 
@@ -1131,7 +1131,7 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1140,7 +1140,7 @@ func (a *CopyTradingAPIService) CreateCopytradingStopCopyTradingV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1167,7 +1167,7 @@ func (r ApiGetCopytradingConfigV5Request) Execute() (*GetCopytradingConfigV5Resp
 }
 
 /*
-GetCopytradingConfigV5 Retrieve current account configuration related to copy/lead trading.  
+GetCopytradingConfigV5 GET / Account configuration
 
 Retrieve current account configuration related to copy/lead trading.
 
@@ -1280,7 +1280,7 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1289,7 +1289,7 @@ func (a *CopyTradingAPIService) GetCopytradingConfigV5Execute(r ApiGetCopytradin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1330,7 +1330,7 @@ func (r ApiGetCopytradingCopySettingsV5Request) Execute() (*GetCopytradingCopySe
 }
 
 /*
-GetCopytradingCopySettingsV5 Retrieve the copy settings about certain lead trader.  
+GetCopytradingCopySettingsV5 GET / Copy settings
 
 Retrieve the copy settings about certain lead trader.
 
@@ -1453,7 +1453,7 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1462,7 +1462,7 @@ func (a *CopyTradingAPIService) GetCopytradingCopySettingsV5Execute(r ApiGetCopy
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1496,7 +1496,7 @@ func (r ApiGetCopytradingCurrentLeadTradersV5Request) Execute() (*GetCopytrading
 }
 
 /*
-GetCopytradingCurrentLeadTradersV5 Retrieve my lead traders.  
+GetCopytradingCurrentLeadTradersV5 GET / My lead traders
 
 Retrieve my lead traders.
 
@@ -1615,7 +1615,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1624,7 +1624,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentLeadTradersV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1686,7 +1686,7 @@ func (r ApiGetCopytradingCurrentSubpositionsV5Request) Execute() (*GetCopytradin
 }
 
 /*
-GetCopytradingCurrentSubpositionsV5 Retrieve lead positions that are not closed.    Returns reverse chronological order with `openTime`  
+GetCopytradingCurrentSubpositionsV5 GET / Existing lead positions
 
 Retrieve lead positions that are not closed.
 
@@ -1833,7 +1833,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1842,7 +1842,7 @@ func (a *CopyTradingAPIService) GetCopytradingCurrentSubpositionsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1876,7 +1876,7 @@ func (r ApiGetCopytradingInstrumentsV5Request) Execute() (*GetCopytradingInstrum
 }
 
 /*
-GetCopytradingInstrumentsV5 Retrieve instruments that are supported to lead by the platform.  Retrieve instruments that the lead trader has set.  
+GetCopytradingInstrumentsV5 GET / Leading instruments
 
 Retrieve instruments that are supported to lead by the platform. 
 Retrieve instruments that the lead trader has set.
@@ -1996,7 +1996,7 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2005,7 +2005,7 @@ func (a *CopyTradingAPIService) GetCopytradingInstrumentsV5Execute(r ApiGetCopyt
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2060,7 +2060,7 @@ func (r ApiGetCopytradingProfitSharingDetailsV5Request) Execute() (*GetCopytradi
 }
 
 /*
-GetCopytradingProfitSharingDetailsV5 The leading trader gets profits shared details for the last 3 months.  
+GetCopytradingProfitSharingDetailsV5 GET / Profit sharing details
 
 The leading trader gets profits shared details for the last 3 months.
 
@@ -2197,7 +2197,7 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2206,7 +2206,7 @@ func (a *CopyTradingAPIService) GetCopytradingProfitSharingDetailsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2240,7 +2240,7 @@ func (r ApiGetCopytradingPublicConfigV5Request) Execute() (*GetCopytradingPublic
 }
 
 /*
-GetCopytradingPublicConfigV5 Public endpoint. Retrieve copy trading parameter configuration information of copy settings  
+GetCopytradingPublicConfigV5 GET / Copy trading configuration
 
 Public endpoint. Retrieve copy trading parameter configuration information of copy settings
 
@@ -2352,7 +2352,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2361,7 +2361,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicConfigV5Execute(r ApiGetCopy
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2409,7 +2409,7 @@ func (r ApiGetCopytradingPublicCopyTradersV5Request) Execute() (*GetCopytradingP
 }
 
 /*
-GetCopytradingPublicCopyTradersV5 Public endpoint. Retrieve copy trader coming from certain lead trader. Return according to `pnl` from high to low  
+GetCopytradingPublicCopyTradersV5 GET / Copy traders
 
 Public endpoint. Retrieve copy trader coming from certain lead trader. Return according to `pnl` from high to low
 
@@ -2531,7 +2531,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2540,7 +2540,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCopyTradersV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2602,7 +2602,7 @@ func (r ApiGetCopytradingPublicCurrentSubpositionsV5Request) Execute() (*GetCopy
 }
 
 /*
-GetCopytradingPublicCurrentSubpositionsV5 Public endpoint. Get current leading positions of lead trader  
+GetCopytradingPublicCurrentSubpositionsV5 GET / Lead trader current lead positions
 
 Public endpoint. Get current leading positions of lead trader
 
@@ -2736,7 +2736,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2745,7 +2745,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicCurrentSubpositionsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2849,7 +2849,7 @@ func (r ApiGetCopytradingPublicLeadTradersV5Request) Execute() (*GetCopytradingP
 }
 
 /*
-GetCopytradingPublicLeadTradersV5 Public endpoint. Retrieve lead trader ranks.  
+GetCopytradingPublicLeadTradersV5 GET / Lead trader ranks
 
 Public endpoint. Retrieve lead trader ranks.
 
@@ -3021,7 +3021,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3030,7 +3030,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicLeadTradersV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3078,7 +3078,7 @@ func (r ApiGetCopytradingPublicPnlV5Request) Execute() (*GetCopytradingPublicPnl
 }
 
 /*
-GetCopytradingPublicPnlV5 Public endpoint. Retrieve lead trader daily pnl. Results are returned in counter chronological order.  
+GetCopytradingPublicPnlV5 GET / Lead trader daily pnl
 
 Public endpoint. Retrieve lead trader daily pnl. Results are returned in counter chronological order.
 
@@ -3198,7 +3198,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3207,7 +3207,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPnlV5Execute(r ApiGetCopytra
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3248,7 +3248,7 @@ func (r ApiGetCopytradingPublicPreferenceCurrencyV5Request) Execute() (*GetCopyt
 }
 
 /*
-GetCopytradingPublicPreferenceCurrencyV5 Public endpoint. The most frequently traded crypto of this lead trader. Results are sorted by ratio from large to small.  
+GetCopytradingPublicPreferenceCurrencyV5 GET / Lead trader currency preferences
 
 Public endpoint. The most frequently traded crypto of this lead trader. Results are sorted by ratio from large to small.
 
@@ -3364,7 +3364,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3373,7 +3373,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicPreferenceCurrencyV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3421,7 +3421,7 @@ func (r ApiGetCopytradingPublicStatsV5Request) Execute() (*GetCopytradingPublicS
 }
 
 /*
-GetCopytradingPublicStatsV5 Public endpoint. Key data related to lead trader performance.  
+GetCopytradingPublicStatsV5 GET / Lead trader stats
 
 Public endpoint. Key data related to lead trader performance.
 
@@ -3541,7 +3541,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3550,7 +3550,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicStatsV5Execute(r ApiGetCopyt
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3612,7 +3612,7 @@ func (r ApiGetCopytradingPublicSubpositionsHistoryV5Request) Execute() (*GetCopy
 }
 
 /*
-GetCopytradingPublicSubpositionsHistoryV5 Public endpoint. Retrieve the lead trader completed leading position of the last 3 months.   Returns reverse chronological order with `subPosId`.   
+GetCopytradingPublicSubpositionsHistoryV5 GET / Lead trader lead position history
 
 Public endpoint. Retrieve the lead trader completed leading position of the last 3 months.
 
@@ -3749,7 +3749,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3758,7 +3758,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicSubpositionsHistoryV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3799,7 +3799,7 @@ func (r ApiGetCopytradingPublicWeeklyPnlV5Request) Execute() (*GetCopytradingPub
 }
 
 /*
-GetCopytradingPublicWeeklyPnlV5 Public endpoint. Retrieve lead trader weekly pnl. Results are returned in counter chronological order.  
+GetCopytradingPublicWeeklyPnlV5 GET / Lead trader weekly pnl
 
 Public endpoint. Retrieve lead trader weekly pnl. Results are returned in counter chronological order.
 
@@ -3915,7 +3915,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3924,7 +3924,7 @@ func (a *CopyTradingAPIService) GetCopytradingPublicWeeklyPnlV5Execute(r ApiGetC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3986,7 +3986,7 @@ func (r ApiGetCopytradingSubpositionsHistoryV5Request) Execute() (*GetCopytradin
 }
 
 /*
-GetCopytradingSubpositionsHistoryV5 Retrieve the completed lead position of the last 3 months.   Returns reverse chronological order with `subPosId`.   
+GetCopytradingSubpositionsHistoryV5 GET / Lead position history
 
 Retrieve the completed lead position of the last 3 months.
 
@@ -4132,7 +4132,7 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4141,7 +4141,7 @@ func (a *CopyTradingAPIService) GetCopytradingSubpositionsHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4175,7 +4175,7 @@ func (r ApiGetCopytradingTotalProfitSharingV5Request) Execute() (*GetCopytrading
 }
 
 /*
-GetCopytradingTotalProfitSharingV5 The leading trader gets the total amount of profit shared since joining the platform.  
+GetCopytradingTotalProfitSharingV5 GET / Total profit sharing
 
 The leading trader gets the total amount of profit shared since joining the platform.
 
@@ -4294,7 +4294,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4303,7 +4303,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalProfitSharingV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4337,7 +4337,7 @@ func (r ApiGetCopytradingTotalUnrealizedProfitSharingV5Request) Execute() (*GetC
 }
 
 /*
-GetCopytradingTotalUnrealizedProfitSharingV5 The leading trader gets the total unrealized amount of profit shared.  
+GetCopytradingTotalUnrealizedProfitSharingV5 GET / Total unrealized profit sharing
 
 The leading trader gets the total unrealized amount of profit shared.
 
@@ -4456,7 +4456,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4465,7 +4465,7 @@ func (a *CopyTradingAPIService) GetCopytradingTotalUnrealizedProfitSharingV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4499,7 +4499,7 @@ func (r ApiGetCopytradingUnrealizedProfitSharingDetailsV5Request) Execute() (*Ge
 }
 
 /*
-GetCopytradingUnrealizedProfitSharingDetailsV5 The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.   The unrealized profit sharing details will update once there copy position is closed.  
+GetCopytradingUnrealizedProfitSharingDetailsV5 GET / Unrealized profit sharing details
 
 The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.
 
@@ -4621,7 +4621,7 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4630,7 +4630,7 @@ func (a *CopyTradingAPIService) GetCopytradingUnrealizedProfitSharingDetailsV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

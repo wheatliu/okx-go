@@ -70,6 +70,18 @@ func Test_rest_MarketDataAPIService(t *testing.T) {
 
 	})
 
+	t.Run("Test MarketDataAPIService GetMarketHistoryCandlesV5", func(t *testing.T) {
+
+		t.Skip("skip test")  // remove to run test
+
+		resp, httpRes, err := apiClient.MarketDataAPI.GetMarketHistoryCandlesV5(context.Background()).Execute()
+
+		require.Nil(t, err)
+		require.NotNil(t, resp)
+		assert.Equal(t, 200, httpRes.StatusCode)
+
+	})
+
 	t.Run("Test MarketDataAPIService GetMarketHistoryTradesV5", func(t *testing.T) {
 
 		t.Skip("skip test")  // remove to run test

@@ -30,7 +30,7 @@ type ApiCreateFinanceFlexibleLoanAdjustCollateralV5Request struct {
 	createFinanceFlexibleLoanAdjustCollateralV5Req *CreateFinanceFlexibleLoanAdjustCollateralV5Req
 }
 
-// The request body for CreateFinanceFlexible-LoanAdjustCollateralV5
+// The request body for CreateFinanceFlexibleLoanAdjustCollateralV5
 func (r ApiCreateFinanceFlexibleLoanAdjustCollateralV5Request) CreateFinanceFlexibleLoanAdjustCollateralV5Req(createFinanceFlexibleLoanAdjustCollateralV5Req CreateFinanceFlexibleLoanAdjustCollateralV5Req) ApiCreateFinanceFlexibleLoanAdjustCollateralV5Request {
 	r.createFinanceFlexibleLoanAdjustCollateralV5Req = &createFinanceFlexibleLoanAdjustCollateralV5Req
 	return r
@@ -41,7 +41,7 @@ func (r ApiCreateFinanceFlexibleLoanAdjustCollateralV5Request) Execute() (*Creat
 }
 
 /*
-CreateFinanceFlexibleLoanAdjustCollateralV5 Method for CreateFinanceFlexibleLoanAdjustCollateralV5
+CreateFinanceFlexibleLoanAdjustCollateralV5 POST / Adjust collateral
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -157,7 +157,7 @@ func (a *FlexibleLoanAPIService) CreateFinanceFlexibleLoanAdjustCollateralV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -166,7 +166,7 @@ func (a *FlexibleLoanAPIService) CreateFinanceFlexibleLoanAdjustCollateralV5Exec
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -189,7 +189,7 @@ type ApiCreateFinanceFlexibleLoanMaxLoanV5Request struct {
 	createFinanceFlexibleLoanMaxLoanV5Req *CreateFinanceFlexibleLoanMaxLoanV5Req
 }
 
-// The request body for CreateFinanceFlexible-LoanMaxLoanV5
+// The request body for CreateFinanceFlexibleLoanMaxLoanV5
 func (r ApiCreateFinanceFlexibleLoanMaxLoanV5Request) CreateFinanceFlexibleLoanMaxLoanV5Req(createFinanceFlexibleLoanMaxLoanV5Req CreateFinanceFlexibleLoanMaxLoanV5Req) ApiCreateFinanceFlexibleLoanMaxLoanV5Request {
 	r.createFinanceFlexibleLoanMaxLoanV5Req = &createFinanceFlexibleLoanMaxLoanV5Req
 	return r
@@ -200,7 +200,7 @@ func (r ApiCreateFinanceFlexibleLoanMaxLoanV5Request) Execute() (*CreateFinanceF
 }
 
 /*
-CreateFinanceFlexibleLoanMaxLoanV5 Method for CreateFinanceFlexibleLoanMaxLoanV5
+CreateFinanceFlexibleLoanMaxLoanV5 POST / Maximum loan amount
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -316,7 +316,7 @@ func (a *FlexibleLoanAPIService) CreateFinanceFlexibleLoanMaxLoanV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -325,7 +325,7 @@ func (a *FlexibleLoanAPIService) CreateFinanceFlexibleLoanMaxLoanV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -352,7 +352,7 @@ func (r ApiGetFinanceFlexibleLoanBorrowCurrenciesV5Request) Execute() (*GetFinan
 }
 
 /*
-GetFinanceFlexibleLoanBorrowCurrenciesV5 Get borrowable currencies  
+GetFinanceFlexibleLoanBorrowCurrenciesV5 GET / Borrowable currencies
 
 Get borrowable currencies
 
@@ -465,7 +465,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanBorrowCurrenciesV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -474,7 +474,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanBorrowCurrenciesV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -508,7 +508,7 @@ func (r ApiGetFinanceFlexibleLoanCollateralAssetsV5Request) Execute() (*GetFinan
 }
 
 /*
-GetFinanceFlexibleLoanCollateralAssetsV5 Get collateral assets in funding account.  
+GetFinanceFlexibleLoanCollateralAssetsV5 GET / Collateral assets
 
 Get collateral assets in funding account.
 
@@ -627,7 +627,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanCollateralAssetsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -636,7 +636,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanCollateralAssetsV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -691,7 +691,7 @@ func (r ApiGetFinanceFlexibleLoanInterestAccruedV5Request) Execute() (*GetFinanc
 }
 
 /*
-GetFinanceFlexibleLoanInterestAccruedV5 Method for GetFinanceFlexibleLoanInterestAccruedV5
+GetFinanceFlexibleLoanInterestAccruedV5 GET / Accrued interest
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -826,7 +826,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanInterestAccruedV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -835,7 +835,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanInterestAccruedV5Execute(
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -890,7 +890,7 @@ func (r ApiGetFinanceFlexibleLoanLoanHistoryV5Request) Execute() (*GetFinanceFle
 }
 
 /*
-GetFinanceFlexibleLoanLoanHistoryV5 Method for GetFinanceFlexibleLoanLoanHistoryV5
+GetFinanceFlexibleLoanLoanHistoryV5 GET / Loan history
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -1025,7 +1025,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanLoanHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1034,7 +1034,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanLoanHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1061,7 +1061,7 @@ func (r ApiGetFinanceFlexibleLoanLoanInfoV5Request) Execute() (*GetFinanceFlexib
 }
 
 /*
-GetFinanceFlexibleLoanLoanInfoV5 Method for GetFinanceFlexibleLoanLoanInfoV5
+GetFinanceFlexibleLoanLoanInfoV5 GET / Loan info
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -1172,7 +1172,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanLoanInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1181,7 +1181,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanLoanInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1215,7 +1215,7 @@ func (r ApiGetFinanceFlexibleLoanMaxCollateralRedeemAmountV5Request) Execute() (
 }
 
 /*
-GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5 Method for GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5
+GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5 GET / Maximum collateral redeem amount
 
 #### Rate Limit: 5 requests per 2 seconds 
 
@@ -1330,7 +1330,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanMaxCollateralRedeemAmount
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1339,7 +1339,7 @@ func (a *FlexibleLoanAPIService) GetFinanceFlexibleLoanMaxCollateralRedeemAmount
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

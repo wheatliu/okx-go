@@ -4,22 +4,22 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateSprdAmendOrderV5**](SpreadTradingAPI.md#CreateSprdAmendOrderV5) | **Post** /api/v5/sprd/amend-order | Amend an incomplete order.  
-[**CreateSprdCancelAllAfterV5**](SpreadTradingAPI.md#CreateSprdCancelAllAfterV5) | **Post** /api/v5/sprd/cancel-all-after | Cancel all pending orders after the countdown timeout. Only applicable to spread trading.  
-[**CreateSprdCancelOrderV5**](SpreadTradingAPI.md#CreateSprdCancelOrderV5) | **Post** /api/v5/sprd/cancel-order | Cancel an incomplete order.  
-[**CreateSprdMassCancelV5**](SpreadTradingAPI.md#CreateSprdMassCancelV5) | **Post** /api/v5/sprd/mass-cancel | Cancel all pending orders.  
-[**CreateSprdOrderV5**](SpreadTradingAPI.md#CreateSprdOrderV5) | **Post** /api/v5/sprd/order | Place a new order  
-[**GetMarketSprdCandlesV5**](SpreadTradingAPI.md#GetMarketSprdCandlesV5) | **Get** /api/v5/market/sprd-candles | Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
-[**GetMarketSprdHistoryCandlesV5**](SpreadTradingAPI.md#GetMarketSprdHistoryCandlesV5) | **Get** /api/v5/market/sprd-history-candles | Retrieve history candlestick charts from recent years.  
-[**GetMarketSprdTickerV5**](SpreadTradingAPI.md#GetMarketSprdTickerV5) | **Get** /api/v5/market/sprd-ticker | Retrieve the latest price snapshot, best bid/ask price and quantity.  
-[**GetSprdBooksV5**](SpreadTradingAPI.md#GetSprdBooksV5) | **Get** /api/v5/sprd/books | Retrieve the order book of the spread.  
-[**GetSprdOrderV5**](SpreadTradingAPI.md#GetSprdOrderV5) | **Get** /api/v5/sprd/order | Retrieve order details.  
-[**GetSprdOrdersHistoryArchiveV5**](SpreadTradingAPI.md#GetSprdOrdersHistoryArchiveV5) | **Get** /api/v5/sprd/orders-history-archive | Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed in the last 3 months. Results are returned in counter chronological order.  
-[**GetSprdOrdersHistoryV5**](SpreadTradingAPI.md#GetSprdOrdersHistoryV5) | **Get** /api/v5/sprd/orders-history | Retrieve the completed order data for the last 21 days, and the incomplete orders (filledSz &#x3D;0 &amp; state &#x3D; canceled) that have been canceled are only reserved for 2 hours. Results are returned in counter chronological order of orders creation.  
-[**GetSprdOrdersPendingV5**](SpreadTradingAPI.md#GetSprdOrdersPendingV5) | **Get** /api/v5/sprd/orders-pending | Retrieve all incomplete orders under the current account.  
-[**GetSprdPublicTradesV5**](SpreadTradingAPI.md#GetSprdPublicTradesV5) | **Get** /api/v5/sprd/public-trades | Retrieve the recent transactions of an instrument (at most 500 records per request). Results are returned in counter chronological order.   
-[**GetSprdSpreadsV5**](SpreadTradingAPI.md#GetSprdSpreadsV5) | **Get** /api/v5/sprd/spreads | Retrieve all available spreads based on the request parameters.  
-[**GetSprdTradesV5**](SpreadTradingAPI.md#GetSprdTradesV5) | **Get** /api/v5/sprd/trades | Retrieve historical transaction details . Results are returned in counter chronological order.  
+[**CreateSprdAmendOrderV5**](SpreadTradingAPI.md#CreateSprdAmendOrderV5) | **Post** /api/v5/sprd/amend-order | Amend order
+[**CreateSprdCancelAllAfterV5**](SpreadTradingAPI.md#CreateSprdCancelAllAfterV5) | **Post** /api/v5/sprd/cancel-all-after | Cancel All After
+[**CreateSprdCancelOrderV5**](SpreadTradingAPI.md#CreateSprdCancelOrderV5) | **Post** /api/v5/sprd/cancel-order | Cancel order
+[**CreateSprdMassCancelV5**](SpreadTradingAPI.md#CreateSprdMassCancelV5) | **Post** /api/v5/sprd/mass-cancel | Cancel All orders
+[**CreateSprdOrderV5**](SpreadTradingAPI.md#CreateSprdOrderV5) | **Post** /api/v5/sprd/order | Place order
+[**GetMarketSprdCandlesV5**](SpreadTradingAPI.md#GetMarketSprdCandlesV5) | **Get** /api/v5/market/sprd-candles | Get candlesticks
+[**GetMarketSprdHistoryCandlesV5**](SpreadTradingAPI.md#GetMarketSprdHistoryCandlesV5) | **Get** /api/v5/market/sprd-history-candles | Get candlesticks history
+[**GetMarketSprdTickerV5**](SpreadTradingAPI.md#GetMarketSprdTickerV5) | **Get** /api/v5/market/sprd-ticker | Get ticker (Public)
+[**GetSprdBooksV5**](SpreadTradingAPI.md#GetSprdBooksV5) | **Get** /api/v5/sprd/books | Get order book (Public)
+[**GetSprdOrderV5**](SpreadTradingAPI.md#GetSprdOrderV5) | **Get** /api/v5/sprd/order | Get order details
+[**GetSprdOrdersHistoryArchiveV5**](SpreadTradingAPI.md#GetSprdOrdersHistoryArchiveV5) | **Get** /api/v5/sprd/orders-history-archive | Get orders history (last 3 months)
+[**GetSprdOrdersHistoryV5**](SpreadTradingAPI.md#GetSprdOrdersHistoryV5) | **Get** /api/v5/sprd/orders-history | Get orders (last 21 days)
+[**GetSprdOrdersPendingV5**](SpreadTradingAPI.md#GetSprdOrdersPendingV5) | **Get** /api/v5/sprd/orders-pending | Get active orders
+[**GetSprdPublicTradesV5**](SpreadTradingAPI.md#GetSprdPublicTradesV5) | **Get** /api/v5/sprd/public-trades | Get public trades (Public)
+[**GetSprdSpreadsV5**](SpreadTradingAPI.md#GetSprdSpreadsV5) | **Get** /api/v5/sprd/spreads | Get Spreads (Public)
+[**GetSprdTradesV5**](SpreadTradingAPI.md#GetSprdTradesV5) | **Get** /api/v5/sprd/trades | Get trades (last 7 days)
 
 
 
@@ -27,7 +27,7 @@ Method | HTTP request | Description
 
 > CreateSprdAmendOrderV5Resp CreateSprdAmendOrderV5(ctx).CreateSprdAmendOrderV5Req(createSprdAmendOrderV5Req).Execute()
 
-Amend an incomplete order.  
+Amend order
 
 
 
@@ -93,7 +93,7 @@ Name | Type | Description  | Notes
 
 > CreateSprdCancelAllAfterV5Resp CreateSprdCancelAllAfterV5(ctx).CreateSprdCancelAllAfterV5Req(createSprdCancelAllAfterV5Req).Execute()
 
-Cancel all pending orders after the countdown timeout. Only applicable to spread trading.  
+Cancel All After
 
 
 
@@ -159,7 +159,7 @@ Name | Type | Description  | Notes
 
 > CreateSprdCancelOrderV5Resp CreateSprdCancelOrderV5(ctx).CreateSprdCancelOrderV5Req(createSprdCancelOrderV5Req).Execute()
 
-Cancel an incomplete order.  
+Cancel order
 
 
 
@@ -225,7 +225,7 @@ Name | Type | Description  | Notes
 
 > CreateSprdMassCancelV5Resp CreateSprdMassCancelV5(ctx).CreateSprdMassCancelV5Req(createSprdMassCancelV5Req).Execute()
 
-Cancel all pending orders.  
+Cancel All orders
 
 
 
@@ -291,7 +291,7 @@ Name | Type | Description  | Notes
 
 > CreateSprdOrderV5Resp CreateSprdOrderV5(ctx).CreateSprdOrderV5Req(createSprdOrderV5Req).Execute()
 
-Place a new order  
+Place order
 
 
 
@@ -357,7 +357,7 @@ Name | Type | Description  | Notes
 
 > GetMarketSprdCandlesV5Resp GetMarketSprdCandlesV5(ctx).SprdId(sprdId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
+Get candlesticks
 
 
 
@@ -431,7 +431,7 @@ No authorization required
 
 > GetMarketSprdHistoryCandlesV5Resp GetMarketSprdHistoryCandlesV5(ctx).SprdId(sprdId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
-Retrieve history candlestick charts from recent years.  
+Get candlesticks history
 
 
 
@@ -505,7 +505,7 @@ No authorization required
 
 > GetMarketSprdTickerV5Resp GetMarketSprdTickerV5(ctx).SprdId(sprdId).Execute()
 
-Retrieve the latest price snapshot, best bid/ask price and quantity.  
+Get ticker (Public)
 
 
 
@@ -571,7 +571,7 @@ No authorization required
 
 > GetSprdBooksV5Resp GetSprdBooksV5(ctx).SprdId(sprdId).Sz(sz).Execute()
 
-Retrieve the order book of the spread.  
+Get order book (Public)
 
 
 
@@ -639,7 +639,7 @@ No authorization required
 
 > GetSprdOrderV5Resp GetSprdOrderV5(ctx).OrdId(ordId).ClOrdId(clOrdId).Execute()
 
-Retrieve order details.  
+Get order details
 
 
 
@@ -707,7 +707,7 @@ Name | Type | Description  | Notes
 
 > GetSprdOrdersHistoryArchiveV5Resp GetSprdOrdersHistoryArchiveV5(ctx).SprdId(sprdId).OrdType(ordType).State(state).InstType(instType).InstFamily(instFamily).BeginId(beginId).EndId(endId).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve the completed order data for the last 3 months, including those placed 3 months ago but completed in the last 3 months. Results are returned in counter chronological order.  
+Get orders history (last 3 months)
 
 
 
@@ -791,7 +791,7 @@ Name | Type | Description  | Notes
 
 > GetSprdOrdersHistoryV5Resp GetSprdOrdersHistoryV5(ctx).SprdId(sprdId).OrdType(ordType).State(state).BeginId(beginId).EndId(endId).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve the completed order data for the last 21 days, and the incomplete orders (filledSz =0 & state = canceled) that have been canceled are only reserved for 2 hours. Results are returned in counter chronological order of orders creation.  
+Get orders (last 21 days)
 
 
 
@@ -871,7 +871,7 @@ Name | Type | Description  | Notes
 
 > GetSprdOrdersPendingV5Resp GetSprdOrdersPendingV5(ctx).SprdId(sprdId).OrdType(ordType).State(state).BeginId(beginId).EndId(endId).Limit(limit).Execute()
 
-Retrieve all incomplete orders under the current account.  
+Get active orders
 
 
 
@@ -947,7 +947,7 @@ Name | Type | Description  | Notes
 
 > GetSprdPublicTradesV5Resp GetSprdPublicTradesV5(ctx).SprdId(sprdId).Execute()
 
-Retrieve the recent transactions of an instrument (at most 500 records per request). Results are returned in counter chronological order.   
+Get public trades (Public)
 
 
 
@@ -1013,7 +1013,7 @@ No authorization required
 
 > GetSprdSpreadsV5Resp GetSprdSpreadsV5(ctx).BaseCcy(baseCcy).InstId(instId).SprdId(sprdId).State(state).Execute()
 
-Retrieve all available spreads based on the request parameters.  
+Get Spreads (Public)
 
 
 
@@ -1085,7 +1085,7 @@ No authorization required
 
 > GetSprdTradesV5Resp GetSprdTradesV5(ctx).SprdId(sprdId).TradeId(tradeId).OrdId(ordId).BeginId(beginId).EndId(endId).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve historical transaction details . Results are returned in counter chronological order.  
+Get trades (last 7 days)
 
 
 

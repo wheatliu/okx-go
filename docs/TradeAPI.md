@@ -4,32 +4,32 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTradeAmendBatchOrdersV5**](TradeAPI.md#CreateTradeAmendBatchOrdersV5) | **Post** /api/v5/trade/amend-batch-orders | Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.  Rate limit of this endpoint will also be affected by the rules  and .  
-[**CreateTradeAmendOrderV5**](TradeAPI.md#CreateTradeAmendOrderV5) | **Post** /api/v5/trade/amend-order | Amend an incomplete order.  Rate limit of this endpoint will also be affected by the rules  and .  
-[**CreateTradeBatchOrdersV5**](TradeAPI.md#CreateTradeBatchOrdersV5) | **Post** /api/v5/trade/batch-orders | Place orders in batches. Maximum 20 orders can be placed per request.    Request parameters should be passed in the form of an array. Orders will be placed in turn    Rate limit of this endpoint will also be affected by the rules  and .  
-[**CreateTradeCancelAllAfterV5**](TradeAPI.md#CreateTradeCancelAllAfterV5) | **Post** /api/v5/trade/cancel-all-after | Cancel all pending orders after the countdown timeout. Applicable to all trading symbols through order book (except Spread trading)    
-[**CreateTradeCancelBatchOrdersV5**](TradeAPI.md#CreateTradeCancelBatchOrdersV5) | **Post** /api/v5/trade/cancel-batch-orders | Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.  
-[**CreateTradeCancelOrderV5**](TradeAPI.md#CreateTradeCancelOrderV5) | **Post** /api/v5/trade/cancel-order | Cancel an incomplete order.  
-[**CreateTradeClosePositionV5**](TradeAPI.md#CreateTradeClosePositionV5) | **Post** /api/v5/trade/close-position | Close the position of an instrument via a market order.  
-[**CreateTradeEasyConvertV5**](TradeAPI.md#CreateTradeEasyConvertV5) | **Post** /api/v5/trade/easy-convert | Convert small currencies to mainstream currencies.   
-[**CreateTradeMassCancelV5**](TradeAPI.md#CreateTradeMassCancelV5) | **Post** /api/v5/trade/mass-cancel | Cancel all the MMP pending orders of an instrument family.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
-[**CreateTradeOneClickRepayV2V5**](TradeAPI.md#CreateTradeOneClickRepayV2V5) | **Post** /api/v5/trade/one-click-repay-v2 | Trade one-click repay to repay debts. Only applicable to &#x60;SPOT mode&#x60;.   
-[**CreateTradeOneClickRepayV5**](TradeAPI.md#CreateTradeOneClickRepayV5) | **Post** /api/v5/trade/one-click-repay | Trade one-click repay to repay cross debts. Isolated debts are not applicable. The maximum repayment amount is based on the remaining available balance of funding and trading accounts. Only applicable to &#x60;Multi-currency margin&#x60;/&#x60;Portfolio margin&#x60;.  
-[**CreateTradeOrderPrecheckV5**](TradeAPI.md#CreateTradeOrderPrecheckV5) | **Post** /api/v5/trade/order-precheck | This endpoint is used to precheck the account information before and after placing the order.    Only applicable to &#x60;Multi-currency margin mode&#x60;, and &#x60;Portfolio margin mode&#x60;.  
-[**CreateTradeOrderV5**](TradeAPI.md#CreateTradeOrderV5) | **Post** /api/v5/trade/order | You can place an order only if you have sufficient funds.  Rate limit of this endpoint will also be affected by the rules  and .  
-[**GetTradeAccountRateLimitV5**](TradeAPI.md#GetTradeAccountRateLimitV5) | **Get** /api/v5/trade/account-rate-limit | Get account rate limit related information.     Only new order requests and amendment order requests will be counted towards this limit. For batch order requests consisting of multiple orders, each order will be counted individually.     For details, please refer to   
-[**GetTradeEasyConvertCurrencyListV5**](TradeAPI.md#GetTradeEasyConvertCurrencyListV5) | **Get** /api/v5/trade/easy-convert-currency-list | Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.  
-[**GetTradeEasyConvertHistoryV5**](TradeAPI.md#GetTradeEasyConvertHistoryV5) | **Get** /api/v5/trade/easy-convert-history | Get the history and status of easy convert trades in the past 7 days.  
-[**GetTradeFillsHistoryV5**](TradeAPI.md#GetTradeFillsHistoryV5) | **Get** /api/v5/trade/fills-history | Retrieve recently-filled transaction details in the last 3 months.  
-[**GetTradeFillsV5**](TradeAPI.md#GetTradeFillsV5) | **Get** /api/v5/trade/fills | Retrieve recently-filled transaction details in the last 3 day.  
-[**GetTradeOneClickRepayCurrencyListV2V5**](TradeAPI.md#GetTradeOneClickRepayCurrencyListV2V5) | **Get** /api/v5/trade/one-click-repay-currency-list-v2 | Get list of debt currency data and repay currencies. Only applicable to &#x60;SPOT mode&#x60;.  
-[**GetTradeOneClickRepayCurrencyListV5**](TradeAPI.md#GetTradeOneClickRepayCurrencyListV5) | **Get** /api/v5/trade/one-click-repay-currency-list | Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts. Only applicable to &#x60;Multi-currency margin&#x60;/&#x60;Portfolio margin&#x60;.  
-[**GetTradeOneClickRepayHistoryV2V5**](TradeAPI.md#GetTradeOneClickRepayHistoryV2V5) | **Get** /api/v5/trade/one-click-repay-history-v2 | Get the history and status of one-click repay trades in the past 7 days. Only applicable to &#x60;SPOT mode&#x60;.  
-[**GetTradeOneClickRepayHistoryV5**](TradeAPI.md#GetTradeOneClickRepayHistoryV5) | **Get** /api/v5/trade/one-click-repay-history | Get the history and status of one-click repay trades in the past 7 days. Only applicable to &#x60;Multi-currency margin&#x60;/&#x60;Portfolio margin&#x60;.  
-[**GetTradeOrderV5**](TradeAPI.md#GetTradeOrderV5) | **Get** /api/v5/trade/order | Retrieve order details.  
-[**GetTradeOrdersHistoryArchiveV5**](TradeAPI.md#GetTradeOrdersHistoryArchiveV5) | **Get** /api/v5/trade/orders-history-archive | Get completed orders which are placed in the last 3 months, including those placed 3 months ago but completed in the last 3 months.      
-[**GetTradeOrdersHistoryV5**](TradeAPI.md#GetTradeOrdersHistoryV5) | **Get** /api/v5/trade/orders-history | Get completed orders which are placed in the last 7 days, including those placed 7 days ago but completed in the last 7 days.      The incomplete orders that have been canceled are only reserved for 2 hours.  
-[**GetTradeOrdersPendingV5**](TradeAPI.md#GetTradeOrdersPendingV5) | **Get** /api/v5/trade/orders-pending | Retrieve all incomplete orders under the current account.  
+[**CreateTradeAmendBatchOrdersV5**](TradeAPI.md#CreateTradeAmendBatchOrdersV5) | **Post** /api/v5/trade/amend-batch-orders | POST / Amend multiple orders
+[**CreateTradeAmendOrderV5**](TradeAPI.md#CreateTradeAmendOrderV5) | **Post** /api/v5/trade/amend-order | POST / Amend order
+[**CreateTradeBatchOrdersV5**](TradeAPI.md#CreateTradeBatchOrdersV5) | **Post** /api/v5/trade/batch-orders | POST / Place multiple orders
+[**CreateTradeCancelAllAfterV5**](TradeAPI.md#CreateTradeCancelAllAfterV5) | **Post** /api/v5/trade/cancel-all-after | POST / Cancel All After
+[**CreateTradeCancelBatchOrdersV5**](TradeAPI.md#CreateTradeCancelBatchOrdersV5) | **Post** /api/v5/trade/cancel-batch-orders | POST / Cancel multiple orders
+[**CreateTradeCancelOrderV5**](TradeAPI.md#CreateTradeCancelOrderV5) | **Post** /api/v5/trade/cancel-order | POST / Cancel order
+[**CreateTradeClosePositionV5**](TradeAPI.md#CreateTradeClosePositionV5) | **Post** /api/v5/trade/close-position | POST / Close positions
+[**CreateTradeEasyConvertV5**](TradeAPI.md#CreateTradeEasyConvertV5) | **Post** /api/v5/trade/easy-convert | POST / Place easy convert
+[**CreateTradeMassCancelV5**](TradeAPI.md#CreateTradeMassCancelV5) | **Post** /api/v5/trade/mass-cancel | POST / Mass cancel order
+[**CreateTradeOneClickRepayV2V5**](TradeAPI.md#CreateTradeOneClickRepayV2V5) | **Post** /api/v5/trade/one-click-repay-v2 | POST / Trade one-click repay (New)
+[**CreateTradeOneClickRepayV5**](TradeAPI.md#CreateTradeOneClickRepayV5) | **Post** /api/v5/trade/one-click-repay | POST / Trade one-click repay
+[**CreateTradeOrderPrecheckV5**](TradeAPI.md#CreateTradeOrderPrecheckV5) | **Post** /api/v5/trade/order-precheck | POST / Order precheck
+[**CreateTradeOrderV5**](TradeAPI.md#CreateTradeOrderV5) | **Post** /api/v5/trade/order | POST / Place order
+[**GetTradeAccountRateLimitV5**](TradeAPI.md#GetTradeAccountRateLimitV5) | **Get** /api/v5/trade/account-rate-limit | GET / Account rate limit
+[**GetTradeEasyConvertCurrencyListV5**](TradeAPI.md#GetTradeEasyConvertCurrencyListV5) | **Get** /api/v5/trade/easy-convert-currency-list | GET / Easy convert currency list
+[**GetTradeEasyConvertHistoryV5**](TradeAPI.md#GetTradeEasyConvertHistoryV5) | **Get** /api/v5/trade/easy-convert-history | GET / Easy convert history
+[**GetTradeFillsHistoryV5**](TradeAPI.md#GetTradeFillsHistoryV5) | **Get** /api/v5/trade/fills-history | GET / Transaction details (last 3 months)
+[**GetTradeFillsV5**](TradeAPI.md#GetTradeFillsV5) | **Get** /api/v5/trade/fills | GET / Transaction details (last 3 days)
+[**GetTradeOneClickRepayCurrencyListV2V5**](TradeAPI.md#GetTradeOneClickRepayCurrencyListV2V5) | **Get** /api/v5/trade/one-click-repay-currency-list-v2 | GET / One-click repay currency list (New)
+[**GetTradeOneClickRepayCurrencyListV5**](TradeAPI.md#GetTradeOneClickRepayCurrencyListV5) | **Get** /api/v5/trade/one-click-repay-currency-list | GET / One-click repay currency list
+[**GetTradeOneClickRepayHistoryV2V5**](TradeAPI.md#GetTradeOneClickRepayHistoryV2V5) | **Get** /api/v5/trade/one-click-repay-history-v2 | GET / One-click repay history (New)
+[**GetTradeOneClickRepayHistoryV5**](TradeAPI.md#GetTradeOneClickRepayHistoryV5) | **Get** /api/v5/trade/one-click-repay-history | GET / One-click repay history
+[**GetTradeOrderV5**](TradeAPI.md#GetTradeOrderV5) | **Get** /api/v5/trade/order | GET / Order details
+[**GetTradeOrdersHistoryArchiveV5**](TradeAPI.md#GetTradeOrdersHistoryArchiveV5) | **Get** /api/v5/trade/orders-history-archive | GET / Order history (last 3 months)
+[**GetTradeOrdersHistoryV5**](TradeAPI.md#GetTradeOrdersHistoryV5) | **Get** /api/v5/trade/orders-history | GET / Order history (last 7 days)
+[**GetTradeOrdersPendingV5**](TradeAPI.md#GetTradeOrdersPendingV5) | **Get** /api/v5/trade/orders-pending | GET / Order List
 
 
 
@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 > CreateTradeAmendBatchOrdersV5Resp CreateTradeAmendBatchOrdersV5(ctx).CreateTradeAmendBatchOrdersV5Req(createTradeAmendBatchOrdersV5Req).Execute()
 
-Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.  Rate limit of this endpoint will also be affected by the rules  and .  
+POST / Amend multiple orders
 
 
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeAmendOrderV5Resp CreateTradeAmendOrderV5(ctx).CreateTradeAmendOrderV5Req(createTradeAmendOrderV5Req).Execute()
 
-Amend an incomplete order.  Rate limit of this endpoint will also be affected by the rules  and .  
+POST / Amend order
 
 
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeBatchOrdersV5Resp CreateTradeBatchOrdersV5(ctx).CreateTradeBatchOrdersV5Req(createTradeBatchOrdersV5Req).Execute()
 
-Place orders in batches. Maximum 20 orders can be placed per request.    Request parameters should be passed in the form of an array. Orders will be placed in turn    Rate limit of this endpoint will also be affected by the rules  and .  
+POST / Place multiple orders
 
 
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeCancelAllAfterV5Resp CreateTradeCancelAllAfterV5(ctx).CreateTradeCancelAllAfterV5Req(createTradeCancelAllAfterV5Req).Execute()
 
-Cancel all pending orders after the countdown timeout. Applicable to all trading symbols through order book (except Spread trading)    
+POST / Cancel All After
 
 
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeCancelBatchOrdersV5Resp CreateTradeCancelBatchOrdersV5(ctx).CreateTradeCancelBatchOrdersV5Req(createTradeCancelBatchOrdersV5Req).Execute()
 
-Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+POST / Cancel multiple orders
 
 
 
@@ -351,7 +351,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeCancelOrderV5Resp CreateTradeCancelOrderV5(ctx).CreateTradeCancelOrderV5Req(createTradeCancelOrderV5Req).Execute()
 
-Cancel an incomplete order.  
+POST / Cancel order
 
 
 
@@ -417,7 +417,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeClosePositionV5Resp CreateTradeClosePositionV5(ctx).CreateTradeClosePositionV5Req(createTradeClosePositionV5Req).Execute()
 
-Close the position of an instrument via a market order.  
+POST / Close positions
 
 
 
@@ -483,7 +483,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeEasyConvertV5Resp CreateTradeEasyConvertV5(ctx).CreateTradeEasyConvertV5Req(createTradeEasyConvertV5Req).Execute()
 
-Convert small currencies to mainstream currencies.   
+POST / Place easy convert
 
 
 
@@ -565,7 +565,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeMassCancelV5Resp CreateTradeMassCancelV5(ctx).CreateTradeMassCancelV5Req(createTradeMassCancelV5Req).Execute()
 
-Cancel all the MMP pending orders of an instrument family.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+POST / Mass cancel order
 
 
 
@@ -631,7 +631,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeOneClickRepayV2V5Resp CreateTradeOneClickRepayV2V5(ctx).CreateTradeOneClickRepayV2V5Req(createTradeOneClickRepayV2V5Req).Execute()
 
-Trade one-click repay to repay debts. Only applicable to `SPOT mode`.   
+POST / Trade one-click repay (New)
 
 
 
@@ -697,7 +697,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeOneClickRepayV5Resp CreateTradeOneClickRepayV5(ctx).CreateTradeOneClickRepayV5Req(createTradeOneClickRepayV5Req).Execute()
 
-Trade one-click repay to repay cross debts. Isolated debts are not applicable. The maximum repayment amount is based on the remaining available balance of funding and trading accounts. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+POST / Trade one-click repay
 
 
 
@@ -763,7 +763,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeOrderPrecheckV5Resp CreateTradeOrderPrecheckV5(ctx).CreateTradeOrderPrecheckV5Req(createTradeOrderPrecheckV5Req).Execute()
 
-This endpoint is used to precheck the account information before and after placing the order.    Only applicable to `Multi-currency margin mode`, and `Portfolio margin mode`.  
+POST / Order precheck
 
 
 
@@ -829,7 +829,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeOrderV5Resp CreateTradeOrderV5(ctx).CreateTradeOrderV5Req(createTradeOrderV5Req).Execute()
 
-You can place an order only if you have sufficient funds.  Rate limit of this endpoint will also be affected by the rules  and .  
+POST / Place order
 
 
 
@@ -879,7 +879,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -895,7 +895,7 @@ Name | Type | Description  | Notes
 
 > GetTradeAccountRateLimitV5Resp GetTradeAccountRateLimitV5(ctx).Execute()
 
-Get account rate limit related information.     Only new order requests and amendment order requests will be counted towards this limit. For batch order requests consisting of multiple orders, each order will be counted individually.     For details, please refer to   
+GET / Account rate limit
 
 
 
@@ -956,7 +956,7 @@ Other parameters are passed through a pointer to a apiGetTradeAccountRateLimitV5
 
 > GetTradeEasyConvertCurrencyListV5Resp GetTradeEasyConvertCurrencyListV5(ctx).Source(source).Execute()
 
-Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.  
+GET / Easy convert currency list
 
 
 
@@ -1022,7 +1022,7 @@ Name | Type | Description  | Notes
 
 > GetTradeEasyConvertHistoryV5Resp GetTradeEasyConvertHistoryV5(ctx).After(after).Before(before).Limit(limit).Execute()
 
-Get the history and status of easy convert trades in the past 7 days.  
+GET / Easy convert history
 
 
 
@@ -1092,7 +1092,7 @@ Name | Type | Description  | Notes
 
 > GetTradeFillsHistoryV5Resp GetTradeFillsHistoryV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).OrdId(ordId).SubType(subType).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve recently-filled transaction details in the last 3 months.  
+GET / Transaction details (last 3 months)
 
 
 
@@ -1178,7 +1178,7 @@ Name | Type | Description  | Notes
 
 > GetTradeFillsV5Resp GetTradeFillsV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).OrdId(ordId).SubType(subType).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Retrieve recently-filled transaction details in the last 3 day.  
+GET / Transaction details (last 3 days)
 
 
 
@@ -1264,7 +1264,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOneClickRepayCurrencyListV2V5Resp GetTradeOneClickRepayCurrencyListV2V5(ctx).Execute()
 
-Get list of debt currency data and repay currencies. Only applicable to `SPOT mode`.  
+GET / One-click repay currency list (New)
 
 
 
@@ -1325,7 +1325,7 @@ Other parameters are passed through a pointer to a apiGetTradeOneClickRepayCurre
 
 > GetTradeOneClickRepayCurrencyListV5Resp GetTradeOneClickRepayCurrencyListV5(ctx).DebtType(debtType).Execute()
 
-Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+GET / One-click repay currency list
 
 
 
@@ -1391,7 +1391,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOneClickRepayHistoryV2V5Resp GetTradeOneClickRepayHistoryV2V5(ctx).After(after).Before(before).Limit(limit).Execute()
 
-Get the history and status of one-click repay trades in the past 7 days. Only applicable to `SPOT mode`.  
+GET / One-click repay history (New)
 
 
 
@@ -1461,7 +1461,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOneClickRepayHistoryV5Resp GetTradeOneClickRepayHistoryV5(ctx).After(after).Before(before).Limit(limit).Execute()
 
-Get the history and status of one-click repay trades in the past 7 days. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+GET / One-click repay history
 
 
 
@@ -1531,7 +1531,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrderV5Resp GetTradeOrderV5(ctx).InstId(instId).OrdId(ordId).ClOrdId(clOrdId).Execute()
 
-Retrieve order details.  
+GET / Order details
 
 
 
@@ -1585,7 +1585,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -1601,7 +1601,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrdersHistoryArchiveV5Resp GetTradeOrdersHistoryArchiveV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).OrdType(ordType).State(state).Category(category).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Get completed orders which are placed in the last 3 months, including those placed 3 months ago but completed in the last 3 months.      
+GET / Order history (last 3 months)
 
 
 
@@ -1689,7 +1689,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrdersHistoryV5Resp GetTradeOrdersHistoryV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).OrdType(ordType).State(state).Category(category).After(after).Before(before).Begin(begin).End(end).Limit(limit).Execute()
 
-Get completed orders which are placed in the last 7 days, including those placed 7 days ago but completed in the last 7 days.      The incomplete orders that have been canceled are only reserved for 2 hours.  
+GET / Order history (last 7 days)
 
 
 
@@ -1777,7 +1777,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrdersPendingV5Resp GetTradeOrdersPendingV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).OrdType(ordType).State(state).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve all incomplete orders under the current account.  
+GET / Order List
 
 
 

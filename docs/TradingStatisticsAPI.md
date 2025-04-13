@@ -4,21 +4,21 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetRubikStatContractsLongShortAccountRatioContractTopTraderV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioContractTopTraderV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio-contract-top-trader | Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
-[**GetRubikStatContractsLongShortAccountRatioContractV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioContractV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio-contract | Retrieve the account long/short ratio of a contract. This endpoint can retrieve the latest 1,440 data entries.     For period&#x3D;1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
-[**GetRubikStatContractsLongShortAccountRatioV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio | Retrieve the ratio of users with net long vs net short positions for Expiry Futures and Perpetual Futures.  
-[**GetRubikStatContractsLongShortPositionRatioContractTopTraderV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortPositionRatioContractTopTraderV5) | **Get** /api/v5/rubik/stat/contracts/long-short-position-ratio-contract-top-trader | Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
-[**GetRubikStatContractsOpenInterestHistoryV5**](TradingStatisticsAPI.md#GetRubikStatContractsOpenInterestHistoryV5) | **Get** /api/v5/rubik/stat/contracts/open-interest-history | Retrieve the contract open interest statistics of futures and perp. This endpoint can retrieve the latest 1,440 data entries.     For period&#x3D;1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
-[**GetRubikStatContractsOpenInterestVolumeV5**](TradingStatisticsAPI.md#GetRubikStatContractsOpenInterestVolumeV5) | **Get** /api/v5/rubik/stat/contracts/open-interest-volume | Retrieve the open interest and trading volume for Expiry Futures and Perpetual Futures.  
-[**GetRubikStatMarginLoanRatioV5**](TradingStatisticsAPI.md#GetRubikStatMarginLoanRatioV5) | **Get** /api/v5/rubik/stat/margin/loan-ratio | Retrieve the ratio of cumulative amount of quote currency to base currency.  
-[**GetRubikStatOptionOpenInterestVolumeExpiryV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeExpiryV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-expiry | Retrieve the open interest and trading volume of calls and puts for each upcoming expiration.  
-[**GetRubikStatOptionOpenInterestVolumeRatioV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeRatioV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-ratio | Retrieve the open interest ratio and trading volume ratio of calls vs puts.  
-[**GetRubikStatOptionOpenInterestVolumeStrikeV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeStrikeV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-strike | Retrieve the taker volume for both buyers and sellers of calls and puts.  
-[**GetRubikStatOptionOpenInterestVolumeV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume | Retrieve the open interest and trading volume for options.  
-[**GetRubikStatOptionTakerBlockVolumeV5**](TradingStatisticsAPI.md#GetRubikStatOptionTakerBlockVolumeV5) | **Get** /api/v5/rubik/stat/option/taker-block-volume | This shows the relative buy/sell volume for calls and puts. It shows whether traders are bullish or bearish on price and volatility.  
-[**GetRubikStatTakerVolumeContractV5**](TradingStatisticsAPI.md#GetRubikStatTakerVolumeContractV5) | **Get** /api/v5/rubik/stat/taker-volume-contract | Retrieve the contract taker volume for both buyers and sellers. This endpoint can retrieve the latest 1,440 data entries.     For period&#x3D;1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
-[**GetRubikStatTakerVolumeV5**](TradingStatisticsAPI.md#GetRubikStatTakerVolumeV5) | **Get** /api/v5/rubik/stat/taker-volume | Retrieve the taker volume for both buyers and sellers.  
-[**GetRubikStatTradingDataSupportCoinV5**](TradingStatisticsAPI.md#GetRubikStatTradingDataSupportCoinV5) | **Get** /api/v5/rubik/stat/trading-data/support-coin | Retrieve the currencies supported by the trading statistics endpoints.  
+[**GetRubikStatContractsLongShortAccountRatioContractTopTraderV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioContractTopTraderV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio-contract-top-trader | Get top traders contract long/short ratio
+[**GetRubikStatContractsLongShortAccountRatioContractV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioContractV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio-contract | Get contract long/short ratio
+[**GetRubikStatContractsLongShortAccountRatioV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortAccountRatioV5) | **Get** /api/v5/rubik/stat/contracts/long-short-account-ratio | Get long/short ratio
+[**GetRubikStatContractsLongShortPositionRatioContractTopTraderV5**](TradingStatisticsAPI.md#GetRubikStatContractsLongShortPositionRatioContractTopTraderV5) | **Get** /api/v5/rubik/stat/contracts/long-short-position-ratio-contract-top-trader | Get top traders contract long/short ratio (by position)
+[**GetRubikStatContractsOpenInterestHistoryV5**](TradingStatisticsAPI.md#GetRubikStatContractsOpenInterestHistoryV5) | **Get** /api/v5/rubik/stat/contracts/open-interest-history | Get contract open interest history
+[**GetRubikStatContractsOpenInterestVolumeV5**](TradingStatisticsAPI.md#GetRubikStatContractsOpenInterestVolumeV5) | **Get** /api/v5/rubik/stat/contracts/open-interest-volume | Get contracts open interest and volume
+[**GetRubikStatMarginLoanRatioV5**](TradingStatisticsAPI.md#GetRubikStatMarginLoanRatioV5) | **Get** /api/v5/rubik/stat/margin/loan-ratio | Get margin long/short ratio
+[**GetRubikStatOptionOpenInterestVolumeExpiryV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeExpiryV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-expiry | Get open interest and volume (expiry)
+[**GetRubikStatOptionOpenInterestVolumeRatioV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeRatioV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-ratio | Get put/call ratio
+[**GetRubikStatOptionOpenInterestVolumeStrikeV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeStrikeV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume-strike | Get open interest and volume (strike)
+[**GetRubikStatOptionOpenInterestVolumeV5**](TradingStatisticsAPI.md#GetRubikStatOptionOpenInterestVolumeV5) | **Get** /api/v5/rubik/stat/option/open-interest-volume | Get options open interest and volume
+[**GetRubikStatOptionTakerBlockVolumeV5**](TradingStatisticsAPI.md#GetRubikStatOptionTakerBlockVolumeV5) | **Get** /api/v5/rubik/stat/option/taker-block-volume | Get taker flow
+[**GetRubikStatTakerVolumeContractV5**](TradingStatisticsAPI.md#GetRubikStatTakerVolumeContractV5) | **Get** /api/v5/rubik/stat/taker-volume-contract | Get contract taker volume
+[**GetRubikStatTakerVolumeV5**](TradingStatisticsAPI.md#GetRubikStatTakerVolumeV5) | **Get** /api/v5/rubik/stat/taker-volume | Get taker volume
+[**GetRubikStatTradingDataSupportCoinV5**](TradingStatisticsAPI.md#GetRubikStatTradingDataSupportCoinV5) | **Get** /api/v5/rubik/stat/trading-data/support-coin | Get support coin
 
 
 
@@ -26,7 +26,7 @@ Method | HTTP request | Description
 
 > GetRubikStatContractsLongShortAccountRatioContractTopTraderV5Resp GetRubikStatContractsLongShortAccountRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
-Retrieve the account net long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
+Get top traders contract long/short ratio
 
 
 
@@ -100,7 +100,7 @@ No authorization required
 
 > GetRubikStatContractsLongShortAccountRatioContractV5Resp GetRubikStatContractsLongShortAccountRatioContractV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
-Retrieve the account long/short ratio of a contract. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+Get contract long/short ratio
 
 
 
@@ -174,7 +174,7 @@ No authorization required
 
 > GetRubikStatContractsLongShortAccountRatioV5Resp GetRubikStatContractsLongShortAccountRatioV5(ctx).Ccy(ccy).Begin(begin).End(end).Period(period).Execute()
 
-Retrieve the ratio of users with net long vs net short positions for Expiry Futures and Perpetual Futures.  
+Get long/short ratio
 
 
 
@@ -246,7 +246,7 @@ No authorization required
 
 > GetRubikStatContractsLongShortPositionRatioContractTopTraderV5Resp GetRubikStatContractsLongShortPositionRatioContractTopTraderV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
-Retrieve the position long/short ratio of a contract for top traders. Top traders refer to the top 5% of traders with the largest open position value. This endpoint can retrieve the latest 1,440 data entries. The data time range is up to March 22, 2024.  
+Get top traders contract long/short ratio (by position)
 
 
 
@@ -320,7 +320,7 @@ No authorization required
 
 > GetRubikStatContractsOpenInterestHistoryV5Resp GetRubikStatContractsOpenInterestHistoryV5(ctx).InstId(instId).Period(period).End(end).Begin(begin).Limit(limit).Execute()
 
-Retrieve the contract open interest statistics of futures and perp. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+Get contract open interest history
 
 
 
@@ -394,7 +394,7 @@ No authorization required
 
 > GetRubikStatContractsOpenInterestVolumeV5Resp GetRubikStatContractsOpenInterestVolumeV5(ctx).Ccy(ccy).Begin(begin).End(end).Period(period).Execute()
 
-Retrieve the open interest and trading volume for Expiry Futures and Perpetual Futures.  
+Get contracts open interest and volume
 
 
 
@@ -466,7 +466,7 @@ No authorization required
 
 > GetRubikStatMarginLoanRatioV5Resp GetRubikStatMarginLoanRatioV5(ctx).Ccy(ccy).Begin(begin).End(end).Period(period).Execute()
 
-Retrieve the ratio of cumulative amount of quote currency to base currency.  
+Get margin long/short ratio
 
 
 
@@ -538,7 +538,7 @@ No authorization required
 
 > GetRubikStatOptionOpenInterestVolumeExpiryV5Resp GetRubikStatOptionOpenInterestVolumeExpiryV5(ctx).Ccy(ccy).Period(period).Execute()
 
-Retrieve the open interest and trading volume of calls and puts for each upcoming expiration.  
+Get open interest and volume (expiry)
 
 
 
@@ -606,7 +606,7 @@ No authorization required
 
 > GetRubikStatOptionOpenInterestVolumeRatioV5Resp GetRubikStatOptionOpenInterestVolumeRatioV5(ctx).Ccy(ccy).Period(period).Execute()
 
-Retrieve the open interest ratio and trading volume ratio of calls vs puts.  
+Get put/call ratio
 
 
 
@@ -674,7 +674,7 @@ No authorization required
 
 > GetRubikStatOptionOpenInterestVolumeStrikeV5Resp GetRubikStatOptionOpenInterestVolumeStrikeV5(ctx).Ccy(ccy).ExpTime(expTime).Period(period).Execute()
 
-Retrieve the taker volume for both buyers and sellers of calls and puts.  
+Get open interest and volume (strike)
 
 
 
@@ -744,7 +744,7 @@ No authorization required
 
 > GetRubikStatOptionOpenInterestVolumeV5Resp GetRubikStatOptionOpenInterestVolumeV5(ctx).Ccy(ccy).Period(period).Execute()
 
-Retrieve the open interest and trading volume for options.  
+Get options open interest and volume
 
 
 
@@ -812,7 +812,7 @@ No authorization required
 
 > GetRubikStatOptionTakerBlockVolumeV5Resp GetRubikStatOptionTakerBlockVolumeV5(ctx).Ccy(ccy).Period(period).Execute()
 
-This shows the relative buy/sell volume for calls and puts. It shows whether traders are bullish or bearish on price and volatility.  
+Get taker flow
 
 
 
@@ -880,7 +880,7 @@ No authorization required
 
 > GetRubikStatTakerVolumeContractV5Resp GetRubikStatTakerVolumeContractV5(ctx).InstId(instId).Period(period).Unit(unit).End(end).Begin(begin).Limit(limit).Execute()
 
-Retrieve the contract taker volume for both buyers and sellers. This endpoint can retrieve the latest 1,440 data entries.     For period=1D, the data time range is up to January 1, 2024; for other periods, the data time range is up to early February 2024.  
+Get contract taker volume
 
 
 
@@ -956,7 +956,7 @@ No authorization required
 
 > GetRubikStatTakerVolumeV5Resp GetRubikStatTakerVolumeV5(ctx).Ccy(ccy).InstType(instType).Begin(begin).End(end).Period(period).Execute()
 
-Retrieve the taker volume for both buyers and sellers.  
+Get taker volume
 
 
 
@@ -1030,7 +1030,7 @@ No authorization required
 
 > GetRubikStatTradingDataSupportCoinV5Resp GetRubikStatTradingDataSupportCoinV5(ctx).Execute()
 
-Retrieve the currencies supported by the trading statistics endpoints.  
+Get support coin
 
 
 

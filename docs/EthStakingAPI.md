@@ -4,12 +4,12 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateFinanceStakingDefiEthPurchaseV5**](EthStakingAPI.md#CreateFinanceStakingDefiEthPurchaseV5) | **Post** /api/v5/finance/staking-defi/eth/purchase | Staking ETH for BETH   Only the assets in the funding account can be used.    
-[**CreateFinanceStakingDefiEthRedeemV5**](EthStakingAPI.md#CreateFinanceStakingDefiEthRedeemV5) | **Post** /api/v5/finance/staking-defi/eth/redeem | Only the assets in the funding account can be used. If your BETH is in your trading account, you can make funding transfer first.    
-[**GetFinanceStakingDefiEthApyHistoryV5**](EthStakingAPI.md#GetFinanceStakingDefiEthApyHistoryV5) | **Get** /api/v5/finance/staking-defi/eth/apy-history | Public endpoints don&#39;t need authorization.  
-[**GetFinanceStakingDefiEthBalanceV5**](EthStakingAPI.md#GetFinanceStakingDefiEthBalanceV5) | **Get** /api/v5/finance/staking-defi/eth/balance | The balance is a snapshot summarized all BETH assets (including assets in redeeming) in account.  
-[**GetFinanceStakingDefiEthProductInfoV5**](EthStakingAPI.md#GetFinanceStakingDefiEthProductInfoV5) | **Get** /api/v5/finance/staking-defi/eth/product-info | 
-[**GetFinanceStakingDefiEthPurchaseRedeemHistoryV5**](EthStakingAPI.md#GetFinanceStakingDefiEthPurchaseRedeemHistoryV5) | **Get** /api/v5/finance/staking-defi/eth/purchase-redeem-history | 
+[**CreateFinanceStakingDefiEthPurchaseV5**](EthStakingAPI.md#CreateFinanceStakingDefiEthPurchaseV5) | **Post** /api/v5/finance/staking-defi/eth/purchase | POST / Purchase
+[**CreateFinanceStakingDefiEthRedeemV5**](EthStakingAPI.md#CreateFinanceStakingDefiEthRedeemV5) | **Post** /api/v5/finance/staking-defi/eth/redeem | POST / Redeem
+[**GetFinanceStakingDefiEthApyHistoryV5**](EthStakingAPI.md#GetFinanceStakingDefiEthApyHistoryV5) | **Get** /api/v5/finance/staking-defi/eth/apy-history | GET / APY history (Public)
+[**GetFinanceStakingDefiEthBalanceV5**](EthStakingAPI.md#GetFinanceStakingDefiEthBalanceV5) | **Get** /api/v5/finance/staking-defi/eth/balance | GET / Balance
+[**GetFinanceStakingDefiEthProductInfoV5**](EthStakingAPI.md#GetFinanceStakingDefiEthProductInfoV5) | **Get** /api/v5/finance/staking-defi/eth/product-info | GET / Product info
+[**GetFinanceStakingDefiEthPurchaseRedeemHistoryV5**](EthStakingAPI.md#GetFinanceStakingDefiEthPurchaseRedeemHistoryV5) | **Get** /api/v5/finance/staking-defi/eth/purchase-redeem-history | GET / Purchase&amp;Redeem history
 
 
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 > CreateFinanceStakingDefiEthPurchaseV5Resp CreateFinanceStakingDefiEthPurchaseV5(ctx).CreateFinanceStakingDefiEthPurchaseV5Req(createFinanceStakingDefiEthPurchaseV5Req).Execute()
 
-Staking ETH for BETH   Only the assets in the funding account can be used.    
+POST / Purchase
 
 
 
@@ -34,7 +34,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiEthPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiEthPurchaseV5Req("Amt_example") // CreateFinanceStakingDefiEthPurchaseV5Req | The request body for CreateFinanceStaking-DefiEthPurchaseV5
+	createFinanceStakingDefiEthPurchaseV5Req := *openapiclient.NewCreateFinanceStakingDefiEthPurchaseV5Req("Amt_example") // CreateFinanceStakingDefiEthPurchaseV5Req | The request body for CreateFinanceStakingDefiEthPurchaseV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -59,7 +59,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiEt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiEthPurchaseV5Req** | [**CreateFinanceStakingDefiEthPurchaseV5Req**](CreateFinanceStakingDefiEthPurchaseV5Req.md) | The request body for CreateFinanceStaking-DefiEthPurchaseV5 | 
+ **createFinanceStakingDefiEthPurchaseV5Req** | [**CreateFinanceStakingDefiEthPurchaseV5Req**](CreateFinanceStakingDefiEthPurchaseV5Req.md) | The request body for CreateFinanceStakingDefiEthPurchaseV5 | 
 
 ### Return type
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceStakingDefiEthRedeemV5Resp CreateFinanceStakingDefiEthRedeemV5(ctx).CreateFinanceStakingDefiEthRedeemV5Req(createFinanceStakingDefiEthRedeemV5Req).Execute()
 
-Only the assets in the funding account can be used. If your BETH is in your trading account, you can make funding transfer first.    
+POST / Redeem
 
 
 
@@ -100,7 +100,7 @@ import (
 )
 
 func main() {
-	createFinanceStakingDefiEthRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiEthRedeemV5Req("Amt_example") // CreateFinanceStakingDefiEthRedeemV5Req | The request body for CreateFinanceStaking-DefiEthRedeemV5
+	createFinanceStakingDefiEthRedeemV5Req := *openapiclient.NewCreateFinanceStakingDefiEthRedeemV5Req("Amt_example") // CreateFinanceStakingDefiEthRedeemV5Req | The request body for CreateFinanceStakingDefiEthRedeemV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -125,7 +125,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceStakingDefiEt
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceStakingDefiEthRedeemV5Req** | [**CreateFinanceStakingDefiEthRedeemV5Req**](CreateFinanceStakingDefiEthRedeemV5Req.md) | The request body for CreateFinanceStaking-DefiEthRedeemV5 | 
+ **createFinanceStakingDefiEthRedeemV5Req** | [**CreateFinanceStakingDefiEthRedeemV5Req**](CreateFinanceStakingDefiEthRedeemV5Req.md) | The request body for CreateFinanceStakingDefiEthRedeemV5 | 
 
 ### Return type
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceStakingDefiEthApyHistoryV5Resp GetFinanceStakingDefiEthApyHistoryV5(ctx).Days(days).Execute()
 
-Public endpoints don't need authorization.  
+GET / APY history (Public)
 
 
 
@@ -215,7 +215,7 @@ No authorization required
 
 > GetFinanceStakingDefiEthBalanceV5Resp GetFinanceStakingDefiEthBalanceV5(ctx).Execute()
 
-The balance is a snapshot summarized all BETH assets (including assets in redeeming) in account.  
+GET / Balance
 
 
 
@@ -276,7 +276,7 @@ Other parameters are passed through a pointer to a apiGetFinanceStakingDefiEthBa
 
 > GetFinanceStakingDefiEthProductInfoV5Resp GetFinanceStakingDefiEthProductInfoV5(ctx).Execute()
 
-
+GET / Product info
 
 
 
@@ -337,7 +337,7 @@ Other parameters are passed through a pointer to a apiGetFinanceStakingDefiEthPr
 
 > GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Resp GetFinanceStakingDefiEthPurchaseRedeemHistoryV5(ctx).Type_(type_).Status(status).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Purchase&Redeem history
 
 
 

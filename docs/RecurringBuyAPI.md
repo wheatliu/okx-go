@@ -4,13 +4,13 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTradingBotRecurringAmendOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringAmendOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/amend-order-algo | 
-[**CreateTradingBotRecurringOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/order-algo | 
-[**CreateTradingBotRecurringStopOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringStopOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/stop-order-algo | A maximum of 10 orders can be stopped per request.  
-[**GetTradingBotRecurringOrdersAlgoDetailsV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-details | 
-[**GetTradingBotRecurringOrdersAlgoHistoryV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-history | 
-[**GetTradingBotRecurringOrdersAlgoPendingV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-pending | 
-[**GetTradingBotRecurringSubOrdersV5**](RecurringBuyAPI.md#GetTradingBotRecurringSubOrdersV5) | **Get** /api/v5/tradingBot/recurring/sub-orders | 
+[**CreateTradingBotRecurringAmendOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringAmendOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/amend-order-algo | POST / Amend recurring buy order
+[**CreateTradingBotRecurringOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/order-algo | POST / Place recurring buy order
+[**CreateTradingBotRecurringStopOrderAlgoV5**](RecurringBuyAPI.md#CreateTradingBotRecurringStopOrderAlgoV5) | **Post** /api/v5/tradingBot/recurring/stop-order-algo | POST / Stop recurring buy order
+[**GetTradingBotRecurringOrdersAlgoDetailsV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-details | GET / Recurring buy order details
+[**GetTradingBotRecurringOrdersAlgoHistoryV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-history | GET / Recurring buy order history
+[**GetTradingBotRecurringOrdersAlgoPendingV5**](RecurringBuyAPI.md#GetTradingBotRecurringOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/recurring/orders-algo-pending | GET / Recurring buy order list
+[**GetTradingBotRecurringSubOrdersV5**](RecurringBuyAPI.md#GetTradingBotRecurringSubOrdersV5) | **Get** /api/v5/tradingBot/recurring/sub-orders | GET / Recurring buy sub orders
 
 
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 > CreateTradingBotRecurringAmendOrderAlgoV5Resp CreateTradingBotRecurringAmendOrderAlgoV5(ctx).CreateTradingBotRecurringAmendOrderAlgoV5Req(createTradingBotRecurringAmendOrderAlgoV5Req).Execute()
 
-
+POST / Amend recurring buy order
 
 
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotRecurringOrderAlgoV5Resp CreateTradingBotRecurringOrderAlgoV5(ctx).CreateTradingBotRecurringOrderAlgoV5Req(createTradingBotRecurringOrderAlgoV5Req).Execute()
 
-
+POST / Place recurring buy order
 
 
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotRecurringStopOrderAlgoV5Resp CreateTradingBotRecurringStopOrderAlgoV5(ctx).CreateTradingBotRecurringStopOrderAlgoV5Req(createTradingBotRecurringStopOrderAlgoV5Req).Execute()
 
-A maximum of 10 orders can be stopped per request.  
+POST / Stop recurring buy order
 
 
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotRecurringOrdersAlgoDetailsV5Resp GetTradingBotRecurringOrdersAlgoDetailsV5(ctx).AlgoId(algoId).Execute()
 
-
+GET / Recurring buy order details
 
 
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotRecurringOrdersAlgoHistoryV5Resp GetTradingBotRecurringOrdersAlgoHistoryV5(ctx).AlgoId(algoId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Recurring buy order history
 
 
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotRecurringOrdersAlgoPendingV5Resp GetTradingBotRecurringOrdersAlgoPendingV5(ctx).AlgoId(algoId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Recurring buy order list
 
 
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotRecurringSubOrdersV5Resp GetTradingBotRecurringSubOrdersV5(ctx).AlgoId(algoId).OrdId(ordId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Recurring buy sub orders
 
 
 

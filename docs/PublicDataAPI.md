@@ -4,34 +4,34 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMarketExchangeRateV5**](PublicDataAPI.md#GetMarketExchangeRateV5) | **Get** /api/v5/market/exchange-rate | This interface provides the average exchange rate data for 2 weeks  
-[**GetMarketHistoryIndexCandlesV5**](PublicDataAPI.md#GetMarketHistoryIndexCandlesV5) | **Get** /api/v5/market/history-index-candles | Retrieve the candlestick charts of the index from recent years.  
-[**GetMarketHistoryMarkPriceCandlesV5**](PublicDataAPI.md#GetMarketHistoryMarkPriceCandlesV5) | **Get** /api/v5/market/history-mark-price-candles | Retrieve the candlestick charts of mark price from recent years.  
-[**GetMarketIndexCandlesV5**](PublicDataAPI.md#GetMarketIndexCandlesV5) | **Get** /api/v5/market/index-candles | Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
-[**GetMarketIndexComponentsV5**](PublicDataAPI.md#GetMarketIndexComponentsV5) | **Get** /api/v5/market/index-components | Get the index component information data on the market  
-[**GetMarketIndexTickersV5**](PublicDataAPI.md#GetMarketIndexTickersV5) | **Get** /api/v5/market/index-tickers | Retrieve index tickers.  
-[**GetMarketMarkPriceCandlesV5**](PublicDataAPI.md#GetMarketMarkPriceCandlesV5) | **Get** /api/v5/market/mark-price-candles | Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
-[**GetPublicConvertContractCoinV5**](PublicDataAPI.md#GetPublicConvertContractCoinV5) | **Get** /api/v5/public/convert-contract-coin | Convert the crypto value to the number of contracts, or vice versa  
-[**GetPublicDeliveryExerciseHistoryV5**](PublicDataAPI.md#GetPublicDeliveryExerciseHistoryV5) | **Get** /api/v5/public/delivery-exercise-history | Retrieve delivery records of Futures and exercise records of Options in the last 3 months.  
-[**GetPublicDiscountRateInterestFreeQuotaV5**](PublicDataAPI.md#GetPublicDiscountRateInterestFreeQuotaV5) | **Get** /api/v5/public/discount-rate-interest-free-quota | Retrieve discount rate level and interest-free quota.  
-[**GetPublicEconomicCalendarV5**](PublicDataAPI.md#GetPublicEconomicCalendarV5) | **Get** /api/v5/public/economic-calendar | Get the macro-economic calendar data within 3 months. Historical data from 3 months ago is only available to users with trading fee tier VIP1 and above.  
-[**GetPublicEstimatedPriceV5**](PublicDataAPI.md#GetPublicEstimatedPriceV5) | **Get** /api/v5/public/estimated-price | Retrieve the estimated delivery price which will only have a return value one hour before the delivery/exercise.  
-[**GetPublicEstimatedSettlementInfoV5**](PublicDataAPI.md#GetPublicEstimatedSettlementInfoV5) | **Get** /api/v5/public/estimated-settlement-info | Retrieve the estimated settlement price which will only have a return value one hour before the settlement.  
-[**GetPublicFundingRateHistoryV5**](PublicDataAPI.md#GetPublicFundingRateHistoryV5) | **Get** /api/v5/public/funding-rate-history | Retrieve funding rate history. This endpoint can retrieve data from the last 3 months.  
-[**GetPublicFundingRateV5**](PublicDataAPI.md#GetPublicFundingRateV5) | **Get** /api/v5/public/funding-rate | Retrieve funding rate.  
-[**GetPublicInstrumentTickBandsV5**](PublicDataAPI.md#GetPublicInstrumentTickBandsV5) | **Get** /api/v5/public/instrument-tick-bands | Get option tick bands information  
-[**GetPublicInstrumentsV5**](PublicDataAPI.md#GetPublicInstrumentsV5) | **Get** /api/v5/public/instruments | Retrieve a list of instruments with open contracts for OKX. Retrieve available instruments info of current account, please refer to .  
-[**GetPublicInsuranceFundV5**](PublicDataAPI.md#GetPublicInsuranceFundV5) | **Get** /api/v5/public/insurance-fund | Get insurance fund balance information  
-[**GetPublicInterestRateLoanQuotaV5**](PublicDataAPI.md#GetPublicInterestRateLoanQuotaV5) | **Get** /api/v5/public/interest-rate-loan-quota | Retrieve interest rate  
-[**GetPublicMarkPriceV5**](PublicDataAPI.md#GetPublicMarkPriceV5) | **Get** /api/v5/public/mark-price | Retrieve mark price.  We set the mark price based on the SPOT index and at a reasonable basis to prevent individual users from manipulating the market and causing the contract price to fluctuate.  
-[**GetPublicOpenInterestV5**](PublicDataAPI.md#GetPublicOpenInterestV5) | **Get** /api/v5/public/open-interest | Retrieve the total open interest for contracts on OKX.  
-[**GetPublicOptSummaryV5**](PublicDataAPI.md#GetPublicOptSummaryV5) | **Get** /api/v5/public/opt-summary | Retrieve option market data.  
-[**GetPublicPositionTiersV5**](PublicDataAPI.md#GetPublicPositionTiersV5) | **Get** /api/v5/public/position-tiers | Retrieve position tiers information, maximum leverage depends on your borrowings and margin ratio.  
-[**GetPublicPremiumHistoryV5**](PublicDataAPI.md#GetPublicPremiumHistoryV5) | **Get** /api/v5/public/premium-history | It will return premium data in the past 6 months.  
-[**GetPublicPriceLimitV5**](PublicDataAPI.md#GetPublicPriceLimitV5) | **Get** /api/v5/public/price-limit | Retrieve the highest buy limit and lowest sell limit of the instrument.  
-[**GetPublicSettlementHistoryV5**](PublicDataAPI.md#GetPublicSettlementHistoryV5) | **Get** /api/v5/public/settlement-history | Retrieve settlement records of futures in the last 3 months.  
-[**GetPublicTimeV5**](PublicDataAPI.md#GetPublicTimeV5) | **Get** /api/v5/public/time | Retrieve API server time.  
-[**GetPublicUnderlyingV5**](PublicDataAPI.md#GetPublicUnderlyingV5) | **Get** /api/v5/public/underlying | 
+[**GetMarketExchangeRateV5**](PublicDataAPI.md#GetMarketExchangeRateV5) | **Get** /api/v5/market/exchange-rate | Get exchange rate
+[**GetMarketHistoryIndexCandlesV5**](PublicDataAPI.md#GetMarketHistoryIndexCandlesV5) | **Get** /api/v5/market/history-index-candles | Get index candlesticks history
+[**GetMarketHistoryMarkPriceCandlesV5**](PublicDataAPI.md#GetMarketHistoryMarkPriceCandlesV5) | **Get** /api/v5/market/history-mark-price-candles | Get mark price candlesticks history
+[**GetMarketIndexCandlesV5**](PublicDataAPI.md#GetMarketIndexCandlesV5) | **Get** /api/v5/market/index-candles | Get index candlesticks
+[**GetMarketIndexComponentsV5**](PublicDataAPI.md#GetMarketIndexComponentsV5) | **Get** /api/v5/market/index-components | Get index components
+[**GetMarketIndexTickersV5**](PublicDataAPI.md#GetMarketIndexTickersV5) | **Get** /api/v5/market/index-tickers | Get index tickers
+[**GetMarketMarkPriceCandlesV5**](PublicDataAPI.md#GetMarketMarkPriceCandlesV5) | **Get** /api/v5/market/mark-price-candles | Get mark price candlesticks
+[**GetPublicConvertContractCoinV5**](PublicDataAPI.md#GetPublicConvertContractCoinV5) | **Get** /api/v5/public/convert-contract-coin | Unit convert
+[**GetPublicDeliveryExerciseHistoryV5**](PublicDataAPI.md#GetPublicDeliveryExerciseHistoryV5) | **Get** /api/v5/public/delivery-exercise-history | Get delivery/exercise history
+[**GetPublicDiscountRateInterestFreeQuotaV5**](PublicDataAPI.md#GetPublicDiscountRateInterestFreeQuotaV5) | **Get** /api/v5/public/discount-rate-interest-free-quota | Get discount rate and interest-free quota
+[**GetPublicEconomicCalendarV5**](PublicDataAPI.md#GetPublicEconomicCalendarV5) | **Get** /api/v5/public/economic-calendar | Get economic calendar data
+[**GetPublicEstimatedPriceV5**](PublicDataAPI.md#GetPublicEstimatedPriceV5) | **Get** /api/v5/public/estimated-price | Get estimated delivery/exercise price
+[**GetPublicEstimatedSettlementInfoV5**](PublicDataAPI.md#GetPublicEstimatedSettlementInfoV5) | **Get** /api/v5/public/estimated-settlement-info | Get estimated future settlement price
+[**GetPublicFundingRateHistoryV5**](PublicDataAPI.md#GetPublicFundingRateHistoryV5) | **Get** /api/v5/public/funding-rate-history | Get funding rate history
+[**GetPublicFundingRateV5**](PublicDataAPI.md#GetPublicFundingRateV5) | **Get** /api/v5/public/funding-rate | Get funding rate
+[**GetPublicInstrumentTickBandsV5**](PublicDataAPI.md#GetPublicInstrumentTickBandsV5) | **Get** /api/v5/public/instrument-tick-bands | Get option tick bands
+[**GetPublicInstrumentsV5**](PublicDataAPI.md#GetPublicInstrumentsV5) | **Get** /api/v5/public/instruments | Get instruments
+[**GetPublicInsuranceFundV5**](PublicDataAPI.md#GetPublicInsuranceFundV5) | **Get** /api/v5/public/insurance-fund | Get insurance fund
+[**GetPublicInterestRateLoanQuotaV5**](PublicDataAPI.md#GetPublicInterestRateLoanQuotaV5) | **Get** /api/v5/public/interest-rate-loan-quota | Get interest rate and loan quota
+[**GetPublicMarkPriceV5**](PublicDataAPI.md#GetPublicMarkPriceV5) | **Get** /api/v5/public/mark-price | Get mark price
+[**GetPublicOpenInterestV5**](PublicDataAPI.md#GetPublicOpenInterestV5) | **Get** /api/v5/public/open-interest | Get open interest
+[**GetPublicOptSummaryV5**](PublicDataAPI.md#GetPublicOptSummaryV5) | **Get** /api/v5/public/opt-summary | Get option market data
+[**GetPublicPositionTiersV5**](PublicDataAPI.md#GetPublicPositionTiersV5) | **Get** /api/v5/public/position-tiers | Get position tiers
+[**GetPublicPremiumHistoryV5**](PublicDataAPI.md#GetPublicPremiumHistoryV5) | **Get** /api/v5/public/premium-history | Get premium history
+[**GetPublicPriceLimitV5**](PublicDataAPI.md#GetPublicPriceLimitV5) | **Get** /api/v5/public/price-limit | Get limit price
+[**GetPublicSettlementHistoryV5**](PublicDataAPI.md#GetPublicSettlementHistoryV5) | **Get** /api/v5/public/settlement-history | Get futures settlement history
+[**GetPublicTimeV5**](PublicDataAPI.md#GetPublicTimeV5) | **Get** /api/v5/public/time | Get system time
+[**GetPublicUnderlyingV5**](PublicDataAPI.md#GetPublicUnderlyingV5) | **Get** /api/v5/public/underlying | Get underlying
 
 
 
@@ -39,7 +39,7 @@ Method | HTTP request | Description
 
 > GetMarketExchangeRateV5Resp GetMarketExchangeRateV5(ctx).Execute()
 
-This interface provides the average exchange rate data for 2 weeks  
+Get exchange rate
 
 
 
@@ -100,7 +100,7 @@ No authorization required
 
 > GetMarketHistoryIndexCandlesV5Resp GetMarketHistoryIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
-Retrieve the candlestick charts of the index from recent years.  
+Get index candlesticks history
 
 
 
@@ -174,7 +174,7 @@ No authorization required
 
 > GetMarketHistoryMarkPriceCandlesV5Resp GetMarketHistoryMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
-Retrieve the candlestick charts of mark price from recent years.  
+Get mark price candlesticks history
 
 
 
@@ -248,7 +248,7 @@ No authorization required
 
 > GetMarketIndexCandlesV5Resp GetMarketIndexCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
-Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
+Get index candlesticks
 
 
 
@@ -322,7 +322,7 @@ No authorization required
 
 > GetMarketIndexComponentsV5Resp GetMarketIndexComponentsV5(ctx).Index(index).Execute()
 
-Get the index component information data on the market  
+Get index components
 
 
 
@@ -388,7 +388,7 @@ No authorization required
 
 > GetMarketIndexTickersV5Resp GetMarketIndexTickersV5(ctx).QuoteCcy(quoteCcy).InstId(instId).Execute()
 
-Retrieve index tickers.  
+Get index tickers
 
 
 
@@ -456,7 +456,7 @@ No authorization required
 
 > GetMarketMarkPriceCandlesV5Resp GetMarketMarkPriceCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
 
-Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
+Get mark price candlesticks
 
 
 
@@ -530,7 +530,7 @@ No authorization required
 
 > GetPublicConvertContractCoinV5Resp GetPublicConvertContractCoinV5(ctx).InstId(instId).Sz(sz).Type_(type_).Px(px).Unit(unit).OpType(opType).Execute()
 
-Convert the crypto value to the number of contracts, or vice versa  
+Unit convert
 
 
 
@@ -606,7 +606,7 @@ No authorization required
 
 > GetPublicDeliveryExerciseHistoryV5Resp GetPublicDeliveryExerciseHistoryV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve delivery records of Futures and exercise records of Options in the last 3 months.  
+Get delivery/exercise history
 
 
 
@@ -682,7 +682,7 @@ No authorization required
 
 > GetPublicDiscountRateInterestFreeQuotaV5Resp GetPublicDiscountRateInterestFreeQuotaV5(ctx).Ccy(ccy).DiscountLv(discountLv).Execute()
 
-Retrieve discount rate level and interest-free quota.  
+Get discount rate and interest-free quota
 
 
 
@@ -750,7 +750,7 @@ No authorization required
 
 > GetPublicEconomicCalendarV5Resp GetPublicEconomicCalendarV5(ctx).Region(region).Importance(importance).Before(before).After(after).Limit(limit).Execute()
 
-Get the macro-economic calendar data within 3 months. Historical data from 3 months ago is only available to users with trading fee tier VIP1 and above.  
+Get economic calendar data
 
 
 
@@ -824,7 +824,7 @@ No authorization required
 
 > GetPublicEstimatedPriceV5Resp GetPublicEstimatedPriceV5(ctx).InstId(instId).Execute()
 
-Retrieve the estimated delivery price which will only have a return value one hour before the delivery/exercise.  
+Get estimated delivery/exercise price
 
 
 
@@ -890,7 +890,7 @@ No authorization required
 
 > GetPublicEstimatedSettlementInfoV5Resp GetPublicEstimatedSettlementInfoV5(ctx).InstId(instId).Execute()
 
-Retrieve the estimated settlement price which will only have a return value one hour before the settlement.  
+Get estimated future settlement price
 
 
 
@@ -956,7 +956,7 @@ No authorization required
 
 > GetPublicFundingRateHistoryV5Resp GetPublicFundingRateHistoryV5(ctx).InstId(instId).Before(before).After(after).Limit(limit).Execute()
 
-Retrieve funding rate history. This endpoint can retrieve data from the last 3 months.  
+Get funding rate history
 
 
 
@@ -1028,7 +1028,7 @@ No authorization required
 
 > GetPublicFundingRateV5Resp GetPublicFundingRateV5(ctx).InstId(instId).Execute()
 
-Retrieve funding rate.  
+Get funding rate
 
 
 
@@ -1094,7 +1094,7 @@ No authorization required
 
 > GetPublicInstrumentTickBandsV5Resp GetPublicInstrumentTickBandsV5(ctx).InstType(instType).InstFamily(instFamily).Execute()
 
-Get option tick bands information  
+Get option tick bands
 
 
 
@@ -1162,7 +1162,7 @@ No authorization required
 
 > GetPublicInstrumentsV5Resp GetPublicInstrumentsV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).Execute()
 
-Retrieve a list of instruments with open contracts for OKX. Retrieve available instruments info of current account, please refer to .  
+Get instruments
 
 
 
@@ -1234,7 +1234,7 @@ No authorization required
 
 > GetPublicInsuranceFundV5Resp GetPublicInsuranceFundV5(ctx).InstType(instType).Type_(type_).Uly(uly).InstFamily(instFamily).Ccy(ccy).Before(before).After(after).Limit(limit).Execute()
 
-Get insurance fund balance information  
+Get insurance fund
 
 
 
@@ -1314,7 +1314,7 @@ No authorization required
 
 > GetPublicInterestRateLoanQuotaV5Resp GetPublicInterestRateLoanQuotaV5(ctx).Execute()
 
-Retrieve interest rate  
+Get interest rate and loan quota
 
 
 
@@ -1375,7 +1375,7 @@ No authorization required
 
 > GetPublicMarkPriceV5Resp GetPublicMarkPriceV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).Execute()
 
-Retrieve mark price.  We set the mark price based on the SPOT index and at a reasonable basis to prevent individual users from manipulating the market and causing the contract price to fluctuate.  
+Get mark price
 
 
 
@@ -1447,7 +1447,7 @@ No authorization required
 
 > GetPublicOpenInterestV5Resp GetPublicOpenInterestV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).InstId(instId).Execute()
 
-Retrieve the total open interest for contracts on OKX.  
+Get open interest
 
 
 
@@ -1519,7 +1519,7 @@ No authorization required
 
 > GetPublicOptSummaryV5Resp GetPublicOptSummaryV5(ctx).Uly(uly).InstFamily(instFamily).ExpTime(expTime).Execute()
 
-Retrieve option market data.  
+Get option market data
 
 
 
@@ -1589,7 +1589,7 @@ No authorization required
 
 > GetPublicPositionTiersV5Resp GetPublicPositionTiersV5(ctx).InstType(instType).TdMode(tdMode).Uly(uly).InstFamily(instFamily).InstId(instId).Ccy(ccy).Tier(tier).Execute()
 
-Retrieve position tiers information, maximum leverage depends on your borrowings and margin ratio.  
+Get position tiers
 
 
 
@@ -1667,7 +1667,7 @@ No authorization required
 
 > GetPublicPremiumHistoryV5Resp GetPublicPremiumHistoryV5(ctx).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-It will return premium data in the past 6 months.  
+Get premium history
 
 
 
@@ -1739,7 +1739,7 @@ No authorization required
 
 > GetPublicPriceLimitV5Resp GetPublicPriceLimitV5(ctx).InstId(instId).Execute()
 
-Retrieve the highest buy limit and lowest sell limit of the instrument.  
+Get limit price
 
 
 
@@ -1805,7 +1805,7 @@ No authorization required
 
 > GetPublicSettlementHistoryV5Resp GetPublicSettlementHistoryV5(ctx).InstFamily(instFamily).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve settlement records of futures in the last 3 months.  
+Get futures settlement history
 
 
 
@@ -1877,7 +1877,7 @@ No authorization required
 
 > GetPublicTimeV5Resp GetPublicTimeV5(ctx).Execute()
 
-Retrieve API server time.  
+Get system time
 
 
 
@@ -1938,7 +1938,7 @@ No authorization required
 
 > GetPublicUnderlyingV5Resp GetPublicUnderlyingV5(ctx).InstType(instType).Execute()
 
-
+Get underlying
 
 
 

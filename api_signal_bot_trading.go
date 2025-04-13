@@ -41,7 +41,7 @@ func (r ApiCreateTradingBotSignalAmendTPSLV5Request) Execute() (*CreateTradingBo
 }
 
 /*
-CreateTradingBotSignalAmendTPSLV5 Method for CreateTradingBotSignalAmendTPSLV5
+CreateTradingBotSignalAmendTPSLV5 POST / Amend TPSL
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -157,7 +157,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalAmendTPSLV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -166,7 +166,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalAmendTPSLV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -200,7 +200,7 @@ func (r ApiCreateTradingBotSignalCancelSubOrderV5Request) Execute() (*CreateTrad
 }
 
 /*
-CreateTradingBotSignalCancelSubOrderV5 Cancel an incomplete order.  
+CreateTradingBotSignalCancelSubOrderV5 POST / Cancel sub order
 
 Cancel an incomplete order.
 
@@ -318,7 +318,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalCancelSubOrderV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -327,7 +327,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalCancelSubOrderV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -361,7 +361,7 @@ func (r ApiCreateTradingBotSignalClosePositionV5Request) Execute() (*CreateTradi
 }
 
 /*
-CreateTradingBotSignalClosePositionV5 Close the position of an instrument via a market order.  
+CreateTradingBotSignalClosePositionV5 POST / Close position
 
 Close the position of an instrument via a market order.
 
@@ -479,7 +479,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalClosePositionV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -488,7 +488,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalClosePositionV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -522,7 +522,7 @@ func (r ApiCreateTradingBotSignalCreateSignalV5Request) Execute() (*CreateTradin
 }
 
 /*
-CreateTradingBotSignalCreateSignalV5 Method for CreateTradingBotSignalCreateSignalV5
+CreateTradingBotSignalCreateSignalV5 POST / Create signal
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -638,7 +638,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalCreateSignalV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -647,7 +647,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalCreateSignalV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -681,7 +681,7 @@ func (r ApiCreateTradingBotSignalMarginBalanceV5Request) Execute() (*CreateTradi
 }
 
 /*
-CreateTradingBotSignalMarginBalanceV5 Method for CreateTradingBotSignalMarginBalanceV5
+CreateTradingBotSignalMarginBalanceV5 POST / Adjust margin balance
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -797,7 +797,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalMarginBalanceV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -806,7 +806,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalMarginBalanceV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -840,7 +840,7 @@ func (r ApiCreateTradingBotSignalOrderAlgoV5Request) Execute() (*CreateTradingBo
 }
 
 /*
-CreateTradingBotSignalOrderAlgoV5 Method for CreateTradingBotSignalOrderAlgoV5
+CreateTradingBotSignalOrderAlgoV5 POST / Create signal bot
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -956,7 +956,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalOrderAlgoV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -965,7 +965,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalOrderAlgoV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -999,7 +999,7 @@ func (r ApiCreateTradingBotSignalSetInstrumentsV5Request) Execute() (*CreateTrad
 }
 
 /*
-CreateTradingBotSignalSetInstrumentsV5 Method for CreateTradingBotSignalSetInstrumentsV5
+CreateTradingBotSignalSetInstrumentsV5 POST / Set instruments
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1115,7 +1115,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalSetInstrumentsV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1124,7 +1124,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalSetInstrumentsV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1158,7 +1158,7 @@ func (r ApiCreateTradingBotSignalStopOrderAlgoV5Request) Execute() (*CreateTradi
 }
 
 /*
-CreateTradingBotSignalStopOrderAlgoV5 A maximum of 10 orders can be stopped per request.  
+CreateTradingBotSignalStopOrderAlgoV5 POST / Cancel signal bots
 
 A maximum of 10 orders can be stopped per request.
 
@@ -1276,7 +1276,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalStopOrderAlgoV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1285,7 +1285,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalStopOrderAlgoV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1319,7 +1319,7 @@ func (r ApiCreateTradingBotSignalSubOrderV5Request) Execute() (*CreateTradingBot
 }
 
 /*
-CreateTradingBotSignalSubOrderV5 You can place an order only if you have sufficient funds.      
+CreateTradingBotSignalSubOrderV5 POST / Place sub order
 
 You can place an order only if you have sufficient funds.
 
@@ -1441,7 +1441,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalSubOrderV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1450,7 +1450,7 @@ func (a *SignalBotTradingAPIService) CreateTradingBotSignalSubOrderV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1505,7 +1505,7 @@ func (r ApiGetTradingBotSignalEventHistoryV5Request) Execute() (*GetTradingBotSi
 }
 
 /*
-GetTradingBotSignalEventHistoryV5 Method for GetTradingBotSignalEventHistoryV5
+GetTradingBotSignalEventHistoryV5 GET / Signal bot event history
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1638,7 +1638,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalEventHistoryV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1647,7 +1647,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalEventHistoryV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1688,7 +1688,7 @@ func (r ApiGetTradingBotSignalOrdersAlgoDetailsV5Request) Execute() (*GetTrading
 }
 
 /*
-GetTradingBotSignalOrdersAlgoDetailsV5 Method for GetTradingBotSignalOrdersAlgoDetailsV5
+GetTradingBotSignalOrdersAlgoDetailsV5 GET / Signal bot order details
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1807,7 +1807,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoDetailsV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1816,7 +1816,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoDetailsV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1878,7 +1878,7 @@ func (r ApiGetTradingBotSignalOrdersAlgoHistoryV5Request) Execute() (*GetTrading
 }
 
 /*
-GetTradingBotSignalOrdersAlgoHistoryV5 Method for GetTradingBotSignalOrdersAlgoHistoryV5
+GetTradingBotSignalOrdersAlgoHistoryV5 GET / Signal bot history
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2013,7 +2013,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoHistoryV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2022,7 +2022,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoHistoryV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2084,7 +2084,7 @@ func (r ApiGetTradingBotSignalOrdersAlgoPendingV5Request) Execute() (*GetTrading
 }
 
 /*
-GetTradingBotSignalOrdersAlgoPendingV5 Method for GetTradingBotSignalOrdersAlgoPendingV5
+GetTradingBotSignalOrdersAlgoPendingV5 GET / Active signal bot
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2221,7 +2221,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoPendingV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2230,7 +2230,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalOrdersAlgoPendingV5Execu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2292,7 +2292,7 @@ func (r ApiGetTradingBotSignalPositionsHistoryV5Request) Execute() (*GetTradingB
 }
 
 /*
-GetTradingBotSignalPositionsHistoryV5 Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.  
+GetTradingBotSignalPositionsHistoryV5 GET / Position history
 
 Retrieve the updated position data for the last 3 months. Return in reverse chronological order using utime.
 
@@ -2433,7 +2433,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalPositionsHistoryV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2442,7 +2442,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalPositionsHistoryV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2483,7 +2483,7 @@ func (r ApiGetTradingBotSignalPositionsV5Request) Execute() (*GetTradingBotSigna
 }
 
 /*
-GetTradingBotSignalPositionsV5 Method for GetTradingBotSignalPositionsV5
+GetTradingBotSignalPositionsV5 GET / Signal bot order positions
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2602,7 +2602,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalPositionsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2611,7 +2611,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalPositionsV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2673,7 +2673,7 @@ func (r ApiGetTradingBotSignalSignalsV5Request) Execute() (*GetTradingBotSignalS
 }
 
 /*
-GetTradingBotSignalSignalsV5 Method for GetTradingBotSignalSignalsV5
+GetTradingBotSignalSignalsV5 GET / Signals
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -2812,7 +2812,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalSignalsV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2821,7 +2821,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalSignalsV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2925,7 +2925,7 @@ func (r ApiGetTradingBotSignalSubOrdersV5Request) Execute() (*GetTradingBotSigna
 }
 
 /*
-GetTradingBotSignalSubOrdersV5 Method for GetTradingBotSignalSubOrdersV5
+GetTradingBotSignalSubOrdersV5 GET / Signal bot sub orders
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -3098,7 +3098,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalSubOrdersV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3107,7 +3107,7 @@ func (a *SignalBotTradingAPIService) GetTradingBotSignalSubOrdersV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

@@ -41,7 +41,7 @@ func (r ApiCreateTradeAmendBatchOrdersV5Request) Execute() (*CreateTradeAmendBat
 }
 
 /*
-CreateTradeAmendBatchOrdersV5 Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.  Rate limit of this endpoint will also be affected by the rules  and .  
+CreateTradeAmendBatchOrdersV5 POST / Amend multiple orders
 
 Amend incomplete orders in batches. Maximum 20 orders can be amended per request. Request parameters should be passed in the form of an array.
 
@@ -114,13 +114,6 @@ func (a *TradeAPIService) CreateTradeAmendBatchOrdersV5Execute(r ApiCreateTradeA
 	}
 	// body params
 	localVarPostBody = r.createTradeAmendBatchOrdersV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -167,7 +160,7 @@ func (a *TradeAPIService) CreateTradeAmendBatchOrdersV5Execute(r ApiCreateTradeA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -176,7 +169,7 @@ func (a *TradeAPIService) CreateTradeAmendBatchOrdersV5Execute(r ApiCreateTradeA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -210,7 +203,7 @@ func (r ApiCreateTradeAmendOrderV5Request) Execute() (*CreateTradeAmendOrderV5Re
 }
 
 /*
-CreateTradeAmendOrderV5 Amend an incomplete order.  Rate limit of this endpoint will also be affected by the rules  and .  
+CreateTradeAmendOrderV5 POST / Amend order
 
 Amend an incomplete order.
 
@@ -281,13 +274,6 @@ func (a *TradeAPIService) CreateTradeAmendOrderV5Execute(r ApiCreateTradeAmendOr
 	}
 	// body params
 	localVarPostBody = r.createTradeAmendOrderV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -334,7 +320,7 @@ func (a *TradeAPIService) CreateTradeAmendOrderV5Execute(r ApiCreateTradeAmendOr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -343,7 +329,7 @@ func (a *TradeAPIService) CreateTradeAmendOrderV5Execute(r ApiCreateTradeAmendOr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -377,7 +363,7 @@ func (r ApiCreateTradeBatchOrdersV5Request) Execute() (*CreateTradeBatchOrdersV5
 }
 
 /*
-CreateTradeBatchOrdersV5 Place orders in batches. Maximum 20 orders can be placed per request.    Request parameters should be passed in the form of an array. Orders will be placed in turn    Rate limit of this endpoint will also be affected by the rules  and .  
+CreateTradeBatchOrdersV5 POST / Place multiple orders
 
 Place orders in batches. Maximum 20 orders can be placed per request. 
 
@@ -455,13 +441,6 @@ func (a *TradeAPIService) CreateTradeBatchOrdersV5Execute(r ApiCreateTradeBatchO
 	}
 	// body params
 	localVarPostBody = r.createTradeBatchOrdersV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -508,7 +487,7 @@ func (a *TradeAPIService) CreateTradeBatchOrdersV5Execute(r ApiCreateTradeBatchO
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -517,7 +496,7 @@ func (a *TradeAPIService) CreateTradeBatchOrdersV5Execute(r ApiCreateTradeBatchO
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -551,7 +530,7 @@ func (r ApiCreateTradeCancelAllAfterV5Request) Execute() (*CreateTradeCancelAllA
 }
 
 /*
-CreateTradeCancelAllAfterV5 Cancel all pending orders after the countdown timeout. Applicable to all trading symbols through order book (except Spread trading)    
+CreateTradeCancelAllAfterV5 POST / Cancel All After
 
 Cancel all pending orders after the countdown timeout. Applicable to all trading symbols through order book (except Spread trading)
 
@@ -671,7 +650,7 @@ func (a *TradeAPIService) CreateTradeCancelAllAfterV5Execute(r ApiCreateTradeCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -680,7 +659,7 @@ func (a *TradeAPIService) CreateTradeCancelAllAfterV5Execute(r ApiCreateTradeCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -714,7 +693,7 @@ func (r ApiCreateTradeCancelBatchOrdersV5Request) Execute() (*CreateTradeCancelB
 }
 
 /*
-CreateTradeCancelBatchOrdersV5 Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+CreateTradeCancelBatchOrdersV5 POST / Cancel multiple orders
 
 Cancel incomplete orders in batches. Maximum 20 orders can be canceled per request. Request parameters should be passed in the form of an array.
 
@@ -783,13 +762,6 @@ func (a *TradeAPIService) CreateTradeCancelBatchOrdersV5Execute(r ApiCreateTrade
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelBatchOrdersV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -836,7 +808,7 @@ func (a *TradeAPIService) CreateTradeCancelBatchOrdersV5Execute(r ApiCreateTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -845,7 +817,7 @@ func (a *TradeAPIService) CreateTradeCancelBatchOrdersV5Execute(r ApiCreateTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -879,7 +851,7 @@ func (r ApiCreateTradeCancelOrderV5Request) Execute() (*CreateTradeCancelOrderV5
 }
 
 /*
-CreateTradeCancelOrderV5 Cancel an incomplete order.  
+CreateTradeCancelOrderV5 POST / Cancel order
 
 Cancel an incomplete order.
 
@@ -946,13 +918,6 @@ func (a *TradeAPIService) CreateTradeCancelOrderV5Execute(r ApiCreateTradeCancel
 	}
 	// body params
 	localVarPostBody = r.createTradeCancelOrderV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -999,7 +964,7 @@ func (a *TradeAPIService) CreateTradeCancelOrderV5Execute(r ApiCreateTradeCancel
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1008,7 +973,7 @@ func (a *TradeAPIService) CreateTradeCancelOrderV5Execute(r ApiCreateTradeCancel
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1042,7 +1007,7 @@ func (r ApiCreateTradeClosePositionV5Request) Execute() (*CreateTradeClosePositi
 }
 
 /*
-CreateTradeClosePositionV5 Close the position of an instrument via a market order.  
+CreateTradeClosePositionV5 POST / Close positions
 
 Close the position of an instrument via a market order.
 
@@ -1109,13 +1074,6 @@ func (a *TradeAPIService) CreateTradeClosePositionV5Execute(r ApiCreateTradeClos
 	}
 	// body params
 	localVarPostBody = r.createTradeClosePositionV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -1162,7 +1120,7 @@ func (a *TradeAPIService) CreateTradeClosePositionV5Execute(r ApiCreateTradeClos
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1171,7 +1129,7 @@ func (a *TradeAPIService) CreateTradeClosePositionV5Execute(r ApiCreateTradeClos
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1205,7 +1163,7 @@ func (r ApiCreateTradeEasyConvertV5Request) Execute() (*CreateTradeEasyConvertV5
 }
 
 /*
-CreateTradeEasyConvertV5 Convert small currencies to mainstream currencies.   
+CreateTradeEasyConvertV5 POST / Place easy convert
 
 Convert small currencies to mainstream currencies. 
 
@@ -1323,7 +1281,7 @@ func (a *TradeAPIService) CreateTradeEasyConvertV5Execute(r ApiCreateTradeEasyCo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1332,7 +1290,7 @@ func (a *TradeAPIService) CreateTradeEasyConvertV5Execute(r ApiCreateTradeEasyCo
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1366,7 +1324,7 @@ func (r ApiCreateTradeMassCancelV5Request) Execute() (*CreateTradeMassCancelV5Re
 }
 
 /*
-CreateTradeMassCancelV5 Cancel all the MMP pending orders of an instrument family.    Only applicable to Option in Portfolio Margin mode, and MMP privilege is required.  
+CreateTradeMassCancelV5 POST / Mass cancel order
 
 Cancel all the MMP pending orders of an instrument family.
 
@@ -1488,7 +1446,7 @@ func (a *TradeAPIService) CreateTradeMassCancelV5Execute(r ApiCreateTradeMassCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1497,7 +1455,7 @@ func (a *TradeAPIService) CreateTradeMassCancelV5Execute(r ApiCreateTradeMassCan
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1531,7 +1489,7 @@ func (r ApiCreateTradeOneClickRepayV2V5Request) Execute() (*CreateTradeOneClickR
 }
 
 /*
-CreateTradeOneClickRepayV2V5 Trade one-click repay to repay debts. Only applicable to `SPOT mode`.   
+CreateTradeOneClickRepayV2V5 POST / Trade one-click repay (New)
 
 Trade one-click repay to repay debts. Only applicable to `SPOT mode`. 
 
@@ -1649,7 +1607,7 @@ func (a *TradeAPIService) CreateTradeOneClickRepayV2V5Execute(r ApiCreateTradeOn
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1658,7 +1616,7 @@ func (a *TradeAPIService) CreateTradeOneClickRepayV2V5Execute(r ApiCreateTradeOn
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1692,7 +1650,7 @@ func (r ApiCreateTradeOneClickRepayV5Request) Execute() (*CreateTradeOneClickRep
 }
 
 /*
-CreateTradeOneClickRepayV5 Trade one-click repay to repay cross debts. Isolated debts are not applicable. The maximum repayment amount is based on the remaining available balance of funding and trading accounts. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+CreateTradeOneClickRepayV5 POST / Trade one-click repay
 
 Trade one-click repay to repay cross debts. Isolated debts are not applicable.
 The maximum repayment amount is based on the remaining available balance of funding and trading accounts.
@@ -1812,7 +1770,7 @@ func (a *TradeAPIService) CreateTradeOneClickRepayV5Execute(r ApiCreateTradeOneC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1821,7 +1779,7 @@ func (a *TradeAPIService) CreateTradeOneClickRepayV5Execute(r ApiCreateTradeOneC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1855,7 +1813,7 @@ func (r ApiCreateTradeOrderPrecheckV5Request) Execute() (*CreateTradeOrderPreche
 }
 
 /*
-CreateTradeOrderPrecheckV5 This endpoint is used to precheck the account information before and after placing the order.    Only applicable to `Multi-currency margin mode`, and `Portfolio margin mode`.  
+CreateTradeOrderPrecheckV5 POST / Order precheck
 
 This endpoint is used to precheck the account information before and after placing the order. 
 
@@ -1976,7 +1934,7 @@ func (a *TradeAPIService) CreateTradeOrderPrecheckV5Execute(r ApiCreateTradeOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1985,7 +1943,7 @@ func (a *TradeAPIService) CreateTradeOrderPrecheckV5Execute(r ApiCreateTradeOrde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2019,7 +1977,7 @@ func (r ApiCreateTradeOrderV5Request) Execute() (*CreateTradeOrderV5Resp, *http.
 }
 
 /*
-CreateTradeOrderV5 You can place an order only if you have sufficient funds.  Rate limit of this endpoint will also be affected by the rules  and .  
+CreateTradeOrderV5 POST / Place order
 
 You can place an order only if you have sufficient funds.
 
@@ -2090,13 +2048,6 @@ func (a *TradeAPIService) CreateTradeOrderV5Execute(r ApiCreateTradeOrderV5Reque
 	}
 	// body params
 	localVarPostBody = r.createTradeOrderV5Req
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -2143,7 +2094,7 @@ func (a *TradeAPIService) CreateTradeOrderV5Execute(r ApiCreateTradeOrderV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2152,7 +2103,7 @@ func (a *TradeAPIService) CreateTradeOrderV5Execute(r ApiCreateTradeOrderV5Reque
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2179,7 +2130,7 @@ func (r ApiGetTradeAccountRateLimitV5Request) Execute() (*GetTradeAccountRateLim
 }
 
 /*
-GetTradeAccountRateLimitV5 Get account rate limit related information.     Only new order requests and amendment order requests will be counted towards this limit. For batch order requests consisting of multiple orders, each order will be counted individually.     For details, please refer to   
+GetTradeAccountRateLimitV5 GET / Account rate limit
 
 Get account rate limit related information. 
 
@@ -2298,7 +2249,7 @@ func (a *TradeAPIService) GetTradeAccountRateLimitV5Execute(r ApiGetTradeAccount
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2307,7 +2258,7 @@ func (a *TradeAPIService) GetTradeAccountRateLimitV5Execute(r ApiGetTradeAccount
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2341,7 +2292,7 @@ func (r ApiGetTradeEasyConvertCurrencyListV5Request) Execute() (*GetTradeEasyCon
 }
 
 /*
-GetTradeEasyConvertCurrencyListV5 Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.  
+GetTradeEasyConvertCurrencyListV5 GET / Easy convert currency list
 
 Get list of small convertibles and mainstream currencies. Only applicable to the crypto balance less than $10.
 
@@ -2460,7 +2411,7 @@ func (a *TradeAPIService) GetTradeEasyConvertCurrencyListV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2469,7 +2420,7 @@ func (a *TradeAPIService) GetTradeEasyConvertCurrencyListV5Execute(r ApiGetTrade
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2517,7 +2468,7 @@ func (r ApiGetTradeEasyConvertHistoryV5Request) Execute() (*GetTradeEasyConvertH
 }
 
 /*
-GetTradeEasyConvertHistoryV5 Get the history and status of easy convert trades in the past 7 days.  
+GetTradeEasyConvertHistoryV5 GET / Easy convert history
 
 Get the history and status of easy convert trades in the past 7 days.
 
@@ -2648,7 +2599,7 @@ func (a *TradeAPIService) GetTradeEasyConvertHistoryV5Execute(r ApiGetTradeEasyC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2657,7 +2608,7 @@ func (a *TradeAPIService) GetTradeEasyConvertHistoryV5Execute(r ApiGetTradeEasyC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2761,7 +2712,7 @@ func (r ApiGetTradeFillsHistoryV5Request) Execute() (*GetTradeFillsHistoryV5Resp
 }
 
 /*
-GetTradeFillsHistoryV5 Retrieve recently-filled transaction details in the last 3 months.  
+GetTradeFillsHistoryV5 GET / Transaction details (last 3 months)
 
 Retrieve recently-filled transaction details in the last 3 months.
 
@@ -2938,7 +2889,7 @@ func (a *TradeAPIService) GetTradeFillsHistoryV5Execute(r ApiGetTradeFillsHistor
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2947,7 +2898,7 @@ func (a *TradeAPIService) GetTradeFillsHistoryV5Execute(r ApiGetTradeFillsHistor
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3051,7 +3002,7 @@ func (r ApiGetTradeFillsV5Request) Execute() (*GetTradeFillsV5Resp, *http.Respon
 }
 
 /*
-GetTradeFillsV5 Retrieve recently-filled transaction details in the last 3 day.  
+GetTradeFillsV5 GET / Transaction details (last 3 days)
 
 Retrieve recently-filled transaction details in the last 3 day.
 
@@ -3230,7 +3181,7 @@ func (a *TradeAPIService) GetTradeFillsV5Execute(r ApiGetTradeFillsV5Request) (*
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3239,7 +3190,7 @@ func (a *TradeAPIService) GetTradeFillsV5Execute(r ApiGetTradeFillsV5Request) (*
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3266,7 +3217,7 @@ func (r ApiGetTradeOneClickRepayCurrencyListV2V5Request) Execute() (*GetTradeOne
 }
 
 /*
-GetTradeOneClickRepayCurrencyListV2V5 Get list of debt currency data and repay currencies. Only applicable to `SPOT mode`.  
+GetTradeOneClickRepayCurrencyListV2V5 GET / One-click repay currency list (New)
 
 Get list of debt currency data and repay currencies. Only applicable to `SPOT mode`.
 
@@ -3379,7 +3330,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayCurrencyListV2V5Execute(r ApiGetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3388,7 +3339,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayCurrencyListV2V5Execute(r ApiGetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3422,7 +3373,7 @@ func (r ApiGetTradeOneClickRepayCurrencyListV5Request) Execute() (*GetTradeOneCl
 }
 
 /*
-GetTradeOneClickRepayCurrencyListV5 Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+GetTradeOneClickRepayCurrencyListV5 GET / One-click repay currency list
 
 Get list of debt currency data and repay currencies. Debt currencies include both cross and isolated debts. Only applicable to `Multi-currency margin`/`Portfolio margin`.
 
@@ -3541,7 +3492,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayCurrencyListV5Execute(r ApiGetTra
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3550,7 +3501,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayCurrencyListV5Execute(r ApiGetTra
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3598,7 +3549,7 @@ func (r ApiGetTradeOneClickRepayHistoryV2V5Request) Execute() (*GetTradeOneClick
 }
 
 /*
-GetTradeOneClickRepayHistoryV2V5 Get the history and status of one-click repay trades in the past 7 days. Only applicable to `SPOT mode`.  
+GetTradeOneClickRepayHistoryV2V5 GET / One-click repay history (New)
 
 Get the history and status of one-click repay trades in the past 7 days. Only applicable to `SPOT mode`.
 
@@ -3729,7 +3680,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayHistoryV2V5Execute(r ApiGetTradeO
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3738,7 +3689,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayHistoryV2V5Execute(r ApiGetTradeO
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3786,7 +3737,7 @@ func (r ApiGetTradeOneClickRepayHistoryV5Request) Execute() (*GetTradeOneClickRe
 }
 
 /*
-GetTradeOneClickRepayHistoryV5 Get the history and status of one-click repay trades in the past 7 days. Only applicable to `Multi-currency margin`/`Portfolio margin`.  
+GetTradeOneClickRepayHistoryV5 GET / One-click repay history
 
 Get the history and status of one-click repay trades in the past 7 days. Only applicable to `Multi-currency margin`/`Portfolio margin`.
 
@@ -3917,7 +3868,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayHistoryV5Execute(r ApiGetTradeOne
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3926,7 +3877,7 @@ func (a *TradeAPIService) GetTradeOneClickRepayHistoryV5Execute(r ApiGetTradeOne
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3974,7 +3925,7 @@ func (r ApiGetTradeOrderV5Request) Execute() (*GetTradeOrderV5Resp, *http.Respon
 }
 
 /*
-GetTradeOrderV5 Retrieve order details.  
+GetTradeOrderV5 GET / Order details
 
 Retrieve order details.
 
@@ -4052,13 +4003,6 @@ func (a *TradeAPIService) GetTradeOrderV5Execute(r ApiGetTradeOrderV5Request) (*
 	if localVarHTTPHeaderAccept != "" {
 		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
 	}
-	if r.ctx != nil {
-		// API Key Authentication
-		if auth, ok := r.ctx.Value(ContextOKXAuth).(Auth); ok {
-			localVarHeaderParams["OK-ACCESS-KEY"] = auth.APIKey
-			localVarHeaderParams["OK-ACCESS-PASSPHRASE"] = auth.Passphrase
-		}
-	}
 	
 	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
 	if err != nil {
@@ -4105,7 +4049,7 @@ func (a *TradeAPIService) GetTradeOrderV5Execute(r ApiGetTradeOrderV5Request) (*
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4114,7 +4058,7 @@ func (a *TradeAPIService) GetTradeOrderV5Execute(r ApiGetTradeOrderV5Request) (*
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4225,7 +4169,7 @@ func (r ApiGetTradeOrdersHistoryArchiveV5Request) Execute() (*GetTradeOrdersHist
 }
 
 /*
-GetTradeOrdersHistoryArchiveV5 Get completed orders which are placed in the last 3 months, including those placed 3 months ago but completed in the last 3 months.      
+GetTradeOrdersHistoryArchiveV5 GET / Order history (last 3 months)
 
 Get completed orders which are placed in the last 3 months, including those placed 3 months ago but completed in the last 3 months.  
 
@@ -4410,7 +4354,7 @@ func (a *TradeAPIService) GetTradeOrdersHistoryArchiveV5Execute(r ApiGetTradeOrd
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4419,7 +4363,7 @@ func (a *TradeAPIService) GetTradeOrdersHistoryArchiveV5Execute(r ApiGetTradeOrd
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4530,7 +4474,7 @@ func (r ApiGetTradeOrdersHistoryV5Request) Execute() (*GetTradeOrdersHistoryV5Re
 }
 
 /*
-GetTradeOrdersHistoryV5 Get completed orders which are placed in the last 7 days, including those placed 7 days ago but completed in the last 7 days.      The incomplete orders that have been canceled are only reserved for 2 hours.  
+GetTradeOrdersHistoryV5 GET / Order history (last 7 days)
 
 Get completed orders which are placed in the last 7 days, including those placed 7 days ago but completed in the last 7 days.  
 
@@ -4717,7 +4661,7 @@ func (a *TradeAPIService) GetTradeOrdersHistoryV5Execute(r ApiGetTradeOrdersHist
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4726,7 +4670,7 @@ func (a *TradeAPIService) GetTradeOrdersHistoryV5Execute(r ApiGetTradeOrdersHist
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4816,7 +4760,7 @@ func (r ApiGetTradeOrdersPendingV5Request) Execute() (*GetTradeOrdersPendingV5Re
 }
 
 /*
-GetTradeOrdersPendingV5 Retrieve all incomplete orders under the current account.  
+GetTradeOrdersPendingV5 GET / Order List
 
 Retrieve all incomplete orders under the current account.
 
@@ -4983,7 +4927,7 @@ func (a *TradeAPIService) GetTradeOrdersPendingV5Execute(r ApiGetTradeOrdersPend
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4992,7 +4936,7 @@ func (a *TradeAPIService) GetTradeOrdersPendingV5Execute(r ApiGetTradeOrdersPend
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

@@ -4,35 +4,35 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAssetCancelWithdrawalV5**](FundingAccountAPI.md#CreateAssetCancelWithdrawalV5) | **Post** /api/v5/asset/cancel-withdrawal | You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.  
-[**CreateAssetConvertEstimateQuoteV5**](FundingAccountAPI.md#CreateAssetConvertEstimateQuoteV5) | **Post** /api/v5/asset/convert/estimate-quote | 
-[**CreateAssetConvertTradeV5**](FundingAccountAPI.md#CreateAssetConvertTradeV5) | **Post** /api/v5/asset/convert/trade | You should make  before convert trade.   For the same side (buy/sell), there&#39;s a trading limit of 1 request per 5 seconds.  
-[**CreateAssetMonthlyStatementV5**](FundingAccountAPI.md#CreateAssetMonthlyStatementV5) | **Post** /api/v5/asset/monthly-statement | Apply for monthly statement in the past year.  
-[**CreateAssetTransferV5**](FundingAccountAPI.md#CreateAssetTransferV5) | **Post** /api/v5/asset/transfer | Only API keys with &#x60;Trade&#x60; privilege can call this endpoint.  This endpoint supports the transfer of funds between your funding account and trading account, and from the master account to sub-accounts.  Sub-account can transfer out to master account by default. Need to call  to grant privilege first if you want sub-account transferring to another sub-account (sub-accounts need to belong to same master account.)  
-[**CreateAssetWithdrawalV5**](FundingAccountAPI.md#CreateAssetWithdrawalV5) | **Post** /api/v5/asset/withdrawal | Only supported withdrawal of assets from funding account. Common sub-account does not support withdrawal.   
-[**CreateFiatCancelWithdrawalV5**](FundingAccountAPI.md#CreateFiatCancelWithdrawalV5) | **Post** /api/v5/fiat/cancel-withdrawal | Cancel a pending fiat withdrawal order, currently only applicable to TRY  
-[**CreateFiatCreateWithdrawalV5**](FundingAccountAPI.md#CreateFiatCreateWithdrawalV5) | **Post** /api/v5/fiat/create-withdrawal | Initiate a fiat withdrawal request (Authenticated endpoint, Only for API keys with \&quot;Withdrawal\&quot; access)   Only supported withdrawal of assets from funding account.  
-[**GetAssetAssetValuationV5**](FundingAccountAPI.md#GetAssetAssetValuationV5) | **Get** /api/v5/asset/asset-valuation | View account asset valuation  
-[**GetAssetBalancesV5**](FundingAccountAPI.md#GetAssetBalancesV5) | **Get** /api/v5/asset/balances | Retrieve the funding account balances of all the assets and the amount that is available or on hold.  
-[**GetAssetBillsV5**](FundingAccountAPI.md#GetAssetBillsV5) | **Get** /api/v5/asset/bills | Query the billing record in the past month.  
-[**GetAssetConvertCurrenciesV5**](FundingAccountAPI.md#GetAssetConvertCurrenciesV5) | **Get** /api/v5/asset/convert/currencies | 
-[**GetAssetConvertCurrencyPairV5**](FundingAccountAPI.md#GetAssetConvertCurrencyPairV5) | **Get** /api/v5/asset/convert/currency-pair | 
-[**GetAssetConvertHistoryV5**](FundingAccountAPI.md#GetAssetConvertHistoryV5) | **Get** /api/v5/asset/convert/history | 
-[**GetAssetCurrenciesV5**](FundingAccountAPI.md#GetAssetCurrenciesV5) | **Get** /api/v5/asset/currencies | Retrieve a list of all currencies available which are related to the current account&#39;s KYC entity.  
-[**GetAssetDepositAddressV5**](FundingAccountAPI.md#GetAssetDepositAddressV5) | **Get** /api/v5/asset/deposit-address | Retrieve the deposit addresses of currencies, including previously-used addresses.  
-[**GetAssetDepositHistoryV5**](FundingAccountAPI.md#GetAssetDepositHistoryV5) | **Get** /api/v5/asset/deposit-history | Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
-[**GetAssetDepositWithdrawStatusV5**](FundingAccountAPI.md#GetAssetDepositWithdrawStatusV5) | **Get** /api/v5/asset/deposit-withdraw-status | Retrieve deposit&#39;s and withdrawal&#39;s detailed status and estimated complete time.  
-[**GetAssetExchangeListV5**](FundingAccountAPI.md#GetAssetExchangeListV5) | **Get** /api/v5/asset/exchange-list | Authentication is not required for this public endpoint.  
-[**GetAssetMonthlyStatementV5**](FundingAccountAPI.md#GetAssetMonthlyStatementV5) | **Get** /api/v5/asset/monthly-statement | Retrieve monthly statement in the past year.  
-[**GetAssetNonTradableAssetsV5**](FundingAccountAPI.md#GetAssetNonTradableAssetsV5) | **Get** /api/v5/asset/non-tradable-assets | 
-[**GetAssetTransferStateV5**](FundingAccountAPI.md#GetAssetTransferStateV5) | **Get** /api/v5/asset/transfer-state | Retrieve the transfer state data of the last 2 weeks.  
-[**GetAssetWithdrawalHistoryV5**](FundingAccountAPI.md#GetAssetWithdrawalHistoryV5) | **Get** /api/v5/asset/withdrawal-history | Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
-[**GetFiatDepositOrderHistoryV5**](FundingAccountAPI.md#GetFiatDepositOrderHistoryV5) | **Get** /api/v5/fiat/deposit-order-history | Get fiat deposit order history  
-[**GetFiatDepositPaymentMethodsV5**](FundingAccountAPI.md#GetFiatDepositPaymentMethodsV5) | **Get** /api/v5/fiat/deposit-payment-methods | To display all the available fiat deposit payment methods  
-[**GetFiatDepositV5**](FundingAccountAPI.md#GetFiatDepositV5) | **Get** /api/v5/fiat/deposit | Get fiat deposit order detail  
-[**GetFiatWithdrawalOrderHistoryV5**](FundingAccountAPI.md#GetFiatWithdrawalOrderHistoryV5) | **Get** /api/v5/fiat/withdrawal-order-history | Get fiat withdrawal order history  
-[**GetFiatWithdrawalPaymentMethodsV5**](FundingAccountAPI.md#GetFiatWithdrawalPaymentMethodsV5) | **Get** /api/v5/fiat/withdrawal-payment-methods | To display all the available fiat withdrawal payment methods  
-[**GetFiatWithdrawalV5**](FundingAccountAPI.md#GetFiatWithdrawalV5) | **Get** /api/v5/fiat/withdrawal | Get fiat withdraw order detail  
+[**CreateAssetCancelWithdrawalV5**](FundingAccountAPI.md#CreateAssetCancelWithdrawalV5) | **Post** /api/v5/asset/cancel-withdrawal | Cancel withdrawal
+[**CreateAssetConvertEstimateQuoteV5**](FundingAccountAPI.md#CreateAssetConvertEstimateQuoteV5) | **Post** /api/v5/asset/convert/estimate-quote | Estimate quote
+[**CreateAssetConvertTradeV5**](FundingAccountAPI.md#CreateAssetConvertTradeV5) | **Post** /api/v5/asset/convert/trade | Convert trade
+[**CreateAssetMonthlyStatementV5**](FundingAccountAPI.md#CreateAssetMonthlyStatementV5) | **Post** /api/v5/asset/monthly-statement | Apply for monthly statement (last year)
+[**CreateAssetTransferV5**](FundingAccountAPI.md#CreateAssetTransferV5) | **Post** /api/v5/asset/transfer | Funds transfer
+[**CreateAssetWithdrawalV5**](FundingAccountAPI.md#CreateAssetWithdrawalV5) | **Post** /api/v5/asset/withdrawal | Withdrawal
+[**CreateFiatCancelWithdrawalV5**](FundingAccountAPI.md#CreateFiatCancelWithdrawalV5) | **Post** /api/v5/fiat/cancel-withdrawal | Cancel withdrawal order
+[**CreateFiatCreateWithdrawalV5**](FundingAccountAPI.md#CreateFiatCreateWithdrawalV5) | **Post** /api/v5/fiat/create-withdrawal | Create withdrawal order
+[**GetAssetAssetValuationV5**](FundingAccountAPI.md#GetAssetAssetValuationV5) | **Get** /api/v5/asset/asset-valuation | Get account asset valuation
+[**GetAssetBalancesV5**](FundingAccountAPI.md#GetAssetBalancesV5) | **Get** /api/v5/asset/balances | Get balance
+[**GetAssetBillsV5**](FundingAccountAPI.md#GetAssetBillsV5) | **Get** /api/v5/asset/bills | Asset bills details
+[**GetAssetConvertCurrenciesV5**](FundingAccountAPI.md#GetAssetConvertCurrenciesV5) | **Get** /api/v5/asset/convert/currencies | Get convert currencies
+[**GetAssetConvertCurrencyPairV5**](FundingAccountAPI.md#GetAssetConvertCurrencyPairV5) | **Get** /api/v5/asset/convert/currency-pair | Get convert currency pair
+[**GetAssetConvertHistoryV5**](FundingAccountAPI.md#GetAssetConvertHistoryV5) | **Get** /api/v5/asset/convert/history | Get convert history
+[**GetAssetCurrenciesV5**](FundingAccountAPI.md#GetAssetCurrenciesV5) | **Get** /api/v5/asset/currencies | Get currencies
+[**GetAssetDepositAddressV5**](FundingAccountAPI.md#GetAssetDepositAddressV5) | **Get** /api/v5/asset/deposit-address | Get deposit address
+[**GetAssetDepositHistoryV5**](FundingAccountAPI.md#GetAssetDepositHistoryV5) | **Get** /api/v5/asset/deposit-history | Get deposit history
+[**GetAssetDepositWithdrawStatusV5**](FundingAccountAPI.md#GetAssetDepositWithdrawStatusV5) | **Get** /api/v5/asset/deposit-withdraw-status | Get deposit withdraw status
+[**GetAssetExchangeListV5**](FundingAccountAPI.md#GetAssetExchangeListV5) | **Get** /api/v5/asset/exchange-list | Get exchange list (public)
+[**GetAssetMonthlyStatementV5**](FundingAccountAPI.md#GetAssetMonthlyStatementV5) | **Get** /api/v5/asset/monthly-statement | Get monthly statement (last year)
+[**GetAssetNonTradableAssetsV5**](FundingAccountAPI.md#GetAssetNonTradableAssetsV5) | **Get** /api/v5/asset/non-tradable-assets | Get non-tradable assets
+[**GetAssetTransferStateV5**](FundingAccountAPI.md#GetAssetTransferStateV5) | **Get** /api/v5/asset/transfer-state | Get funds transfer state
+[**GetAssetWithdrawalHistoryV5**](FundingAccountAPI.md#GetAssetWithdrawalHistoryV5) | **Get** /api/v5/asset/withdrawal-history | Get withdrawal history
+[**GetFiatDepositOrderHistoryV5**](FundingAccountAPI.md#GetFiatDepositOrderHistoryV5) | **Get** /api/v5/fiat/deposit-order-history | Get deposit order history
+[**GetFiatDepositPaymentMethodsV5**](FundingAccountAPI.md#GetFiatDepositPaymentMethodsV5) | **Get** /api/v5/fiat/deposit-payment-methods | Get deposit payment methods
+[**GetFiatDepositV5**](FundingAccountAPI.md#GetFiatDepositV5) | **Get** /api/v5/fiat/deposit | Get deposit order detail
+[**GetFiatWithdrawalOrderHistoryV5**](FundingAccountAPI.md#GetFiatWithdrawalOrderHistoryV5) | **Get** /api/v5/fiat/withdrawal-order-history | Get withdrawal order history
+[**GetFiatWithdrawalPaymentMethodsV5**](FundingAccountAPI.md#GetFiatWithdrawalPaymentMethodsV5) | **Get** /api/v5/fiat/withdrawal-payment-methods | Get withdrawal payment methods
+[**GetFiatWithdrawalV5**](FundingAccountAPI.md#GetFiatWithdrawalV5) | **Get** /api/v5/fiat/withdrawal | Get withdrawal order detail
 
 
 
@@ -40,7 +40,7 @@ Method | HTTP request | Description
 
 > CreateAssetCancelWithdrawalV5Resp CreateAssetCancelWithdrawalV5(ctx).CreateAssetCancelWithdrawalV5Req(createAssetCancelWithdrawalV5Req).Execute()
 
-You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.  
+Cancel withdrawal
 
 
 
@@ -106,7 +106,7 @@ Name | Type | Description  | Notes
 
 > CreateAssetConvertEstimateQuoteV5Resp CreateAssetConvertEstimateQuoteV5(ctx).CreateAssetConvertEstimateQuoteV5Req(createAssetConvertEstimateQuoteV5Req).Execute()
 
-
+Estimate quote
 
 
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 
 > CreateAssetConvertTradeV5Resp CreateAssetConvertTradeV5(ctx).CreateAssetConvertTradeV5Req(createAssetConvertTradeV5Req).Execute()
 
-You should make  before convert trade.   For the same side (buy/sell), there's a trading limit of 1 request per 5 seconds.  
+Convert trade
 
 
 
@@ -238,7 +238,7 @@ Name | Type | Description  | Notes
 
 > CreateAssetMonthlyStatementV5Resp CreateAssetMonthlyStatementV5(ctx).CreateAssetMonthlyStatementV5Req(createAssetMonthlyStatementV5Req).Execute()
 
-Apply for monthly statement in the past year.  
+Apply for monthly statement (last year)
 
 
 
@@ -304,7 +304,7 @@ Name | Type | Description  | Notes
 
 > CreateAssetTransferV5Resp CreateAssetTransferV5(ctx).CreateAssetTransferV5Req(createAssetTransferV5Req).Execute()
 
-Only API keys with `Trade` privilege can call this endpoint.  This endpoint supports the transfer of funds between your funding account and trading account, and from the master account to sub-accounts.  Sub-account can transfer out to master account by default. Need to call  to grant privilege first if you want sub-account transferring to another sub-account (sub-accounts need to belong to same master account.)  
+Funds transfer
 
 
 
@@ -370,7 +370,7 @@ Name | Type | Description  | Notes
 
 > CreateAssetWithdrawalV5Resp CreateAssetWithdrawalV5(ctx).CreateAssetWithdrawalV5Req(createAssetWithdrawalV5Req).Execute()
 
-Only supported withdrawal of assets from funding account. Common sub-account does not support withdrawal.   
+Withdrawal
 
 
 
@@ -436,7 +436,7 @@ Name | Type | Description  | Notes
 
 > CreateFiatCancelWithdrawalV5Resp CreateFiatCancelWithdrawalV5(ctx).CreateFiatCancelWithdrawalV5Req(createFiatCancelWithdrawalV5Req).Execute()
 
-Cancel a pending fiat withdrawal order, currently only applicable to TRY  
+Cancel withdrawal order
 
 
 
@@ -502,7 +502,7 @@ Name | Type | Description  | Notes
 
 > CreateFiatCreateWithdrawalV5Resp CreateFiatCreateWithdrawalV5(ctx).CreateFiatCreateWithdrawalV5Req(createFiatCreateWithdrawalV5Req).Execute()
 
-Initiate a fiat withdrawal request (Authenticated endpoint, Only for API keys with \"Withdrawal\" access)   Only supported withdrawal of assets from funding account.  
+Create withdrawal order
 
 
 
@@ -568,7 +568,7 @@ Name | Type | Description  | Notes
 
 > GetAssetAssetValuationV5Resp GetAssetAssetValuationV5(ctx).Ccy(ccy).Execute()
 
-View account asset valuation  
+Get account asset valuation
 
 
 
@@ -634,7 +634,7 @@ Name | Type | Description  | Notes
 
 > GetAssetBalancesV5Resp GetAssetBalancesV5(ctx).Ccy(ccy).Execute()
 
-Retrieve the funding account balances of all the assets and the amount that is available or on hold.  
+Get balance
 
 
 
@@ -700,7 +700,7 @@ Name | Type | Description  | Notes
 
 > GetAssetBillsV5Resp GetAssetBillsV5(ctx).Ccy(ccy).Type_(type_).ClientId(clientId).After(after).Before(before).Limit(limit).Execute()
 
-Query the billing record in the past month.  
+Asset bills details
 
 
 
@@ -776,7 +776,7 @@ Name | Type | Description  | Notes
 
 > GetAssetConvertCurrenciesV5Resp GetAssetConvertCurrenciesV5(ctx).Execute()
 
-
+Get convert currencies
 
 
 
@@ -837,7 +837,7 @@ Other parameters are passed through a pointer to a apiGetAssetConvertCurrenciesV
 
 > GetAssetConvertCurrencyPairV5Resp GetAssetConvertCurrencyPairV5(ctx).FromCcy(fromCcy).ToCcy(toCcy).Execute()
 
-
+Get convert currency pair
 
 
 
@@ -905,7 +905,7 @@ Name | Type | Description  | Notes
 
 > GetAssetConvertHistoryV5Resp GetAssetConvertHistoryV5(ctx).ClTReqId(clTReqId).After(after).Before(before).Limit(limit).Tag(tag).Execute()
 
-
+Get convert history
 
 
 
@@ -979,7 +979,7 @@ Name | Type | Description  | Notes
 
 > GetAssetCurrenciesV5Resp GetAssetCurrenciesV5(ctx).Ccy(ccy).Execute()
 
-Retrieve a list of all currencies available which are related to the current account's KYC entity.  
+Get currencies
 
 
 
@@ -1045,7 +1045,7 @@ Name | Type | Description  | Notes
 
 > GetAssetDepositAddressV5Resp GetAssetDepositAddressV5(ctx).Ccy(ccy).Execute()
 
-Retrieve the deposit addresses of currencies, including previously-used addresses.  
+Get deposit address
 
 
 
@@ -1111,7 +1111,7 @@ Name | Type | Description  | Notes
 
 > GetAssetDepositHistoryV5Resp GetAssetDepositHistoryV5(ctx).Ccy(ccy).DepId(depId).FromWdId(fromWdId).TxId(txId).Type_(type_).State(state).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
+Get deposit history
 
 
 
@@ -1193,7 +1193,7 @@ Name | Type | Description  | Notes
 
 > GetAssetDepositWithdrawStatusV5Resp GetAssetDepositWithdrawStatusV5(ctx).WdId(wdId).TxId(txId).Ccy(ccy).To(to).Chain(chain).Execute()
 
-Retrieve deposit's and withdrawal's detailed status and estimated complete time.  
+Get deposit withdraw status
 
 
 
@@ -1267,7 +1267,7 @@ Name | Type | Description  | Notes
 
 > GetAssetExchangeListV5Resp GetAssetExchangeListV5(ctx).Execute()
 
-Authentication is not required for this public endpoint.  
+Get exchange list (public)
 
 
 
@@ -1328,7 +1328,7 @@ No authorization required
 
 > GetAssetMonthlyStatementV5Resp GetAssetMonthlyStatementV5(ctx).Month(month).Execute()
 
-Retrieve monthly statement in the past year.  
+Get monthly statement (last year)
 
 
 
@@ -1394,7 +1394,7 @@ Name | Type | Description  | Notes
 
 > GetAssetNonTradableAssetsV5Resp GetAssetNonTradableAssetsV5(ctx).Ccy(ccy).Execute()
 
-
+Get non-tradable assets
 
 
 
@@ -1460,7 +1460,7 @@ Name | Type | Description  | Notes
 
 > GetAssetTransferStateV5Resp GetAssetTransferStateV5(ctx).TransId(transId).ClientId(clientId).Type_(type_).Execute()
 
-Retrieve the transfer state data of the last 2 weeks.  
+Get funds transfer state
 
 
 
@@ -1530,7 +1530,7 @@ Name | Type | Description  | Notes
 
 > GetAssetWithdrawalHistoryV5Resp GetAssetWithdrawalHistoryV5(ctx).Ccy(ccy).WdId(wdId).ClientId(clientId).TxId(txId).Type_(type_).State(state).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
+Get withdrawal history
 
 
 
@@ -1612,7 +1612,7 @@ Name | Type | Description  | Notes
 
 > GetFiatDepositOrderHistoryV5Resp GetFiatDepositOrderHistoryV5(ctx).Ccy(ccy).PaymentMethod(paymentMethod).State(state).After(after).Before(before).Limit(limit).Execute()
 
-Get fiat deposit order history  
+Get deposit order history
 
 
 
@@ -1688,7 +1688,7 @@ Name | Type | Description  | Notes
 
 > GetFiatDepositPaymentMethodsV5Resp GetFiatDepositPaymentMethodsV5(ctx).Ccy(ccy).Execute()
 
-To display all the available fiat deposit payment methods  
+Get deposit payment methods
 
 
 
@@ -1754,7 +1754,7 @@ Name | Type | Description  | Notes
 
 > GetFiatDepositV5Resp GetFiatDepositV5(ctx).OrdId(ordId).Execute()
 
-Get fiat deposit order detail  
+Get deposit order detail
 
 
 
@@ -1820,7 +1820,7 @@ Name | Type | Description  | Notes
 
 > GetFiatWithdrawalOrderHistoryV5Resp GetFiatWithdrawalOrderHistoryV5(ctx).Ccy(ccy).PaymentMethod(paymentMethod).State(state).After(after).Before(before).Limit(limit).Execute()
 
-Get fiat withdrawal order history  
+Get withdrawal order history
 
 
 
@@ -1896,7 +1896,7 @@ Name | Type | Description  | Notes
 
 > GetFiatWithdrawalPaymentMethodsV5Resp GetFiatWithdrawalPaymentMethodsV5(ctx).Ccy(ccy).Execute()
 
-To display all the available fiat withdrawal payment methods  
+Get withdrawal payment methods
 
 
 
@@ -1962,7 +1962,7 @@ Name | Type | Description  | Notes
 
 > GetFiatWithdrawalV5Resp GetFiatWithdrawalV5(ctx).OrdId(ordId).Execute()
 
-Get fiat withdraw order detail  
+Get withdrawal order detail
 
 
 

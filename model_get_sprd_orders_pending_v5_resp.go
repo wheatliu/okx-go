@@ -20,7 +20,7 @@ var _ MappedNullable = &GetSprdOrdersPendingV5Resp{}
 // GetSprdOrdersPendingV5Resp struct for GetSprdOrdersPendingV5Resp
 type GetSprdOrdersPendingV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []map[string]interface{} `json:"data,omitempty"`
+	Data []GetSprdOrdersPendingV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *GetSprdOrdersPendingV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetSprdOrdersPendingV5Resp) GetData() []map[string]interface{} {
+func (o *GetSprdOrdersPendingV5Resp) GetData() []GetSprdOrdersPendingV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret []map[string]interface{}
+		var ret []GetSprdOrdersPendingV5RespDataInner
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *GetSprdOrdersPendingV5Resp) GetData() []map[string]interface{} {
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetSprdOrdersPendingV5Resp) GetDataOk() ([]map[string]interface{}, bool) {
+func (o *GetSprdOrdersPendingV5Resp) GetDataOk() ([]GetSprdOrdersPendingV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *GetSprdOrdersPendingV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []map[string]interface{} and assigns it to the Data field.
-func (o *GetSprdOrdersPendingV5Resp) SetData(v []map[string]interface{}) {
+// SetData gets a reference to the given []GetSprdOrdersPendingV5RespDataInner and assigns it to the Data field.
+func (o *GetSprdOrdersPendingV5Resp) SetData(v []GetSprdOrdersPendingV5RespDataInner) {
 	o.Data = v
 }
 

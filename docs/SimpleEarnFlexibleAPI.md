@@ -4,12 +4,12 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateFinanceSavingsPurchaseRedemptV5**](SimpleEarnFlexibleAPI.md#CreateFinanceSavingsPurchaseRedemptV5) | **Post** /api/v5/finance/savings/purchase-redempt | Only the assets in the funding account can be used for saving.  
-[**CreateFinanceSavingsSetLendingRateV5**](SimpleEarnFlexibleAPI.md#CreateFinanceSavingsSetLendingRateV5) | **Post** /api/v5/finance/savings/set-lending-rate | 
-[**GetFinanceSavingsBalanceV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsBalanceV5) | **Get** /api/v5/finance/savings/balance | 
-[**GetFinanceSavingsLendingHistoryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingHistoryV5) | **Get** /api/v5/finance/savings/lending-history | Return data in the past month.  
-[**GetFinanceSavingsLendingRateHistoryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingRateHistoryV5) | **Get** /api/v5/finance/savings/lending-rate-history | Authentication is not required for this public endpoint.   Only returned records after December 14, 2021.  
-[**GetFinanceSavingsLendingRateSummaryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingRateSummaryV5) | **Get** /api/v5/finance/savings/lending-rate-summary | Authentication is not required for this public endpoint.  
+[**CreateFinanceSavingsPurchaseRedemptV5**](SimpleEarnFlexibleAPI.md#CreateFinanceSavingsPurchaseRedemptV5) | **Post** /api/v5/finance/savings/purchase-redempt | POST / Savings purchase/redemption
+[**CreateFinanceSavingsSetLendingRateV5**](SimpleEarnFlexibleAPI.md#CreateFinanceSavingsSetLendingRateV5) | **Post** /api/v5/finance/savings/set-lending-rate | POST / Set lending rate
+[**GetFinanceSavingsBalanceV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsBalanceV5) | **Get** /api/v5/finance/savings/balance | GET / Saving balance
+[**GetFinanceSavingsLendingHistoryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingHistoryV5) | **Get** /api/v5/finance/savings/lending-history | GET / Lending history
+[**GetFinanceSavingsLendingRateHistoryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingRateHistoryV5) | **Get** /api/v5/finance/savings/lending-rate-history | GET / Public borrow history (public)
+[**GetFinanceSavingsLendingRateSummaryV5**](SimpleEarnFlexibleAPI.md#GetFinanceSavingsLendingRateSummaryV5) | **Get** /api/v5/finance/savings/lending-rate-summary | GET / Public borrow info (public)
 
 
 
@@ -17,7 +17,7 @@ Method | HTTP request | Description
 
 > CreateFinanceSavingsPurchaseRedemptV5Resp CreateFinanceSavingsPurchaseRedemptV5(ctx).CreateFinanceSavingsPurchaseRedemptV5Req(createFinanceSavingsPurchaseRedemptV5Req).Execute()
 
-Only the assets in the funding account can be used for saving.  
+POST / Savings purchase/redemption
 
 
 
@@ -83,7 +83,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceSavingsSetLendingRateV5Resp CreateFinanceSavingsSetLendingRateV5(ctx).CreateFinanceSavingsSetLendingRateV5Req(createFinanceSavingsSetLendingRateV5Req).Execute()
 
-
+POST / Set lending rate
 
 
 
@@ -149,7 +149,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceSavingsBalanceV5Resp GetFinanceSavingsBalanceV5(ctx).Ccy(ccy).Execute()
 
-
+GET / Saving balance
 
 
 
@@ -215,7 +215,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceSavingsLendingHistoryV5Resp GetFinanceSavingsLendingHistoryV5(ctx).Ccy(ccy).After(after).Before(before).Limit(limit).Execute()
 
-Return data in the past month.  
+GET / Lending history
 
 
 
@@ -287,7 +287,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceSavingsLendingRateHistoryV5Resp GetFinanceSavingsLendingRateHistoryV5(ctx).Ccy(ccy).After(after).Before(before).Limit(limit).Execute()
 
-Authentication is not required for this public endpoint.   Only returned records after December 14, 2021.  
+GET / Public borrow history (public)
 
 
 
@@ -359,7 +359,7 @@ No authorization required
 
 > GetFinanceSavingsLendingRateSummaryV5Resp GetFinanceSavingsLendingRateSummaryV5(ctx).Ccy(ccy).Execute()
 
-Authentication is not required for this public endpoint.  
+GET / Public borrow info (public)
 
 
 

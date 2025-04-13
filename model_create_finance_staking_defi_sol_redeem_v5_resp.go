@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateFinanceStakingDefiSolRedeemV5Resp{}
 // CreateFinanceStakingDefiSolRedeemV5Resp struct for CreateFinanceStakingDefiSolRedeemV5Resp
 type CreateFinanceStakingDefiSolRedeemV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []map[string]interface{} `json:"data,omitempty"`
+	Data []string `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *CreateFinanceStakingDefiSolRedeemV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateFinanceStakingDefiSolRedeemV5Resp) GetData() []map[string]interface{} {
+func (o *CreateFinanceStakingDefiSolRedeemV5Resp) GetData() []string {
 	if o == nil || IsNil(o.Data) {
-		var ret []map[string]interface{}
+		var ret []string
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *CreateFinanceStakingDefiSolRedeemV5Resp) GetData() []map[string]interfa
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateFinanceStakingDefiSolRedeemV5Resp) GetDataOk() ([]map[string]interface{}, bool) {
+func (o *CreateFinanceStakingDefiSolRedeemV5Resp) GetDataOk() ([]string, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *CreateFinanceStakingDefiSolRedeemV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []map[string]interface{} and assigns it to the Data field.
-func (o *CreateFinanceStakingDefiSolRedeemV5Resp) SetData(v []map[string]interface{}) {
+// SetData gets a reference to the given []string and assigns it to the Data field.
+func (o *CreateFinanceStakingDefiSolRedeemV5Resp) SetData(v []string) {
 	o.Data = v
 }
 

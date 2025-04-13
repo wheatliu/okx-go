@@ -4,17 +4,18 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**GetMarketBooksFullV5**](MarketDataAPI.md#GetMarketBooksFullV5) | **Get** /api/v5/market/books-full | Retrieve order book of the instrument. The data will be updated once a second.  
-[**GetMarketBooksV5**](MarketDataAPI.md#GetMarketBooksV5) | **Get** /api/v5/market/books | Retrieve order book of the instrument.  
-[**GetMarketCallAuctionDetailsV5**](MarketDataAPI.md#GetMarketCallAuctionDetailsV5) | **Get** /api/v5/market/call-auction-details | Retrieve call auction details.  
-[**GetMarketCandlesV5**](MarketDataAPI.md#GetMarketCandlesV5) | **Get** /api/v5/market/candles | Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
-[**GetMarketHistoryTradesV5**](MarketDataAPI.md#GetMarketHistoryTradesV5) | **Get** /api/v5/market/history-trades | Retrieve the recent transactions of an instrument from the last 3 months with pagination.  
-[**GetMarketOptionInstrumentFamilyTradesV5**](MarketDataAPI.md#GetMarketOptionInstrumentFamilyTradesV5) | **Get** /api/v5/market/option/instrument-family-trades | Retrieve the recent transactions of an instrument under same instFamily. The maximum is 100.  
-[**GetMarketPlatform24VolumeV5**](MarketDataAPI.md#GetMarketPlatform24VolumeV5) | **Get** /api/v5/market/platform-24-volume | The 24-hour trading volume is calculated on a rolling basis.  
-[**GetMarketTickerV5**](MarketDataAPI.md#GetMarketTickerV5) | **Get** /api/v5/market/ticker | Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
-[**GetMarketTickersV5**](MarketDataAPI.md#GetMarketTickersV5) | **Get** /api/v5/market/tickers | Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
-[**GetMarketTradesV5**](MarketDataAPI.md#GetMarketTradesV5) | **Get** /api/v5/market/trades | Retrieve the recent transactions of an instrument.  
-[**GetPublicOptionTradesV5**](MarketDataAPI.md#GetPublicOptionTradesV5) | **Get** /api/v5/public/option-trades | The maximum is 100.  
+[**GetMarketBooksFullV5**](MarketDataAPI.md#GetMarketBooksFullV5) | **Get** /api/v5/market/books-full | GET / Full order book
+[**GetMarketBooksV5**](MarketDataAPI.md#GetMarketBooksV5) | **Get** /api/v5/market/books | GET / Order book
+[**GetMarketCallAuctionDetailsV5**](MarketDataAPI.md#GetMarketCallAuctionDetailsV5) | **Get** /api/v5/market/call-auction-details | GET / Call auction details
+[**GetMarketCandlesV5**](MarketDataAPI.md#GetMarketCandlesV5) | **Get** /api/v5/market/candles | GET / Candlesticks
+[**GetMarketHistoryCandlesV5**](MarketDataAPI.md#GetMarketHistoryCandlesV5) | **Get** /api/v5/market/history-candles | GET / Candlesticks history
+[**GetMarketHistoryTradesV5**](MarketDataAPI.md#GetMarketHistoryTradesV5) | **Get** /api/v5/market/history-trades | GET / Trades history
+[**GetMarketOptionInstrumentFamilyTradesV5**](MarketDataAPI.md#GetMarketOptionInstrumentFamilyTradesV5) | **Get** /api/v5/market/option/instrument-family-trades | GET / Option trades by instrument family
+[**GetMarketPlatform24VolumeV5**](MarketDataAPI.md#GetMarketPlatform24VolumeV5) | **Get** /api/v5/market/platform-24-volume | GET / 24H total volume
+[**GetMarketTickerV5**](MarketDataAPI.md#GetMarketTickerV5) | **Get** /api/v5/market/ticker | GET / Ticker
+[**GetMarketTickersV5**](MarketDataAPI.md#GetMarketTickersV5) | **Get** /api/v5/market/tickers | GET / Tickers
+[**GetMarketTradesV5**](MarketDataAPI.md#GetMarketTradesV5) | **Get** /api/v5/market/trades | GET / Trades
+[**GetPublicOptionTradesV5**](MarketDataAPI.md#GetPublicOptionTradesV5) | **Get** /api/v5/public/option-trades | GET / Option trades
 
 
 
@@ -22,7 +23,7 @@ Method | HTTP request | Description
 
 > GetMarketBooksFullV5Resp GetMarketBooksFullV5(ctx).InstId(instId).Sz(sz).Execute()
 
-Retrieve order book of the instrument. The data will be updated once a second.  
+GET / Full order book
 
 
 
@@ -90,7 +91,7 @@ No authorization required
 
 > GetMarketBooksV5Resp GetMarketBooksV5(ctx).InstId(instId).Sz(sz).Execute()
 
-Retrieve order book of the instrument.  
+GET / Order book
 
 
 
@@ -158,7 +159,7 @@ No authorization required
 
 > GetMarketCallAuctionDetailsV5Resp GetMarketCallAuctionDetailsV5(ctx).InstId(instId).Execute()
 
-Retrieve call auction details.  
+GET / Call auction details
 
 
 
@@ -224,7 +225,7 @@ No authorization required
 
 > GetMarketCandlesV5Resp GetMarketCandlesV5(ctx).InstId(instId).Bar(bar).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
+GET / Candlesticks
 
 
 
@@ -294,11 +295,85 @@ No authorization required
 [[Back to README]](../README.md)
 
 
+## GetMarketHistoryCandlesV5
+
+> GetMarketHistoryCandlesV5Resp GetMarketHistoryCandlesV5(ctx).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+
+GET / Candlesticks history
+
+
+
+### Example
+
+```go
+package main
+
+import (
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/openxapi/okx-go/rest"
+)
+
+func main() {
+	instId := "instId_example" // string | Instrument ID, e.g. `BTC-USDT` (default to "")
+	after := "after_example" // string | Pagination of data to return records earlier than the requested `ts` (optional) (default to "")
+	before := "before_example" // string | Pagination of data to return records newer than the requested `ts`. The latest data will be returned when using `before` individually (optional) (default to "")
+	bar := "bar_example" // string | Bar size, the default is `1m`  e.g. [1s/1m/3m/5m/15m/30m/1H/2H/4H]   Hong Kong time opening price k-line: [6H/12H/1D/2D/3D/1W/1M/3M]  UTC time opening price k-line: [6Hutc/12Hutc/1Dutc/2Dutc/3Dutc/1Wutc/1Mutc/3Mutc] (optional) (default to "")
+	limit := "limit_example" // string | Number of results per request. The maximum is `100`. The default is `100`. (optional) (default to "")
+
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.MarketDataAPI.GetMarketHistoryCandlesV5(context.Background()).InstId(instId).After(after).Before(before).Bar(bar).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `MarketDataAPI.GetMarketHistoryCandlesV5``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMarketHistoryCandlesV5`: GetMarketHistoryCandlesV5Resp
+	fmt.Fprintf(os.Stdout, "Response from `MarketDataAPI.GetMarketHistoryCandlesV5`: %v\n", resp)
+}
+```
+
+### Path Parameters
+
+
+
+### Other Parameters
+
+Other parameters are passed through a pointer to a apiGetMarketHistoryCandlesV5Request struct via the builder pattern
+
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **instId** | **string** | Instrument ID, e.g. &#x60;BTC-USDT&#x60; | [default to &quot;&quot;]
+ **after** | **string** | Pagination of data to return records earlier than the requested &#x60;ts&#x60; | [default to &quot;&quot;]
+ **before** | **string** | Pagination of data to return records newer than the requested &#x60;ts&#x60;. The latest data will be returned when using &#x60;before&#x60; individually | [default to &quot;&quot;]
+ **bar** | **string** | Bar size, the default is &#x60;1m&#x60;  e.g. [1s/1m/3m/5m/15m/30m/1H/2H/4H]   Hong Kong time opening price k-line: [6H/12H/1D/2D/3D/1W/1M/3M]  UTC time opening price k-line: [6Hutc/12Hutc/1Dutc/2Dutc/3Dutc/1Wutc/1Mutc/3Mutc] | [default to &quot;&quot;]
+ **limit** | **string** | Number of results per request. The maximum is &#x60;100&#x60;. The default is &#x60;100&#x60;. | [default to &quot;&quot;]
+
+### Return type
+
+[**GetMarketHistoryCandlesV5Resp**](GetMarketHistoryCandlesV5Resp.md)
+
+### Authorization
+
+No authorization required
+
+### HTTP request headers
+
+- **Content-Type**: Not defined
+- **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints)
+[[Back to Model list]](../README.md#documentation-for-models)
+[[Back to README]](../README.md)
+
+
 ## GetMarketHistoryTradesV5
 
 > GetMarketHistoryTradesV5Resp GetMarketHistoryTradesV5(ctx).InstId(instId).Type_(type_).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the recent transactions of an instrument from the last 3 months with pagination.  
+GET / Trades history
 
 
 
@@ -372,7 +447,7 @@ No authorization required
 
 > GetMarketOptionInstrumentFamilyTradesV5Resp GetMarketOptionInstrumentFamilyTradesV5(ctx).InstFamily(instFamily).Execute()
 
-Retrieve the recent transactions of an instrument under same instFamily. The maximum is 100.  
+GET / Option trades by instrument family
 
 
 
@@ -438,7 +513,7 @@ No authorization required
 
 > GetMarketPlatform24VolumeV5Resp GetMarketPlatform24VolumeV5(ctx).Execute()
 
-The 24-hour trading volume is calculated on a rolling basis.  
+GET / 24H total volume
 
 
 
@@ -499,7 +574,7 @@ No authorization required
 
 > GetMarketTickerV5Resp GetMarketTickerV5(ctx).InstId(instId).Execute()
 
-Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
+GET / Ticker
 
 
 
@@ -565,7 +640,7 @@ No authorization required
 
 > GetMarketTickersV5Resp GetMarketTickersV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).Execute()
 
-Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
+GET / Tickers
 
 
 
@@ -635,7 +710,7 @@ No authorization required
 
 > GetMarketTradesV5Resp GetMarketTradesV5(ctx).InstId(instId).Limit(limit).Execute()
 
-Retrieve the recent transactions of an instrument.  
+GET / Trades
 
 
 
@@ -703,7 +778,7 @@ No authorization required
 
 > GetPublicOptionTradesV5Resp GetPublicOptionTradesV5(ctx).InstId(instId).InstFamily(instFamily).OptType(optType).Execute()
 
-The maximum is 100.  
+GET / Option trades
 
 
 

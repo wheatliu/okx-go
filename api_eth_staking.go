@@ -30,7 +30,7 @@ type ApiCreateFinanceStakingDefiEthPurchaseV5Request struct {
 	createFinanceStakingDefiEthPurchaseV5Req *CreateFinanceStakingDefiEthPurchaseV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiEthPurchaseV5
+// The request body for CreateFinanceStakingDefiEthPurchaseV5
 func (r ApiCreateFinanceStakingDefiEthPurchaseV5Request) CreateFinanceStakingDefiEthPurchaseV5Req(createFinanceStakingDefiEthPurchaseV5Req CreateFinanceStakingDefiEthPurchaseV5Req) ApiCreateFinanceStakingDefiEthPurchaseV5Request {
 	r.createFinanceStakingDefiEthPurchaseV5Req = &createFinanceStakingDefiEthPurchaseV5Req
 	return r
@@ -41,7 +41,7 @@ func (r ApiCreateFinanceStakingDefiEthPurchaseV5Request) Execute() (*CreateFinan
 }
 
 /*
-CreateFinanceStakingDefiEthPurchaseV5 Staking ETH for BETH   Only the assets in the funding account can be used.    
+CreateFinanceStakingDefiEthPurchaseV5 POST / Purchase
 
 Staking ETH for BETH
 
@@ -164,7 +164,7 @@ func (a *EthStakingAPIService) CreateFinanceStakingDefiEthPurchaseV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -173,7 +173,7 @@ func (a *EthStakingAPIService) CreateFinanceStakingDefiEthPurchaseV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -196,7 +196,7 @@ type ApiCreateFinanceStakingDefiEthRedeemV5Request struct {
 	createFinanceStakingDefiEthRedeemV5Req *CreateFinanceStakingDefiEthRedeemV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiEthRedeemV5
+// The request body for CreateFinanceStakingDefiEthRedeemV5
 func (r ApiCreateFinanceStakingDefiEthRedeemV5Request) CreateFinanceStakingDefiEthRedeemV5Req(createFinanceStakingDefiEthRedeemV5Req CreateFinanceStakingDefiEthRedeemV5Req) ApiCreateFinanceStakingDefiEthRedeemV5Request {
 	r.createFinanceStakingDefiEthRedeemV5Req = &createFinanceStakingDefiEthRedeemV5Req
 	return r
@@ -207,7 +207,7 @@ func (r ApiCreateFinanceStakingDefiEthRedeemV5Request) Execute() (*CreateFinance
 }
 
 /*
-CreateFinanceStakingDefiEthRedeemV5 Only the assets in the funding account can be used. If your BETH is in your trading account, you can make funding transfer first.    
+CreateFinanceStakingDefiEthRedeemV5 POST / Redeem
 
 Only the assets in the funding account can be used. If your BETH is in your trading account, you can make funding transfer first.
 
@@ -327,7 +327,7 @@ func (a *EthStakingAPIService) CreateFinanceStakingDefiEthRedeemV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -336,7 +336,7 @@ func (a *EthStakingAPIService) CreateFinanceStakingDefiEthRedeemV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -370,7 +370,7 @@ func (r ApiGetFinanceStakingDefiEthApyHistoryV5Request) Execute() (*GetFinanceSt
 }
 
 /*
-GetFinanceStakingDefiEthApyHistoryV5 Public endpoints don't need authorization.  
+GetFinanceStakingDefiEthApyHistoryV5 GET / APY history (Public)
 
 Public endpoints don't need authorization.
 
@@ -478,7 +478,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthApyHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -487,7 +487,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthApyHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -514,7 +514,7 @@ func (r ApiGetFinanceStakingDefiEthBalanceV5Request) Execute() (*GetFinanceStaki
 }
 
 /*
-GetFinanceStakingDefiEthBalanceV5 The balance is a snapshot summarized all BETH assets (including assets in redeeming) in account.  
+GetFinanceStakingDefiEthBalanceV5 GET / Balance
 
 The balance is a snapshot summarized all BETH assets (including assets in redeeming) in account.
 
@@ -627,7 +627,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthBalanceV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -636,7 +636,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthBalanceV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -663,7 +663,7 @@ func (r ApiGetFinanceStakingDefiEthProductInfoV5Request) Execute() (*GetFinanceS
 }
 
 /*
-GetFinanceStakingDefiEthProductInfoV5 Method for GetFinanceStakingDefiEthProductInfoV5
+GetFinanceStakingDefiEthProductInfoV5 GET / Product info
 
 #### Rate Limit: 3 requests per second 
 
@@ -774,7 +774,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthProductInfoV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -783,7 +783,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthProductInfoV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -845,7 +845,7 @@ func (r ApiGetFinanceStakingDefiEthPurchaseRedeemHistoryV5Request) Execute() (*G
 }
 
 /*
-GetFinanceStakingDefiEthPurchaseRedeemHistoryV5 Method for GetFinanceStakingDefiEthPurchaseRedeemHistoryV5
+GetFinanceStakingDefiEthPurchaseRedeemHistoryV5 GET / Purchase&Redeem history
 
 #### Rate Limit: 6 requests per second 
 
@@ -986,7 +986,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -995,7 +995,7 @@ func (a *EthStakingAPIService) GetFinanceStakingDefiEthPurchaseRedeemHistoryV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

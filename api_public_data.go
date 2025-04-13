@@ -34,7 +34,7 @@ func (r ApiGetMarketExchangeRateV5Request) Execute() (*GetMarketExchangeRateV5Re
 }
 
 /*
-GetMarketExchangeRateV5 This interface provides the average exchange rate data for 2 weeks  
+GetMarketExchangeRateV5 Get exchange rate
 
 This interface provides the average exchange rate data for 2 weeks
 
@@ -138,7 +138,7 @@ func (a *PublicDataAPIService) GetMarketExchangeRateV5Execute(r ApiGetMarketExch
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -147,7 +147,7 @@ func (a *PublicDataAPIService) GetMarketExchangeRateV5Execute(r ApiGetMarketExch
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -209,7 +209,7 @@ func (r ApiGetMarketHistoryIndexCandlesV5Request) Execute() (*GetMarketHistoryIn
 }
 
 /*
-GetMarketHistoryIndexCandlesV5 Retrieve the candlestick charts of the index from recent years.  
+GetMarketHistoryIndexCandlesV5 Get index candlesticks history
 
 Retrieve the candlestick charts of the index from recent years.
 
@@ -341,7 +341,7 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -350,7 +350,7 @@ func (a *PublicDataAPIService) GetMarketHistoryIndexCandlesV5Execute(r ApiGetMar
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -412,7 +412,7 @@ func (r ApiGetMarketHistoryMarkPriceCandlesV5Request) Execute() (*GetMarketHisto
 }
 
 /*
-GetMarketHistoryMarkPriceCandlesV5 Retrieve the candlestick charts of mark price from recent years.  
+GetMarketHistoryMarkPriceCandlesV5 Get mark price candlesticks history
 
 Retrieve the candlestick charts of mark price from recent years.
 
@@ -544,7 +544,7 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -553,7 +553,7 @@ func (a *PublicDataAPIService) GetMarketHistoryMarkPriceCandlesV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -615,7 +615,7 @@ func (r ApiGetMarketIndexCandlesV5Request) Execute() (*GetMarketIndexCandlesV5Re
 }
 
 /*
-GetMarketIndexCandlesV5 Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
+GetMarketIndexCandlesV5 Get index candlesticks
 
 Retrieve the candlestick charts of the index. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar. 
 
@@ -747,7 +747,7 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -756,7 +756,7 @@ func (a *PublicDataAPIService) GetMarketIndexCandlesV5Execute(r ApiGetMarketInde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -790,7 +790,7 @@ func (r ApiGetMarketIndexComponentsV5Request) Execute() (*GetMarketIndexComponen
 }
 
 /*
-GetMarketIndexComponentsV5 Get the index component information data on the market  
+GetMarketIndexComponentsV5 Get index components
 
 Get the index component information data on the market
 
@@ -898,7 +898,7 @@ func (a *PublicDataAPIService) GetMarketIndexComponentsV5Execute(r ApiGetMarketI
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -907,7 +907,7 @@ func (a *PublicDataAPIService) GetMarketIndexComponentsV5Execute(r ApiGetMarketI
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -948,7 +948,7 @@ func (r ApiGetMarketIndexTickersV5Request) Execute() (*GetMarketIndexTickersV5Re
 }
 
 /*
-GetMarketIndexTickersV5 Retrieve index tickers.  
+GetMarketIndexTickersV5 Get index tickers
 
 Retrieve index tickers.
 
@@ -1064,7 +1064,7 @@ func (a *PublicDataAPIService) GetMarketIndexTickersV5Execute(r ApiGetMarketInde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1073,7 +1073,7 @@ func (a *PublicDataAPIService) GetMarketIndexTickersV5Execute(r ApiGetMarketInde
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1135,7 +1135,7 @@ func (r ApiGetMarketMarkPriceCandlesV5Request) Execute() (*GetMarketMarkPriceCan
 }
 
 /*
-GetMarketMarkPriceCandlesV5 Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.  
+GetMarketMarkPriceCandlesV5 Get mark price candlesticks
 
 Retrieve the candlestick charts of mark price. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.
 
@@ -1267,7 +1267,7 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1276,7 +1276,7 @@ func (a *PublicDataAPIService) GetMarketMarkPriceCandlesV5Execute(r ApiGetMarket
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1345,7 +1345,7 @@ func (r ApiGetPublicConvertContractCoinV5Request) Execute() (*GetPublicConvertCo
 }
 
 /*
-GetPublicConvertContractCoinV5 Convert the crypto value to the number of contracts, or vice versa  
+GetPublicConvertContractCoinV5 Unit convert
 
 Convert the crypto value to the number of contracts, or vice versa
 
@@ -1481,7 +1481,7 @@ func (a *PublicDataAPIService) GetPublicConvertContractCoinV5Execute(r ApiGetPub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1490,7 +1490,7 @@ func (a *PublicDataAPIService) GetPublicConvertContractCoinV5Execute(r ApiGetPub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1559,7 +1559,7 @@ func (r ApiGetPublicDeliveryExerciseHistoryV5Request) Execute() (*GetPublicDeliv
 }
 
 /*
-GetPublicDeliveryExerciseHistoryV5 Retrieve delivery records of Futures and exercise records of Options in the last 3 months.  
+GetPublicDeliveryExerciseHistoryV5 Get delivery/exercise history
 
 Retrieve delivery records of Futures and exercise records of Options in the last 3 months.
 
@@ -1697,7 +1697,7 @@ func (a *PublicDataAPIService) GetPublicDeliveryExerciseHistoryV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1706,7 +1706,7 @@ func (a *PublicDataAPIService) GetPublicDeliveryExerciseHistoryV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1747,7 +1747,7 @@ func (r ApiGetPublicDiscountRateInterestFreeQuotaV5Request) Execute() (*GetPubli
 }
 
 /*
-GetPublicDiscountRateInterestFreeQuotaV5 Retrieve discount rate level and interest-free quota.  
+GetPublicDiscountRateInterestFreeQuotaV5 Get discount rate and interest-free quota
 
 Retrieve discount rate level and interest-free quota.
 
@@ -1863,7 +1863,7 @@ func (a *PublicDataAPIService) GetPublicDiscountRateInterestFreeQuotaV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1872,7 +1872,7 @@ func (a *PublicDataAPIService) GetPublicDiscountRateInterestFreeQuotaV5Execute(r
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1934,7 +1934,7 @@ func (r ApiGetPublicEconomicCalendarV5Request) Execute() (*GetPublicEconomicCale
 }
 
 /*
-GetPublicEconomicCalendarV5 Get the macro-economic calendar data within 3 months. Historical data from 3 months ago is only available to users with trading fee tier VIP1 and above.  
+GetPublicEconomicCalendarV5 Get economic calendar data
 
 **_Authentication is required for this endpoint. This endpoint is only supported in production environment._**
 
@@ -2070,7 +2070,7 @@ func (a *PublicDataAPIService) GetPublicEconomicCalendarV5Execute(r ApiGetPublic
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2079,7 +2079,7 @@ func (a *PublicDataAPIService) GetPublicEconomicCalendarV5Execute(r ApiGetPublic
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2113,7 +2113,7 @@ func (r ApiGetPublicEstimatedPriceV5Request) Execute() (*GetPublicEstimatedPrice
 }
 
 /*
-GetPublicEstimatedPriceV5 Retrieve the estimated delivery price which will only have a return value one hour before the delivery/exercise.  
+GetPublicEstimatedPriceV5 Get estimated delivery/exercise price
 
 Retrieve the estimated delivery price which will only have a return value one hour before the delivery/exercise.
 
@@ -2221,7 +2221,7 @@ func (a *PublicDataAPIService) GetPublicEstimatedPriceV5Execute(r ApiGetPublicEs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2230,7 +2230,7 @@ func (a *PublicDataAPIService) GetPublicEstimatedPriceV5Execute(r ApiGetPublicEs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2264,7 +2264,7 @@ func (r ApiGetPublicEstimatedSettlementInfoV5Request) Execute() (*GetPublicEstim
 }
 
 /*
-GetPublicEstimatedSettlementInfoV5 Retrieve the estimated settlement price which will only have a return value one hour before the settlement.  
+GetPublicEstimatedSettlementInfoV5 Get estimated future settlement price
 
 Retrieve the estimated settlement price which will only have a return value one hour before the settlement.
 
@@ -2372,7 +2372,7 @@ func (a *PublicDataAPIService) GetPublicEstimatedSettlementInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2381,7 +2381,7 @@ func (a *PublicDataAPIService) GetPublicEstimatedSettlementInfoV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2436,7 +2436,7 @@ func (r ApiGetPublicFundingRateHistoryV5Request) Execute() (*GetPublicFundingRat
 }
 
 /*
-GetPublicFundingRateHistoryV5 Retrieve funding rate history. This endpoint can retrieve data from the last 3 months.  
+GetPublicFundingRateHistoryV5 Get funding rate history
 
 Retrieve funding rate history. This endpoint can retrieve data from the last 3 months.
 
@@ -2562,7 +2562,7 @@ func (a *PublicDataAPIService) GetPublicFundingRateHistoryV5Execute(r ApiGetPubl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2571,7 +2571,7 @@ func (a *PublicDataAPIService) GetPublicFundingRateHistoryV5Execute(r ApiGetPubl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2605,7 +2605,7 @@ func (r ApiGetPublicFundingRateV5Request) Execute() (*GetPublicFundingRateV5Resp
 }
 
 /*
-GetPublicFundingRateV5 Retrieve funding rate.  
+GetPublicFundingRateV5 Get funding rate
 
 Retrieve funding rate.
 
@@ -2713,7 +2713,7 @@ func (a *PublicDataAPIService) GetPublicFundingRateV5Execute(r ApiGetPublicFundi
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2722,7 +2722,7 @@ func (a *PublicDataAPIService) GetPublicFundingRateV5Execute(r ApiGetPublicFundi
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2763,7 +2763,7 @@ func (r ApiGetPublicInstrumentTickBandsV5Request) Execute() (*GetPublicInstrumen
 }
 
 /*
-GetPublicInstrumentTickBandsV5 Get option tick bands information  
+GetPublicInstrumentTickBandsV5 Get option tick bands
 
 Get option tick bands information
 
@@ -2877,7 +2877,7 @@ func (a *PublicDataAPIService) GetPublicInstrumentTickBandsV5Execute(r ApiGetPub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2886,7 +2886,7 @@ func (a *PublicDataAPIService) GetPublicInstrumentTickBandsV5Execute(r ApiGetPub
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2941,7 +2941,7 @@ func (r ApiGetPublicInstrumentsV5Request) Execute() (*GetPublicInstrumentsV5Resp
 }
 
 /*
-GetPublicInstrumentsV5 Retrieve a list of instruments with open contracts for OKX. Retrieve available instruments info of current account, please refer to .  
+GetPublicInstrumentsV5 Get instruments
 
 Retrieve a list of instruments with open contracts for OKX. Retrieve available instruments info of current account, please refer to .
 
@@ -3067,7 +3067,7 @@ func (a *PublicDataAPIService) GetPublicInstrumentsV5Execute(r ApiGetPublicInstr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3076,7 +3076,7 @@ func (a *PublicDataAPIService) GetPublicInstrumentsV5Execute(r ApiGetPublicInstr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3159,7 +3159,7 @@ func (r ApiGetPublicInsuranceFundV5Request) Execute() (*GetPublicInsuranceFundV5
 }
 
 /*
-GetPublicInsuranceFundV5 Get insurance fund balance information  
+GetPublicInsuranceFundV5 Get insurance fund
 
 Get insurance fund balance information
 
@@ -3309,7 +3309,7 @@ func (a *PublicDataAPIService) GetPublicInsuranceFundV5Execute(r ApiGetPublicIns
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3318,7 +3318,7 @@ func (a *PublicDataAPIService) GetPublicInsuranceFundV5Execute(r ApiGetPublicIns
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3345,7 +3345,7 @@ func (r ApiGetPublicInterestRateLoanQuotaV5Request) Execute() (*GetPublicInteres
 }
 
 /*
-GetPublicInterestRateLoanQuotaV5 Retrieve interest rate  
+GetPublicInterestRateLoanQuotaV5 Get interest rate and loan quota
 
 Retrieve interest rate
 
@@ -3449,7 +3449,7 @@ func (a *PublicDataAPIService) GetPublicInterestRateLoanQuotaV5Execute(r ApiGetP
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3458,7 +3458,7 @@ func (a *PublicDataAPIService) GetPublicInterestRateLoanQuotaV5Execute(r ApiGetP
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3513,7 +3513,7 @@ func (r ApiGetPublicMarkPriceV5Request) Execute() (*GetPublicMarkPriceV5Resp, *h
 }
 
 /*
-GetPublicMarkPriceV5 Retrieve mark price.  We set the mark price based on the SPOT index and at a reasonable basis to prevent individual users from manipulating the market and causing the contract price to fluctuate.  
+GetPublicMarkPriceV5 Get mark price
 
 Retrieve mark price.
 
@@ -3641,7 +3641,7 @@ func (a *PublicDataAPIService) GetPublicMarkPriceV5Execute(r ApiGetPublicMarkPri
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3650,7 +3650,7 @@ func (a *PublicDataAPIService) GetPublicMarkPriceV5Execute(r ApiGetPublicMarkPri
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3705,7 +3705,7 @@ func (r ApiGetPublicOpenInterestV5Request) Execute() (*GetPublicOpenInterestV5Re
 }
 
 /*
-GetPublicOpenInterestV5 Retrieve the total open interest for contracts on OKX.  
+GetPublicOpenInterestV5 Get open interest
 
 Retrieve the total open interest for contracts on OKX.
 
@@ -3831,7 +3831,7 @@ func (a *PublicDataAPIService) GetPublicOpenInterestV5Execute(r ApiGetPublicOpen
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3840,7 +3840,7 @@ func (a *PublicDataAPIService) GetPublicOpenInterestV5Execute(r ApiGetPublicOpen
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3888,7 +3888,7 @@ func (r ApiGetPublicOptSummaryV5Request) Execute() (*GetPublicOptSummaryV5Resp, 
 }
 
 /*
-GetPublicOptSummaryV5 Retrieve option market data.  
+GetPublicOptSummaryV5 Get option market data
 
 Retrieve option market data.
 
@@ -4010,7 +4010,7 @@ func (a *PublicDataAPIService) GetPublicOptSummaryV5Execute(r ApiGetPublicOptSum
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4019,7 +4019,7 @@ func (a *PublicDataAPIService) GetPublicOptSummaryV5Execute(r ApiGetPublicOptSum
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4095,7 +4095,7 @@ func (r ApiGetPublicPositionTiersV5Request) Execute() (*GetPublicPositionTiersV5
 }
 
 /*
-GetPublicPositionTiersV5 Retrieve position tiers information, maximum leverage depends on your borrowings and margin ratio.  
+GetPublicPositionTiersV5 Get position tiers
 
 Retrieve position tiers information, maximum leverage depends on your borrowings and margin ratio.
 
@@ -4237,7 +4237,7 @@ func (a *PublicDataAPIService) GetPublicPositionTiersV5Execute(r ApiGetPublicPos
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4246,7 +4246,7 @@ func (a *PublicDataAPIService) GetPublicPositionTiersV5Execute(r ApiGetPublicPos
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4301,7 +4301,7 @@ func (r ApiGetPublicPremiumHistoryV5Request) Execute() (*GetPublicPremiumHistory
 }
 
 /*
-GetPublicPremiumHistoryV5 It will return premium data in the past 6 months.  
+GetPublicPremiumHistoryV5 Get premium history
 
 It will return premium data in the past 6 months.
 
@@ -4427,7 +4427,7 @@ func (a *PublicDataAPIService) GetPublicPremiumHistoryV5Execute(r ApiGetPublicPr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4436,7 +4436,7 @@ func (a *PublicDataAPIService) GetPublicPremiumHistoryV5Execute(r ApiGetPublicPr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4470,7 +4470,7 @@ func (r ApiGetPublicPriceLimitV5Request) Execute() (*GetPublicPriceLimitV5Resp, 
 }
 
 /*
-GetPublicPriceLimitV5 Retrieve the highest buy limit and lowest sell limit of the instrument.  
+GetPublicPriceLimitV5 Get limit price
 
 Retrieve the highest buy limit and lowest sell limit of the instrument.
 
@@ -4578,7 +4578,7 @@ func (a *PublicDataAPIService) GetPublicPriceLimitV5Execute(r ApiGetPublicPriceL
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4587,7 +4587,7 @@ func (a *PublicDataAPIService) GetPublicPriceLimitV5Execute(r ApiGetPublicPriceL
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4642,7 +4642,7 @@ func (r ApiGetPublicSettlementHistoryV5Request) Execute() (*GetPublicSettlementH
 }
 
 /*
-GetPublicSettlementHistoryV5 Retrieve settlement records of futures in the last 3 months.  
+GetPublicSettlementHistoryV5 Get futures settlement history
 
 Retrieve settlement records of futures in the last 3 months.
 
@@ -4768,7 +4768,7 @@ func (a *PublicDataAPIService) GetPublicSettlementHistoryV5Execute(r ApiGetPubli
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4777,7 +4777,7 @@ func (a *PublicDataAPIService) GetPublicSettlementHistoryV5Execute(r ApiGetPubli
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4804,7 +4804,7 @@ func (r ApiGetPublicTimeV5Request) Execute() (*GetPublicTimeV5Resp, *http.Respon
 }
 
 /*
-GetPublicTimeV5 Retrieve API server time.  
+GetPublicTimeV5 Get system time
 
 Retrieve API server time.
 
@@ -4908,7 +4908,7 @@ func (a *PublicDataAPIService) GetPublicTimeV5Execute(r ApiGetPublicTimeV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4917,7 +4917,7 @@ func (a *PublicDataAPIService) GetPublicTimeV5Execute(r ApiGetPublicTimeV5Reques
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4951,7 +4951,7 @@ func (r ApiGetPublicUnderlyingV5Request) Execute() (*GetPublicUnderlyingV5Resp, 
 }
 
 /*
-GetPublicUnderlyingV5 Method for GetPublicUnderlyingV5
+GetPublicUnderlyingV5 Get underlying
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -5057,7 +5057,7 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5066,7 +5066,7 @@ func (a *PublicDataAPIService) GetPublicUnderlyingV5Execute(r ApiGetPublicUnderl
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

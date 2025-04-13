@@ -41,7 +41,7 @@ func (r ApiCreateTradingBotRecurringAmendOrderAlgoV5Request) Execute() (*CreateT
 }
 
 /*
-CreateTradingBotRecurringAmendOrderAlgoV5 Method for CreateTradingBotRecurringAmendOrderAlgoV5
+CreateTradingBotRecurringAmendOrderAlgoV5 POST / Amend recurring buy order
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -157,7 +157,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringAmendOrderAlgoV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -166,7 +166,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringAmendOrderAlgoV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -200,7 +200,7 @@ func (r ApiCreateTradingBotRecurringOrderAlgoV5Request) Execute() (*CreateTradin
 }
 
 /*
-CreateTradingBotRecurringOrderAlgoV5 Method for CreateTradingBotRecurringOrderAlgoV5
+CreateTradingBotRecurringOrderAlgoV5 POST / Place recurring buy order
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -316,7 +316,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringOrderAlgoV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -325,7 +325,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringOrderAlgoV5Execute(r A
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -359,7 +359,7 @@ func (r ApiCreateTradingBotRecurringStopOrderAlgoV5Request) Execute() (*CreateTr
 }
 
 /*
-CreateTradingBotRecurringStopOrderAlgoV5 A maximum of 10 orders can be stopped per request.  
+CreateTradingBotRecurringStopOrderAlgoV5 POST / Stop recurring buy order
 
 A maximum of 10 orders can be stopped per request.
 
@@ -477,7 +477,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringStopOrderAlgoV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -486,7 +486,7 @@ func (a *RecurringBuyAPIService) CreateTradingBotRecurringStopOrderAlgoV5Execute
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -520,7 +520,7 @@ func (r ApiGetTradingBotRecurringOrdersAlgoDetailsV5Request) Execute() (*GetTrad
 }
 
 /*
-GetTradingBotRecurringOrdersAlgoDetailsV5 Method for GetTradingBotRecurringOrdersAlgoDetailsV5
+GetTradingBotRecurringOrdersAlgoDetailsV5 GET / Recurring buy order details
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -635,7 +635,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoDetailsV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -644,7 +644,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoDetailsV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -699,7 +699,7 @@ func (r ApiGetTradingBotRecurringOrdersAlgoHistoryV5Request) Execute() (*GetTrad
 }
 
 /*
-GetTradingBotRecurringOrdersAlgoHistoryV5 Method for GetTradingBotRecurringOrdersAlgoHistoryV5
+GetTradingBotRecurringOrdersAlgoHistoryV5 GET / Recurring buy order history
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -834,7 +834,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoHistoryV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -843,7 +843,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoHistoryV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -898,7 +898,7 @@ func (r ApiGetTradingBotRecurringOrdersAlgoPendingV5Request) Execute() (*GetTrad
 }
 
 /*
-GetTradingBotRecurringOrdersAlgoPendingV5 Method for GetTradingBotRecurringOrdersAlgoPendingV5
+GetTradingBotRecurringOrdersAlgoPendingV5 GET / Recurring buy order list
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1033,7 +1033,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoPendingV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1042,7 +1042,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringOrdersAlgoPendingV5Execut
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1104,7 +1104,7 @@ func (r ApiGetTradingBotRecurringSubOrdersV5Request) Execute() (*GetTradingBotRe
 }
 
 /*
-GetTradingBotRecurringSubOrdersV5 Method for GetTradingBotRecurringSubOrdersV5
+GetTradingBotRecurringSubOrdersV5 GET / Recurring buy sub orders
 
 #### Rate Limit: 20 requests per 2 seconds 
 
@@ -1243,7 +1243,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringSubOrdersV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1252,7 +1252,7 @@ func (a *RecurringBuyAPIService) GetTradingBotRecurringSubOrdersV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

@@ -41,7 +41,7 @@ func (r ApiCreateAssetCancelWithdrawalV5Request) Execute() (*CreateAssetCancelWi
 }
 
 /*
-CreateAssetCancelWithdrawalV5 You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.  
+CreateAssetCancelWithdrawalV5 Cancel withdrawal
 
 You can cancel normal withdrawal requests, but you cannot cancel withdrawal requests on Lightning.
 
@@ -159,7 +159,7 @@ func (a *FundingAccountAPIService) CreateAssetCancelWithdrawalV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *FundingAccountAPIService) CreateAssetCancelWithdrawalV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -202,7 +202,7 @@ func (r ApiCreateAssetConvertEstimateQuoteV5Request) Execute() (*CreateAssetConv
 }
 
 /*
-CreateAssetConvertEstimateQuoteV5 Method for CreateAssetConvertEstimateQuoteV5
+CreateAssetConvertEstimateQuoteV5 Estimate quote
 
 #### Rate Limit: 10 requests per second 
 
@@ -322,7 +322,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertEstimateQuoteV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -331,7 +331,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertEstimateQuoteV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -365,7 +365,7 @@ func (r ApiCreateAssetConvertTradeV5Request) Execute() (*CreateAssetConvertTrade
 }
 
 /*
-CreateAssetConvertTradeV5 You should make  before convert trade.   For the same side (buy/sell), there's a trading limit of 1 request per 5 seconds.  
+CreateAssetConvertTradeV5 Convert trade
 
 You should make  before convert trade. 
 
@@ -487,7 +487,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertTradeV5Execute(r ApiCreateA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -496,7 +496,7 @@ func (a *FundingAccountAPIService) CreateAssetConvertTradeV5Execute(r ApiCreateA
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -530,7 +530,7 @@ func (r ApiCreateAssetMonthlyStatementV5Request) Execute() (*CreateAssetMonthlyS
 }
 
 /*
-CreateAssetMonthlyStatementV5 Apply for monthly statement in the past year.  
+CreateAssetMonthlyStatementV5 Apply for monthly statement (last year)
 
 Apply for monthly statement in the past year.
 
@@ -648,7 +648,7 @@ func (a *FundingAccountAPIService) CreateAssetMonthlyStatementV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -657,7 +657,7 @@ func (a *FundingAccountAPIService) CreateAssetMonthlyStatementV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -691,7 +691,7 @@ func (r ApiCreateAssetTransferV5Request) Execute() (*CreateAssetTransferV5Resp, 
 }
 
 /*
-CreateAssetTransferV5 Only API keys with `Trade` privilege can call this endpoint.  This endpoint supports the transfer of funds between your funding account and trading account, and from the master account to sub-accounts.  Sub-account can transfer out to master account by default. Need to call  to grant privilege first if you want sub-account transferring to another sub-account (sub-accounts need to belong to same master account.)  
+CreateAssetTransferV5 Funds transfer
 
 Only API keys with `Trade` privilege can call this endpoint.
 
@@ -815,7 +815,7 @@ func (a *FundingAccountAPIService) CreateAssetTransferV5Execute(r ApiCreateAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -824,7 +824,7 @@ func (a *FundingAccountAPIService) CreateAssetTransferV5Execute(r ApiCreateAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -858,7 +858,7 @@ func (r ApiCreateAssetWithdrawalV5Request) Execute() (*CreateAssetWithdrawalV5Re
 }
 
 /*
-CreateAssetWithdrawalV5 Only supported withdrawal of assets from funding account. Common sub-account does not support withdrawal.   
+CreateAssetWithdrawalV5 Withdrawal
 
 Only supported withdrawal of assets from funding account. Common sub-account does not support withdrawal. 
 
@@ -984,7 +984,7 @@ func (a *FundingAccountAPIService) CreateAssetWithdrawalV5Execute(r ApiCreateAss
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -993,7 +993,7 @@ func (a *FundingAccountAPIService) CreateAssetWithdrawalV5Execute(r ApiCreateAss
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1027,7 +1027,7 @@ func (r ApiCreateFiatCancelWithdrawalV5Request) Execute() (*CreateFiatCancelWith
 }
 
 /*
-CreateFiatCancelWithdrawalV5 Cancel a pending fiat withdrawal order, currently only applicable to TRY  
+CreateFiatCancelWithdrawalV5 Cancel withdrawal order
 
 Cancel a pending fiat withdrawal order, currently only applicable to TRY
 
@@ -1145,7 +1145,7 @@ func (a *FundingAccountAPIService) CreateFiatCancelWithdrawalV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1154,7 +1154,7 @@ func (a *FundingAccountAPIService) CreateFiatCancelWithdrawalV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1188,7 +1188,7 @@ func (r ApiCreateFiatCreateWithdrawalV5Request) Execute() (*CreateFiatCreateWith
 }
 
 /*
-CreateFiatCreateWithdrawalV5 Initiate a fiat withdrawal request (Authenticated endpoint, Only for API keys with \"Withdrawal\" access)   Only supported withdrawal of assets from funding account.  
+CreateFiatCreateWithdrawalV5 Create withdrawal order
 
 Initiate a fiat withdrawal request (Authenticated endpoint, Only for API keys with "Withdrawal" access)
 
@@ -1309,7 +1309,7 @@ func (a *FundingAccountAPIService) CreateFiatCreateWithdrawalV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1318,7 +1318,7 @@ func (a *FundingAccountAPIService) CreateFiatCreateWithdrawalV5Execute(r ApiCrea
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1352,7 +1352,7 @@ func (r ApiGetAssetAssetValuationV5Request) Execute() (*GetAssetAssetValuationV5
 }
 
 /*
-GetAssetAssetValuationV5 View account asset valuation  
+GetAssetAssetValuationV5 Get account asset valuation
 
 View account asset valuation
 
@@ -1471,7 +1471,7 @@ func (a *FundingAccountAPIService) GetAssetAssetValuationV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1480,7 +1480,7 @@ func (a *FundingAccountAPIService) GetAssetAssetValuationV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1514,7 +1514,7 @@ func (r ApiGetAssetBalancesV5Request) Execute() (*GetAssetBalancesV5Resp, *http.
 }
 
 /*
-GetAssetBalancesV5 Retrieve the funding account balances of all the assets and the amount that is available or on hold.  
+GetAssetBalancesV5 Get balance
 
 Retrieve the funding account balances of all the assets and the amount that is available or on hold.
 
@@ -1635,7 +1635,7 @@ func (a *FundingAccountAPIService) GetAssetBalancesV5Execute(r ApiGetAssetBalanc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1644,7 +1644,7 @@ func (a *FundingAccountAPIService) GetAssetBalancesV5Execute(r ApiGetAssetBalanc
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1713,7 +1713,7 @@ func (r ApiGetAssetBillsV5Request) Execute() (*GetAssetBillsV5Resp, *http.Respon
 }
 
 /*
-GetAssetBillsV5 Query the billing record in the past month.  
+GetAssetBillsV5 Asset bills details
 
 Query the billing record in the past month.
 
@@ -1862,7 +1862,7 @@ func (a *FundingAccountAPIService) GetAssetBillsV5Execute(r ApiGetAssetBillsV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1871,7 +1871,7 @@ func (a *FundingAccountAPIService) GetAssetBillsV5Execute(r ApiGetAssetBillsV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1898,7 +1898,7 @@ func (r ApiGetAssetConvertCurrenciesV5Request) Execute() (*GetAssetConvertCurren
 }
 
 /*
-GetAssetConvertCurrenciesV5 Method for GetAssetConvertCurrenciesV5
+GetAssetConvertCurrenciesV5 Get convert currencies
 
 #### Rate Limit: 6 requests per second 
 
@@ -2009,7 +2009,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2018,7 +2018,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrenciesV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2059,7 +2059,7 @@ func (r ApiGetAssetConvertCurrencyPairV5Request) Execute() (*GetAssetConvertCurr
 }
 
 /*
-GetAssetConvertCurrencyPairV5 Method for GetAssetConvertCurrencyPairV5
+GetAssetConvertCurrencyPairV5 Get convert currency pair
 
 #### Rate Limit: 6 requests per second 
 
@@ -2178,7 +2178,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2187,7 +2187,7 @@ func (a *FundingAccountAPIService) GetAssetConvertCurrencyPairV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2249,7 +2249,7 @@ func (r ApiGetAssetConvertHistoryV5Request) Execute() (*GetAssetConvertHistoryV5
 }
 
 /*
-GetAssetConvertHistoryV5 Method for GetAssetConvertHistoryV5
+GetAssetConvertHistoryV5 Get convert history
 
 #### Rate Limit: 6 requests per second 
 
@@ -2388,7 +2388,7 @@ func (a *FundingAccountAPIService) GetAssetConvertHistoryV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2397,7 +2397,7 @@ func (a *FundingAccountAPIService) GetAssetConvertHistoryV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2431,7 +2431,7 @@ func (r ApiGetAssetCurrenciesV5Request) Execute() (*GetAssetCurrenciesV5Resp, *h
 }
 
 /*
-GetAssetCurrenciesV5 Retrieve a list of all currencies available which are related to the current account's KYC entity.  
+GetAssetCurrenciesV5 Get currencies
 
 Retrieve a list of all currencies available which are related to the current account's KYC entity.
 
@@ -2550,7 +2550,7 @@ func (a *FundingAccountAPIService) GetAssetCurrenciesV5Execute(r ApiGetAssetCurr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2559,7 +2559,7 @@ func (a *FundingAccountAPIService) GetAssetCurrenciesV5Execute(r ApiGetAssetCurr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2593,7 +2593,7 @@ func (r ApiGetAssetDepositAddressV5Request) Execute() (*GetAssetDepositAddressV5
 }
 
 /*
-GetAssetDepositAddressV5 Retrieve the deposit addresses of currencies, including previously-used addresses.  
+GetAssetDepositAddressV5 Get deposit address
 
 Retrieve the deposit addresses of currencies, including previously-used addresses.
 
@@ -2710,7 +2710,7 @@ func (a *FundingAccountAPIService) GetAssetDepositAddressV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2719,7 +2719,7 @@ func (a *FundingAccountAPIService) GetAssetDepositAddressV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -2809,7 +2809,7 @@ func (r ApiGetAssetDepositHistoryV5Request) Execute() (*GetAssetDepositHistoryV5
 }
 
 /*
-GetAssetDepositHistoryV5 Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
+GetAssetDepositHistoryV5 Get deposit history
 
 Retrieve the deposit records according to the currency, deposit status, and time range in reverse chronological order. The 100 most recent records are returned by default.
 
@@ -2979,7 +2979,7 @@ func (a *FundingAccountAPIService) GetAssetDepositHistoryV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -2988,7 +2988,7 @@ func (a *FundingAccountAPIService) GetAssetDepositHistoryV5Execute(r ApiGetAsset
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3050,7 +3050,7 @@ func (r ApiGetAssetDepositWithdrawStatusV5Request) Execute() (*GetAssetDepositWi
 }
 
 /*
-GetAssetDepositWithdrawStatusV5 Retrieve deposit's and withdrawal's detailed status and estimated complete time.  
+GetAssetDepositWithdrawStatusV5 Get deposit withdraw status
 
 Retrieve deposit's and withdrawal's detailed status and estimated complete time.
 
@@ -3193,7 +3193,7 @@ func (a *FundingAccountAPIService) GetAssetDepositWithdrawStatusV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3202,7 +3202,7 @@ func (a *FundingAccountAPIService) GetAssetDepositWithdrawStatusV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3229,7 +3229,7 @@ func (r ApiGetAssetExchangeListV5Request) Execute() (*GetAssetExchangeListV5Resp
 }
 
 /*
-GetAssetExchangeListV5 Authentication is not required for this public endpoint.  
+GetAssetExchangeListV5 Get exchange list (public)
 
 Authentication is not required for this public endpoint.
 
@@ -3333,7 +3333,7 @@ func (a *FundingAccountAPIService) GetAssetExchangeListV5Execute(r ApiGetAssetEx
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3342,7 +3342,7 @@ func (a *FundingAccountAPIService) GetAssetExchangeListV5Execute(r ApiGetAssetEx
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3376,7 +3376,7 @@ func (r ApiGetAssetMonthlyStatementV5Request) Execute() (*GetAssetMonthlyStateme
 }
 
 /*
-GetAssetMonthlyStatementV5 Retrieve monthly statement in the past year.  
+GetAssetMonthlyStatementV5 Get monthly statement (last year)
 
 Retrieve monthly statement in the past year.
 
@@ -3493,7 +3493,7 @@ func (a *FundingAccountAPIService) GetAssetMonthlyStatementV5Execute(r ApiGetAss
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3502,7 +3502,7 @@ func (a *FundingAccountAPIService) GetAssetMonthlyStatementV5Execute(r ApiGetAss
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3536,7 +3536,7 @@ func (r ApiGetAssetNonTradableAssetsV5Request) Execute() (*GetAssetNonTradableAs
 }
 
 /*
-GetAssetNonTradableAssetsV5 Method for GetAssetNonTradableAssetsV5
+GetAssetNonTradableAssetsV5 Get non-tradable assets
 
 #### Rate Limit: 6 requests per second 
 
@@ -3653,7 +3653,7 @@ func (a *FundingAccountAPIService) GetAssetNonTradableAssetsV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3662,7 +3662,7 @@ func (a *FundingAccountAPIService) GetAssetNonTradableAssetsV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3710,7 +3710,7 @@ func (r ApiGetAssetTransferStateV5Request) Execute() (*GetAssetTransferStateV5Re
 }
 
 /*
-GetAssetTransferStateV5 Retrieve the transfer state data of the last 2 weeks.  
+GetAssetTransferStateV5 Get funds transfer state
 
 Retrieve the transfer state data of the last 2 weeks.
 
@@ -3841,7 +3841,7 @@ func (a *FundingAccountAPIService) GetAssetTransferStateV5Execute(r ApiGetAssetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -3850,7 +3850,7 @@ func (a *FundingAccountAPIService) GetAssetTransferStateV5Execute(r ApiGetAssetT
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -3940,7 +3940,7 @@ func (r ApiGetAssetWithdrawalHistoryV5Request) Execute() (*GetAssetWithdrawalHis
 }
 
 /*
-GetAssetWithdrawalHistoryV5 Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.   Websocket API is also available, refer to .  
+GetAssetWithdrawalHistoryV5 Get withdrawal history
 
 Retrieve the withdrawal records according to the currency, withdrawal status, and time range in reverse chronological order. The 100 most recent records are returned by default.
 
@@ -4110,7 +4110,7 @@ func (a *FundingAccountAPIService) GetAssetWithdrawalHistoryV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4119,7 +4119,7 @@ func (a *FundingAccountAPIService) GetAssetWithdrawalHistoryV5Execute(r ApiGetAs
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4188,7 +4188,7 @@ func (r ApiGetFiatDepositOrderHistoryV5Request) Execute() (*GetFiatDepositOrderH
 }
 
 /*
-GetFiatDepositOrderHistoryV5 Get fiat deposit order history  
+GetFiatDepositOrderHistoryV5 Get deposit order history
 
 Get fiat deposit order history
 
@@ -4337,7 +4337,7 @@ func (a *FundingAccountAPIService) GetFiatDepositOrderHistoryV5Execute(r ApiGetF
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4346,7 +4346,7 @@ func (a *FundingAccountAPIService) GetFiatDepositOrderHistoryV5Execute(r ApiGetF
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4380,7 +4380,7 @@ func (r ApiGetFiatDepositPaymentMethodsV5Request) Execute() (*GetFiatDepositPaym
 }
 
 /*
-GetFiatDepositPaymentMethodsV5 To display all the available fiat deposit payment methods  
+GetFiatDepositPaymentMethodsV5 Get deposit payment methods
 
 To display all the available fiat deposit payment methods
 
@@ -4497,7 +4497,7 @@ func (a *FundingAccountAPIService) GetFiatDepositPaymentMethodsV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4506,7 +4506,7 @@ func (a *FundingAccountAPIService) GetFiatDepositPaymentMethodsV5Execute(r ApiGe
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4540,7 +4540,7 @@ func (r ApiGetFiatDepositV5Request) Execute() (*GetFiatDepositV5Resp, *http.Resp
 }
 
 /*
-GetFiatDepositV5 Get fiat deposit order detail  
+GetFiatDepositV5 Get deposit order detail
 
 Get fiat deposit order detail
 
@@ -4657,7 +4657,7 @@ func (a *FundingAccountAPIService) GetFiatDepositV5Execute(r ApiGetFiatDepositV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4666,7 +4666,7 @@ func (a *FundingAccountAPIService) GetFiatDepositV5Execute(r ApiGetFiatDepositV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4735,7 +4735,7 @@ func (r ApiGetFiatWithdrawalOrderHistoryV5Request) Execute() (*GetFiatWithdrawal
 }
 
 /*
-GetFiatWithdrawalOrderHistoryV5 Get fiat withdrawal order history  
+GetFiatWithdrawalOrderHistoryV5 Get withdrawal order history
 
 Get fiat withdrawal order history
 
@@ -4884,7 +4884,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalOrderHistoryV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -4893,7 +4893,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalOrderHistoryV5Execute(r ApiG
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -4927,7 +4927,7 @@ func (r ApiGetFiatWithdrawalPaymentMethodsV5Request) Execute() (*GetFiatWithdraw
 }
 
 /*
-GetFiatWithdrawalPaymentMethodsV5 To display all the available fiat withdrawal payment methods  
+GetFiatWithdrawalPaymentMethodsV5 Get withdrawal payment methods
 
 To display all the available fiat withdrawal payment methods
 
@@ -5044,7 +5044,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalPaymentMethodsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5053,7 +5053,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalPaymentMethodsV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -5087,7 +5087,7 @@ func (r ApiGetFiatWithdrawalV5Request) Execute() (*GetFiatWithdrawalV5Resp, *htt
 }
 
 /*
-GetFiatWithdrawalV5 Get fiat withdraw order detail  
+GetFiatWithdrawalV5 Get withdrawal order detail
 
 Get fiat withdraw order detail
 
@@ -5204,7 +5204,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalV5Execute(r ApiGetFiatWithdr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -5213,7 +5213,7 @@ func (a *FundingAccountAPIService) GetFiatWithdrawalV5Execute(r ApiGetFiatWithdr
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

@@ -30,7 +30,7 @@ type ApiCreateFinanceStakingDefiCancelV5Request struct {
 	createFinanceStakingDefiCancelV5Req *CreateFinanceStakingDefiCancelV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiCancelV5
+// The request body for CreateFinanceStakingDefiCancelV5
 func (r ApiCreateFinanceStakingDefiCancelV5Request) CreateFinanceStakingDefiCancelV5Req(createFinanceStakingDefiCancelV5Req CreateFinanceStakingDefiCancelV5Req) ApiCreateFinanceStakingDefiCancelV5Request {
 	r.createFinanceStakingDefiCancelV5Req = &createFinanceStakingDefiCancelV5Req
 	return r
@@ -41,7 +41,7 @@ func (r ApiCreateFinanceStakingDefiCancelV5Request) Execute() (*CreateFinanceSta
 }
 
 /*
-CreateFinanceStakingDefiCancelV5 Method for CreateFinanceStakingDefiCancelV5
+CreateFinanceStakingDefiCancelV5 POST / Cancel purchases/redemptions
 
 **_After cancelling, returning funds will go to the funding account._**
 
@@ -159,7 +159,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiCancelV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -168,7 +168,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiCancelV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -191,7 +191,7 @@ type ApiCreateFinanceStakingDefiPurchaseV5Request struct {
 	createFinanceStakingDefiPurchaseV5Req *CreateFinanceStakingDefiPurchaseV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiPurchaseV5
+// The request body for CreateFinanceStakingDefiPurchaseV5
 func (r ApiCreateFinanceStakingDefiPurchaseV5Request) CreateFinanceStakingDefiPurchaseV5Req(createFinanceStakingDefiPurchaseV5Req CreateFinanceStakingDefiPurchaseV5Req) ApiCreateFinanceStakingDefiPurchaseV5Request {
 	r.createFinanceStakingDefiPurchaseV5Req = &createFinanceStakingDefiPurchaseV5Req
 	return r
@@ -202,7 +202,7 @@ func (r ApiCreateFinanceStakingDefiPurchaseV5Request) Execute() (*CreateFinanceS
 }
 
 /*
-CreateFinanceStakingDefiPurchaseV5 Method for CreateFinanceStakingDefiPurchaseV5
+CreateFinanceStakingDefiPurchaseV5 POST / Purchase
 
 #### Rate Limit: 2 requests per second 
 
@@ -318,7 +318,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiPurchaseV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -327,7 +327,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiPurchaseV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -350,7 +350,7 @@ type ApiCreateFinanceStakingDefiRedeemV5Request struct {
 	createFinanceStakingDefiRedeemV5Req *CreateFinanceStakingDefiRedeemV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiRedeemV5
+// The request body for CreateFinanceStakingDefiRedeemV5
 func (r ApiCreateFinanceStakingDefiRedeemV5Request) CreateFinanceStakingDefiRedeemV5Req(createFinanceStakingDefiRedeemV5Req CreateFinanceStakingDefiRedeemV5Req) ApiCreateFinanceStakingDefiRedeemV5Request {
 	r.createFinanceStakingDefiRedeemV5Req = &createFinanceStakingDefiRedeemV5Req
 	return r
@@ -361,7 +361,7 @@ func (r ApiCreateFinanceStakingDefiRedeemV5Request) Execute() (*CreateFinanceSta
 }
 
 /*
-CreateFinanceStakingDefiRedeemV5 Method for CreateFinanceStakingDefiRedeemV5
+CreateFinanceStakingDefiRedeemV5 POST / Redeem
 
 #### Rate Limit: 2 requests per second 
 
@@ -477,7 +477,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiRedeemV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -486,7 +486,7 @@ func (a *OnChainEarnAPIService) CreateFinanceStakingDefiRedeemV5Execute(r ApiCre
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -534,7 +534,7 @@ func (r ApiGetFinanceStakingDefiOffersV5Request) Execute() (*GetFinanceStakingDe
 }
 
 /*
-GetFinanceStakingDefiOffersV5 Method for GetFinanceStakingDefiOffersV5
+GetFinanceStakingDefiOffersV5 GET / Offers
 
 #### Rate Limit: 3 requests per second 
 
@@ -663,7 +663,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOffersV5Execute(r ApiGetFin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -672,7 +672,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOffersV5Execute(r ApiGetFin
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -727,7 +727,7 @@ func (r ApiGetFinanceStakingDefiOrdersActiveV5Request) Execute() (*GetFinanceSta
 }
 
 /*
-GetFinanceStakingDefiOrdersActiveV5 Method for GetFinanceStakingDefiOrdersActiveV5
+GetFinanceStakingDefiOrdersActiveV5 GET / Active orders
 
 #### Rate Limit: 3 requests per second 
 
@@ -862,7 +862,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersActiveV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -871,7 +871,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersActiveV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -940,7 +940,7 @@ func (r ApiGetFinanceStakingDefiOrdersHistoryV5Request) Execute() (*GetFinanceSt
 }
 
 /*
-GetFinanceStakingDefiOrdersHistoryV5 Method for GetFinanceStakingDefiOrdersHistoryV5
+GetFinanceStakingDefiOrdersHistoryV5 GET / Order history
 
 #### Rate Limit: 3 requests per second 
 
@@ -1087,7 +1087,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1096,7 +1096,7 @@ func (a *OnChainEarnAPIService) GetFinanceStakingDefiOrdersHistoryV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

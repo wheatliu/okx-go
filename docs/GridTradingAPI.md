@@ -4,25 +4,25 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTradingBotGridAdjustInvestmentV5**](GridTradingAPI.md#CreateTradingBotGridAdjustInvestmentV5) | **Post** /api/v5/tradingBot/grid/adjust-investment | It is used to add investment and only applicable to contract gird.  
-[**CreateTradingBotGridAmendOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridAmendOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/amend-order-algo | 
-[**CreateTradingBotGridCancelCloseOrderV5**](GridTradingAPI.md#CreateTradingBotGridCancelCloseOrderV5) | **Post** /api/v5/tradingBot/grid/cancel-close-order | 
-[**CreateTradingBotGridClosePositionV5**](GridTradingAPI.md#CreateTradingBotGridClosePositionV5) | **Post** /api/v5/tradingBot/grid/close-position | Close position when the contract grid stop type is &#39;keep position&#39;.  
-[**CreateTradingBotGridComputeMarginBalanceV5**](GridTradingAPI.md#CreateTradingBotGridComputeMarginBalanceV5) | **Post** /api/v5/tradingBot/grid/compute-margin-balance | 
-[**CreateTradingBotGridMarginBalanceV5**](GridTradingAPI.md#CreateTradingBotGridMarginBalanceV5) | **Post** /api/v5/tradingBot/grid/margin-balance | 
-[**CreateTradingBotGridMinInvestmentV5**](GridTradingAPI.md#CreateTradingBotGridMinInvestmentV5) | **Post** /api/v5/tradingBot/grid/min-investment | Authentication is not required for this public endpoint.  
-[**CreateTradingBotGridOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/order-algo | 
-[**CreateTradingBotGridOrderInstantTriggerV5**](GridTradingAPI.md#CreateTradingBotGridOrderInstantTriggerV5) | **Post** /api/v5/tradingBot/grid/order-instant-trigger | 
-[**CreateTradingBotGridStopOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridStopOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/stop-order-algo | A maximum of 10 orders can be stopped per request.  
-[**CreateTradingBotGridWithdrawIncomeV5**](GridTradingAPI.md#CreateTradingBotGridWithdrawIncomeV5) | **Post** /api/v5/tradingBot/grid/withdraw-income | 
-[**GetTradingBotGridAiParamV5**](GridTradingAPI.md#GetTradingBotGridAiParamV5) | **Get** /api/v5/tradingBot/grid/ai-param | Authentication is not required for this public endpoint.  
-[**GetTradingBotGridGridQuantityV5**](GridTradingAPI.md#GetTradingBotGridGridQuantityV5) | **Get** /api/v5/tradingBot/grid/grid-quantity | Authentication is not required for this public endpoint.    Maximum grid quantity can be retrieved from this endpoint. Minimum grid quantity always is 2.  
-[**GetTradingBotGridOrdersAlgoDetailsV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/grid/orders-algo-details | 
-[**GetTradingBotGridOrdersAlgoHistoryV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/grid/orders-algo-history | 
-[**GetTradingBotGridOrdersAlgoPendingV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/grid/orders-algo-pending | 
-[**GetTradingBotGridPositionsV5**](GridTradingAPI.md#GetTradingBotGridPositionsV5) | **Get** /api/v5/tradingBot/grid/positions | 
-[**GetTradingBotGridSubOrdersV5**](GridTradingAPI.md#GetTradingBotGridSubOrdersV5) | **Get** /api/v5/tradingBot/grid/sub-orders | 
-[**GetTradingBotPublicRsiBackTestingV5**](GridTradingAPI.md#GetTradingBotPublicRsiBackTestingV5) | **Get** /api/v5/tradingBot/public/rsi-back-testing | Authentication is not required for this public endpoint.  
+[**CreateTradingBotGridAdjustInvestmentV5**](GridTradingAPI.md#CreateTradingBotGridAdjustInvestmentV5) | **Post** /api/v5/tradingBot/grid/adjust-investment | POST / Add investment
+[**CreateTradingBotGridAmendOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridAmendOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/amend-order-algo | POST / Amend grid algo order
+[**CreateTradingBotGridCancelCloseOrderV5**](GridTradingAPI.md#CreateTradingBotGridCancelCloseOrderV5) | **Post** /api/v5/tradingBot/grid/cancel-close-order | POST / Cancel close position order for contract grid
+[**CreateTradingBotGridClosePositionV5**](GridTradingAPI.md#CreateTradingBotGridClosePositionV5) | **Post** /api/v5/tradingBot/grid/close-position | POST / Close position for contract grid
+[**CreateTradingBotGridComputeMarginBalanceV5**](GridTradingAPI.md#CreateTradingBotGridComputeMarginBalanceV5) | **Post** /api/v5/tradingBot/grid/compute-margin-balance | POST / Compute margin balance
+[**CreateTradingBotGridMarginBalanceV5**](GridTradingAPI.md#CreateTradingBotGridMarginBalanceV5) | **Post** /api/v5/tradingBot/grid/margin-balance | POST / Adjust margin balance
+[**CreateTradingBotGridMinInvestmentV5**](GridTradingAPI.md#CreateTradingBotGridMinInvestmentV5) | **Post** /api/v5/tradingBot/grid/min-investment | POST / Compute min investment (public)
+[**CreateTradingBotGridOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/order-algo | POST / Place grid algo order
+[**CreateTradingBotGridOrderInstantTriggerV5**](GridTradingAPI.md#CreateTradingBotGridOrderInstantTriggerV5) | **Post** /api/v5/tradingBot/grid/order-instant-trigger | POST / Instant trigger grid algo order
+[**CreateTradingBotGridStopOrderAlgoV5**](GridTradingAPI.md#CreateTradingBotGridStopOrderAlgoV5) | **Post** /api/v5/tradingBot/grid/stop-order-algo | POST / Stop grid algo order
+[**CreateTradingBotGridWithdrawIncomeV5**](GridTradingAPI.md#CreateTradingBotGridWithdrawIncomeV5) | **Post** /api/v5/tradingBot/grid/withdraw-income | POST / Spot grid withdraw income
+[**GetTradingBotGridAiParamV5**](GridTradingAPI.md#GetTradingBotGridAiParamV5) | **Get** /api/v5/tradingBot/grid/ai-param | GET / Grid AI parameter (public)
+[**GetTradingBotGridGridQuantityV5**](GridTradingAPI.md#GetTradingBotGridGridQuantityV5) | **Get** /api/v5/tradingBot/grid/grid-quantity | GET / Max grid quantity (public)
+[**GetTradingBotGridOrdersAlgoDetailsV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoDetailsV5) | **Get** /api/v5/tradingBot/grid/orders-algo-details | GET / Grid algo order details
+[**GetTradingBotGridOrdersAlgoHistoryV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoHistoryV5) | **Get** /api/v5/tradingBot/grid/orders-algo-history | GET / Grid algo order history
+[**GetTradingBotGridOrdersAlgoPendingV5**](GridTradingAPI.md#GetTradingBotGridOrdersAlgoPendingV5) | **Get** /api/v5/tradingBot/grid/orders-algo-pending | GET / Grid algo order list
+[**GetTradingBotGridPositionsV5**](GridTradingAPI.md#GetTradingBotGridPositionsV5) | **Get** /api/v5/tradingBot/grid/positions | GET / Grid algo order positions
+[**GetTradingBotGridSubOrdersV5**](GridTradingAPI.md#GetTradingBotGridSubOrdersV5) | **Get** /api/v5/tradingBot/grid/sub-orders | GET / Grid algo sub orders
+[**GetTradingBotPublicRsiBackTestingV5**](GridTradingAPI.md#GetTradingBotPublicRsiBackTestingV5) | **Get** /api/v5/tradingBot/public/rsi-back-testing | GET / RSI back testing (public)
 
 
 
@@ -30,7 +30,7 @@ Method | HTTP request | Description
 
 > CreateTradingBotGridAdjustInvestmentV5Resp CreateTradingBotGridAdjustInvestmentV5(ctx).CreateTradingBotGridAdjustInvestmentV5Req(createTradingBotGridAdjustInvestmentV5Req).Execute()
 
-It is used to add investment and only applicable to contract gird.  
+POST / Add investment
 
 
 
@@ -96,7 +96,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridAmendOrderAlgoV5Resp CreateTradingBotGridAmendOrderAlgoV5(ctx).CreateTradingBotGridAmendOrderAlgoV5Req(createTradingBotGridAmendOrderAlgoV5Req).Execute()
 
-
+POST / Amend grid algo order
 
 
 
@@ -162,7 +162,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridCancelCloseOrderV5Resp CreateTradingBotGridCancelCloseOrderV5(ctx).CreateTradingBotGridCancelCloseOrderV5Req(createTradingBotGridCancelCloseOrderV5Req).Execute()
 
-
+POST / Cancel close position order for contract grid
 
 
 
@@ -228,7 +228,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridClosePositionV5Resp CreateTradingBotGridClosePositionV5(ctx).CreateTradingBotGridClosePositionV5Req(createTradingBotGridClosePositionV5Req).Execute()
 
-Close position when the contract grid stop type is 'keep position'.  
+POST / Close position for contract grid
 
 
 
@@ -294,7 +294,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridComputeMarginBalanceV5Resp CreateTradingBotGridComputeMarginBalanceV5(ctx).CreateTradingBotGridComputeMarginBalanceV5Req(createTradingBotGridComputeMarginBalanceV5Req).Execute()
 
-
+POST / Compute margin balance
 
 
 
@@ -360,7 +360,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridMarginBalanceV5Resp CreateTradingBotGridMarginBalanceV5(ctx).CreateTradingBotGridMarginBalanceV5Req(createTradingBotGridMarginBalanceV5Req).Execute()
 
-
+POST / Adjust margin balance
 
 
 
@@ -426,7 +426,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridMinInvestmentV5Resp CreateTradingBotGridMinInvestmentV5(ctx).CreateTradingBotGridMinInvestmentV5Req(createTradingBotGridMinInvestmentV5Req).Execute()
 
-Authentication is not required for this public endpoint.  
+POST / Compute min investment (public)
 
 
 
@@ -492,7 +492,7 @@ No authorization required
 
 > CreateTradingBotGridOrderAlgoV5Resp CreateTradingBotGridOrderAlgoV5(ctx).CreateTradingBotGridOrderAlgoV5Req(createTradingBotGridOrderAlgoV5Req).Execute()
 
-
+POST / Place grid algo order
 
 
 
@@ -558,7 +558,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridOrderInstantTriggerV5Resp CreateTradingBotGridOrderInstantTriggerV5(ctx).CreateTradingBotGridOrderInstantTriggerV5Req(createTradingBotGridOrderInstantTriggerV5Req).Execute()
 
-
+POST / Instant trigger grid algo order
 
 
 
@@ -624,7 +624,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridStopOrderAlgoV5Resp CreateTradingBotGridStopOrderAlgoV5(ctx).CreateTradingBotGridStopOrderAlgoV5Req(createTradingBotGridStopOrderAlgoV5Req).Execute()
 
-A maximum of 10 orders can be stopped per request.  
+POST / Stop grid algo order
 
 
 
@@ -690,7 +690,7 @@ Name | Type | Description  | Notes
 
 > CreateTradingBotGridWithdrawIncomeV5Resp CreateTradingBotGridWithdrawIncomeV5(ctx).CreateTradingBotGridWithdrawIncomeV5Req(createTradingBotGridWithdrawIncomeV5Req).Execute()
 
-
+POST / Spot grid withdraw income
 
 
 
@@ -756,7 +756,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotGridAiParamV5Resp GetTradingBotGridAiParamV5(ctx).AlgoOrdType(algoOrdType).InstId(instId).Direction(direction).Duration(duration).Execute()
 
-Authentication is not required for this public endpoint.  
+GET / Grid AI parameter (public)
 
 
 
@@ -828,7 +828,7 @@ No authorization required
 
 > GetTradingBotGridGridQuantityV5Resp GetTradingBotGridGridQuantityV5(ctx).InstId(instId).RunType(runType).AlgoOrdType(algoOrdType).MaxPx(maxPx).MinPx(minPx).Lever(lever).Execute()
 
-Authentication is not required for this public endpoint.    Maximum grid quantity can be retrieved from this endpoint. Minimum grid quantity always is 2.  
+GET / Max grid quantity (public)
 
 
 
@@ -904,7 +904,7 @@ No authorization required
 
 > GetTradingBotGridOrdersAlgoDetailsV5Resp GetTradingBotGridOrdersAlgoDetailsV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).Execute()
 
-
+GET / Grid algo order details
 
 
 
@@ -972,7 +972,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotGridOrdersAlgoHistoryV5Resp GetTradingBotGridOrdersAlgoHistoryV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).InstId(instId).InstType(instType).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Grid algo order history
 
 
 
@@ -1050,7 +1050,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotGridOrdersAlgoPendingV5Resp GetTradingBotGridOrdersAlgoPendingV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).InstId(instId).InstType(instType).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Grid algo order list
 
 
 
@@ -1128,7 +1128,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotGridPositionsV5Resp GetTradingBotGridPositionsV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).Execute()
 
-
+GET / Grid algo order positions
 
 
 
@@ -1196,7 +1196,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotGridSubOrdersV5Resp GetTradingBotGridSubOrdersV5(ctx).AlgoOrdType(algoOrdType).AlgoId(algoId).Type_(type_).GroupId(groupId).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Grid algo sub orders
 
 
 
@@ -1274,7 +1274,7 @@ Name | Type | Description  | Notes
 
 > GetTradingBotPublicRsiBackTestingV5Resp GetTradingBotPublicRsiBackTestingV5(ctx).InstId(instId).Timeframe(timeframe).Thold(thold).TimePeriod(timePeriod).TriggerCond(triggerCond).Duration(duration).Execute()
 
-Authentication is not required for this public endpoint.  
+GET / RSI back testing (public)
 
 
 

@@ -20,7 +20,7 @@ var _ MappedNullable = &CreateAssetTransferV5Resp{}
 // CreateAssetTransferV5Resp struct for CreateAssetTransferV5Resp
 type CreateAssetTransferV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []map[string]interface{} `json:"data,omitempty"`
+	Data []CreateAssetTransferV5RespDataInner `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *CreateAssetTransferV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *CreateAssetTransferV5Resp) GetData() []map[string]interface{} {
+func (o *CreateAssetTransferV5Resp) GetData() []CreateAssetTransferV5RespDataInner {
 	if o == nil || IsNil(o.Data) {
-		var ret []map[string]interface{}
+		var ret []CreateAssetTransferV5RespDataInner
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *CreateAssetTransferV5Resp) GetData() []map[string]interface{} {
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *CreateAssetTransferV5Resp) GetDataOk() ([]map[string]interface{}, bool) {
+func (o *CreateAssetTransferV5Resp) GetDataOk() ([]CreateAssetTransferV5RespDataInner, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *CreateAssetTransferV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []map[string]interface{} and assigns it to the Data field.
-func (o *CreateAssetTransferV5Resp) SetData(v []map[string]interface{}) {
+// SetData gets a reference to the given []CreateAssetTransferV5RespDataInner and assigns it to the Data field.
+func (o *CreateAssetTransferV5Resp) SetData(v []CreateAssetTransferV5RespDataInner) {
 	o.Data = v
 }
 

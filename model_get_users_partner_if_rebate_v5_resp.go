@@ -20,7 +20,7 @@ var _ MappedNullable = &GetUsersPartnerIfRebateV5Resp{}
 // GetUsersPartnerIfRebateV5Resp struct for GetUsersPartnerIfRebateV5Resp
 type GetUsersPartnerIfRebateV5Resp struct {
 	Code *string `json:"code,omitempty"`
-	Data []GetUsersPartnerIfRebateV5RespDataInner `json:"data,omitempty"`
+	Data []map[string]interface{} `json:"data,omitempty"`
 	Msg *string `json:"msg,omitempty"`
 }
 
@@ -82,9 +82,9 @@ func (o *GetUsersPartnerIfRebateV5Resp) SetCode(v string) {
 }
 
 // GetData returns the Data field value if set, zero value otherwise.
-func (o *GetUsersPartnerIfRebateV5Resp) GetData() []GetUsersPartnerIfRebateV5RespDataInner {
+func (o *GetUsersPartnerIfRebateV5Resp) GetData() []map[string]interface{} {
 	if o == nil || IsNil(o.Data) {
-		var ret []GetUsersPartnerIfRebateV5RespDataInner
+		var ret []map[string]interface{}
 		return ret
 	}
 	return o.Data
@@ -92,7 +92,7 @@ func (o *GetUsersPartnerIfRebateV5Resp) GetData() []GetUsersPartnerIfRebateV5Res
 
 // GetDataOk returns a tuple with the Data field value if set, nil otherwise
 // and a boolean to check if the value has been set.
-func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() ([]GetUsersPartnerIfRebateV5RespDataInner, bool) {
+func (o *GetUsersPartnerIfRebateV5Resp) GetDataOk() ([]map[string]interface{}, bool) {
 	if o == nil || IsNil(o.Data) {
 		return nil, false
 	}
@@ -108,8 +108,8 @@ func (o *GetUsersPartnerIfRebateV5Resp) HasData() bool {
 	return false
 }
 
-// SetData gets a reference to the given []GetUsersPartnerIfRebateV5RespDataInner and assigns it to the Data field.
-func (o *GetUsersPartnerIfRebateV5Resp) SetData(v []GetUsersPartnerIfRebateV5RespDataInner) {
+// SetData gets a reference to the given []map[string]interface{} and assigns it to the Data field.
+func (o *GetUsersPartnerIfRebateV5Resp) SetData(v []map[string]interface{}) {
 	o.Data = v
 }
 

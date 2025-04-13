@@ -4,16 +4,16 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateAssetSubaccountTransferV5**](SubAccountAPI.md#CreateAssetSubaccountTransferV5) | **Post** /api/v5/asset/subaccount/transfer | Applies to master accounts only.   Only API keys with &#x60;Trade&#x60; privilege can call this endpoint.  
-[**CreateUsersSubaccountModifyApikeyV5**](SubAccountAPI.md#CreateUsersSubaccountModifyApikeyV5) | **Post** /api/v5/users/subaccount/modify-apikey | Applies to master accounts only and master accounts API Key must be linked to IP addresses. Only API keys with &#x60;Trade&#x60; privilege can call this endpoint.  
-[**CreateUsersSubaccountSetTransferOutV5**](SubAccountAPI.md#CreateUsersSubaccountSetTransferOutV5) | **Post** /api/v5/users/subaccount/set-transfer-out | Set permission of transfer out for sub-account (only applicable to master account API key). Sub-account can transfer out to master account by default.  
-[**GetAccountSubaccountBalancesV5**](SubAccountAPI.md#GetAccountSubaccountBalancesV5) | **Get** /api/v5/account/subaccount/balances | Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)  
-[**GetAccountSubaccountMaxWithdrawalV5**](SubAccountAPI.md#GetAccountSubaccountMaxWithdrawalV5) | **Get** /api/v5/account/subaccount/max-withdrawal | Retrieve the maximum withdrawal information of a sub-account via the master account (applies to master accounts only). If no currency is specified, the transferable amount of all owned currencies will be returned.  
-[**GetAssetSubaccountBalancesV5**](SubAccountAPI.md#GetAssetSubaccountBalancesV5) | **Get** /api/v5/asset/subaccount/balances | Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)  
-[**GetAssetSubaccountBillsV5**](SubAccountAPI.md#GetAssetSubaccountBillsV5) | **Get** /api/v5/asset/subaccount/bills | Applies to master accounts only.  
-[**GetAssetSubaccountManagedSubaccountBillsV5**](SubAccountAPI.md#GetAssetSubaccountManagedSubaccountBillsV5) | **Get** /api/v5/asset/subaccount/managed-subaccount-bills | Only applicable to the trading team&#39;s master account to getting transfer records of managed sub accounts entrusted to oneself.  
-[**GetUsersEntrustSubaccountListV5**](SubAccountAPI.md#GetUsersEntrustSubaccountListV5) | **Get** /api/v5/users/entrust-subaccount-list | The trading team uses this interface to view the list of sub-accounts currently under escrow  
-[**GetUsersSubaccountListV5**](SubAccountAPI.md#GetUsersSubaccountListV5) | **Get** /api/v5/users/subaccount/list | Applies to master accounts only  
+[**CreateAssetSubaccountTransferV5**](SubAccountAPI.md#CreateAssetSubaccountTransferV5) | **Post** /api/v5/asset/subaccount/transfer | Master accounts manage the transfers between sub-accounts
+[**CreateUsersSubaccountModifyApikeyV5**](SubAccountAPI.md#CreateUsersSubaccountModifyApikeyV5) | **Post** /api/v5/users/subaccount/modify-apikey | Reset the API Key of a sub-account
+[**CreateUsersSubaccountSetTransferOutV5**](SubAccountAPI.md#CreateUsersSubaccountSetTransferOutV5) | **Post** /api/v5/users/subaccount/set-transfer-out | Set permission of transfer out
+[**GetAccountSubaccountBalancesV5**](SubAccountAPI.md#GetAccountSubaccountBalancesV5) | **Get** /api/v5/account/subaccount/balances | Get sub-account trading balance
+[**GetAccountSubaccountMaxWithdrawalV5**](SubAccountAPI.md#GetAccountSubaccountMaxWithdrawalV5) | **Get** /api/v5/account/subaccount/max-withdrawal | Get sub-account maximum withdrawals
+[**GetAssetSubaccountBalancesV5**](SubAccountAPI.md#GetAssetSubaccountBalancesV5) | **Get** /api/v5/asset/subaccount/balances | Get sub-account funding balance
+[**GetAssetSubaccountBillsV5**](SubAccountAPI.md#GetAssetSubaccountBillsV5) | **Get** /api/v5/asset/subaccount/bills | Get history of sub-account transfer
+[**GetAssetSubaccountManagedSubaccountBillsV5**](SubAccountAPI.md#GetAssetSubaccountManagedSubaccountBillsV5) | **Get** /api/v5/asset/subaccount/managed-subaccount-bills | Get history of managed sub-account transfer
+[**GetUsersEntrustSubaccountListV5**](SubAccountAPI.md#GetUsersEntrustSubaccountListV5) | **Get** /api/v5/users/entrust-subaccount-list | Get custody trading sub-account list
+[**GetUsersSubaccountListV5**](SubAccountAPI.md#GetUsersSubaccountListV5) | **Get** /api/v5/users/subaccount/list | Get sub-account list
 
 
 
@@ -21,7 +21,7 @@ Method | HTTP request | Description
 
 > CreateAssetSubaccountTransferV5Resp CreateAssetSubaccountTransferV5(ctx).CreateAssetSubaccountTransferV5Req(createAssetSubaccountTransferV5Req).Execute()
 
-Applies to master accounts only.   Only API keys with `Trade` privilege can call this endpoint.  
+Master accounts manage the transfers between sub-accounts
 
 
 
@@ -87,7 +87,7 @@ Name | Type | Description  | Notes
 
 > CreateUsersSubaccountModifyApikeyV5Resp CreateUsersSubaccountModifyApikeyV5(ctx).CreateUsersSubaccountModifyApikeyV5Req(createUsersSubaccountModifyApikeyV5Req).Execute()
 
-Applies to master accounts only and master accounts API Key must be linked to IP addresses. Only API keys with `Trade` privilege can call this endpoint.  
+Reset the API Key of a sub-account
 
 
 
@@ -153,7 +153,7 @@ Name | Type | Description  | Notes
 
 > CreateUsersSubaccountSetTransferOutV5Resp CreateUsersSubaccountSetTransferOutV5(ctx).CreateUsersSubaccountSetTransferOutV5Req(createUsersSubaccountSetTransferOutV5Req).Execute()
 
-Set permission of transfer out for sub-account (only applicable to master account API key). Sub-account can transfer out to master account by default.  
+Set permission of transfer out
 
 
 
@@ -219,7 +219,7 @@ Name | Type | Description  | Notes
 
 > GetAccountSubaccountBalancesV5Resp GetAccountSubaccountBalancesV5(ctx).SubAcct(subAcct).Execute()
 
-Query detailed balance info of Trading Account of a sub-account via the master account (applies to master accounts only)  
+Get sub-account trading balance
 
 
 
@@ -285,7 +285,7 @@ Name | Type | Description  | Notes
 
 > GetAccountSubaccountMaxWithdrawalV5Resp GetAccountSubaccountMaxWithdrawalV5(ctx).SubAcct(subAcct).Ccy(ccy).Execute()
 
-Retrieve the maximum withdrawal information of a sub-account via the master account (applies to master accounts only). If no currency is specified, the transferable amount of all owned currencies will be returned.  
+Get sub-account maximum withdrawals
 
 
 
@@ -353,7 +353,7 @@ Name | Type | Description  | Notes
 
 > GetAssetSubaccountBalancesV5Resp GetAssetSubaccountBalancesV5(ctx).SubAcct(subAcct).Ccy(ccy).Execute()
 
-Query detailed balance info of Funding Account of a sub-account via the master account (applies to master accounts only)  
+Get sub-account funding balance
 
 
 
@@ -421,7 +421,7 @@ Name | Type | Description  | Notes
 
 > GetAssetSubaccountBillsV5Resp GetAssetSubaccountBillsV5(ctx).Ccy(ccy).Type_(type_).SubAcct(subAcct).After(after).Before(before).Limit(limit).Execute()
 
-Applies to master accounts only.  
+Get history of sub-account transfer
 
 
 
@@ -497,7 +497,7 @@ Name | Type | Description  | Notes
 
 > GetAssetSubaccountManagedSubaccountBillsV5Resp GetAssetSubaccountManagedSubaccountBillsV5(ctx).Ccy(ccy).Type_(type_).SubAcct(subAcct).SubUid(subUid).After(after).Before(before).Limit(limit).Execute()
 
-Only applicable to the trading team's master account to getting transfer records of managed sub accounts entrusted to oneself.  
+Get history of managed sub-account transfer
 
 
 
@@ -575,7 +575,7 @@ Name | Type | Description  | Notes
 
 > GetUsersEntrustSubaccountListV5Resp GetUsersEntrustSubaccountListV5(ctx).SubAcct(subAcct).Execute()
 
-The trading team uses this interface to view the list of sub-accounts currently under escrow  
+Get custody trading sub-account list
 
 
 
@@ -641,7 +641,7 @@ Name | Type | Description  | Notes
 
 > GetUsersSubaccountListV5Resp GetUsersSubaccountListV5(ctx).Enable(enable).SubAcct(subAcct).After(after).Before(before).Limit(limit).Execute()
 
-Applies to master accounts only  
+Get sub-account list
 
 
 

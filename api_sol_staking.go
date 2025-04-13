@@ -30,7 +30,7 @@ type ApiCreateFinanceStakingDefiSolPurchaseV5Request struct {
 	createFinanceStakingDefiSolPurchaseV5Req *CreateFinanceStakingDefiSolPurchaseV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiSolPurchaseV5
+// The request body for CreateFinanceStakingDefiSolPurchaseV5
 func (r ApiCreateFinanceStakingDefiSolPurchaseV5Request) CreateFinanceStakingDefiSolPurchaseV5Req(createFinanceStakingDefiSolPurchaseV5Req CreateFinanceStakingDefiSolPurchaseV5Req) ApiCreateFinanceStakingDefiSolPurchaseV5Request {
 	r.createFinanceStakingDefiSolPurchaseV5Req = &createFinanceStakingDefiSolPurchaseV5Req
 	return r
@@ -41,7 +41,7 @@ func (r ApiCreateFinanceStakingDefiSolPurchaseV5Request) Execute() (*CreateFinan
 }
 
 /*
-CreateFinanceStakingDefiSolPurchaseV5 Staking SOL for OKSOL   Only the assets in the funding account can be used.    
+CreateFinanceStakingDefiSolPurchaseV5 POST / Purchase
 
 Staking SOL for OKSOL
 
@@ -164,7 +164,7 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolPurchaseV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -173,7 +173,7 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolPurchaseV5Execute(r Ap
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -196,7 +196,7 @@ type ApiCreateFinanceStakingDefiSolRedeemV5Request struct {
 	createFinanceStakingDefiSolRedeemV5Req *CreateFinanceStakingDefiSolRedeemV5Req
 }
 
-// The request body for CreateFinanceStaking-DefiSolRedeemV5
+// The request body for CreateFinanceStakingDefiSolRedeemV5
 func (r ApiCreateFinanceStakingDefiSolRedeemV5Request) CreateFinanceStakingDefiSolRedeemV5Req(createFinanceStakingDefiSolRedeemV5Req CreateFinanceStakingDefiSolRedeemV5Req) ApiCreateFinanceStakingDefiSolRedeemV5Request {
 	r.createFinanceStakingDefiSolRedeemV5Req = &createFinanceStakingDefiSolRedeemV5Req
 	return r
@@ -207,7 +207,7 @@ func (r ApiCreateFinanceStakingDefiSolRedeemV5Request) Execute() (*CreateFinance
 }
 
 /*
-CreateFinanceStakingDefiSolRedeemV5 Only the assets in the funding account can be used. If your OKSOL is in your trading account, you can make funding transfer first.    
+CreateFinanceStakingDefiSolRedeemV5 POST / Redeem
 
 Only the assets in the funding account can be used. If your OKSOL is in your trading account, you can make funding transfer first.
 
@@ -327,7 +327,7 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolRedeemV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -336,7 +336,7 @@ func (a *SolStakingAPIService) CreateFinanceStakingDefiSolRedeemV5Execute(r ApiC
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -370,7 +370,7 @@ func (r ApiGetFinanceStakingDefiSolApyHistoryV5Request) Execute() (*GetFinanceSt
 }
 
 /*
-GetFinanceStakingDefiSolApyHistoryV5 Public endpoints don't need authorization.  
+GetFinanceStakingDefiSolApyHistoryV5 GET / APY history (Public)
 
 Public endpoints don't need authorization.
 
@@ -478,7 +478,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolApyHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -487,7 +487,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolApyHistoryV5Execute(r Api
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -514,7 +514,7 @@ func (r ApiGetFinanceStakingDefiSolBalanceV5Request) Execute() (*GetFinanceStaki
 }
 
 /*
-GetFinanceStakingDefiSolBalanceV5 The balance is summarized all OKSOL assets (including assets in redeeming) in account.  
+GetFinanceStakingDefiSolBalanceV5 GET / Balance
 
 The balance is summarized all OKSOL assets (including assets in redeeming) in account.
 
@@ -627,7 +627,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolBalanceV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -636,7 +636,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolBalanceV5Execute(r ApiGet
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -698,7 +698,7 @@ func (r ApiGetFinanceStakingDefiSolPurchaseRedeemHistoryV5Request) Execute() (*G
 }
 
 /*
-GetFinanceStakingDefiSolPurchaseRedeemHistoryV5 Method for GetFinanceStakingDefiSolPurchaseRedeemHistoryV5
+GetFinanceStakingDefiSolPurchaseRedeemHistoryV5 GET / Purchase&Redeem history
 
 #### Rate Limit: 6 requests per second 
 
@@ -839,7 +839,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolPurchaseRedeemHistoryV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -848,7 +848,7 @@ func (a *SolStakingAPIService) GetFinanceStakingDefiSolPurchaseRedeemHistoryV5Ex
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

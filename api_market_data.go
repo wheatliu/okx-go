@@ -48,7 +48,7 @@ func (r ApiGetMarketBooksFullV5Request) Execute() (*GetMarketBooksFullV5Resp, *h
 }
 
 /*
-GetMarketBooksFullV5 Retrieve order book of the instrument. The data will be updated once a second.  
+GetMarketBooksFullV5 GET / Full order book
 
 Retrieve order book of the instrument. The data will be updated once a second.
 
@@ -162,7 +162,7 @@ func (a *MarketDataAPIService) GetMarketBooksFullV5Execute(r ApiGetMarketBooksFu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -171,7 +171,7 @@ func (a *MarketDataAPIService) GetMarketBooksFullV5Execute(r ApiGetMarketBooksFu
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -212,7 +212,7 @@ func (r ApiGetMarketBooksV5Request) Execute() (*GetMarketBooksV5Resp, *http.Resp
 }
 
 /*
-GetMarketBooksV5 Retrieve order book of the instrument.  
+GetMarketBooksV5 GET / Order book
 
 Retrieve order book of the instrument.
 
@@ -326,7 +326,7 @@ func (a *MarketDataAPIService) GetMarketBooksV5Execute(r ApiGetMarketBooksV5Requ
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -335,7 +335,7 @@ func (a *MarketDataAPIService) GetMarketBooksV5Execute(r ApiGetMarketBooksV5Requ
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -369,7 +369,7 @@ func (r ApiGetMarketCallAuctionDetailsV5Request) Execute() (*GetMarketCallAuctio
 }
 
 /*
-GetMarketCallAuctionDetailsV5 Retrieve call auction details.  
+GetMarketCallAuctionDetailsV5 GET / Call auction details
 
 Retrieve call auction details.
 
@@ -477,7 +477,7 @@ func (a *MarketDataAPIService) GetMarketCallAuctionDetailsV5Execute(r ApiGetMark
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -486,7 +486,7 @@ func (a *MarketDataAPIService) GetMarketCallAuctionDetailsV5Execute(r ApiGetMark
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -548,7 +548,7 @@ func (r ApiGetMarketCandlesV5Request) Execute() (*GetMarketCandlesV5Resp, *http.
 }
 
 /*
-GetMarketCandlesV5 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar.   
+GetMarketCandlesV5 GET / Candlesticks
 
 Retrieve the candlestick charts. This endpoint can retrieve the latest 1,440 data entries. Charts are returned in groups based on the requested bar. 
 
@@ -680,7 +680,7 @@ func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -689,7 +689,210 @@ func (a *MarketDataAPIService) GetMarketCandlesV5Execute(r ApiGetMarketCandlesV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
+
+	if *localVarReturnValue.Code != "0" {
+		var v *APIError = &APIError{
+			Code: localVarReturnValue.Code,
+			Msg: localVarReturnValue.Msg,
+		}
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: *localVarReturnValue.Msg,
+			model: v,
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	return localVarReturnValue, localVarHTTPResponse, nil
+}
+
+type ApiGetMarketHistoryCandlesV5Request struct {
+	ctx context.Context
+	ApiService *MarketDataAPIService
+	instId *string
+	after *string
+	before *string
+	bar *string
+	limit *string
+}
+
+// Instrument ID, e.g. &#x60;BTC-USDT&#x60;
+func (r ApiGetMarketHistoryCandlesV5Request) InstId(instId string) ApiGetMarketHistoryCandlesV5Request {
+	r.instId = &instId
+	return r
+}
+
+// Pagination of data to return records earlier than the requested &#x60;ts&#x60;
+func (r ApiGetMarketHistoryCandlesV5Request) After(after string) ApiGetMarketHistoryCandlesV5Request {
+	r.after = &after
+	return r
+}
+
+// Pagination of data to return records newer than the requested &#x60;ts&#x60;. The latest data will be returned when using &#x60;before&#x60; individually
+func (r ApiGetMarketHistoryCandlesV5Request) Before(before string) ApiGetMarketHistoryCandlesV5Request {
+	r.before = &before
+	return r
+}
+
+// Bar size, the default is &#x60;1m&#x60;  e.g. [1s/1m/3m/5m/15m/30m/1H/2H/4H]   Hong Kong time opening price k-line: [6H/12H/1D/2D/3D/1W/1M/3M]  UTC time opening price k-line: [6Hutc/12Hutc/1Dutc/2Dutc/3Dutc/1Wutc/1Mutc/3Mutc]
+func (r ApiGetMarketHistoryCandlesV5Request) Bar(bar string) ApiGetMarketHistoryCandlesV5Request {
+	r.bar = &bar
+	return r
+}
+
+// Number of results per request. The maximum is &#x60;100&#x60;. The default is &#x60;100&#x60;.
+func (r ApiGetMarketHistoryCandlesV5Request) Limit(limit string) ApiGetMarketHistoryCandlesV5Request {
+	r.limit = &limit
+	return r
+}
+
+func (r ApiGetMarketHistoryCandlesV5Request) Execute() (*GetMarketHistoryCandlesV5Resp, *http.Response, error) {
+	return r.ApiService.GetMarketHistoryCandlesV5Execute(r)
+}
+
+/*
+GetMarketHistoryCandlesV5 GET / Candlesticks history
+
+Retrieve history candlestick charts from recent years(It is last 3 months supported for 1s candlestick).
+
+#### Rate Limit: 20 requests per 2 seconds 
+
+#### Rate limit rule: IP 
+
+
+
+ @param ctx context.Context - for authentication, logging, cancellation, deadlines, tracing, etc. Passed from http.Request or context.Background().
+ @return ApiGetMarketHistoryCandlesV5Request
+*/
+func (a *MarketDataAPIService) GetMarketHistoryCandlesV5(ctx context.Context) ApiGetMarketHistoryCandlesV5Request {
+	return ApiGetMarketHistoryCandlesV5Request{
+		ApiService: a,
+		ctx: ctx,
+	}
+}
+
+// Execute executes the request
+//  @return GetMarketHistoryCandlesV5Resp
+func (a *MarketDataAPIService) GetMarketHistoryCandlesV5Execute(r ApiGetMarketHistoryCandlesV5Request) (*GetMarketHistoryCandlesV5Resp, *http.Response, error) {
+	var (
+		localVarHTTPMethod   = http.MethodGet
+		localVarPostBody     interface{}
+		formFiles            []formFile
+		localVarReturnValue  *GetMarketHistoryCandlesV5Resp
+	)
+
+	localBasePath, err := a.client.cfg.ServerURLWithContext(r.ctx, "MarketDataAPIService.GetMarketHistoryCandlesV5")
+	if err != nil {
+		return localVarReturnValue, nil, &GenericOpenAPIError{error: err.Error()}
+	}
+
+	localVarPath := localBasePath + "/api/v5/market/history-candles"
+
+	localVarHeaderParams := make(map[string]string)
+	localVarQueryParams := url.Values{}
+	localVarFormParams := url.Values{}
+	if r.instId == nil {
+		return localVarReturnValue, nil, reportError("instId is required and must be specified")
+	}
+
+	parameterAddToHeaderOrQuery(localVarQueryParams, "instId", r.instId, "form", "")
+	if r.after != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "after", r.after, "form", "")
+	} else {
+		var defaultValue string = ""
+		r.after = &defaultValue
+	}
+	if r.before != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "before", r.before, "form", "")
+	} else {
+		var defaultValue string = ""
+		r.before = &defaultValue
+	}
+	if r.bar != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "bar", r.bar, "form", "")
+	} else {
+		var defaultValue string = ""
+		r.bar = &defaultValue
+	}
+	if r.limit != nil {
+		parameterAddToHeaderOrQuery(localVarQueryParams, "limit", r.limit, "form", "")
+	} else {
+		var defaultValue string = ""
+		r.limit = &defaultValue
+	}
+	// to determine the Content-Type header
+	localVarHTTPContentTypes := []string{}
+
+	// set Content-Type header
+	localVarHTTPContentType := selectHeaderContentType(localVarHTTPContentTypes)
+	if localVarHTTPContentType != "" {
+		localVarHeaderParams["Content-Type"] = localVarHTTPContentType
+	}
+
+	// to determine the Accept header
+	localVarHTTPHeaderAccepts := []string{"application/json"}
+
+	// set Accept header
+	localVarHTTPHeaderAccept := selectHeaderAccept(localVarHTTPHeaderAccepts)
+	if localVarHTTPHeaderAccept != "" {
+		localVarHeaderParams["Accept"] = localVarHTTPHeaderAccept
+	}
 	
+	req, err := a.client.prepareRequest(r.ctx, localVarPath, localVarHTTPMethod, localVarPostBody, localVarHeaderParams, localVarQueryParams, localVarFormParams, formFiles)
+	if err != nil {
+		return localVarReturnValue, nil, err
+	}
+
+	localVarHTTPResponse, err := a.client.callAPI(req)
+	if err != nil || localVarHTTPResponse == nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	localVarBody, err := io.ReadAll(localVarHTTPResponse.Body)
+	localVarHTTPResponse.Body.Close()
+	localVarHTTPResponse.Body = io.NopCloser(bytes.NewBuffer(localVarBody))
+	if err != nil {
+		return localVarReturnValue, localVarHTTPResponse, err
+	}
+
+	if localVarHTTPResponse.StatusCode >= 300 {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: localVarHTTPResponse.Status,
+		}
+		if localVarHTTPResponse.StatusCode >= 400 && localVarHTTPResponse.StatusCode < 500 {
+			var v APIError
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
+			return localVarReturnValue, localVarHTTPResponse, newErr
+		}
+		if localVarHTTPResponse.StatusCode >= 500 {
+			var v APIError
+			err = a.client.decode(&v, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+			if err != nil {
+				newErr.error = err.Error()
+				return localVarReturnValue, localVarHTTPResponse, newErr
+			}
+			newErr.error = strings.TrimSpace(fmt.Sprintf("%s %s", localVarHTTPResponse.Status, *v.Msg))
+			newErr.model = &v
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
+	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
+	if err != nil {
+		newErr := &GenericOpenAPIError{
+			body:  localVarBody,
+			error: err.Error(),
+		}
+		return localVarReturnValue, localVarHTTPResponse, newErr
+	}
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -751,7 +954,7 @@ func (r ApiGetMarketHistoryTradesV5Request) Execute() (*GetMarketHistoryTradesV5
 }
 
 /*
-GetMarketHistoryTradesV5 Retrieve the recent transactions of an instrument from the last 3 months with pagination.  
+GetMarketHistoryTradesV5 GET / Trades history
 
 Retrieve the recent transactions of an instrument from the last 3 months with pagination.
 
@@ -883,7 +1086,7 @@ func (a *MarketDataAPIService) GetMarketHistoryTradesV5Execute(r ApiGetMarketHis
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -892,7 +1095,7 @@ func (a *MarketDataAPIService) GetMarketHistoryTradesV5Execute(r ApiGetMarketHis
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -926,7 +1129,7 @@ func (r ApiGetMarketOptionInstrumentFamilyTradesV5Request) Execute() (*GetMarket
 }
 
 /*
-GetMarketOptionInstrumentFamilyTradesV5 Retrieve the recent transactions of an instrument under same instFamily. The maximum is 100.  
+GetMarketOptionInstrumentFamilyTradesV5 GET / Option trades by instrument family
 
 Retrieve the recent transactions of an instrument under same instFamily. The maximum is 100.
 
@@ -1034,7 +1237,7 @@ func (a *MarketDataAPIService) GetMarketOptionInstrumentFamilyTradesV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1043,7 +1246,7 @@ func (a *MarketDataAPIService) GetMarketOptionInstrumentFamilyTradesV5Execute(r 
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1070,7 +1273,7 @@ func (r ApiGetMarketPlatform24VolumeV5Request) Execute() (*GetMarketPlatform24Vo
 }
 
 /*
-GetMarketPlatform24VolumeV5 The 24-hour trading volume is calculated on a rolling basis.  
+GetMarketPlatform24VolumeV5 GET / 24H total volume
 
 The 24-hour trading volume is calculated on a rolling basis.
 
@@ -1174,7 +1377,7 @@ func (a *MarketDataAPIService) GetMarketPlatform24VolumeV5Execute(r ApiGetMarket
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1183,7 +1386,7 @@ func (a *MarketDataAPIService) GetMarketPlatform24VolumeV5Execute(r ApiGetMarket
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1217,7 +1420,7 @@ func (r ApiGetMarketTickerV5Request) Execute() (*GetMarketTickerV5Resp, *http.Re
 }
 
 /*
-GetMarketTickerV5 Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
+GetMarketTickerV5 GET / Ticker
 
 Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.
 
@@ -1325,7 +1528,7 @@ func (a *MarketDataAPIService) GetMarketTickerV5Execute(r ApiGetMarketTickerV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1334,7 +1537,7 @@ func (a *MarketDataAPIService) GetMarketTickerV5Execute(r ApiGetMarketTickerV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1382,7 +1585,7 @@ func (r ApiGetMarketTickersV5Request) Execute() (*GetMarketTickersV5Resp, *http.
 }
 
 /*
-GetMarketTickersV5 Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.  
+GetMarketTickersV5 GET / Tickers
 
 Retrieve the latest price snapshot, best bid/ask price, and trading volume in the last 24 hours.
 
@@ -1502,7 +1705,7 @@ func (a *MarketDataAPIService) GetMarketTickersV5Execute(r ApiGetMarketTickersV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1511,7 +1714,7 @@ func (a *MarketDataAPIService) GetMarketTickersV5Execute(r ApiGetMarketTickersV5
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1552,7 +1755,7 @@ func (r ApiGetMarketTradesV5Request) Execute() (*GetMarketTradesV5Resp, *http.Re
 }
 
 /*
-GetMarketTradesV5 Retrieve the recent transactions of an instrument.  
+GetMarketTradesV5 GET / Trades
 
 Retrieve the recent transactions of an instrument.
 
@@ -1666,7 +1869,7 @@ func (a *MarketDataAPIService) GetMarketTradesV5Execute(r ApiGetMarketTradesV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1675,7 +1878,7 @@ func (a *MarketDataAPIService) GetMarketTradesV5Execute(r ApiGetMarketTradesV5Re
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,
@@ -1723,7 +1926,7 @@ func (r ApiGetPublicOptionTradesV5Request) Execute() (*GetPublicOptionTradesV5Re
 }
 
 /*
-GetPublicOptionTradesV5 The maximum is 100.  
+GetPublicOptionTradesV5 GET / Option trades
 
 The maximum is 100.
 
@@ -1845,7 +2048,7 @@ func (a *MarketDataAPIService) GetPublicOptionTradesV5Execute(r ApiGetPublicOpti
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	err = a.client.decode(&localVarReturnValue, localVarBody, localVarHTTPResponse.Header.Get("Content-Type"))
 	if err != nil {
 		newErr := &GenericOpenAPIError{
@@ -1854,7 +2057,7 @@ func (a *MarketDataAPIService) GetPublicOptionTradesV5Execute(r ApiGetPublicOpti
 		}
 		return localVarReturnValue, localVarHTTPResponse, newErr
 	}
-	
+
 	if *localVarReturnValue.Code != "0" {
 		var v *APIError = &APIError{
 			Code: localVarReturnValue.Code,

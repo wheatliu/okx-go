@@ -4,32 +4,32 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateCopytradingAlgoOrderV5**](CopyTradingAPI.md#CreateCopytradingAlgoOrderV5) | **Post** /api/v5/copytrading/algo-order | Set TP/SL for the current lead position that are not closed.  
-[**CreateCopytradingAmendCopySettingsV5**](CopyTradingAPI.md#CreateCopytradingAmendCopySettingsV5) | **Post** /api/v5/copytrading/amend-copy-settings | You need to use this endpoint to amend copy settings  
-[**CreateCopytradingAmendProfitSharingRatioV5**](CopyTradingAPI.md#CreateCopytradingAmendProfitSharingRatioV5) | **Post** /api/v5/copytrading/amend-profit-sharing-ratio | It is used to amend profit sharing ratio.   
-[**CreateCopytradingCloseSubpositionV5**](CopyTradingAPI.md#CreateCopytradingCloseSubpositionV5) | **Post** /api/v5/copytrading/close-subposition | You can only close a lead position once a time.    It is required to pass subPosId which can get from .  
-[**CreateCopytradingFirstCopySettingsV5**](CopyTradingAPI.md#CreateCopytradingFirstCopySettingsV5) | **Post** /api/v5/copytrading/first-copy-settings | The first copy settings for the certain lead trader. You need to first copy settings after stopping copying.  
-[**CreateCopytradingSetInstrumentsV5**](CopyTradingAPI.md#CreateCopytradingSetInstrumentsV5) | **Post** /api/v5/copytrading/set-instruments | The leading trader can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.   All non-leading instruments can&#39;t have position or pending orders for the current request when setting non-leading instruments as leading instruments.  
-[**CreateCopytradingStopCopyTradingV5**](CopyTradingAPI.md#CreateCopytradingStopCopyTradingV5) | **Post** /api/v5/copytrading/stop-copy-trading | You need to use this endpoint to stop copy trading  
-[**GetCopytradingConfigV5**](CopyTradingAPI.md#GetCopytradingConfigV5) | **Get** /api/v5/copytrading/config | Retrieve current account configuration related to copy/lead trading.  
-[**GetCopytradingCopySettingsV5**](CopyTradingAPI.md#GetCopytradingCopySettingsV5) | **Get** /api/v5/copytrading/copy-settings | Retrieve the copy settings about certain lead trader.  
-[**GetCopytradingCurrentLeadTradersV5**](CopyTradingAPI.md#GetCopytradingCurrentLeadTradersV5) | **Get** /api/v5/copytrading/current-lead-traders | Retrieve my lead traders.  
-[**GetCopytradingCurrentSubpositionsV5**](CopyTradingAPI.md#GetCopytradingCurrentSubpositionsV5) | **Get** /api/v5/copytrading/current-subpositions | Retrieve lead positions that are not closed.    Returns reverse chronological order with &#x60;openTime&#x60;  
-[**GetCopytradingInstrumentsV5**](CopyTradingAPI.md#GetCopytradingInstrumentsV5) | **Get** /api/v5/copytrading/instruments | Retrieve instruments that are supported to lead by the platform.  Retrieve instruments that the lead trader has set.  
-[**GetCopytradingProfitSharingDetailsV5**](CopyTradingAPI.md#GetCopytradingProfitSharingDetailsV5) | **Get** /api/v5/copytrading/profit-sharing-details | The leading trader gets profits shared details for the last 3 months.  
-[**GetCopytradingPublicConfigV5**](CopyTradingAPI.md#GetCopytradingPublicConfigV5) | **Get** /api/v5/copytrading/public-config | Public endpoint. Retrieve copy trading parameter configuration information of copy settings  
-[**GetCopytradingPublicCopyTradersV5**](CopyTradingAPI.md#GetCopytradingPublicCopyTradersV5) | **Get** /api/v5/copytrading/public-copy-traders | Public endpoint. Retrieve copy trader coming from certain lead trader. Return according to &#x60;pnl&#x60; from high to low  
-[**GetCopytradingPublicCurrentSubpositionsV5**](CopyTradingAPI.md#GetCopytradingPublicCurrentSubpositionsV5) | **Get** /api/v5/copytrading/public-current-subpositions | Public endpoint. Get current leading positions of lead trader  
-[**GetCopytradingPublicLeadTradersV5**](CopyTradingAPI.md#GetCopytradingPublicLeadTradersV5) | **Get** /api/v5/copytrading/public-lead-traders | Public endpoint. Retrieve lead trader ranks.  
-[**GetCopytradingPublicPnlV5**](CopyTradingAPI.md#GetCopytradingPublicPnlV5) | **Get** /api/v5/copytrading/public-pnl | Public endpoint. Retrieve lead trader daily pnl. Results are returned in counter chronological order.  
-[**GetCopytradingPublicPreferenceCurrencyV5**](CopyTradingAPI.md#GetCopytradingPublicPreferenceCurrencyV5) | **Get** /api/v5/copytrading/public-preference-currency | Public endpoint. The most frequently traded crypto of this lead trader. Results are sorted by ratio from large to small.  
-[**GetCopytradingPublicStatsV5**](CopyTradingAPI.md#GetCopytradingPublicStatsV5) | **Get** /api/v5/copytrading/public-stats | Public endpoint. Key data related to lead trader performance.  
-[**GetCopytradingPublicSubpositionsHistoryV5**](CopyTradingAPI.md#GetCopytradingPublicSubpositionsHistoryV5) | **Get** /api/v5/copytrading/public-subpositions-history | Public endpoint. Retrieve the lead trader completed leading position of the last 3 months.   Returns reverse chronological order with &#x60;subPosId&#x60;.   
-[**GetCopytradingPublicWeeklyPnlV5**](CopyTradingAPI.md#GetCopytradingPublicWeeklyPnlV5) | **Get** /api/v5/copytrading/public-weekly-pnl | Public endpoint. Retrieve lead trader weekly pnl. Results are returned in counter chronological order.  
-[**GetCopytradingSubpositionsHistoryV5**](CopyTradingAPI.md#GetCopytradingSubpositionsHistoryV5) | **Get** /api/v5/copytrading/subpositions-history | Retrieve the completed lead position of the last 3 months.   Returns reverse chronological order with &#x60;subPosId&#x60;.   
-[**GetCopytradingTotalProfitSharingV5**](CopyTradingAPI.md#GetCopytradingTotalProfitSharingV5) | **Get** /api/v5/copytrading/total-profit-sharing | The leading trader gets the total amount of profit shared since joining the platform.  
-[**GetCopytradingTotalUnrealizedProfitSharingV5**](CopyTradingAPI.md#GetCopytradingTotalUnrealizedProfitSharingV5) | **Get** /api/v5/copytrading/total-unrealized-profit-sharing | The leading trader gets the total unrealized amount of profit shared.  
-[**GetCopytradingUnrealizedProfitSharingDetailsV5**](CopyTradingAPI.md#GetCopytradingUnrealizedProfitSharingDetailsV5) | **Get** /api/v5/copytrading/unrealized-profit-sharing-details | The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.   The unrealized profit sharing details will update once there copy position is closed.  
+[**CreateCopytradingAlgoOrderV5**](CopyTradingAPI.md#CreateCopytradingAlgoOrderV5) | **Post** /api/v5/copytrading/algo-order | POST / Place lead stop order
+[**CreateCopytradingAmendCopySettingsV5**](CopyTradingAPI.md#CreateCopytradingAmendCopySettingsV5) | **Post** /api/v5/copytrading/amend-copy-settings | POST / Amend copy settings
+[**CreateCopytradingAmendProfitSharingRatioV5**](CopyTradingAPI.md#CreateCopytradingAmendProfitSharingRatioV5) | **Post** /api/v5/copytrading/amend-profit-sharing-ratio | POST / Amend profit sharing ratio
+[**CreateCopytradingCloseSubpositionV5**](CopyTradingAPI.md#CreateCopytradingCloseSubpositionV5) | **Post** /api/v5/copytrading/close-subposition | POST / Close lead position
+[**CreateCopytradingFirstCopySettingsV5**](CopyTradingAPI.md#CreateCopytradingFirstCopySettingsV5) | **Post** /api/v5/copytrading/first-copy-settings | POST / First copy settings
+[**CreateCopytradingSetInstrumentsV5**](CopyTradingAPI.md#CreateCopytradingSetInstrumentsV5) | **Post** /api/v5/copytrading/set-instruments | POST / Amend leading instruments
+[**CreateCopytradingStopCopyTradingV5**](CopyTradingAPI.md#CreateCopytradingStopCopyTradingV5) | **Post** /api/v5/copytrading/stop-copy-trading | POST / Stop copying
+[**GetCopytradingConfigV5**](CopyTradingAPI.md#GetCopytradingConfigV5) | **Get** /api/v5/copytrading/config | GET / Account configuration
+[**GetCopytradingCopySettingsV5**](CopyTradingAPI.md#GetCopytradingCopySettingsV5) | **Get** /api/v5/copytrading/copy-settings | GET / Copy settings
+[**GetCopytradingCurrentLeadTradersV5**](CopyTradingAPI.md#GetCopytradingCurrentLeadTradersV5) | **Get** /api/v5/copytrading/current-lead-traders | GET / My lead traders
+[**GetCopytradingCurrentSubpositionsV5**](CopyTradingAPI.md#GetCopytradingCurrentSubpositionsV5) | **Get** /api/v5/copytrading/current-subpositions | GET / Existing lead positions
+[**GetCopytradingInstrumentsV5**](CopyTradingAPI.md#GetCopytradingInstrumentsV5) | **Get** /api/v5/copytrading/instruments | GET / Leading instruments
+[**GetCopytradingProfitSharingDetailsV5**](CopyTradingAPI.md#GetCopytradingProfitSharingDetailsV5) | **Get** /api/v5/copytrading/profit-sharing-details | GET / Profit sharing details
+[**GetCopytradingPublicConfigV5**](CopyTradingAPI.md#GetCopytradingPublicConfigV5) | **Get** /api/v5/copytrading/public-config | GET / Copy trading configuration
+[**GetCopytradingPublicCopyTradersV5**](CopyTradingAPI.md#GetCopytradingPublicCopyTradersV5) | **Get** /api/v5/copytrading/public-copy-traders | GET / Copy traders
+[**GetCopytradingPublicCurrentSubpositionsV5**](CopyTradingAPI.md#GetCopytradingPublicCurrentSubpositionsV5) | **Get** /api/v5/copytrading/public-current-subpositions | GET / Lead trader current lead positions
+[**GetCopytradingPublicLeadTradersV5**](CopyTradingAPI.md#GetCopytradingPublicLeadTradersV5) | **Get** /api/v5/copytrading/public-lead-traders | GET / Lead trader ranks
+[**GetCopytradingPublicPnlV5**](CopyTradingAPI.md#GetCopytradingPublicPnlV5) | **Get** /api/v5/copytrading/public-pnl | GET / Lead trader daily pnl
+[**GetCopytradingPublicPreferenceCurrencyV5**](CopyTradingAPI.md#GetCopytradingPublicPreferenceCurrencyV5) | **Get** /api/v5/copytrading/public-preference-currency | GET / Lead trader currency preferences
+[**GetCopytradingPublicStatsV5**](CopyTradingAPI.md#GetCopytradingPublicStatsV5) | **Get** /api/v5/copytrading/public-stats | GET / Lead trader stats
+[**GetCopytradingPublicSubpositionsHistoryV5**](CopyTradingAPI.md#GetCopytradingPublicSubpositionsHistoryV5) | **Get** /api/v5/copytrading/public-subpositions-history | GET / Lead trader lead position history
+[**GetCopytradingPublicWeeklyPnlV5**](CopyTradingAPI.md#GetCopytradingPublicWeeklyPnlV5) | **Get** /api/v5/copytrading/public-weekly-pnl | GET / Lead trader weekly pnl
+[**GetCopytradingSubpositionsHistoryV5**](CopyTradingAPI.md#GetCopytradingSubpositionsHistoryV5) | **Get** /api/v5/copytrading/subpositions-history | GET / Lead position history
+[**GetCopytradingTotalProfitSharingV5**](CopyTradingAPI.md#GetCopytradingTotalProfitSharingV5) | **Get** /api/v5/copytrading/total-profit-sharing | GET / Total profit sharing
+[**GetCopytradingTotalUnrealizedProfitSharingV5**](CopyTradingAPI.md#GetCopytradingTotalUnrealizedProfitSharingV5) | **Get** /api/v5/copytrading/total-unrealized-profit-sharing | GET / Total unrealized profit sharing
+[**GetCopytradingUnrealizedProfitSharingDetailsV5**](CopyTradingAPI.md#GetCopytradingUnrealizedProfitSharingDetailsV5) | **Get** /api/v5/copytrading/unrealized-profit-sharing-details | GET / Unrealized profit sharing details
 
 
 
@@ -37,7 +37,7 @@ Method | HTTP request | Description
 
 > CreateCopytradingAlgoOrderV5Resp CreateCopytradingAlgoOrderV5(ctx).CreateCopytradingAlgoOrderV5Req(createCopytradingAlgoOrderV5Req).Execute()
 
-Set TP/SL for the current lead position that are not closed.  
+POST / Place lead stop order
 
 
 
@@ -103,7 +103,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingAmendCopySettingsV5Resp CreateCopytradingAmendCopySettingsV5(ctx).CreateCopytradingAmendCopySettingsV5Req(createCopytradingAmendCopySettingsV5Req).Execute()
 
-You need to use this endpoint to amend copy settings  
+POST / Amend copy settings
 
 
 
@@ -169,7 +169,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingAmendProfitSharingRatioV5Resp CreateCopytradingAmendProfitSharingRatioV5(ctx).CreateCopytradingAmendProfitSharingRatioV5Req(createCopytradingAmendProfitSharingRatioV5Req).Execute()
 
-It is used to amend profit sharing ratio.   
+POST / Amend profit sharing ratio
 
 
 
@@ -235,7 +235,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingCloseSubpositionV5Resp CreateCopytradingCloseSubpositionV5(ctx).CreateCopytradingCloseSubpositionV5Req(createCopytradingCloseSubpositionV5Req).Execute()
 
-You can only close a lead position once a time.    It is required to pass subPosId which can get from .  
+POST / Close lead position
 
 
 
@@ -301,7 +301,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingFirstCopySettingsV5Resp CreateCopytradingFirstCopySettingsV5(ctx).CreateCopytradingFirstCopySettingsV5Req(createCopytradingFirstCopySettingsV5Req).Execute()
 
-The first copy settings for the certain lead trader. You need to first copy settings after stopping copying.  
+POST / First copy settings
 
 
 
@@ -367,7 +367,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingSetInstrumentsV5Resp CreateCopytradingSetInstrumentsV5(ctx).CreateCopytradingSetInstrumentsV5Req(createCopytradingSetInstrumentsV5Req).Execute()
 
-The leading trader can amend current leading instruments, need to set initial leading instruments while applying to become a leading trader.   All non-leading instruments can't have position or pending orders for the current request when setting non-leading instruments as leading instruments.  
+POST / Amend leading instruments
 
 
 
@@ -433,7 +433,7 @@ Name | Type | Description  | Notes
 
 > CreateCopytradingStopCopyTradingV5Resp CreateCopytradingStopCopyTradingV5(ctx).CreateCopytradingStopCopyTradingV5Req(createCopytradingStopCopyTradingV5Req).Execute()
 
-You need to use this endpoint to stop copy trading  
+POST / Stop copying
 
 
 
@@ -499,7 +499,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingConfigV5Resp GetCopytradingConfigV5(ctx).Execute()
 
-Retrieve current account configuration related to copy/lead trading.  
+GET / Account configuration
 
 
 
@@ -560,7 +560,7 @@ Other parameters are passed through a pointer to a apiGetCopytradingConfigV5Requ
 
 > GetCopytradingCopySettingsV5Resp GetCopytradingCopySettingsV5(ctx).UniqueCode(uniqueCode).InstType(instType).Execute()
 
-Retrieve the copy settings about certain lead trader.  
+GET / Copy settings
 
 
 
@@ -628,7 +628,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingCurrentLeadTradersV5Resp GetCopytradingCurrentLeadTradersV5(ctx).InstType(instType).Execute()
 
-Retrieve my lead traders.  
+GET / My lead traders
 
 
 
@@ -694,7 +694,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingCurrentSubpositionsV5Resp GetCopytradingCurrentSubpositionsV5(ctx).InstType(instType).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve lead positions that are not closed.    Returns reverse chronological order with `openTime`  
+GET / Existing lead positions
 
 
 
@@ -768,7 +768,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingInstrumentsV5Resp GetCopytradingInstrumentsV5(ctx).InstType(instType).Execute()
 
-Retrieve instruments that are supported to lead by the platform.  Retrieve instruments that the lead trader has set.  
+GET / Leading instruments
 
 
 
@@ -834,7 +834,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingProfitSharingDetailsV5Resp GetCopytradingProfitSharingDetailsV5(ctx).InstType(instType).After(after).Before(before).Limit(limit).Execute()
 
-The leading trader gets profits shared details for the last 3 months.  
+GET / Profit sharing details
 
 
 
@@ -906,7 +906,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingPublicConfigV5Resp GetCopytradingPublicConfigV5(ctx).InstType(instType).Execute()
 
-Public endpoint. Retrieve copy trading parameter configuration information of copy settings  
+GET / Copy trading configuration
 
 
 
@@ -972,7 +972,7 @@ No authorization required
 
 > GetCopytradingPublicCopyTradersV5Resp GetCopytradingPublicCopyTradersV5(ctx).UniqueCode(uniqueCode).InstType(instType).Limit(limit).Execute()
 
-Public endpoint. Retrieve copy trader coming from certain lead trader. Return according to `pnl` from high to low  
+GET / Copy traders
 
 
 
@@ -1042,7 +1042,7 @@ No authorization required
 
 > GetCopytradingPublicCurrentSubpositionsV5Resp GetCopytradingPublicCurrentSubpositionsV5(ctx).UniqueCode(uniqueCode).InstType(instType).After(after).Before(before).Limit(limit).Execute()
 
-Public endpoint. Get current leading positions of lead trader  
+GET / Lead trader current lead positions
 
 
 
@@ -1116,7 +1116,7 @@ No authorization required
 
 > GetCopytradingPublicLeadTradersV5Resp GetCopytradingPublicLeadTradersV5(ctx).InstType(instType).SortType(sortType).State(state).MinLeadDays(minLeadDays).MinAssets(minAssets).MaxAssets(maxAssets).MinAum(minAum).MaxAum(maxAum).DataVer(dataVer).Page(page).Limit(limit).Execute()
 
-Public endpoint. Retrieve lead trader ranks.  
+GET / Lead trader ranks
 
 
 
@@ -1202,7 +1202,7 @@ No authorization required
 
 > GetCopytradingPublicPnlV5Resp GetCopytradingPublicPnlV5(ctx).UniqueCode(uniqueCode).LastDays(lastDays).InstType(instType).Execute()
 
-Public endpoint. Retrieve lead trader daily pnl. Results are returned in counter chronological order.  
+GET / Lead trader daily pnl
 
 
 
@@ -1272,7 +1272,7 @@ No authorization required
 
 > GetCopytradingPublicPreferenceCurrencyV5Resp GetCopytradingPublicPreferenceCurrencyV5(ctx).UniqueCode(uniqueCode).InstType(instType).Execute()
 
-Public endpoint. The most frequently traded crypto of this lead trader. Results are sorted by ratio from large to small.  
+GET / Lead trader currency preferences
 
 
 
@@ -1340,7 +1340,7 @@ No authorization required
 
 > GetCopytradingPublicStatsV5Resp GetCopytradingPublicStatsV5(ctx).UniqueCode(uniqueCode).LastDays(lastDays).InstType(instType).Execute()
 
-Public endpoint. Key data related to lead trader performance.  
+GET / Lead trader stats
 
 
 
@@ -1410,7 +1410,7 @@ No authorization required
 
 > GetCopytradingPublicSubpositionsHistoryV5Resp GetCopytradingPublicSubpositionsHistoryV5(ctx).UniqueCode(uniqueCode).InstType(instType).After(after).Before(before).Limit(limit).Execute()
 
-Public endpoint. Retrieve the lead trader completed leading position of the last 3 months.   Returns reverse chronological order with `subPosId`.   
+GET / Lead trader lead position history
 
 
 
@@ -1484,7 +1484,7 @@ No authorization required
 
 > GetCopytradingPublicWeeklyPnlV5Resp GetCopytradingPublicWeeklyPnlV5(ctx).UniqueCode(uniqueCode).InstType(instType).Execute()
 
-Public endpoint. Retrieve lead trader weekly pnl. Results are returned in counter chronological order.  
+GET / Lead trader weekly pnl
 
 
 
@@ -1552,7 +1552,7 @@ No authorization required
 
 > GetCopytradingSubpositionsHistoryV5Resp GetCopytradingSubpositionsHistoryV5(ctx).InstType(instType).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve the completed lead position of the last 3 months.   Returns reverse chronological order with `subPosId`.   
+GET / Lead position history
 
 
 
@@ -1626,7 +1626,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingTotalProfitSharingV5Resp GetCopytradingTotalProfitSharingV5(ctx).InstType(instType).Execute()
 
-The leading trader gets the total amount of profit shared since joining the platform.  
+GET / Total profit sharing
 
 
 
@@ -1692,7 +1692,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingTotalUnrealizedProfitSharingV5Resp GetCopytradingTotalUnrealizedProfitSharingV5(ctx).InstType(instType).Execute()
 
-The leading trader gets the total unrealized amount of profit shared.  
+GET / Total unrealized profit sharing
 
 
 
@@ -1758,7 +1758,7 @@ Name | Type | Description  | Notes
 
 > GetCopytradingUnrealizedProfitSharingDetailsV5Resp GetCopytradingUnrealizedProfitSharingDetailsV5(ctx).InstType(instType).Execute()
 
-The leading trader gets the profit sharing details that are expected to be shared in the next settlement cycle.   The unrealized profit sharing details will update once there copy position is closed.  
+GET / Unrealized profit sharing details
 
 
 

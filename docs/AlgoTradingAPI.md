@@ -4,13 +4,13 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateTradeAmendAlgosV5**](AlgoTradingAPI.md#CreateTradeAmendAlgosV5) | **Post** /api/v5/trade/amend-algos | Amend unfilled algo orders (Support Stop order and Trigger order only, not including Move_order_stop order, Iceberg order, TWAP order, Trailing Stop order).    
-[**CreateTradeCancelAdvanceAlgosV5**](AlgoTradingAPI.md#CreateTradeCancelAdvanceAlgosV5) | **Post** /api/v5/trade/cancel-advance-algos | This endpoint will be offline soon, please use      Cancel unfilled algo orders (including Iceberg order, TWAP order, Trailing Stop order). A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
-[**CreateTradeCancelAlgosV5**](AlgoTradingAPI.md#CreateTradeCancelAlgosV5) | **Post** /api/v5/trade/cancel-algos | Cancel unfilled algo orders. A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
-[**CreateTradeOrderAlgoV5**](AlgoTradingAPI.md#CreateTradeOrderAlgoV5) | **Post** /api/v5/trade/order-algo | The algo order includes &#x60;trigger&#x60; order, &#x60;oco&#x60; order, &#x60;chase&#x60; order, &#x60;conditional&#x60; order, &#x60;twap&#x60; order and trailing order.  
-[**GetTradeOrderAlgoV5**](AlgoTradingAPI.md#GetTradeOrderAlgoV5) | **Get** /api/v5/trade/order-algo | 
-[**GetTradeOrdersAlgoHistoryV5**](AlgoTradingAPI.md#GetTradeOrdersAlgoHistoryV5) | **Get** /api/v5/trade/orders-algo-history | Retrieve a list of all algo orders under the current account in the last 3 months.  
-[**GetTradeOrdersAlgoPendingV5**](AlgoTradingAPI.md#GetTradeOrdersAlgoPendingV5) | **Get** /api/v5/trade/orders-algo-pending | Retrieve a list of untriggered Algo orders under the current account.  
+[**CreateTradeAmendAlgosV5**](AlgoTradingAPI.md#CreateTradeAmendAlgosV5) | **Post** /api/v5/trade/amend-algos | POST / Amend algo order
+[**CreateTradeCancelAdvanceAlgosV5**](AlgoTradingAPI.md#CreateTradeCancelAdvanceAlgosV5) | **Post** /api/v5/trade/cancel-advance-algos | POST / Cancel advance algo order
+[**CreateTradeCancelAlgosV5**](AlgoTradingAPI.md#CreateTradeCancelAlgosV5) | **Post** /api/v5/trade/cancel-algos | POST / Cancel algo order
+[**CreateTradeOrderAlgoV5**](AlgoTradingAPI.md#CreateTradeOrderAlgoV5) | **Post** /api/v5/trade/order-algo | POST / Place algo order
+[**GetTradeOrderAlgoV5**](AlgoTradingAPI.md#GetTradeOrderAlgoV5) | **Get** /api/v5/trade/order-algo | GET / Algo order details
+[**GetTradeOrdersAlgoHistoryV5**](AlgoTradingAPI.md#GetTradeOrdersAlgoHistoryV5) | **Get** /api/v5/trade/orders-algo-history | GET / Algo order history
+[**GetTradeOrdersAlgoPendingV5**](AlgoTradingAPI.md#GetTradeOrdersAlgoPendingV5) | **Get** /api/v5/trade/orders-algo-pending | GET / Algo order list
 
 
 
@@ -18,7 +18,7 @@ Method | HTTP request | Description
 
 > CreateTradeAmendAlgosV5Resp CreateTradeAmendAlgosV5(ctx).CreateTradeAmendAlgosV5Req(createTradeAmendAlgosV5Req).Execute()
 
-Amend unfilled algo orders (Support Stop order and Trigger order only, not including Move_order_stop order, Iceberg order, TWAP order, Trailing Stop order).    
+POST / Amend algo order
 
 
 
@@ -84,7 +84,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeCancelAdvanceAlgosV5Resp CreateTradeCancelAdvanceAlgosV5(ctx).CreateTradeCancelAdvanceAlgosV5Req(createTradeCancelAdvanceAlgosV5Req).Execute()
 
-This endpoint will be offline soon, please use      Cancel unfilled algo orders (including Iceberg order, TWAP order, Trailing Stop order). A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+POST / Cancel advance algo order
 
 
 
@@ -134,7 +134,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -150,7 +150,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeCancelAlgosV5Resp CreateTradeCancelAlgosV5(ctx).CreateTradeCancelAlgosV5Req(createTradeCancelAlgosV5Req).Execute()
 
-Cancel unfilled algo orders. A maximum of 10 orders can be canceled per request. Request parameters should be passed in the form of an array.  
+POST / Cancel algo order
 
 
 
@@ -200,7 +200,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -216,7 +216,7 @@ Name | Type | Description  | Notes
 
 > CreateTradeOrderAlgoV5Resp CreateTradeOrderAlgoV5(ctx).CreateTradeOrderAlgoV5Req(createTradeOrderAlgoV5Req).Execute()
 
-The algo order includes `trigger` order, `oco` order, `chase` order, `conditional` order, `twap` order and trailing order.  
+POST / Place algo order
 
 
 
@@ -266,7 +266,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[APIKey](../README.md#APIKey), [Passphrase](../README.md#Passphrase)
+No authorization required
 
 ### HTTP request headers
 
@@ -282,7 +282,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrderAlgoV5Resp GetTradeOrderAlgoV5(ctx).AlgoId(algoId).AlgoClOrdId(algoClOrdId).Execute()
 
-
+GET / Algo order details
 
 
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrdersAlgoHistoryV5Resp GetTradeOrdersAlgoHistoryV5(ctx).OrdType(ordType).State(state).AlgoId(algoId).InstType(instType).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve a list of all algo orders under the current account in the last 3 months.  
+GET / Algo order history
 
 
 
@@ -430,7 +430,7 @@ Name | Type | Description  | Notes
 
 > GetTradeOrdersAlgoPendingV5Resp GetTradeOrdersAlgoPendingV5(ctx).OrdType(ordType).AlgoId(algoId).AlgoClOrdId(algoClOrdId).InstType(instType).InstId(instId).After(after).Before(before).Limit(limit).Execute()
 
-Retrieve a list of untriggered Algo orders under the current account.  
+GET / Algo order list
 
 
 

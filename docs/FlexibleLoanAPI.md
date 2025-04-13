@@ -4,14 +4,14 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateFinanceFlexibleLoanAdjustCollateralV5**](FlexibleLoanAPI.md#CreateFinanceFlexibleLoanAdjustCollateralV5) | **Post** /api/v5/finance/flexible-loan/adjust-collateral | 
-[**CreateFinanceFlexibleLoanMaxLoanV5**](FlexibleLoanAPI.md#CreateFinanceFlexibleLoanMaxLoanV5) | **Post** /api/v5/finance/flexible-loan/max-loan | 
-[**GetFinanceFlexibleLoanBorrowCurrenciesV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanBorrowCurrenciesV5) | **Get** /api/v5/finance/flexible-loan/borrow-currencies | Get borrowable currencies  
-[**GetFinanceFlexibleLoanCollateralAssetsV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanCollateralAssetsV5) | **Get** /api/v5/finance/flexible-loan/collateral-assets | Get collateral assets in funding account.  
-[**GetFinanceFlexibleLoanInterestAccruedV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanInterestAccruedV5) | **Get** /api/v5/finance/flexible-loan/interest-accrued | 
-[**GetFinanceFlexibleLoanLoanHistoryV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanLoanHistoryV5) | **Get** /api/v5/finance/flexible-loan/loan-history | 
-[**GetFinanceFlexibleLoanLoanInfoV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanLoanInfoV5) | **Get** /api/v5/finance/flexible-loan/loan-info | 
-[**GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5) | **Get** /api/v5/finance/flexible-loan/max-collateral-redeem-amount | 
+[**CreateFinanceFlexibleLoanAdjustCollateralV5**](FlexibleLoanAPI.md#CreateFinanceFlexibleLoanAdjustCollateralV5) | **Post** /api/v5/finance/flexible-loan/adjust-collateral | POST / Adjust collateral
+[**CreateFinanceFlexibleLoanMaxLoanV5**](FlexibleLoanAPI.md#CreateFinanceFlexibleLoanMaxLoanV5) | **Post** /api/v5/finance/flexible-loan/max-loan | POST / Maximum loan amount
+[**GetFinanceFlexibleLoanBorrowCurrenciesV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanBorrowCurrenciesV5) | **Get** /api/v5/finance/flexible-loan/borrow-currencies | GET / Borrowable currencies
+[**GetFinanceFlexibleLoanCollateralAssetsV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanCollateralAssetsV5) | **Get** /api/v5/finance/flexible-loan/collateral-assets | GET / Collateral assets
+[**GetFinanceFlexibleLoanInterestAccruedV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanInterestAccruedV5) | **Get** /api/v5/finance/flexible-loan/interest-accrued | GET / Accrued interest
+[**GetFinanceFlexibleLoanLoanHistoryV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanLoanHistoryV5) | **Get** /api/v5/finance/flexible-loan/loan-history | GET / Loan history
+[**GetFinanceFlexibleLoanLoanInfoV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanLoanInfoV5) | **Get** /api/v5/finance/flexible-loan/loan-info | GET / Loan info
+[**GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5**](FlexibleLoanAPI.md#GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5) | **Get** /api/v5/finance/flexible-loan/max-collateral-redeem-amount | GET / Maximum collateral redeem amount
 
 
 
@@ -19,7 +19,7 @@ Method | HTTP request | Description
 
 > CreateFinanceFlexibleLoanAdjustCollateralV5Resp CreateFinanceFlexibleLoanAdjustCollateralV5(ctx).CreateFinanceFlexibleLoanAdjustCollateralV5Req(createFinanceFlexibleLoanAdjustCollateralV5Req).Execute()
 
-
+POST / Adjust collateral
 
 
 
@@ -36,7 +36,7 @@ import (
 )
 
 func main() {
-	createFinanceFlexibleLoanAdjustCollateralV5Req := *openapiclient.NewCreateFinanceFlexibleLoanAdjustCollateralV5Req("CollateralAmt_example", "CollateralCcy_example", "Type_example") // CreateFinanceFlexibleLoanAdjustCollateralV5Req | The request body for CreateFinanceFlexible-LoanAdjustCollateralV5
+	createFinanceFlexibleLoanAdjustCollateralV5Req := *openapiclient.NewCreateFinanceFlexibleLoanAdjustCollateralV5Req("CollateralAmt_example", "CollateralCcy_example", "Type_example") // CreateFinanceFlexibleLoanAdjustCollateralV5Req | The request body for CreateFinanceFlexibleLoanAdjustCollateralV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -61,7 +61,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceFlexibleLoanA
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceFlexibleLoanAdjustCollateralV5Req** | [**CreateFinanceFlexibleLoanAdjustCollateralV5Req**](CreateFinanceFlexibleLoanAdjustCollateralV5Req.md) | The request body for CreateFinanceFlexible-LoanAdjustCollateralV5 | 
+ **createFinanceFlexibleLoanAdjustCollateralV5Req** | [**CreateFinanceFlexibleLoanAdjustCollateralV5Req**](CreateFinanceFlexibleLoanAdjustCollateralV5Req.md) | The request body for CreateFinanceFlexibleLoanAdjustCollateralV5 | 
 
 ### Return type
 
@@ -85,7 +85,7 @@ Name | Type | Description  | Notes
 
 > CreateFinanceFlexibleLoanMaxLoanV5Resp CreateFinanceFlexibleLoanMaxLoanV5(ctx).CreateFinanceFlexibleLoanMaxLoanV5Req(createFinanceFlexibleLoanMaxLoanV5Req).Execute()
 
-
+POST / Maximum loan amount
 
 
 
@@ -102,7 +102,7 @@ import (
 )
 
 func main() {
-	createFinanceFlexibleLoanMaxLoanV5Req := *openapiclient.NewCreateFinanceFlexibleLoanMaxLoanV5Req("BorrowCcy_example") // CreateFinanceFlexibleLoanMaxLoanV5Req | The request body for CreateFinanceFlexible-LoanMaxLoanV5
+	createFinanceFlexibleLoanMaxLoanV5Req := *openapiclient.NewCreateFinanceFlexibleLoanMaxLoanV5Req("BorrowCcy_example") // CreateFinanceFlexibleLoanMaxLoanV5Req | The request body for CreateFinanceFlexibleLoanMaxLoanV5
 
 	configuration := openapiclient.NewConfiguration()
 	apiClient := openapiclient.NewAPIClient(configuration)
@@ -127,7 +127,7 @@ Other parameters are passed through a pointer to a apiCreateFinanceFlexibleLoanM
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **createFinanceFlexibleLoanMaxLoanV5Req** | [**CreateFinanceFlexibleLoanMaxLoanV5Req**](CreateFinanceFlexibleLoanMaxLoanV5Req.md) | The request body for CreateFinanceFlexible-LoanMaxLoanV5 | 
+ **createFinanceFlexibleLoanMaxLoanV5Req** | [**CreateFinanceFlexibleLoanMaxLoanV5Req**](CreateFinanceFlexibleLoanMaxLoanV5Req.md) | The request body for CreateFinanceFlexibleLoanMaxLoanV5 | 
 
 ### Return type
 
@@ -151,7 +151,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceFlexibleLoanBorrowCurrenciesV5Resp GetFinanceFlexibleLoanBorrowCurrenciesV5(ctx).Execute()
 
-Get borrowable currencies  
+GET / Borrowable currencies
 
 
 
@@ -212,7 +212,7 @@ Other parameters are passed through a pointer to a apiGetFinanceFlexibleLoanBorr
 
 > GetFinanceFlexibleLoanCollateralAssetsV5Resp GetFinanceFlexibleLoanCollateralAssetsV5(ctx).Ccy(ccy).Execute()
 
-Get collateral assets in funding account.  
+GET / Collateral assets
 
 
 
@@ -278,7 +278,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceFlexibleLoanInterestAccruedV5Resp GetFinanceFlexibleLoanInterestAccruedV5(ctx).Ccy(ccy).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Accrued interest
 
 
 
@@ -350,7 +350,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceFlexibleLoanLoanHistoryV5Resp GetFinanceFlexibleLoanLoanHistoryV5(ctx).Type_(type_).After(after).Before(before).Limit(limit).Execute()
 
-
+GET / Loan history
 
 
 
@@ -422,7 +422,7 @@ Name | Type | Description  | Notes
 
 > GetFinanceFlexibleLoanLoanInfoV5Resp GetFinanceFlexibleLoanLoanInfoV5(ctx).Execute()
 
-
+GET / Loan info
 
 
 
@@ -483,7 +483,7 @@ Other parameters are passed through a pointer to a apiGetFinanceFlexibleLoanLoan
 
 > GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5Resp GetFinanceFlexibleLoanMaxCollateralRedeemAmountV5(ctx).Ccy(ccy).Execute()
 
-
+GET / Maximum collateral redeem amount
 
 
 

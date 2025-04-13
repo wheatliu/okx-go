@@ -5,7 +5,7 @@
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **Code** | Pointer to **string** |  | [optional] [default to ""]
-**Data** | Pointer to **[]map[string]interface{}** |  | [optional] 
+**Data** | Pointer to [**[]CreateAssetTransferV5RespDataInner**](CreateAssetTransferV5RespDataInner.md) |  | [optional] 
 **Msg** | Pointer to **string** |  | [optional] [default to ""]
 
 ## Methods
@@ -54,20 +54,20 @@ HasCode returns a boolean if a field has been set.
 
 ### GetData
 
-`func (o *CreateAssetTransferV5Resp) GetData() []map[string]interface{}`
+`func (o *CreateAssetTransferV5Resp) GetData() []CreateAssetTransferV5RespDataInner`
 
 GetData returns the Data field if non-nil, zero value otherwise.
 
 ### GetDataOk
 
-`func (o *CreateAssetTransferV5Resp) GetDataOk() (*[]map[string]interface{}, bool)`
+`func (o *CreateAssetTransferV5Resp) GetDataOk() (*[]CreateAssetTransferV5RespDataInner, bool)`
 
 GetDataOk returns a tuple with the Data field if it's non-nil, zero value otherwise
 and a boolean to check if the value has been set.
 
 ### SetData
 
-`func (o *CreateAssetTransferV5Resp) SetData(v []map[string]interface{})`
+`func (o *CreateAssetTransferV5Resp) SetData(v []CreateAssetTransferV5RespDataInner)`
 
 SetData sets Data field to given value.
 

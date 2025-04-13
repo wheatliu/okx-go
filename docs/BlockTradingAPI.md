@@ -4,29 +4,29 @@ All URIs are relative to *https://www.okx.com*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**CreateRfqCancelAllAfterV5**](BlockTradingAPI.md#CreateRfqCancelAllAfterV5) | **Post** /api/v5/rfq/cancel-all-after | Cancel all quotes after the countdown timeout.  
-[**CreateRfqCancelAllQuotesV5**](BlockTradingAPI.md#CreateRfqCancelAllQuotesV5) | **Post** /api/v5/rfq/cancel-all-quotes | Cancels all active Quotes.  
-[**CreateRfqCancelAllRfqsV5**](BlockTradingAPI.md#CreateRfqCancelAllRfqsV5) | **Post** /api/v5/rfq/cancel-all-rfqs | Cancels all active RFQs.  
-[**CreateRfqCancelBatchQuotesV5**](BlockTradingAPI.md#CreateRfqCancelBatchQuotesV5) | **Post** /api/v5/rfq/cancel-batch-quotes | Cancel one or multiple active Quote(s) in a single batch. Maximum 100 quote orders can be canceled per request.  
-[**CreateRfqCancelBatchRfqsV5**](BlockTradingAPI.md#CreateRfqCancelBatchRfqsV5) | **Post** /api/v5/rfq/cancel-batch-rfqs | Cancel one or multiple active RFQ(s) in a single batch. Maximum 100 RFQ orders can be canceled per request.  
-[**CreateRfqCancelQuoteV5**](BlockTradingAPI.md#CreateRfqCancelQuoteV5) | **Post** /api/v5/rfq/cancel-quote | Cancels an existing active Quote you have created in response to an RFQ.  
-[**CreateRfqCancelRfqV5**](BlockTradingAPI.md#CreateRfqCancelRfqV5) | **Post** /api/v5/rfq/cancel-rfq | Cancel an existing active RFQ that you have created previously.  
-[**CreateRfqCreateQuoteV5**](BlockTradingAPI.md#CreateRfqCreateQuoteV5) | **Post** /api/v5/rfq/create-quote | Allows the user to Quote an RFQ that they are a counterparty to. The user MUST quote the entire RFQ and not part of the legs or part of the quantity. Partial quoting is not allowed.   
-[**CreateRfqCreateRfqV5**](BlockTradingAPI.md#CreateRfqCreateRfqV5) | **Post** /api/v5/rfq/create-rfq | Creates a new RFQ  To learn more, please visit   
-[**CreateRfqExecuteQuoteV5**](BlockTradingAPI.md#CreateRfqExecuteQuoteV5) | **Post** /api/v5/rfq/execute-quote | Executes a Quote. It is only used by the creator of the RFQ  
-[**CreateRfqMakerInstrumentSettingsV5**](BlockTradingAPI.md#CreateRfqMakerInstrumentSettingsV5) | **Post** /api/v5/rfq/maker-instrument-settings | Customize the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
-[**CreateRfqMmpConfigV5**](BlockTradingAPI.md#CreateRfqMmpConfigV5) | **Post** /api/v5/rfq/mmp-config | This endpoint is used to set MMP configure and only applicable to block trading makers    
-[**CreateRfqMmpResetV5**](BlockTradingAPI.md#CreateRfqMmpResetV5) | **Post** /api/v5/rfq/mmp-reset | Reset the MMP status to be inactive.  
-[**GetMarketBlockTickerV5**](BlockTradingAPI.md#GetMarketBlockTickerV5) | **Get** /api/v5/market/block-ticker | Retrieve the latest block trading volume in the last 24 hours.  
-[**GetMarketBlockTickersV5**](BlockTradingAPI.md#GetMarketBlockTickersV5) | **Get** /api/v5/market/block-tickers | Retrieve the latest block trading volume in the last 24 hours.  
-[**GetPublicBlockTradesV5**](BlockTradingAPI.md#GetPublicBlockTradesV5) | **Get** /api/v5/public/block-trades | Retrieve the recent block trading transactions of an instrument. Descending order by tradeId. The data will be updated 15 minutes after the block trade execution.  
-[**GetRfqCounterpartiesV5**](BlockTradingAPI.md#GetRfqCounterpartiesV5) | **Get** /api/v5/rfq/counterparties | Retrieves the list of counterparties that the user is permitted to trade with.   
-[**GetRfqMakerInstrumentSettingsV5**](BlockTradingAPI.md#GetRfqMakerInstrumentSettingsV5) | **Get** /api/v5/rfq/maker-instrument-settings | Retrieve the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
-[**GetRfqMmpConfigV5**](BlockTradingAPI.md#GetRfqMmpConfigV5) | **Get** /api/v5/rfq/mmp-config | This endpoint is used to get MMP configure information and only applicable to block trading market makers    
-[**GetRfqPublicTradesV5**](BlockTradingAPI.md#GetRfqPublicTradesV5) | **Get** /api/v5/rfq/public-trades | Retrieves the executed block trades. The data will be updated 15 minutes after the block trade execution.  
-[**GetRfqQuotesV5**](BlockTradingAPI.md#GetRfqQuotesV5) | **Get** /api/v5/rfq/quotes | Retrieve all Quotes that the user is a counterparty to (either as the creator or the receiver).  
-[**GetRfqRfqsV5**](BlockTradingAPI.md#GetRfqRfqsV5) | **Get** /api/v5/rfq/rfqs | Retrieves details of RFQs that the user is a counterparty to (either as the creator or the receiver of the RFQ).   
-[**GetRfqTradesV5**](BlockTradingAPI.md#GetRfqTradesV5) | **Get** /api/v5/rfq/trades | Retrieves the executed trades that the user is a counterparty to (either as the creator or the receiver).  
+[**CreateRfqCancelAllAfterV5**](BlockTradingAPI.md#CreateRfqCancelAllAfterV5) | **Post** /api/v5/rfq/cancel-all-after | Cancel All After
+[**CreateRfqCancelAllQuotesV5**](BlockTradingAPI.md#CreateRfqCancelAllQuotesV5) | **Post** /api/v5/rfq/cancel-all-quotes | Cancel all Quotes
+[**CreateRfqCancelAllRfqsV5**](BlockTradingAPI.md#CreateRfqCancelAllRfqsV5) | **Post** /api/v5/rfq/cancel-all-rfqs | Cancel all RFQs
+[**CreateRfqCancelBatchQuotesV5**](BlockTradingAPI.md#CreateRfqCancelBatchQuotesV5) | **Post** /api/v5/rfq/cancel-batch-quotes | Cancel multiple Quotes
+[**CreateRfqCancelBatchRfqsV5**](BlockTradingAPI.md#CreateRfqCancelBatchRfqsV5) | **Post** /api/v5/rfq/cancel-batch-rfqs | Cancel multiple RFQs
+[**CreateRfqCancelQuoteV5**](BlockTradingAPI.md#CreateRfqCancelQuoteV5) | **Post** /api/v5/rfq/cancel-quote | Cancel Quote
+[**CreateRfqCancelRfqV5**](BlockTradingAPI.md#CreateRfqCancelRfqV5) | **Post** /api/v5/rfq/cancel-rfq | Cancel RFQ
+[**CreateRfqCreateQuoteV5**](BlockTradingAPI.md#CreateRfqCreateQuoteV5) | **Post** /api/v5/rfq/create-quote | Create Quote
+[**CreateRfqCreateRfqV5**](BlockTradingAPI.md#CreateRfqCreateRfqV5) | **Post** /api/v5/rfq/create-rfq | Create RFQ
+[**CreateRfqExecuteQuoteV5**](BlockTradingAPI.md#CreateRfqExecuteQuoteV5) | **Post** /api/v5/rfq/execute-quote | Execute Quote
+[**CreateRfqMakerInstrumentSettingsV5**](BlockTradingAPI.md#CreateRfqMakerInstrumentSettingsV5) | **Post** /api/v5/rfq/maker-instrument-settings | Set Quote products
+[**CreateRfqMmpConfigV5**](BlockTradingAPI.md#CreateRfqMmpConfigV5) | **Post** /api/v5/rfq/mmp-config | Set MMP
+[**CreateRfqMmpResetV5**](BlockTradingAPI.md#CreateRfqMmpResetV5) | **Post** /api/v5/rfq/mmp-reset | Reset MMP status
+[**GetMarketBlockTickerV5**](BlockTradingAPI.md#GetMarketBlockTickerV5) | **Get** /api/v5/market/block-ticker | Get block ticker
+[**GetMarketBlockTickersV5**](BlockTradingAPI.md#GetMarketBlockTickersV5) | **Get** /api/v5/market/block-tickers | Get block tickers
+[**GetPublicBlockTradesV5**](BlockTradingAPI.md#GetPublicBlockTradesV5) | **Get** /api/v5/public/block-trades | Get public single-leg transactions of block trades
+[**GetRfqCounterpartiesV5**](BlockTradingAPI.md#GetRfqCounterpartiesV5) | **Get** /api/v5/rfq/counterparties | Get Counterparties
+[**GetRfqMakerInstrumentSettingsV5**](BlockTradingAPI.md#GetRfqMakerInstrumentSettingsV5) | **Get** /api/v5/rfq/maker-instrument-settings | Get Quote products
+[**GetRfqMmpConfigV5**](BlockTradingAPI.md#GetRfqMmpConfigV5) | **Get** /api/v5/rfq/mmp-config | Get MMP Config
+[**GetRfqPublicTradesV5**](BlockTradingAPI.md#GetRfqPublicTradesV5) | **Get** /api/v5/rfq/public-trades | Get public multi-leg transactions of block trades
+[**GetRfqQuotesV5**](BlockTradingAPI.md#GetRfqQuotesV5) | **Get** /api/v5/rfq/quotes | Get quotes
+[**GetRfqRfqsV5**](BlockTradingAPI.md#GetRfqRfqsV5) | **Get** /api/v5/rfq/rfqs | Get rfqs
+[**GetRfqTradesV5**](BlockTradingAPI.md#GetRfqTradesV5) | **Get** /api/v5/rfq/trades | Get trades
 
 
 
@@ -34,7 +34,7 @@ Method | HTTP request | Description
 
 > CreateRfqCancelAllAfterV5Resp CreateRfqCancelAllAfterV5(ctx).CreateRfqCancelAllAfterV5Req(createRfqCancelAllAfterV5Req).Execute()
 
-Cancel all quotes after the countdown timeout.  
+Cancel All After
 
 
 
@@ -100,7 +100,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCancelAllQuotesV5Resp CreateRfqCancelAllQuotesV5(ctx).Execute()
 
-Cancels all active Quotes.  
+Cancel all Quotes
 
 
 
@@ -161,7 +161,7 @@ Other parameters are passed through a pointer to a apiCreateRfqCancelAllQuotesV5
 
 > CreateRfqCancelAllRfqsV5Resp CreateRfqCancelAllRfqsV5(ctx).Execute()
 
-Cancels all active RFQs.  
+Cancel all RFQs
 
 
 
@@ -222,7 +222,7 @@ Other parameters are passed through a pointer to a apiCreateRfqCancelAllRfqsV5Re
 
 > CreateRfqCancelBatchQuotesV5Resp CreateRfqCancelBatchQuotesV5(ctx).CreateRfqCancelBatchQuotesV5Req(createRfqCancelBatchQuotesV5Req).Execute()
 
-Cancel one or multiple active Quote(s) in a single batch. Maximum 100 quote orders can be canceled per request.  
+Cancel multiple Quotes
 
 
 
@@ -288,7 +288,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCancelBatchRfqsV5Resp CreateRfqCancelBatchRfqsV5(ctx).CreateRfqCancelBatchRfqsV5Req(createRfqCancelBatchRfqsV5Req).Execute()
 
-Cancel one or multiple active RFQ(s) in a single batch. Maximum 100 RFQ orders can be canceled per request.  
+Cancel multiple RFQs
 
 
 
@@ -354,7 +354,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCancelQuoteV5Resp CreateRfqCancelQuoteV5(ctx).CreateRfqCancelQuoteV5Req(createRfqCancelQuoteV5Req).Execute()
 
-Cancels an existing active Quote you have created in response to an RFQ.  
+Cancel Quote
 
 
 
@@ -420,7 +420,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCancelRfqV5Resp CreateRfqCancelRfqV5(ctx).CreateRfqCancelRfqV5Req(createRfqCancelRfqV5Req).Execute()
 
-Cancel an existing active RFQ that you have created previously.  
+Cancel RFQ
 
 
 
@@ -486,7 +486,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCreateQuoteV5Resp CreateRfqCreateQuoteV5(ctx).CreateRfqCreateQuoteV5Req(createRfqCreateQuoteV5Req).Execute()
 
-Allows the user to Quote an RFQ that they are a counterparty to. The user MUST quote the entire RFQ and not part of the legs or part of the quantity. Partial quoting is not allowed.   
+Create Quote
 
 
 
@@ -552,7 +552,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqCreateRfqV5Resp CreateRfqCreateRfqV5(ctx).CreateRfqCreateRfqV5Req(createRfqCreateRfqV5Req).Execute()
 
-Creates a new RFQ  To learn more, please visit   
+Create RFQ
 
 
 
@@ -618,7 +618,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqExecuteQuoteV5Resp CreateRfqExecuteQuoteV5(ctx).CreateRfqExecuteQuoteV5Req(createRfqExecuteQuoteV5Req).Execute()
 
-Executes a Quote. It is only used by the creator of the RFQ  
+Execute Quote
 
 
 
@@ -684,7 +684,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqMakerInstrumentSettingsV5Resp CreateRfqMakerInstrumentSettingsV5(ctx).CreateRfqMakerInstrumentSettingsV5Req(createRfqMakerInstrumentSettingsV5Req).Execute()
 
-Customize the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
+Set Quote products
 
 
 
@@ -750,7 +750,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqMmpConfigV5Resp CreateRfqMmpConfigV5(ctx).CreateRfqMmpConfigV5Req(createRfqMmpConfigV5Req).Execute()
 
-This endpoint is used to set MMP configure and only applicable to block trading makers    
+Set MMP
 
 
 
@@ -816,7 +816,7 @@ Name | Type | Description  | Notes
 
 > CreateRfqMmpResetV5Resp CreateRfqMmpResetV5(ctx).Execute()
 
-Reset the MMP status to be inactive.  
+Reset MMP status
 
 
 
@@ -877,7 +877,7 @@ Other parameters are passed through a pointer to a apiCreateRfqMmpResetV5Request
 
 > GetMarketBlockTickerV5Resp GetMarketBlockTickerV5(ctx).InstId(instId).Execute()
 
-Retrieve the latest block trading volume in the last 24 hours.  
+Get block ticker
 
 
 
@@ -943,7 +943,7 @@ No authorization required
 
 > GetMarketBlockTickersV5Resp GetMarketBlockTickersV5(ctx).InstType(instType).Uly(uly).InstFamily(instFamily).Execute()
 
-Retrieve the latest block trading volume in the last 24 hours.  
+Get block tickers
 
 
 
@@ -1013,7 +1013,7 @@ No authorization required
 
 > GetPublicBlockTradesV5Resp GetPublicBlockTradesV5(ctx).InstId(instId).Execute()
 
-Retrieve the recent block trading transactions of an instrument. Descending order by tradeId. The data will be updated 15 minutes after the block trade execution.  
+Get public single-leg transactions of block trades
 
 
 
@@ -1079,7 +1079,7 @@ No authorization required
 
 > GetRfqCounterpartiesV5Resp GetRfqCounterpartiesV5(ctx).Execute()
 
-Retrieves the list of counterparties that the user is permitted to trade with.   
+Get Counterparties
 
 
 
@@ -1140,7 +1140,7 @@ Other parameters are passed through a pointer to a apiGetRfqCounterpartiesV5Requ
 
 > GetRfqMakerInstrumentSettingsV5Resp GetRfqMakerInstrumentSettingsV5(ctx).Execute()
 
-Retrieve the products which makers want to quote and receive RFQs for, and the corresponding price and size limit.   
+Get Quote products
 
 
 
@@ -1201,7 +1201,7 @@ Other parameters are passed through a pointer to a apiGetRfqMakerInstrumentSetti
 
 > GetRfqMmpConfigV5Resp GetRfqMmpConfigV5(ctx).Execute()
 
-This endpoint is used to get MMP configure information and only applicable to block trading market makers    
+Get MMP Config
 
 
 
@@ -1262,7 +1262,7 @@ Other parameters are passed through a pointer to a apiGetRfqMmpConfigV5Request s
 
 > GetRfqPublicTradesV5Resp GetRfqPublicTradesV5(ctx).BeginId(beginId).EndId(endId).Limit(limit).Execute()
 
-Retrieves the executed block trades. The data will be updated 15 minutes after the block trade execution.  
+Get public multi-leg transactions of block trades
 
 
 
@@ -1332,7 +1332,7 @@ No authorization required
 
 > GetRfqQuotesV5Resp GetRfqQuotesV5(ctx).RfqId(rfqId).ClRfqId(clRfqId).QuoteId(quoteId).ClQuoteId(clQuoteId).State(state).BeginId(beginId).EndId(endId).Limit(limit).Execute()
 
-Retrieve all Quotes that the user is a counterparty to (either as the creator or the receiver).  
+Get quotes
 
 
 
@@ -1412,7 +1412,7 @@ Name | Type | Description  | Notes
 
 > GetRfqRfqsV5Resp GetRfqRfqsV5(ctx).RfqId(rfqId).ClRfqId(clRfqId).State(state).BeginId(beginId).EndId(endId).Limit(limit).Execute()
 
-Retrieves details of RFQs that the user is a counterparty to (either as the creator or the receiver of the RFQ).   
+Get rfqs
 
 
 
@@ -1488,7 +1488,7 @@ Name | Type | Description  | Notes
 
 > GetRfqTradesV5Resp GetRfqTradesV5(ctx).RfqId(rfqId).ClRfqId(clRfqId).QuoteId(quoteId).BlockTdId(blockTdId).ClQuoteId(clQuoteId).BeginId(beginId).EndId(endId).BeginTs(beginTs).EndTs(endTs).Limit(limit).IsSuccessful(isSuccessful).Execute()
 
-Retrieves the executed trades that the user is a counterparty to (either as the creator or the receiver).  
+Get trades
 
 
 
